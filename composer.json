@@ -1,0 +1,7 @@
+{
+  "require": {
+    "twig/twig" : "1.6.5",
+    "symfony/filesystem": "v2.6.4",
+    "symfony/yaml": "v2.6.4"
+  }
+}

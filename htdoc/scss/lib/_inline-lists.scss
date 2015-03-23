@@ -1,0 +1,42 @@
+//
+// @variables
+//
+
+
+$inline-list-overflow: hidden !default;
+$inline-list-display: block !default;
+$inline-list-children-display: block !default;
+
+
+@mixin inline-list($direction: left, $margin-opposite: 0px, $margin-dir: 0) {
+
+    $dir: left;
+    $dir-opposite: right;
+    @if ($direction == right) {
+        $dir: right;
+        $dir-opposite: left;
+    }
+
+    padding: 0;
+    list-style: none;
+    overflow: $inline-list-overflow;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & > li {
+        list-style: none;
+        float: $dir;
+        margin-#{$dir}: $margin-dir;
+        margin-#{$dir-opposite}: $margin-opposite;
+        display: $inline-list-display;
+        height: 100%;
+
+        &:last-child {
+            margin-#{$dir-opposite}: 0;
+        }
+
+        & > * {
+            display: $inline-list-children-display;
+        }
+    }
+}

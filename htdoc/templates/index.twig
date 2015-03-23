@@ -1,0 +1,25 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+    <body class="l-page">
+
+    {% include "subtemplates/module-coverlines.twig" %}
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+
+    <div class="l-page--container">
+        <aside>this is aside</aside>
+        {% include "subtemplates/contentArticle.twig" %}
+    </div>
+
+    <div class="l-footer {% if footer.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-footer.twig" %}
+    </div>
+
+    {{ parent() }}
+    </body>
+{% endblock %}
+

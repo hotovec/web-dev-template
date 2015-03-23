@@ -1,0 +1,33 @@
+<footer class="m-footer">
+    <div class="m-footer--container">
+
+        <section class="m-footer--section">sectionA</section>
+        <section class="m-footer--section">sectionA</section>
+        <section class="m-footer--section">sectionA</section>
+        <section class="m-footer--section">sectionA</section>
+
+        <div class="m-footer--copyright">
+            <ul class="m-footer--menu-primary">
+                {% for link in footer.menuPrimary %}
+                    <li class="m-footer--menu-link">
+                        <a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <a class="m-footer--logo" href="/">
+                <div class="mm-has-svg" style="background-image: url(http://readwrite.com/site/images/readwrite-logo.svg);"></div>
+            </a>
+
+
+            <ul class="m-footer--menu-secondary">
+                {% for link in footer.menuSecondary %}
+                    <li class="m-footer--menu-link">
+                        <a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</footer>

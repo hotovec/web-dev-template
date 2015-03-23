@@ -1,0 +1,75 @@
+$coverlines-height: 100px !default;
+$coverlines-inner-height: 80px !default;
+
+$coverlines-bg-color: #dedede !default;
+$coverlines-bg-image: url('http://lorempixel.com/900/400/fashion/2/') !default;
+
+$coverlinesLayout: (
+        columns: (2, 1, 1),
+        gutters: 0,
+        math: fluid,
+        gutter-position: inside,
+        container: auto,
+        container-position: center,
+);
+
+// default coverlines module
+
+.m-coverlines {
+
+    height: $coverlines-height;
+    background-color: $coverlines-bg-color;
+    background-image: $coverlines-bg-image;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+
+    position: relative;
+    overflow: hidden;
+
+    height: $coverlines-height;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    .m-coverlines--container {
+        @include l-grid();
+        @include layout($coverlinesLayout);
+
+        height: $coverlines-inner-height;
+        width: 100%;
+
+    }
+
+    &.mm-gravity-bottom {
+        align-items: flex-end;
+    }
+
+    &.mm-gravity-top {
+        align-items: flex-start;
+    }
+
+    .m-coverlines--logo {
+        @include span(1 at 1);
+
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    article {
+        &:nth-of-type(1) {
+            @include span(1 at 2);
+        }
+        &:nth-of-type(2) {
+            @include span(1 at 3);
+        }
+    }
+
+}

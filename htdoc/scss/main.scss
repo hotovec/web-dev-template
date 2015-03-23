@@ -1,0 +1,28 @@
+// componentns
+@import "../components/normalize-scss/normalize";
+@import "../components/bourbon/app/assets/stylesheets/bourbon";
+@import "../components/susy/sass/susy";
+// foundation
+@import "settings";
+@import "foundation";
+// custom mixins
+@import "lib/inline-lists";
+// can break foundation one
+// base
+@import "base/globals";
+
+// layouts and modules
+@import "layouts/layout-main";
+@import "layouts/layout-navbar";
+@import "layouts/layout-footer";
+
+@import "layouts/layout-page-detail-full";
+
+
+
+@import "modules/module-navbar";
+@import "modules/module-footer";
+@import "modules/module-coverlines";
+@import "modules/module-content-article";
+
+// dev

@@ -1,0 +1,108 @@
+
+.l-page.l-page_detail-full {
+
+    .l-page--container {
+        @include susy-clearfix();
+
+        background-color: #f5f5f5;
+
+        .m-article--header {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+            overflow: hidden;
+
+            h1 {
+                margin: 0;
+            }
+        }
+
+        .m-article--content {
+            background-color: antiquewhite;
+            p {
+                margin-top: 0;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            @include l-grid();
+        }
+
+        .m-article--content-container {
+            background-color: #008cba;
+            img {
+                width: 100%;
+            }
+
+            @include susy-media($B) {
+                @include span(10);
+                @include push(1);
+            }
+
+            @include susy-media($C) {
+                @include span(8);
+                @include push(2);
+            }
+
+            @include susy-media($D) {
+                @include span(6);
+                @include push(3);
+            }
+        }
+
+        .m-article--abstract {
+            background-color: #ff0;
+        }
+
+        .m-article--footer {
+            background-color: pink;
+
+        }
+
+        .m-article--header,
+        .m-article--footer {
+            $cw: get-container-width($defaultGrid) / 2;
+            padding: 0 calc(50% - #{$cw});
+
+            @include susy-media($B) {
+                $cw: get-container-width($defaultGridB) / 2;
+                padding: 0 calc(50% - #{$cw});
+            }
+            @include susy-media($C) {
+                $cw: get-container-width($defaultGridC) / 2;
+                padding: 0 calc(50% - #{$cw});
+            }
+            @include susy-media($D) {
+                $cw: get-container-width($defaultGridD) / 2;
+                padding: 0 calc(50% - #{$cw});
+            }
+        }
+
+        .m-article--header-container,
+        .m-article--footer-container {
+            overflow: hidden;
+            @include susy-media($B) {
+                @include span(10);
+                @include push(1);
+            }
+
+            @include susy-media($C) {
+                @include span(8);
+                @include push(2);
+            }
+
+            @include susy-media($D) {
+                @include span(6);
+                @include push(3);
+            }
+        }
+
+        aside {
+            display: none;
+        }
+
+    }
+}
+
+

@@ -1,0 +1,11 @@
+
+.l-footer {
+    overflow: hidden;
+    background-color: lightgoldenrodyellow;
+
+    &.is-sticky {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+}

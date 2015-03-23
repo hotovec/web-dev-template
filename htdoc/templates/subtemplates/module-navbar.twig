@@ -1,0 +1,55 @@
+<div class="m-navbar">
+    <div class="m-navbar--container">
+
+        <ul class="m-navbar--menu-primary">
+            {# icons / shortcuts #}
+            <li class="m-navbar--menu-sections">
+                <a target="" title="Topics"><em class="">TOC</em></a>
+            </li>
+
+            <li class="m-navbar--menu-search">
+                <a target="" title="Topics"><em class="">Search</em></a>
+            </li>
+
+            <li class="m-navbar--menu-info">
+                <a target="" title="Topics"><em class="">Info</em></a>
+            </li>
+
+            {# links #}
+
+            {% for link in navbar.menuPrimary %}
+                <li class="m-navbar--menu-link"><a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a></li>
+            {% endfor %}
+        </ul>
+
+        {# logo #}
+        <a class="m-navbar--logo" href="/"><div class="mm-has-svg" style="background-image: url(http://readwrite.com/site/images/readwrite-logo.svg);"></div></a>
+
+        {# social #}
+        <ul class="m-navbar--menu-secondary">
+            {% for link in navbar.menuSecondary %}
+                <li class="m-navbar--menu-link"><a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a></li>
+            {% endfor %}
+
+            <li class="m-navbar--menu-social m-navbar--menu-twitter">
+                <a target="_blank" title="" href="https://twitter.com/rww">
+                    <em class="">Twitter</em>
+                </a>
+            </li>
+
+            <li class="m-navbar--menu-social m-navbar--menu-facebook">
+                <a target="_blank" title="" href="https://twitter.com/rww">
+                    <em class="">Facebook</em>
+                </a>
+            </li>
+
+            <li class="m-navbar--menu-social m-navbar--menu-instagram">
+                <a target="_blank" title="" href="https://twitter.com/rww">
+                    <em class="">Instagram</em>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

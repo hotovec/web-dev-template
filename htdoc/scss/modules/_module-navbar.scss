@@ -1,0 +1,119 @@
+$navbar-height:48px !default;
+$navbar-status-height:24px !default;
+$navbar-font-primary: 'helvetica neue', Helvetica, Arial, sans-serif !default;
+
+$navbar-color: #666 !default;
+$navbar-bg-color: transparent !default;
+$navbar-hover-color: darken($navbar-color, 20%) !default;
+$navbar-hover-bg-color: transparent !default;
+$navbar-border-color: #dfdfe3 !default;
+$navbar-font-size: rem(12) !default;
+$navbar-font-weight: 600 !default;
+$navbar-text-transform: uppercase !default;
+
+$navbar: (
+        columns: 5,
+        gutters: 0,
+        math: fluid,
+        gutter-position: inside,
+        container: auto,
+        container-position: center,
+);
+
+// module default layout
+
+.m-navbar {
+
+    height: 100%;
+    width: 100%;
+
+
+    .m-navbar--container {
+
+        @include l-grid();
+
+        display: flex;
+        flex-wrap: wrap;
+        @include layout($navbar);
+    }
+
+    .m-navbar--menu-logo,
+    .m-navbar--menu-primary,
+    .m-navbar--menu-secondary {
+        height: $navbar-height;
+    }
+
+    .m-navbar--logo {
+        @include span(1);
+        order: 1;
+    }
+
+    .m-navbar--menu-primary {
+        @include span(2);
+        order: 2;
+    }
+
+    .m-navbar--menu-secondary {
+        @include span(2);
+        order: 3;
+    }
+}
+
+// module default styling
+
+.m-navbar {
+
+    background-color: $navbar-bg-color;
+    border-top: 1px solid $navbar-border-color;
+    border-bottom: 1px solid $navbar-border-color;
+
+    font-family: $navbar-font-primary;
+    font-size: $navbar-font-size;
+    font-weight: $navbar-font-weight;
+    text-transform: $navbar-text-transform;
+
+    li {}
+    em { font-style: normal; }
+
+    .m-navbar--logo {
+        .mm-has-svg {
+            width: 100%;
+            min-height: $navbar-height;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+
+    .m-navbar--menu-primary,
+    .m-navbar--menu-secondary {
+
+        a {
+            display: block;
+            height: 100%;
+            line-height: $navbar-height;
+            padding: 0 10px;
+
+            cursor: pointer;
+
+            color: $navbar-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $navbar-hover-color;
+                background-color: $navbar-hover-bg-color;
+            }
+        }
+    }
+
+
+    .m-navbar--menu-primary {
+        @include inline-list(left);
+    }
+
+    .m-navbar--menu-secondary {
+        @include inline-list(right);
+    }
+
+
+}
