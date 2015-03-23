@@ -3,13 +3,16 @@
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/susy/sass/susy";
 
-// foundation
+// settings
 @import "settings";
+
+// foundation
+@import "foundation_settings";
 @import "foundation";
 
-// custom mixins
-
+// custom libs
 @import "lib/inline-lists"; // can break foundation one
+
 // base
 @import "base/globals";
 
@@ -17,7 +20,6 @@
 @import "layouts/layout-main";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
-
 @import "layouts/layout-page-detail-full";
 
 @import "modules/module-navbar";
