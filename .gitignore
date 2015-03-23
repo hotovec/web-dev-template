@@ -3,6 +3,7 @@
 .sass-cache
 .twig-cache
 bower_components
+node_modules
 htdoc/components
 config.codekit
 vendor
