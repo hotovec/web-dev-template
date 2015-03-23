@@ -7,8 +7,9 @@
 @import "settings";
 
 // foundation
-@import "foundation_settings";
-@import "foundation";
+@import "foundation/foundation_settings";
+@import "foundation/foundation";
+@import "foundation/foundation_overrides";
 
 // custom libs
 @import "lib/inline-lists"; // can break foundation one
