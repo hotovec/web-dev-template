@@ -76,19 +76,31 @@ $navbarData = array(
     'menuSecondary' => array(
         array(
             'url' => '/link-url.html',
-            'title' => 'sec-link1',
+            'title' => 'Kontakt',
             'target' => '',
             'active' => false
         ),
         array(
             'url' => '/link-url.html',
-            'title' => 'sec-link2',
+            'title' => 'Firma a lidé',
             'target' => '',
             'active' => false
         ),
         array(
             'url' => '/link-url.html',
-            'title' => 'sec-link3',
+            'title' => 'Reference',
+            'target' => '',
+            'active' => false
+        ),
+        array(
+            'url' => '/link-url.html',
+            'title' => 'Objekty dle účelu',
+            'target' => '',
+            'active' => false
+        ),
+        array(
+            'url' => '/link-url.html',
+            'title' => 'produkty a služby',
             'target' => '',
             'active' => false
         ),

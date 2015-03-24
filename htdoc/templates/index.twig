@@ -3,11 +3,9 @@
 {% block body %}
     <body class="l-page">
 
-    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
-        {% include "subtemplates/module-navbar-secondary.twig" %}
-    </div>
 
     <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
         {% include "subtemplates/module-navbar.twig" %}
     </div>
 

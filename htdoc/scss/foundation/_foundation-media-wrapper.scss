@@ -18,55 +18,44 @@ $navbar-height_CD: 48px;
 
     } @else if $size == B {
         // Variable setup for size B
-        $navbar-height: $navbar-height_AB;
         $queryString: $medium-up;
 
     } @else if $size == C {
         // Variable setup for size C
-        $navbar-height: $navbar-height_CD;
         $queryString: $large-up;
 
     } @else if $size == D {
         // Variable setup for size D
-        $navbar-height: $navbar-height_CD;
         $queryString: $xlarge-up;
 
     } @else if $size == E {
         // Variable setup for size D
-        $navbar-height: $navbar-height_CD;
         $queryString: $xxlarge-up;
 
     } @else if $size == A-only {
         // Variable setup for size A
-        $navbar-height: $navbar-height_AB;
         $queryString: $small-only;
 
     } @else if $size == B-only {
         // Variable setup for size B
-        $navbar-height: $navbar-height_AB;
         $queryString: $medium-only;
 
     } @else if $size == C-only {
         // Variable setup for size C
-        $navbar-height: $navbar-height_CD;
         $queryString: $large-only;
 
     } @else if $size == D-only {
         // Variable setup for size C
-        $navbar-height: $navbar-height_CD;
         $queryString: $xlarge-only;
 
     } @else if $size == E-only {
         // Variable setup for size C
-        $navbar-height: $navbar-height_CD;
         $queryString: $xxlarge-only;
     }
 
     @media #{$queryString} {
         @content;
-
         //reset defaults
-        $navbar-height: $navbar-height_AB;
     }
 
 }
