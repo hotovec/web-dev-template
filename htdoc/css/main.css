@@ -381,25 +381,25 @@ span.color-body-font {
   color: #4A4A4A; }
 span.color-body-bg {
   color: #ECEDEC; }
-span.color-c1 {
+span.color-1 {
   color: #7AB929; }
-span.color-c2 {
+span.color-2 {
   color: #6DC1AE; }
-span.color-c3 {
+span.color-3 {
   color: #4E9ED8; }
-span.color-c4 {
+span.color-4 {
   color: #7D83BF; }
-span.color-c5 {
+span.color-5 {
   color: #9C6FAE; }
-span.color-c6 {
+span.color-6 {
   color: #E8308A; }
-span.color-c7 {
+span.color-7 {
   color: #E50051; }
-span.color-c8 {
+span.color-8 {
   color: #EC6608; }
-span.color-c9 {
+span.color-9 {
   color: #F4B003; }
-span.color-c10 {
+span.color-10 {
   color: #B5BBB4; }
 
 meta.foundation-version {
@@ -2363,10 +2363,6 @@ html {
   .l-page.l-page_detail-full .l-page--container aside {
     display: none; }
 
-.m-hero {
-  background-color: black;
-  height: 500px; }
-
 .m-navbar {
   width: 100%;
   height: 120px; }
@@ -2591,3 +2587,103 @@ html {
     .m-coverlines .m-coverlines--logo img {
       height: 100%;
       width: auto; }
+
+.hero-tabs {
+  background-color: black;
+  height: 620px;
+  color: white;
+  position: relative; }
+  .hero-tabs .content-tab {
+    background-image: url("http://lorempixel.com/1000/700");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 620px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-top: 60px; }
+    .hero-tabs .content-tab .description {
+      width: 50%; }
+    .hero-tabs .content-tab.mm-right .description {
+      width: 50%;
+      float: right;
+      text-align: right; }
+  .hero-tabs .navigation {
+    position: absolute;
+    bottom: 60px;
+    width: 100%; }
+  .hero-tabs .tab {
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.3em;
+    padding: 16px 16px;
+    padding-top: 12px;
+    color: white;
+    border-top: 3px solid white;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+    .hero-tabs .tab:hover {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; }
+    .hero-tabs .tab.color-1 {
+      border-color: #7AB929; }
+      .hero-tabs .tab.color-1:hover {
+        background-color: #7AB929; }
+      .hero-tabs .tab.color-1.active {
+        background-color: #7AB929; }
+    .hero-tabs .tab.color-2 {
+      border-color: #6DC1AE; }
+      .hero-tabs .tab.color-2:hover {
+        background-color: #6DC1AE; }
+      .hero-tabs .tab.color-2.active {
+        background-color: #6DC1AE; }
+    .hero-tabs .tab.color-3 {
+      border-color: #4E9ED8; }
+      .hero-tabs .tab.color-3:hover {
+        background-color: #4E9ED8; }
+      .hero-tabs .tab.color-3.active {
+        background-color: #4E9ED8; }
+    .hero-tabs .tab.color-4 {
+      border-color: #7D83BF; }
+      .hero-tabs .tab.color-4:hover {
+        background-color: #7D83BF; }
+      .hero-tabs .tab.color-4.active {
+        background-color: #7D83BF; }
+    .hero-tabs .tab.color-5 {
+      border-color: #9C6FAE; }
+      .hero-tabs .tab.color-5:hover {
+        background-color: #9C6FAE; }
+      .hero-tabs .tab.color-5.active {
+        background-color: #9C6FAE; }
+    .hero-tabs .tab.color-6 {
+      border-color: #E8308A; }
+      .hero-tabs .tab.color-6:hover {
+        background-color: #E8308A; }
+      .hero-tabs .tab.color-6.active {
+        background-color: #E8308A; }
+    .hero-tabs .tab.color-7 {
+      border-color: #E50051; }
+      .hero-tabs .tab.color-7:hover {
+        background-color: #E50051; }
+      .hero-tabs .tab.color-7.active {
+        background-color: #E50051; }
+    .hero-tabs .tab.color-8 {
+      border-color: #EC6608; }
+      .hero-tabs .tab.color-8:hover {
+        background-color: #EC6608; }
+      .hero-tabs .tab.color-8.active {
+        background-color: #EC6608; }
+    .hero-tabs .tab.color-9 {
+      border-color: #F4B003; }
+      .hero-tabs .tab.color-9:hover {
+        background-color: #F4B003; }
+      .hero-tabs .tab.color-9.active {
+        background-color: #F4B003; }
+    .hero-tabs .tab.color-10 {
+      border-color: #B5BBB4; }
+      .hero-tabs .tab.color-10:hover {
+        background-color: #B5BBB4; }
+      .hero-tabs .tab.color-10.active {
+        background-color: #B5BBB4; }

@@ -1,0 +1,74 @@
+.hero-tabs {
+    background-color: black;
+    height: 620px;
+    color: white;
+    position: relative;
+
+
+    .content-tab {
+
+        background-image: url("http://lorempixel.com/1000/700");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 620px;
+        font-size: rem-calc(24px);
+        font-weight: 800;
+        padding-top: 60px;
+
+
+        .description {
+            width: 50%;
+        }
+
+
+        &.mm-right {
+            .description {
+                width: 50%;
+                float: right;
+                text-align: right;
+            }
+        }
+    }
+
+
+
+    .navigation {
+        position: absolute;
+        bottom: 60px;
+        width: 100%;
+    }
+
+
+
+    .tab {
+        font-weight: 600;
+        font-size: rem-calc(17);
+        line-height: 1.3em;
+        padding: 16px 16px;
+        padding-top: 12px;
+
+        color: white;
+        border-top: 3px solid white;
+
+        cursor: pointer;
+
+        @include transition(all 0.3s);
+
+        &:hover {
+            @include transition(all 0.3s);
+        }
+
+        @each $colorName, $colorValue in $pallete {
+            &.color-#{$colorName} {
+                border-color: $colorValue;
+                &:hover {
+                    background-color: $colorValue;
+                }
+                &.active {
+                    background-color: $colorValue;
+                }
+            }
+        }
+
+    }
+}
