@@ -1,0 +1,45 @@
+
+// base containers
+@mixin l-grid() {
+
+}
+
+@mixin mediaDebug() {
+    &:after {
+        background-color: #5fb555;
+        content: "Size A";
+        position: fixed;
+        z-index: 10000;
+        height: 30px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+
+        @include media(B) {
+            background-color: #1fa59b;
+            content: "Size B";
+        }
+
+        @include media(C) {
+            background-color: #2366a0;
+            content: "Size C";
+        }
+
+        @include media(D) {
+            background-color: #423480;
+            content: "Size D";
+        }
+    }
+}
+
+body {
+    @include mediaDebug();
+}
+
+
+
+

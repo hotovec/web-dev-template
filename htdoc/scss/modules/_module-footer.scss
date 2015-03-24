@@ -1,22 +1,7 @@
 $footer-copyright-height: 64px !default;
 
-$footer: (
-        columns: 8,
-        gutters: 0,
-        math: fluid,
-        gutter-position: inside,
-        container: auto,
-        container-position: center,
-);
 
-$footerCopyright: (
-        columns: 7,
-        gutters: 0,
-        math: fluid,
-        gutter-position: inside,
-        container: auto,
-        container-position: center,
-);
+
 
 // module inner base layout
 
@@ -24,34 +9,26 @@ $footerCopyright: (
 
     height: 100%;
     width: 100%;
-
+    @include l-grid();
 
     .m-footer--container {
-        @include l-grid();
-        @include layout($footer);
     }
 
     .m-footer--section {
-        @include span(2);
         border: 1px solid black;
     }
 
     .m-footer--copyright {
-        @include span(8);
         height: $footer-copyright-height;
-        border: 1px solid black;
+        border: 1px solid red;
         display: flex;
     }
 
     .m-footer--menu-primary,
     .m-footer--menu-secondary {
-        @include layout($footerCopyright);
-        @include span(3);
-        @include inline-list();
         border: 1px solid blue;
     }
     .m-footer--logo {
-        @include span(1);
     }
 
 }
@@ -59,11 +36,6 @@ $footerCopyright: (
 // module default style
 
 .m-footer {
-    background-color: grey;
-
-    .m-footer--container {
-        background-color: grey;
-    }
 
     .m-footer--menu-primary {
         @include inline-list(left, 30px);

@@ -1,0 +1,72 @@
+// Media query function, this provide also variable setup, which make use all grids much more comfortable.
+// You have your variables set to right valuse at time you call mediaquery.
+// It is possible to add some other functions which you need to be set up in current screen "size".
+
+// syntax:  @include media(C) { ... }
+
+$current_size: A;
+$navbar-height_AB: 48px;
+$navbar-height_CD: 48px;
+
+@mixin media($size) {
+    $queryString: $small-up;
+    $current_size: $size; // register global variable for current screen size debugging
+
+    @if $size == A {
+        // Variable setup for size A
+        $queryString: $small-up;
+
+    } @else if $size == B {
+        // Variable setup for size B
+        $navbar-height: $navbar-height_AB;
+        $queryString: $medium-up;
+
+    } @else if $size == C {
+        // Variable setup for size C
+        $navbar-height: $navbar-height_CD;
+        $queryString: $large-up;
+
+    } @else if $size == D {
+        // Variable setup for size D
+        $navbar-height: $navbar-height_CD;
+        $queryString: $xlarge-up;
+
+    } @else if $size == E {
+        // Variable setup for size D
+        $navbar-height: $navbar-height_CD;
+        $queryString: $xxlarge-up;
+
+    } @else if $size == A-only {
+        // Variable setup for size A
+        $navbar-height: $navbar-height_AB;
+        $queryString: $small-only;
+
+    } @else if $size == B-only {
+        // Variable setup for size B
+        $navbar-height: $navbar-height_AB;
+        $queryString: $medium-only;
+
+    } @else if $size == C-only {
+        // Variable setup for size C
+        $navbar-height: $navbar-height_CD;
+        $queryString: $large-only;
+
+    } @else if $size == D-only {
+        // Variable setup for size C
+        $navbar-height: $navbar-height_CD;
+        $queryString: $xlarge-only;
+
+    } @else if $size == E-only {
+        // Variable setup for size C
+        $navbar-height: $navbar-height_CD;
+        $queryString: $xxlarge-only;
+    }
+
+    @media #{$queryString} {
+        @content;
+
+        //reset defaults
+        $navbar-height: $navbar-height_AB;
+    }
+
+}

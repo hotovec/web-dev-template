@@ -1,6 +1,6 @@
 $navbar-height:48px !default;
 $navbar-status-height:24px !default;
-$navbar-font-primary: 'helvetica neue', Helvetica, Arial, sans-serif !default;
+$navbar-font-primary: $font-family-headline !default;
 
 $navbar-color: #666 !default;
 $navbar-bg-color: transparent !default;
@@ -11,30 +11,17 @@ $navbar-font-size: rem(12) !default;
 $navbar-font-weight: 600 !default;
 $navbar-text-transform: uppercase !default;
 
-$navbar: (
-        columns: 5,
-        gutters: 0,
-        math: fluid,
-        gutter-position: inside,
-        container: auto,
-        container-position: center,
-);
-
 // module default layout
 
 .m-navbar {
-
     height: 100%;
     width: 100%;
 
 
     .m-navbar--container {
-
         @include l-grid();
-
         display: flex;
         flex-wrap: wrap;
-        @include layout($navbar);
     }
 
     .m-navbar--menu-logo,
@@ -44,17 +31,14 @@ $navbar: (
     }
 
     .m-navbar--logo {
-        @include span(1);
         order: 1;
     }
 
     .m-navbar--menu-primary {
-        @include span(2);
         order: 2;
     }
 
     .m-navbar--menu-secondary {
-        @include span(2);
         order: 3;
     }
 }

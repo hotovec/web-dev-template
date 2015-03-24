@@ -4,17 +4,19 @@
 // Behold; here are all the Foundation components.
 
 //@import "../../components/foundation/scss/foundation/components/accordion";
-@import "../../components/foundation/scss/foundation/components/alert-boxes";
-@import "../../components/foundation/scss/foundation/components/block-grid";
+
+//@import "../../components/foundation/scss/foundation/components/alert-boxes";
+//@import "../../components/foundation/scss/foundation/components/block-grid";
 //@import "../../components/foundation/scss/foundation/components/breadcrumbs";
-@import "../../components/foundation/scss/foundation/components/button-groups";
+//@import "../../components/foundation/scss/foundation/components/button-groups";
 @import "../../components/foundation/scss/foundation/components/buttons";
 @import "../../components/foundation/scss/foundation/components/clearing";
 //@import "../../components/foundation/scss/foundation/components/dropdown";
 //@import "../../components/foundation/scss/foundation/components/dropdown-buttons";
-@import "../../components/foundation/scss/foundation/components/flex-video";
+//@import "../../components/foundation/scss/foundation/components/flex-video";
 @import "../../components/foundation/scss/foundation/components/forms";
-//@import "../../components/foundation/scss/foundation/components/grid";
+@import "../../components/foundation/scss/foundation/components/grid";
+
 //@import "../../components/foundation/scss/foundation/components/joyride";
 //@import "../../components/foundation/scss/foundation/components/keystrokes";
 //@import "../../components/foundation/scss/foundation/components/labels";
@@ -34,9 +36,11 @@
 //@import "../../components/foundation/scss/foundation/components/thumbs";
 //@import "../../components/foundation/scss/foundation/components/tooltips";
 //@import "../../components/foundation/scss/foundation/components/top-bar";
+
 @import "../../components/foundation/scss/foundation/components/type";
+
 //@import "../../components/foundation/scss/foundation/components/offcanvas";
 //@import "../../components/foundation/scss/foundation/components/visibility";
 
 // used custom version
-//@import "../../components/foundation/scss/foundation/components/inline-lists";
+//@import "../../components/bower-foundation5/scss/foundation/components/inline-lists";

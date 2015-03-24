@@ -19,8 +19,7 @@ $inline-list-children-display: block !default;
     padding: 0;
     list-style: none;
     overflow: $inline-list-overflow;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:0 ;
 
     & > li {
         list-style: none;

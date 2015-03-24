@@ -1,26 +1,38 @@
 // componentns
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
-@import "../components/susy/sass/susy";
+//@import "../components/susy/sass/susy";
+
+// skin variables
+@import "skin";
 
 // settings
 @import "settings";
 
+
 // foundation
-
-//@import "foundation/foundation_settings";
+@import "foundation/settings";
 @import "foundation/foundation";
-//@import "foundation/foundation_overrides";
-
+@import "foundation/foundation-media-wrapper";
 
 // custom libs
-@import "lib/inline-lists"; // can break foundation one
+@import "lib/vertical-align";
 
-// base
+
 @import "base/globals";
+@import "base/grid";
+
+
+// foundation overrides
+@import "foundation/override_row"; // can break foundation one
+@import "foundation/override-inline-lists"; // can break foundation one
+
+
+
+
+
 
 // layouts and modules
-@import "layouts/layout-main";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
 @import "layouts/layout-page-detail-full";
@@ -31,3 +43,4 @@
 @import "modules/module-content-article";
 
 // dev
+
