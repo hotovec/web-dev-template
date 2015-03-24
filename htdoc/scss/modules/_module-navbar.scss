@@ -48,10 +48,15 @@ $navbar-text-transform: uppercase !default;
         }
 
         .m-navbar--menu-primary {
+            order: 1;
         }
-        .m-navbar--menu-tertiary {
-        }
+
         .m-navbar--menu-secondary {
+            order: 2;
+        }
+
+        .m-navbar--menu-tertiary {
+            order: 3;
         }
     }
 
@@ -108,13 +113,17 @@ $navbar-text-transform: uppercase !default;
 
     .m-navbar--menu-secondary {
         @include inline-list(right);
+
+
     }
 
     .m-navbar--menu-social {
         a {
-            padding: 0 5px;
+            padding: 0;
         }
-        em { display: none;}
+        em {
+            display: none;
+        }
     }
 
     // secondary navbar
@@ -124,6 +133,27 @@ $navbar-text-transform: uppercase !default;
         line-height: $navbar-secondary-height;
 
         border-top: 0;
+
+        .m-navbar--menu {
+            height: auto;
+            padding: 0;
+            border-right: 1px solid $color-secondary;
+
+            > li {
+                padding: 0 10px;
+            }
+            a {
+                padding: 0;
+            }
+
+            &:last-of-type {
+                border: none;
+                > li {
+                    padding-right: 0;
+                }
+            }
+
+        }
 
         a {
             font-size: $navbar-secondary-font-size;
