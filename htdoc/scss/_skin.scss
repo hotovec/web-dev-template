@@ -13,16 +13,16 @@ $color-body-bg:     #ECEDEC;
 // color custom schema
 
 $pallete: (
-        "c1": #7AB929,
-        "c2": #6DC1AE,
-        "c3": #4E9ED8,
-        "c4": #7D83BF,
-        "c5": #9C6FAE,
-        "c6": #E8308A,
-        "c7": #E50051,
-        "c8": #EC6608,
-        "c9": #F4B003,
-        "c10": #B5BBB4
+        "1": #7AB929,
+        "2": #6DC1AE,
+        "3": #4E9ED8,
+        "4": #7D83BF,
+        "5": #9C6FAE,
+        "6": #E8308A,
+        "7": #E50051,
+        "8": #EC6608,
+        "9": #F4B003,
+        "10": #B5BBB4
 );
 
 @function pallete($key) {
