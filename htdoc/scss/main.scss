@@ -30,10 +30,12 @@
 
 
 // layouts and modules
+@import "layouts/layout-section";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
 @import "layouts/layout-page-detail-full";
 
+@import "modules/module-hero";
 @import "modules/module-navbar";
 @import "modules/module-footer";
 @import "modules/module-coverlines";

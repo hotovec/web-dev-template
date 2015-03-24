@@ -2305,6 +2305,10 @@ html {
     .row {
       max-width: 1296px; } }
 
+.l-section,
+.l-section_hero {
+  border: 2px solid gray; }
+
 .l-navbar.is-sticky {
   position: fixed;
   width: 100%;
@@ -2358,6 +2362,10 @@ html {
     overflow: hidden; }
   .l-page.l-page_detail-full .l-page--container aside {
     display: none; }
+
+.m-hero {
+  background-color: black;
+  height: 500px; }
 
 .m-navbar {
   width: 100%;

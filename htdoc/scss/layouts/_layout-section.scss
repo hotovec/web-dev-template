@@ -1,0 +1,8 @@
+@mixin l-section-base() {
+    border: 2px solid gray;
+}
+
+.l-section,
+.l-section_hero {
+    @include l-section-base();
+}
