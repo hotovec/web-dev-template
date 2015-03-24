@@ -1,15 +1,3 @@
 .row {
-    background-color: darkturquoise;
-
-    max-width: $layout-width-A;
-
-    @include media(B) {
-        max-width: $layout-width-B;
-    }
-    @include media(C) {
-        max-width: $layout-width-C;
-    }
-    @include media(D) {
-        max-width: $layout-width-D;
-    }
+    @include l-grid();
 }

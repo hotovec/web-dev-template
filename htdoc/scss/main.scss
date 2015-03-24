@@ -5,9 +5,8 @@
 
 // skin variables
 @import "skin";
-
-// settings
 @import "settings";
+
 
 
 // foundation
@@ -15,13 +14,11 @@
 @import "foundation/foundation";
 @import "foundation/foundation-media-wrapper";
 
-// custom libs
-@import "lib/vertical-align";
-
-
-@import "base/globals";
+// settings
 @import "base/grid";
+@import "base/globals";
 
+@import "lib/vertical-align";
 
 // foundation overrides
 @import "foundation/override_row"; // can break foundation one
