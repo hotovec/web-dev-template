@@ -1,6 +1,8 @@
 
 // base containers
 @mixin l-grid() {
+    margin: 0 auto;
+
         max-width: $layout-width-A;
 
         @include media(B) {
