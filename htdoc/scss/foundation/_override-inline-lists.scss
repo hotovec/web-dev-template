@@ -4,7 +4,7 @@
 
 $inline-list-overflow: hidden !default;
 $inline-list-display: block !default;
-$inline-list-children-display: block !default;
+$inline-list-children-display: inline-block !default;
 
 
 @mixin inline-list($direction: left, $margin-opposite: 0px, $margin-dir: 0) {

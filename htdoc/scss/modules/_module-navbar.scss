@@ -1,22 +1,24 @@
-$navbar-height:48px !default;
-$navbar-status-height:24px !default;
+$navbar-height: 120px;
+
+$navbar-secondary-height: 30px !default;
+$navbar-status-height: 24px !default;
 $navbar-font-primary: $font-family-headline !default;
 
 $navbar-color: #666 !default;
-$navbar-bg-color: transparent !default;
-$navbar-hover-color: darken($navbar-color, 20%) !default;
+$navbar-bg-color: #fff !default;
+$navbar-hover-color: $color-primary !default;
 $navbar-hover-bg-color: transparent !default;
 $navbar-border-color: #dfdfe3 !default;
-$navbar-font-size: rem(12) !default;
+$navbar-font-size: rem(14) !default;
+$navbar-secondary-font-size: rem(12) !default;
 $navbar-font-weight: 600 !default;
 $navbar-text-transform: uppercase !default;
 
-// module default layout
+// module inner default layout
 
 .m-navbar {
-    height: 100%;
     width: 100%;
-
+    height: $navbar-height;
 
     .m-navbar--container {
         @include l-grid();
@@ -25,22 +27,34 @@ $navbar-text-transform: uppercase !default;
     }
 
     .m-navbar--menu-logo,
-    .m-navbar--menu-primary,
-    .m-navbar--menu-secondary {
+    .m-navbar--menu {
         height: $navbar-height;
     }
 
     .m-navbar--logo {
+        flex: 2;
         order: 1;
     }
-
     .m-navbar--menu-primary {
         order: 2;
     }
-
     .m-navbar--menu-secondary {
         order: 3;
     }
+
+    &.mm-secondary {
+        .m-navbar--container {
+            justify-content: flex-end;
+        }
+
+        .m-navbar--menu-primary {
+        }
+        .m-navbar--menu-tertiary {
+        }
+        .m-navbar--menu-secondary {
+        }
+    }
+
 }
 
 // module default styling
@@ -50,14 +64,14 @@ $navbar-text-transform: uppercase !default;
     background-color: $navbar-bg-color;
     border-top: 1px solid $navbar-border-color;
     border-bottom: 1px solid $navbar-border-color;
-
     font-family: $navbar-font-primary;
     font-size: $navbar-font-size;
     font-weight: $navbar-font-weight;
     text-transform: $navbar-text-transform;
 
-    li {}
-    em { font-style: normal; }
+    em {
+        font-style: normal;
+    }
 
     .m-navbar--logo {
         .mm-has-svg {
@@ -68,10 +82,7 @@ $navbar-text-transform: uppercase !default;
         }
     }
 
-
-    .m-navbar--menu-primary,
-    .m-navbar--menu-secondary {
-
+    .m-navbar--menu {
         a {
             display: block;
             height: 100%;
@@ -90,7 +101,7 @@ $navbar-text-transform: uppercase !default;
         }
     }
 
-
+    .m-navbar--menu,
     .m-navbar--menu-primary {
         @include inline-list(left);
     }
@@ -99,5 +110,30 @@ $navbar-text-transform: uppercase !default;
         @include inline-list(right);
     }
 
+    .m-navbar--menu-social {
+        a {
+            padding: 0 5px;
+        }
+        em { display: none;}
+    }
 
+    // secondary navbar
+    &.mm-secondary {
+        font-size: $navbar-secondary-font-size;
+        height: $navbar-secondary-height;
+        line-height: $navbar-secondary-height;
+
+        border-top: 0;
+
+        a {
+            font-size: $navbar-secondary-font-size;
+            height: $navbar-secondary-height;
+            line-height: $navbar-secondary-height;
+        }
+    }
+
+}
+
+.m-navbar.mm-secondary ~ .m-navbar {
+    border-top: none;
 }
