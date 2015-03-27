@@ -2480,16 +2480,6 @@ body {
         width: calc(100% * 1 - 30px);
         margin-left: 15px;
         margin-right: 15px; } }
-  .l-section_block-feed .slide {
-    *zoom: 1;
-    float: left;
-    width: calc(100% * 0.5);
-    border: 1px solid red; }
-    .l-section_block-feed .slide:before, .l-section_block-feed .slide:after {
-      content: '';
-      display: table; }
-    .l-section_block-feed .slide:after {
-      clear: both; }
   .l-section_block-feed .slick-list {
     overflow: visible !important; }
   .l-section_block-feed .slick-slide {

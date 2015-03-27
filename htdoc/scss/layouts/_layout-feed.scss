@@ -84,15 +84,10 @@
         }
     }
 
-    .slide {
-        @include cf();
-        @include column(1/2, $gut: 0);
-        border: 1px solid red;
-    }
-
     .slick-list {
         overflow: visible !important;
     }
+
     .slick-slide {
         opacity: .2;
         @include transition(opacity 0.3s);
