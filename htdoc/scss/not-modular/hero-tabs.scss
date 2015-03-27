@@ -1,13 +1,14 @@
 .hero-tabs {
-    background-color: black;
-    height: 620px;
-    color: white;
-    position: relative;
+    //background-color: black;
 
+    height: 620px;
+    position: relative;
+    color: white;
 
     .content-tab {
 
         background-image: url("http://lorempixel.com/1000/700");
+
         background-repeat: no-repeat;
         background-size: cover;
         height: 620px;
@@ -15,30 +16,26 @@
         font-weight: 800;
         padding-top: 60px;
 
-
         .description {
-            width: 50%;
+            width: 90%;
+            @include media(C) {
+                width: 50%;
+            }
         }
-
 
         &.mm-right {
             .description {
-                width: 50%;
                 float: right;
                 text-align: right;
             }
         }
     }
 
-
-
     .navigation {
         position: absolute;
         bottom: 60px;
         width: 100%;
     }
-
-
 
     .tab {
         font-weight: 600;

@@ -2728,10 +2728,9 @@ html {
       width: auto; }
 
 .hero-tabs {
-  background-color: black;
   height: 620px;
-  color: white;
-  position: relative; }
+  position: relative;
+  color: white; }
   .hero-tabs .content-tab {
     background-image: url("http://lorempixel.com/1000/700");
     background-repeat: no-repeat;
@@ -2741,9 +2740,11 @@ html {
     font-weight: 800;
     padding-top: 60px; }
     .hero-tabs .content-tab .description {
-      width: 50%; }
+      width: 90%; }
+      @media only screen and (min-width: 961px) {
+        .hero-tabs .content-tab .description {
+          width: 50%; } }
     .hero-tabs .content-tab.mm-right .description {
-      width: 50%;
       float: right;
       text-align: right; }
   .hero-tabs .navigation {
