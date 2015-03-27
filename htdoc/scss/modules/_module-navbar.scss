@@ -1,4 +1,4 @@
-$navbar-height: 120px;
+$navbar-height: 48px;
 
 $navbar-secondary-height: 30px !default;
 $navbar-status-height: 24px !default;
@@ -18,45 +18,69 @@ $navbar-text-transform: uppercase !default;
 
 .m-navbar {
     width: 100%;
-    height: $navbar-height;
+    height: auto;
+    @include cf();
 
     .m-navbar--container {
         @include l-grid();
-        display: flex;
-        flex-wrap: wrap;
+
+        /* -ms-box-orient: horizontal;
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -moz-flex;
+         display: -webkit-flex;
+         display: flex;*/
+
+        //-webkit-flex-flow: wrap row;
+        //flex-flow: wrap row;
     }
 
     .m-navbar--menu-logo,
     .m-navbar--menu {
         height: $navbar-height;
     }
+    &.mm-primary {
 
-    .m-navbar--logo {
-        flex: 2;
-        order: 1;
-    }
-    .m-navbar--menu-primary {
-        order: 2;
-    }
-    .m-navbar--menu-secondary {
-        order: 3;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .m-navbar--logo,
+        .m-navbar--menu-primary,
+        .m-navbar--menu-secondary {
+            @include column(1);
+            text-align: center;
+        }
+
+        @include media(C) {
+            .m-navbar--logo {
+                @include column(.3);
+            }
+
+            .m-navbar--menu-secondary {
+                @include column(.7);
+            }
+        }
     }
 
     &.mm-secondary {
-        .m-navbar--container {
-            justify-content: flex-end;
-        }
 
         .m-navbar--menu-primary {
-            order: 1;
+            @include column(.4);
         }
 
         .m-navbar--menu-secondary {
-            order: 2;
+            @include column(.3);
         }
 
         .m-navbar--menu-tertiary {
-            order: 3;
+            @include column(.3);
+        }
+
+        display: none;
+
+        @include media(C) {
+            display: block;
         }
     }
 
@@ -84,6 +108,11 @@ $navbar-text-transform: uppercase !default;
             min-height: $navbar-height;
             background-repeat: no-repeat;
             background-size: contain;
+            background-position: 50% 50%;
+
+            @include media(C) {
+                background-position: 0 50%;
+            }
         }
     }
 
@@ -113,8 +142,6 @@ $navbar-text-transform: uppercase !default;
 
     .m-navbar--menu-secondary {
         @include inline-list(right);
-
-
     }
 
     .m-navbar--menu-social {
