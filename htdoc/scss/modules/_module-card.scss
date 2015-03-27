@@ -1,0 +1,48 @@
+@mixin m-card() {
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+            color: $color-black;
+            text-decoration: underline;
+        }
+    }
+
+    .m-item--hed {
+        font-size: rem-calc(18);
+    }
+
+    .m-item--description {
+        font-size: rem-calc(14);
+    }
+
+    .m-item--image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+.m-card_standard {
+    @include m-card();
+
+    border: 1px solid red;
+}
+
+.m-card_image {
+
+    @include m-card();
+    border: 1px solid blue;
+    height: 100%;
+    overflow: hidden;
+
+    .m-item--description {
+        display: none;
+    }
+
+}
+
+

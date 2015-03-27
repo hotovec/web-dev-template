@@ -29,11 +29,19 @@
 @import "layouts/layout-section";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
+@import "layouts/layout-feed";
+
 @import "layouts/layout-page-detail-full";
 
 @import "modules/module-navbar";
 @import "modules/module-footer";
 @import "modules/module-coverlines";
+
+@import "modules/module-content-item";
+@import "modules/module-card";
+
+
+
 @import "modules/module-content-article";
 
 @import "not-modular/hero-tabs";

@@ -1,21 +1,22 @@
-
 // base containers
 @mixin l-grid() {
-        box-sizing: border-box;
 
-        @include container($pad: 30px, $mw: $layout-width-A);
+    box-sizing: border-box;
+    @include cf();
 
-        @include media(B) {
-            @include container($pad: 30px, $mw: $layout-width-B);
-        }
+    @include container($mw: $layout-width-A);
 
-        @include media(C) {
-            @include container($pad: 0, $mw: $layout-width-C);
-        }
+    @include media(B) {
+        @include container($mw: $layout-width-B);
+    }
 
-        @include media(D) {
-            @include container($pad: 0, $mw: $layout-width-D);
-        }
+    @include media(C) {
+        @include container($mw: $layout-width-C);
+    }
+
+    @include media(D) {
+        @include container($mw: $layout-width-D);
+    }
 }
 
 @mixin mediaDebug() {

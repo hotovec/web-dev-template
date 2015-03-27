@@ -1,0 +1,105 @@
+.l-feed {
+}
+
+.l-row {
+    @include l-grid();
+}
+
+.l-full {
+    @include column(1);
+}
+
+.l-half {
+}
+
+.l-single {
+}
+
+.l-underlay {
+    z-index: -1;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+//
+
+.l-section_triple-card {
+
+    display: none;
+
+    .l-single {
+        @include column(1);
+
+        @include media(B) {
+            @include column(1/3);
+        }
+
+        @include media(C) {
+            @include column(1/3, $gut: 80px);
+        }
+
+        @include media(D) {
+            @include column(1/3, $gut: 150px);
+
+        }
+    }
+}
+
+.l-section_block-feed {
+
+    width: 100%;
+    overflow: hidden;
+
+    .l-single,
+    .l-double,
+    .l-half {
+        overflow: hidden;
+        margin-bottom: 20px;
+        height: 210px;
+
+        @include media(C) {
+            height: 210px;
+        }
+        @include media(D) {
+            height: 294px;
+        }
+    }
+
+    .l-single {
+        @include column(1/2);
+        @include media(C) {
+            @include column(1/2);
+        }
+    }
+
+    .l-double {
+        @include column(1);
+
+        @include media(C) {
+            @include column(1);
+        }
+    }
+
+    .slide {
+        @include cf();
+        @include column(1/2, $gut: 0);
+        border: 1px solid red;
+    }
+
+    .slick-list {
+        overflow: visible !important;
+    }
+    .slick-slide {
+        opacity: .2;
+        @include transition(opacity 0.3s);
+        &.slick-active {
+            @include transition(opacity 0.3s);
+            opacity: 1;
+        }
+    }
+
+}
