@@ -1,7 +1,7 @@
 // componentns
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
-//@import "../components/susy/sass/susy";
+@import "../components/lost-grid/scss/lost";
 
 // skin variables
 @import "skin";
@@ -25,11 +25,8 @@
 @import "foundation/override-inline-lists"; // can break foundation one
 
 
-
-
-
-
 // layouts and modules
+@import "layouts/layout-section";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
 @import "layouts/layout-page-detail-full";
@@ -39,5 +36,5 @@
 @import "modules/module-coverlines";
 @import "modules/module-content-article";
 
+@import "not-modular/hero-tabs";
 // dev
-

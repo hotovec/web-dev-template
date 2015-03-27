@@ -9,6 +9,8 @@
         {% include "subtemplates/module-navbar.twig" %}
     </div>
 
+    {% include "subtemplates/hero-tabs.twig" %}
+
 
     <div class="l-page--container">
         <aside>this is aside</aside>
@@ -20,6 +22,42 @@
     </div>
 
     {{ parent() }}
+
+    <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
+    <script>
+        var homeSlick = $('.slides').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+
+        $(function () {
+            var oldSlick = null;
+
+            $("[slickTo]").each(function () {
+                $(this).mouseenter(function () {
+                    if (oldSlick) {
+                        oldSlick.removeClass("active");
+                    }
+
+                    var slide = $(this).attr("slickTo");
+                    $(this).addClass("active");
+                    $('.slides').slick('slickGoTo', slide);
+                    oldSlick = $(this);
+                });
+
+
+
+            });
+
+        });
+
+    </script>
+
+
     </body>
 {% endblock %}
 
