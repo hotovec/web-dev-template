@@ -371,6 +371,23 @@ td,
 th {
   padding: 0; }
 
+.container {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+
+.row {
+  *zoom: 1;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .row:before, .row:after {
+    content: '';
+    display: table; }
+  .row:after {
+    clear: both; }
+
 span.color-primary {
   color: #C20E1A; }
 span.color-secondary {
