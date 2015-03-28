@@ -1,8 +1,43 @@
-@mixin l-section-base() {
+@mixin m-section-base() {
     border: 2px solid gray;
+    padding: 50px 0;
 }
 
-.l-section,
-.l-section_hero {
-    @include l-section-base();
+.m-section--hed {
+    font-size: rem-calc(30);
+}
+
+.m-section--item { }
+
+.m-section {
+    @include m-section-base();
+}
+
+.l-section_side-triple {
+
+    .m-section--hed {
+        @include column(2/4);
+    }
+
+    .m-section--item {
+
+        @include column(1/4);
+        overflow: hidden;
+
+        &:nth-of-type(1) {
+            height: 200*2px + $gutter;
+            @include move(1/4);
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        {
+            height: 200px;
+            @include move(-1/4);
+        }
+        &:nth-of-type(2) {
+            margin-bottom: $gutter;
+        }
+
+    }
 }
