@@ -7,7 +7,8 @@
     font-size: rem-calc(30);
 }
 
-.m-section--item { }
+.m-section--item {
+}
 
 .m-section {
     @include m-section-base();
@@ -16,28 +17,86 @@
 .l-section_side-triple {
 
     .m-section--hed {
-        @include column(2/4);
+        @include column(1);
+        @include media(C) {
+            @include column(2/4);
+        }
     }
 
     .m-section--item {
+        $cellheight: 120px;
 
-        @include column(1/4);
+        @include column(1/2);
         overflow: hidden;
 
         &:nth-of-type(1) {
-            height: 200*2px + $gutter;
-            @include move(1/4);
+            height: 2 * $cellheight + $gutter;
+            @include move(1/2);
         }
 
         &:nth-of-type(2),
         &:nth-of-type(3),
         {
-            height: 200px;
-            @include move(-1/4);
+            height: $cellheight;
+            @include move(-1/2);
         }
         &:nth-of-type(2) {
             margin-bottom: $gutter;
         }
+    }
 
+    @include media(B) {
+        .m-section--item {
+            $cellheight: 200px;
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+            }
+        }
+    }
+
+    @include media(C) {
+
+        .m-section--item {
+            $cellheight: 140px;
+            @include column(1/4);
+            overflow: hidden;
+
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+                @include move(1/4);
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+                @include move(-1/4);
+            }
+            &:nth-of-type(2) {
+                margin-bottom: $gutter;
+            }
+
+        }
+    }
+
+    @include media(D) {
+        .m-section--item {
+            $cellheight: 200px;
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+            }
+        }
     }
 }
