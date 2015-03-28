@@ -3,22 +3,19 @@
     padding: 50px 0;
     height: auto;
     position: relative;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
-.m-section--header,
-.m-section--footer {
-}
 
 
 // base section hed style
 .m-section--hed {
     font-size: rem-calc(30);
     text-transform: uppercase;
-
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
 
     &.mm-huge {
         font-size: rem-calc(50);
