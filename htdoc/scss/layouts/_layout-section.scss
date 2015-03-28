@@ -1,19 +1,42 @@
 @mixin m-section-base() {
     border: 2px solid gray;
     padding: 50px 0;
+    height: auto;
+    position: relative;
 }
 
+// base section hed style
 .m-section--hed {
     font-size: rem-calc(30);
 }
 
-.m-section--item {
+// base section underlay
+.m-section--underlay {
+    z-index: -1;
+    background-color: rgb(46,46,50);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+
+    background-image: url("http://lorempixel.com/800/500");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
 }
 
+// base section module style
 .m-section {
     @include m-section-base();
 }
 
+// base section layout item
+.l-section--item { }
+
+
+// side-triple section layout
 .l-section_side-triple {
 
     .m-section--hed {
@@ -23,7 +46,7 @@
         }
     }
 
-    .m-section--item {
+    .l-section--item {
         $cellheight: 120px;
 
         @include column(1/2);
@@ -46,7 +69,7 @@
     }
 
     @include media(B) {
-        .m-section--item {
+        .l-section--item {
             $cellheight: 200px;
             &:nth-of-type(1) {
                 height: 2 * $cellheight + $gutter;
@@ -62,7 +85,7 @@
 
     @include media(C) {
 
-        .m-section--item {
+        .l-section--item {
             $cellheight: 140px;
             @include column(1/4);
             overflow: hidden;
@@ -86,7 +109,7 @@
     }
 
     @include media(D) {
-        .m-section--item {
+        .l-section--item {
             $cellheight: 200px;
             &:nth-of-type(1) {
                 height: 2 * $cellheight + $gutter;
