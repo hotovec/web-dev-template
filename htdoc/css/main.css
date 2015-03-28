@@ -1250,17 +1250,25 @@ body {
       padding-right: 0; } }
 
 .m-section--hed {
-  font-size: 1.875rem; }
+  font-size: 1.875rem;
+  text-transform: uppercase; }
+  .m-section--hed.mm-huge {
+    font-size: 3.125rem;
+    font-weight: 200;
+    line-height: 1.2em;
+    margin-bottom: 90px; }
+  .m-section--hed.mm-tiny {
+    font-size: 1.25rem; }
+  .m-section--hed.mm-center {
+    text-align: center; }
 
 .m-section--underlay {
   z-index: -1;
-  background-color: #2e2e32;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
   margin: auto;
-  background-image: url("http://lorempixel.com/800/500");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-attachment: fixed; }
