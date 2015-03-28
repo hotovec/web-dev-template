@@ -29,10 +29,11 @@
 
 //
 
-.l-feed_triple-card {
+.l-feed_triple {
 
     .l-single {
         @include column(1);
+
 
         @include media(B) {
             @include column(1/3);
@@ -49,23 +50,63 @@
     }
 }
 
+.l-feed_six {
+
+    .l-single {
+        @include column(1);
+        margin-bottom: 30px;
+
+        @include media(B) {
+            @include column(1/3);
+        }
+
+        @include media(C) {
+            @include column(1/6);
+        }
+
+        @include media(D) {
+            @include column(1/6);
+
+        }
+    }
+
+    .l-double {
+        @include column(1);
+        margin-bottom: 30px;
+
+        @include media(B) {
+            @include column(2/3);
+        }
+
+        @include media(C) {
+            @include column(2/6);
+        }
+
+        @include media(D) {
+            @include column(2/6);
+
+        }
+    }
+}
+
 .l-feed_block-carousel {
 
     width: 100%;
     overflow: hidden;
-
-    .l-single,
-    .l-double,
-    .l-half {
-        overflow: hidden;
-        margin-bottom: 20px;
-        height: 210px;
-
-        @include media(C) {
+    .l-section--content {
+        .l-single,
+        .l-double,
+        .l-half {
+            overflow: hidden;
+            margin-bottom: 20px;
             height: 210px;
-        }
-        @include media(D) {
-            height: 294px;
+
+            @include media(C) {
+                height: 210px;
+            }
+            @include media(D) {
+                height: 294px;
+            }
         }
     }
 

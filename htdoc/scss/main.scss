@@ -13,6 +13,7 @@
 @import "foundation/settings";
 @import "foundation/foundation";
 @import "foundation/foundation-media-wrapper";
+@import "foundation/override-inline-lists"; // can break foundation one
 
 // settings
 @import "base/grid";
@@ -20,12 +21,9 @@
 
 @import "lib/vertical-align";
 
-// foundation overrides
-@import "foundation/override_row"; // can break foundation one
-@import "foundation/override-inline-lists"; // can break foundation one
-
 
 // layouts and modules
+@import "modules/module-page-scroll";
 @import "layouts/layout-section";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";

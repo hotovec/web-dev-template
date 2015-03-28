@@ -8,8 +8,36 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+
 }
 
+.m-section--header,
+.m-section--footer {
+
+    @include cf();
+
+    text-transform: uppercase;
+    font-weight: 800;
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+}
+
+.m-section--header {
+    margin-bottom: 50px;
+}
+
+.m-section--top {}
+.m-section--more {
+    text-align: right;
+}
 
 
 // base section hed style
@@ -25,7 +53,7 @@
     }
 
     &.mm-tiny {
-        font-size: rem-calc(20);
+        font-size: rem-calc(16);
     }
 
     &.mm-center {

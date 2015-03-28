@@ -1211,9 +1211,6 @@ html {
 body {
   overflow-x: hidden; }
 
-.hide {
-  display: none; }
-
 .row {
   box-sizing: border-box;
   *zoom: 1;
@@ -1249,6 +1246,82 @@ body {
       padding-left: 0;
       padding-right: 0; } }
 
+.hide {
+  display: none; }
+
+.inline {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin: 0; }
+  .inline > li {
+    list-style: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    display: block;
+    height: 100%; }
+    .inline > li:last-child {
+      margin-right: 0; }
+    .inline > li > * {
+      display: inline-block; }
+
+.inline-right {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  margin: 0; }
+  .inline-right > li {
+    list-style: none;
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+    display: block;
+    height: 100%; }
+    .inline-right > li:last-child {
+      margin-left: 0; }
+    .inline-right > li > * {
+      display: inline-block; }
+
+.m-page-scroll {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: fixed;
+  right: 0; }
+  .m-page-scroll .m-page-scroll--item {
+    color: #C20E1A;
+    font-size: 0.8125rem;
+    -webkit-transform: rotate(-90deg) translateY(20px);
+    -moz-transform: rotate(-90deg) translateY(20px);
+    -ms-transform: rotate(-90deg) translateY(20px);
+    -o-transform: rotate(-90deg) translateY(20px);
+    transform: rotate(-90deg) translateY(20px); }
+
+.m-section--header, .m-section--footer {
+  *zoom: 1;
+  text-transform: uppercase;
+  font-weight: 800; }
+  .m-section--header:before, .m-section--header:after, .m-section--footer:before, .m-section--footer:after {
+    content: '';
+    display: table; }
+  .m-section--header:after, .m-section--footer:after {
+    clear: both; }
+  .m-section--header a, .m-section--footer a {
+    text-decoration: none;
+    color: #000; }
+    .m-section--header a:hover, .m-section--footer a:hover {
+      color: #C20E1A;
+      text-decoration: underline; }
+
+.m-section--header {
+  margin-bottom: 50px; }
+
+.m-section--more {
+  text-align: right; }
+
 .m-section--hed {
   font-size: 1.875rem;
   text-transform: uppercase; }
@@ -1258,7 +1331,7 @@ body {
     line-height: 1.2em;
     margin-bottom: 90px; }
   .m-section--hed.mm-tiny {
-    font-size: 1.25rem; }
+    font-size: 1rem; }
   .m-section--hed.mm-center {
     text-align: center; }
 
@@ -1278,6 +1351,9 @@ body {
   padding: 50px 0;
   height: auto;
   position: relative; }
+  .m-section h1, .m-section h2, .m-section h3, .m-section h4, .m-section h5, .m-section h6 {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 .l-section_side-triple .m-section--hed {
   float: left;
@@ -1402,42 +1478,91 @@ body {
   right: 0;
   bottom: 0; }
 
-.l-feed_triple-card .l-single {
+.l-feed_triple .l-single {
   float: left;
   width: calc(100% * 1 - 30px);
   margin-left: 15px;
   margin-right: 15px; }
   @media only screen and (min-width:641px) {
-    .l-feed_triple-card .l-single {
+    .l-feed_triple .l-single {
       float: left;
       width: calc(100% * 0.3333333333 - 30px);
       margin-left: 15px;
       margin-right: 15px; } }
   @media only screen and (min-width:961px) {
-    .l-feed_triple-card .l-single {
+    .l-feed_triple .l-single {
       float: left;
       width: calc(100% * 0.3333333333 - 80px);
       margin-left: 40px;
       margin-right: 40px; } }
   @media only screen and (min-width:1297px) {
-    .l-feed_triple-card .l-single {
+    .l-feed_triple .l-single {
       float: left;
       width: calc(100% * 0.3333333333 - 150px);
       margin-left: 75px;
       margin-right: 75px; } }
 
+.l-feed_six .l-single {
+  float: left;
+  width: calc(100% * 1 - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px; }
+  @media only screen and (min-width:641px) {
+    .l-feed_six .l-single {
+      float: left;
+      width: calc(100% * 0.3333333333 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+  @media only screen and (min-width:961px) {
+    .l-feed_six .l-single {
+      float: left;
+      width: calc(100% * 0.1666666667 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+  @media only screen and (min-width:1297px) {
+    .l-feed_six .l-single {
+      float: left;
+      width: calc(100% * 0.1666666667 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+.l-feed_six .l-double {
+  float: left;
+  width: calc(100% * 1 - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px; }
+  @media only screen and (min-width:641px) {
+    .l-feed_six .l-double {
+      float: left;
+      width: calc(100% * 0.6666666667 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+  @media only screen and (min-width:961px) {
+    .l-feed_six .l-double {
+      float: left;
+      width: calc(100% * 0.3333333333 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+  @media only screen and (min-width:1297px) {
+    .l-feed_six .l-double {
+      float: left;
+      width: calc(100% * 0.3333333333 - 30px);
+      margin-left: 15px;
+      margin-right: 15px; } }
+
 .l-feed_block-carousel {
   width: 100%;
   overflow: hidden; }
-  .l-feed_block-carousel .l-single, .l-feed_block-carousel .l-double, .l-feed_block-carousel .l-half {
+  .l-feed_block-carousel .l-section--content .l-single, .l-feed_block-carousel .l-section--content .l-double, .l-feed_block-carousel .l-section--content .l-half {
     overflow: hidden;
     margin-bottom: 20px;
     height: 210px; }
     @media only screen and (min-width:961px) {
-      .l-feed_block-carousel .l-single, .l-feed_block-carousel .l-double, .l-feed_block-carousel .l-half {
+      .l-feed_block-carousel .l-section--content .l-single, .l-feed_block-carousel .l-section--content .l-double, .l-feed_block-carousel .l-section--content .l-half {
         height: 210px; } }
     @media only screen and (min-width:1297px) {
-      .l-feed_block-carousel .l-single, .l-feed_block-carousel .l-double, .l-feed_block-carousel .l-half {
+      .l-feed_block-carousel .l-section--content .l-single, .l-feed_block-carousel .l-section--content .l-double, .l-feed_block-carousel .l-section--content .l-half {
         height: 294px; } }
   .l-feed_block-carousel .l-single {
     float: left;
