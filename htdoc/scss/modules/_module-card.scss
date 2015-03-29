@@ -1,12 +1,21 @@
 @mixin m-card() {
 
+    article,
+    header {
+        position: relative;
+    }
+
     a {
-        color: $primary-color;
+        color: $color-black;
         text-decoration: none;
         &:hover {
-            color: $color-black;
+            color: $primary-color;
             text-decoration: underline;
         }
+    }
+
+    p {
+        margin: 0;
     }
 
     .m-item--hed {
@@ -33,16 +42,157 @@
 }
 
 .m-card_image {
-
     @include m-card();
-    border: 1px solid blue;
-    height: 100%;
+
+    height: 240px;
     overflow: hidden;
+
+    article,
+    header {
+        height: 100%;
+    }
+
+    .m-item--image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        overflow: hidden;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            border-top: 4px solid transparent;
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .m-item--hed {
+        position: absolute;
+        bottom: 20px;
+        left: 25px;
+        color: white;
+        text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+        a {
+            color: white;
+        }
+    }
 
     .m-item--description {
         display: none;
+        pointer-events: none;
     }
 
+    .m-card--more {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        color: white;
+    }
+
+    &:hover {
+        .m-item--image a:before {
+            opacity: 0.8;
+        }
+
+        .m-item--description {
+            position: absolute;
+            display: block;
+            padding: 30px;
+            color: white;
+        }
+
+        .m-card--more {
+            display: none;
+        }
+    }
+
+    @each $colorName, $colorValue in $pallete {
+        &.mm-color-#{$colorName} {
+            .m-item--image a {
+                border-top-color: $colorValue; //pallete(1);
+                &:before {
+                    background-color: $colorValue; //pallete(1);
+                }
+            }
+        }
+    }
+
+}
+
+.m-card_certificate {
+    @include m-card();
+
+    article {
+        text-align: center;
+    }
+
+    .m-item--image {
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        margin: 0 auto;
+
+        margin-bottom: 30px;
+    }
+
+    .m-item--hed {
+        margin-bottom: 15px;
+    }
+
+}
+
+.m-card_faq {
+    @include m-card();
+    background-color: $color-secondary;
+
+    article {
+        height: 140px;
+        width: 100%;
+        position: relative;
+        //cursor: pointer;
+    }
+
+    .m-item--hed a {
+        padding: 30px;
+        position: absolute;
+        height: 100%;
+        font-size: rem-calc(16);
+        font-weight: 600;
+        color: $color-black;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .m-item--description {
+        padding: 30px;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 140px;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        .m-item--description {
+            // display: block;
+        }
+        .m-item--hed {
+            //display: none;
+        }
+    }
 }
 
 

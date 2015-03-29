@@ -11,54 +11,6 @@
 
     {#{% include "subtemplates/hero-tabs.twig" %}#}
 
-
-    <div class="m-section l-feed_six">
-
-        <header class="m-section--header">
-            <h2 class="m-section--hed mm-center">Certifikace</h2>
-        </header>
-
-        <div class="row">
-            {% for a in 1..6 %}
-                <div class="m-card_standard l-single">
-
-                    <article class="m-story">
-                        <header>
-                            <div class="m-item--image">
-                                <a href="">
-                                    <img src="http://lorempixel.com/400/600" alt="" />
-                                </a>
-                            </div>
-                            <h1 class="m-item--hed">
-                                <a href="">titulek titulek</a>
-                            </h1>
-
-                            <div class="m-item--description">
-                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                            </div>
-                            <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                        </header>
-                    </article>
-
-                </div>
-            {% endfor %}
-        </div>
-
-
-        <div class="row">
-            <footer class="m-section--footer">
-                <div class="l-half">
-                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
-                </div>
-                <div class="l-half">
-                    <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
-                </div>
-            </footer>
-        </div>
-
-    </div>
-
-
     <div class="m-section l-section_side-triple">
 
         <div class="l-grid">
@@ -80,21 +32,30 @@
                             <div class="m-item--description">
                                 <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
                             </div>
-                            <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
                         </header>
                     </article>
+                    <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
+
                 </div>
             {% endfor %}
 
+        </div>
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+                </div>
+            </footer>
         </div>
     </div>
 
 
     <div class="m-section l-feed_block-carousel">
 
-        <div class="m-section--underlay">
-            <div>text pod</div>
-        </div>
+        <div class="m-section--underlay"></div>
 
         <div class="l-grid">
             <header class="m-section--header">
@@ -268,7 +229,7 @@
     </div>
 
 
-    <div class="m-section l-feed_triple">
+    <div class="m-section l-feed_triple-card">
 
         <div class="l-grid">
             <h2 class="m-section--hed mm-huge mm-center">Jsme přední český výrobce <span>modulární výstavby</span></h2>
@@ -354,6 +315,193 @@
                     <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
                 </div>
             </footer>
+        </div>
+
+    </div>
+
+    {# FAQ #}
+    <div class="m-section l-feed_three">
+
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+                    <h2 class="m-section--hed">Faq / Znalostní báze</h2>
+                </div>
+            </header>
+        </div>
+
+        <div class="row">
+            {% for a in 1..6 %}
+                <div class="m-card_faq l-single">
+
+                    <article class="m-story">
+                        <header>
+                            <h1 class="m-item--hed">
+                                <a href="">
+                                    Dokáže stavba splnit nízko energetický standard AAA pro školku nebo i další stavby, třeba požární zbrojnice?
+                                </a>
+                            </h1>
+
+                            <div class="m-item--description">
+                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                            </div>
+                        </header>
+                    </article>
+
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <ul class="m-section--nav inline-right">
+                        <li><a href="" title="Novinky">Technická pomoc</a></li>
+                        <li><a href="">informace pro architekty</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+    {# obory #}
+    <div class="m-section l-feed_three">
+
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+                    <h2 class="m-section--hed">Objekty <span class="color-primary">dle účelu</span></h2>
+                </div>
+            </header>
+        </div>
+
+        <div class="row">
+            {% for a in 1..6 %}
+                <div class="m-card_image mm-color-{{ a }} l-single">
+
+                    <article class="m-story">
+                        <header>
+                            <div class="m-item--image">
+                                <a href="">
+                                    <img src="http://lorempixel.com/400/600" alt="" />
+                                </a>
+                            </div>
+                            <h1 class="m-item--hed">
+                                <a href="">titulek titulek</a>
+                            </h1>
+
+                            <div class="m-item--description">
+                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                            </div>
+                        </header>
+                        <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
+                    </article>
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <ul class="m-section--nav inline-right">
+                        <li><a href="" title="Novinky">Technická pomoc</a></li>
+                        <li><a href="">informace pro architekty</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+    <div class="m-section l-feed_six">
+
+        <header class="m-section--header">
+            <h2 class="m-section--hed mm-center">Certifikace</h2>
+        </header>
+
+        <div class="row">
+            {% for a in 1..6 %}
+                <div class="m-card_certificate l-single">
+
+                    <article class="m-story">
+                        <header>
+                            <div class="m-item--image">
+                                <a href="">
+                                    <img src="http://lorempixel.com/400/600" alt="" />
+                                </a>
+                            </div>
+                            <h1 class="m-item--hed">
+                                <a href="">titulek titulek</a>
+                            </h1>
+
+                            <div class="m-item--description">
+                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                            </div>
+                        </header>
+                    </article>
+
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+    <div class="m-section l-section_support">
+
+        <div class="l-grid">
+            <div class="m-section--item">
+
+                <article class="m-newsletter">
+                    <header>
+                        <h1 class="m-newsletter--hed">Podpora pro zákazníky</h1>
+                    </header>
+
+                    <div>Nenašli jste zde odpověď na Vaše otázky? Zeptejte se nás přímo!</div>
+                    <button>Zeptejte se nás <i class="fa fa-arrow-right"></i></button>
+                </article>
+
+            </div>
+            <div class="m-section--item">
+
+                <article class="m-bulletin">
+                    <header>
+                        <h1 class="m-bulletin--hed">Podpora pro zákazníky</h1>
+                    </header>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" />
+                            <button><i class="fa fa-envelope"></i></button>
+                        </div>
+                    </form>
+                    <div>Odběrem našeho měsíčního ebulletinu získáte přehled o dění ve světě modulární architektury i o novinkách systému modulární výstavby KOMA.</div>
+
+                </article>
+
+            </div>
         </div>
 
     </div>
