@@ -1,31 +1,7 @@
 .l-feed {
 }
 
-.l-row,
-.l-grid {
-    @include l-grid();
-}
 
-.l-full {
-    @include column(1);
-}
-
-.l-half {
-    @include column(1/2);
-}
-
-.l-single {
-}
-
-.l-underlay {
-    z-index: -1;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
 
 //
 
