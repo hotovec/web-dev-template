@@ -35,37 +35,39 @@
         position: absolute;
         bottom: 60px;
         width: 100%;
-    }
 
-    .tab {
-        font-weight: 600;
-        font-size: rem-calc(17);
-        line-height: 1.3em;
-        padding: 16px 16px;
-        padding-top: 12px;
+        .tab {
+            @include column(1/6);
 
-        color: white;
-        border-top: 3px solid white;
+            font-weight: 600;
+            font-size: rem-calc(17);
+            line-height: 1.3em;
+            padding: 16px 16px;
+            padding-top: 12px;
 
-        cursor: pointer;
+            color: white;
+            border-top: 3px solid white;
 
-        @include transition(all 0.3s);
+            cursor: pointer;
 
-        &:hover {
             @include transition(all 0.3s);
-        }
 
-        @each $colorName, $colorValue in $pallete {
-            &.color-#{$colorName} {
-                border-color: $colorValue;
-                &:hover {
-                    background-color: $colorValue;
-                }
-                &.active {
-                    background-color: $colorValue;
+            &:hover {
+                @include transition(all 0.3s);
+            }
+
+            @each $colorName, $colorValue in $pallete {
+                &.color-#{$colorName} {
+                    border-color: $colorValue;
+                    &:hover {
+                        background-color: $colorValue;
+                    }
+                    &.active {
+                        background-color: $colorValue;
+                    }
                 }
             }
-        }
 
+        }
     }
 }
