@@ -2162,6 +2162,77 @@ body {
     margin-top: 0;
     margin-bottom: 0; }
 
+.m-section_vertical-tabs {
+  position: relative;
+  background-color: #C20E1A;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 500px; }
+  .m-section_vertical-tabs .m-section--container {
+    height: 100%;
+    position: relative; }
+  .m-section_vertical-tabs .m-section--header {
+    float: left;
+    width: calc(100% * 0.3333333333);
+    height: 100%; }
+  .m-section_vertical-tabs .m-section--nav {
+    float: left;
+    width: calc(100% * 0.1666666667);
+    height: 100%; }
+  .m-section_vertical-tabs .m-section--carousel {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden; }
+    .m-section_vertical-tabs .m-section--carousel .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+  .m-section_vertical-tabs .m-section--header {
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  .m-section_vertical-tabs .m-section--nav {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .m-section_vertical-tabs .m-section--nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      .m-section_vertical-tabs .m-section--nav ul li {
+        position: relative; }
+        .m-section_vertical-tabs .m-section--nav ul li a {
+          display: block;
+          height: 64px;
+          line-height: 64px;
+          color: white;
+          font-weight: 600;
+          text-decoration: none; }
+        .m-section_vertical-tabs .m-section--nav ul li.active a {
+          font-weight: 800; }
+        .m-section_vertical-tabs .m-section--nav ul li.active:after {
+          display: block;
+          width: 64px;
+          height: 64px;
+          background-color: #C20E1A;
+          color: white;
+          text-align: center;
+          position: absolute;
+          top: 0;
+          right: -64px;
+          z-index: 2;
+          font: normal normal normal 14px/62px FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          transform: translate(0, 0);
+          content: "\f061"; }
+  .m-section_vertical-tabs .m-section--carousel .slide {
+    background: #B5BBB4; }
+
 .m-card_standard {
   border: 1px solid red; }
   .m-card_standard article,
