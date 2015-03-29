@@ -7,4 +7,23 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    overflow-x: hidden;
+}
 
+.row {
+    @include l-grid();
+}
+
+
+.hide {
+    display: none;
+}
+
+.inline {
+    @include inline-list(left, 20px);
+}
+
+.inline-right {
+    @include inline-list(right, 20px);
+}

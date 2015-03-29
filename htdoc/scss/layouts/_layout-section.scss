@@ -1,8 +1,214 @@
-@mixin l-section-base() {
+@mixin m-section-base() {
     border: 2px solid gray;
+    padding: 50px 0;
+    height: auto;
+    position: relative;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }
 
-.l-section,
-.l-section_hero {
-    @include l-section-base();
+.m-section--header,
+.m-section--footer {
+
+    @include cf();
+
+    text-transform: uppercase;
+    font-weight: 800;
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
 }
+
+.m-section--header {
+    margin-bottom: 50px;
+}
+
+.m-section--top {
+}
+
+.m-section--more {
+    text-align: right;
+}
+
+// base section hed style
+.m-section--hed {
+    font-size: rem-calc(30);
+    text-transform: uppercase;
+
+    &.mm-huge {
+        font-size: rem-calc(50);
+        font-weight: 200;
+        line-height: 1.2em;
+        margin-bottom: 90px;
+    }
+
+    &.mm-tiny {
+        font-size: rem-calc(16);
+    }
+
+    &.mm-center {
+        text-align: center;
+    }
+
+}
+
+// base section underlay
+.m-section--underlay {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+}
+
+// base section module style
+.m-section {
+    @include m-section-base();
+}
+
+// base section layout item
+.l-section--item {
+}
+
+// side-triple section layout
+.l-section_side-triple {
+
+    .m-section--hed {
+        @include column(1);
+        @include media(C) {
+            @include column(2/4);
+        }
+    }
+
+    .l-section--item {
+        $cellheight: 120px;
+
+        @include column(1/2);
+        overflow: hidden;
+
+        &:nth-of-type(1) {
+            height: 2 * $cellheight + $gutter;
+            @include move(1/2);
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        {
+            height: $cellheight;
+            @include move(-1/2);
+        }
+        &:nth-of-type(2) {
+            margin-bottom: $gutter;
+        }
+    }
+
+    @include media(B) {
+        .l-section--item {
+            $cellheight: 200px;
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+            }
+        }
+    }
+
+    @include media(C) {
+
+        .l-section--item {
+            $cellheight: 140px;
+            @include column(1/4);
+            overflow: hidden;
+
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+                @include move(1/4);
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+                @include move(-1/4);
+            }
+            &:nth-of-type(2) {
+                margin-bottom: $gutter;
+            }
+
+        }
+    }
+
+    @include media(D) {
+        .l-section--item {
+            $cellheight: 200px;
+            &:nth-of-type(1) {
+                height: 2 * $cellheight + $gutter;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            {
+                height: $cellheight;
+            }
+        }
+    }
+}
+
+.l-section_support {
+    .m-section--item {
+
+        &:nth-of-type(1) {
+            @include column(1);
+        }
+        &:nth-of-type(2) {
+            @include column(1);
+        }
+
+
+        @include media(B) {
+            &:nth-of-type(1) {
+                @include column(5/12);
+            }
+            &:nth-of-type(2) {
+                @include column(7/12);
+            }
+        }
+
+        @include media(C) {
+
+            &:nth-of-type(1) {
+                @include column(3/12);
+                @include move(1/12);
+            }
+            &:nth-of-type(2) {
+                @include column(5/12);
+                @include move(3/12);
+            }
+        }
+    }
+
+}
+
+
+

@@ -1,0 +1,11 @@
+.m-page-scroll {
+    @include vertical-align();
+    position: fixed;
+    right: 0;
+
+    .m-page-scroll--item {
+        color: $color-primary;
+        font-size: rem-calc(13);
+        @include transform(rotate(-90deg) translateY(20px));
+    }
+}

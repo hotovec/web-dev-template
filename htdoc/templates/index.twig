@@ -1,7 +1,6 @@
 {% extends "_base.twig" %}
 
 {% block body %}
-    <body class="l-page">
 
 
     <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
@@ -10,54 +9,77 @@
     </div>
 
     {% include "subtemplates/hero-tabs.twig" %}
-
-
-    <div class="l-page--container">
-        <aside>this is aside</aside>
-        {% include "subtemplates/contentArticle.twig" %}
-    </div>
+    {% include "subtemplates/section-side-triple.twig" %}
+    {% include "subtemplates/feed-block-carousel.twig" %}
+    {% include "subtemplates/feed-card-triple.twig" %}
+    {% include "subtemplates/feed-three_faq.twig" %}
+    {% include "subtemplates/feed-three_obory.twig" %}
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/module-support.twig" %}
 
     <div class="l-footer {% if footer.isSticky %}is-sticky{% endif %}">
         {% include "subtemplates/module-footer.twig" %}
     </div>
 
+    {% include "subtemplates/module-page-scroll.twig" %}
+
     {{ parent() }}
 
-    <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
-    <script>
-        var homeSlick = $('.slides').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            adaptiveHeight: true
-        });
+{% endblock %}
 
+{% block scripts %}
+
+    <script>
         $(function () {
+            // hero - tabs js
+            var homeSlick = $('.hero-slides').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+
             var oldSlick = null;
 
             $("[slickTo]").each(function () {
                 $(this).mouseenter(function () {
+                    console.log("slick");
                     if (oldSlick) {
                         oldSlick.removeClass("active");
                     }
 
                     var slide = $(this).attr("slickTo");
                     $(this).addClass("active");
-                    $('.slides').slick('slickGoTo', slide);
+                    $('.hero-slides').slick('slickGoTo', slide);
                     oldSlick = $(this);
                 });
 
 
-
             });
+        });
 
+
+        // block feed JS
+
+        var blogSlick = $('.block-feed-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
     </script>
-
-
-    </body>
 {% endblock %}
 

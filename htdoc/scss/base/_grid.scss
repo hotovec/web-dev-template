@@ -1,19 +1,22 @@
-
 // base containers
 @mixin l-grid() {
-    margin: 0 auto;
 
-        max-width: $layout-width-A;
+    box-sizing: border-box;
+    @include cf();
 
-        @include media(B) {
-            max-width: $layout-width-B;
-        }
-        @include media(C) {
-            max-width: $layout-width-C;
-        }
-        @include media(D) {
-            max-width: $layout-width-D;
-        }
+    @include container($mw: $layout-width-A);
+
+    @include media(B) {
+        @include container($mw: $layout-width-B);
+    }
+
+    @include media(C) {
+        @include container($mw: $layout-width-C);
+    }
+
+    @include media(D) {
+        @include container($mw: $layout-width-D);
+    }
 }
 
 @mixin mediaDebug() {

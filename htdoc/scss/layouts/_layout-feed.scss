@@ -1,0 +1,165 @@
+.l-feed {
+}
+
+.l-row,
+.l-grid {
+    @include l-grid();
+}
+
+.l-full {
+    @include column(1);
+}
+
+.l-half {
+    @include column(1/2);
+}
+
+.l-single {
+}
+
+.l-underlay {
+    z-index: -1;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+//
+
+
+
+
+.l-feed_triple-card {
+
+    .l-single {
+        @include column(1,$gut:60px);
+
+        @include media(B) {
+            @include column(1/3);
+        }
+
+        @include media(C) {
+            @include column(1/3, $gut: 80px);
+        }
+
+        @include media(D) {
+            @include column(1/3, $gut: 150px);
+
+        }
+    }
+}
+
+.l-feed_three {
+
+    .l-single {
+        @include column(1);
+        margin-bottom: 30px;
+
+        @include media(B) {
+            @include column(1/2);
+        }
+
+        @include media(C) {
+            @include column(1/3);
+        }
+
+        @include media(D) {
+            @include column(1/3);
+
+        }
+    }
+}
+
+
+.l-feed_six {
+
+    .l-single {
+        @include column(1/2);
+        margin-bottom: 30px;
+
+        @include media(B) {
+            @include column(1/3);
+        }
+
+        @include media(C) {
+            @include column(1/6);
+        }
+
+        @include media(D) {
+            @include column(1/6);
+
+        }
+    }
+
+    .l-double {
+        @include column(1);
+        margin-bottom: 30px;
+
+        @include media(B) {
+            @include column(2/3);
+        }
+
+        @include media(C) {
+            @include column(2/6);
+        }
+
+        @include media(D) {
+            @include column(2/6);
+
+        }
+    }
+}
+
+.l-feed_block-carousel {
+
+    width: 100%;
+    overflow: hidden;
+    .l-section--content {
+        .l-single,
+        .l-double,
+        .l-half {
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 210px;
+
+            @include media(C) {
+                height: 210px;
+            }
+            @include media(D) {
+                height: 294px;
+            }
+        }
+    }
+
+    .l-single {
+        @include column(1/2);
+        @include media(C) {
+            @include column(1/2);
+        }
+    }
+
+    .l-double {
+        @include column(1);
+
+        @include media(C) {
+            @include column(1);
+        }
+    }
+
+    .slick-list {
+        overflow: visible !important;
+    }
+
+    .slick-slide {
+        opacity: .2;
+        @include transition(opacity 0.3s);
+        &.slick-active {
+            @include transition(opacity 0.3s);
+            opacity: 1;
+        }
+    }
+
+}
