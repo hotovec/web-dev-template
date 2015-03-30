@@ -9,32 +9,35 @@
     </div>
 
     <div class="row">
-        <div class="slides full-carousel">
+        <div class="l-full">
+            <div class="slides full-carousel">
 
-            {% for s in 1..6 %}
-                <div class="m-card_reference l-single slide">
+                {% for s in 1..6 %}
+                    <div class="m-card_reference l-single slide">
 
-                    <article class="m-story">
-                        <header>
-                            <div class="m-item--image">
-                                <a href="">
-                                    <img src="http://lorempixel.com/400/600" alt="" />
-                                </a>
-                            </div>
-                            <h1 class="m-item--hed">
-                                <a href="">titulek titulek</a>
-                            </h1>
+                        <article class="m-story">
+                            <header>
+                                <div class="m-item--image mm-bg-only" style="background-image: url(http://lorempixel.com/900/600)">
+                                    <a href="">
+                                        <img src="http://lorempixel.com/400/600" alt="" />
+                                    </a>
+                                </div>
 
-                            <div class="m-item--description">
-                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                            </div>
-                            <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                        </header>
-                    </article>
+                                <h1 class="m-item--hed">
+                                    <a href="">titulek titulek</a>
+                                </h1>
 
-                </div>
-            {% endfor %}
+                                <div class="m-item--description">
+                                    <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                                </div>
+                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
+                            </header>
+                        </article>
 
+                    </div>
+                {% endfor %}
+
+            </div>
         </div>
     </div>
 

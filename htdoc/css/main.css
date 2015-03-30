@@ -2374,6 +2374,14 @@ body {
       background-repeat: no-repeat;
       background-size: cover; }
 
+.m-item--image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .m-item--image.mm-bg-only img {
+    visibility: hidden;
+    pointer-events: none; }
+
 .m-card_standard {
   border: 1px solid red; }
   .m-card_standard article,
