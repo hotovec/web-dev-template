@@ -2386,26 +2386,24 @@ body {
     visibility: hidden;
     pointer-events: none; }
 
-.m-card_standard {
-  border: 1px solid red; }
-  .m-card_standard article,
-  .m-card_standard header {
-    position: relative; }
-  .m-card_standard a {
-    color: #000;
-    text-decoration: none; }
-    .m-card_standard a:hover {
-      color: #C20E1A;
-      text-decoration: underline; }
-  .m-card_standard p {
-    margin: 0; }
-  .m-card_standard .m-item--hed {
-    font-size: 1.125rem; }
-  .m-card_standard .m-item--description {
-    font-size: 0.875rem; }
-  .m-card_standard .m-item--image img {
-    width: 100%;
-    height: auto; }
+.m-card_standard article,
+.m-card_standard header {
+  position: relative; }
+.m-card_standard a {
+  color: #000;
+  text-decoration: none; }
+  .m-card_standard a:hover {
+    color: #C20E1A;
+    text-decoration: underline; }
+.m-card_standard p {
+  margin: 0; }
+.m-card_standard .m-item--hed {
+  font-size: 1.125rem; }
+.m-card_standard .m-item--description {
+  font-size: 0.875rem; }
+.m-card_standard .m-item--image img {
+  width: 100%;
+  height: auto; }
 
 .m-card_image {
   height: 240px;
@@ -2441,8 +2439,7 @@ body {
     .m-card_image .m-item--image a {
       display: block;
       width: 100%;
-      height: 100%;
-      border-top: 4px solid transparent; }
+      height: 100%; }
       .m-card_image .m-item--image a:before {
         position: absolute;
         content: "";
@@ -2468,51 +2465,61 @@ body {
     left: 30px;
     color: white; }
   .m-card_image.mm-color-1 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #7AB929; }
     .m-card_image.mm-color-1 .m-item--image a:before {
       background-color: #7AB929;
       opacity: .4; }
   .m-card_image.mm-color-2 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #6DC1AE; }
     .m-card_image.mm-color-2 .m-item--image a:before {
       background-color: #6DC1AE;
       opacity: .4; }
   .m-card_image.mm-color-3 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #4E9ED8; }
     .m-card_image.mm-color-3 .m-item--image a:before {
       background-color: #4E9ED8;
       opacity: .4; }
   .m-card_image.mm-color-4 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #7D83BF; }
     .m-card_image.mm-color-4 .m-item--image a:before {
       background-color: #7D83BF;
       opacity: .4; }
   .m-card_image.mm-color-5 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #9C6FAE; }
     .m-card_image.mm-color-5 .m-item--image a:before {
       background-color: #9C6FAE;
       opacity: .4; }
   .m-card_image.mm-color-6 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #E8308A; }
     .m-card_image.mm-color-6 .m-item--image a:before {
       background-color: #E8308A;
       opacity: .4; }
   .m-card_image.mm-color-7 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #E50051; }
     .m-card_image.mm-color-7 .m-item--image a:before {
       background-color: #E50051;
       opacity: .4; }
   .m-card_image.mm-color-8 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #EC6608; }
     .m-card_image.mm-color-8 .m-item--image a:before {
       background-color: #EC6608;
       opacity: .4; }
   .m-card_image.mm-color-9 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #F4B003; }
     .m-card_image.mm-color-9 .m-item--image a:before {
       background-color: #F4B003;
       opacity: .4; }
   .m-card_image.mm-color-10 .m-item--image a {
+    border-top: 4px solid transparent;
     border-top-color: #B5BBB4; }
     .m-card_image.mm-color-10 .m-item--image a:before {
       background-color: #B5BBB4;
@@ -2561,8 +2568,7 @@ body {
     .m-card_thumb .m-item--image a {
       display: block;
       width: 100%;
-      height: 100%;
-      border-top: 4px solid transparent; }
+      height: 100%; }
       .m-card_thumb .m-item--image a:before {
         position: absolute;
         content: "";
