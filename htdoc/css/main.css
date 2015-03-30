@@ -388,36 +388,101 @@ th {
   .row:after {
     clear: both; }
 
-span.color-primary {
+.color-primary {
   color: #C20E1A; }
-span.color-secondary {
+
+.color-secondary {
   color: #B5BBB4; }
-span.color-black {
+
+.color-black {
   color: #000; }
-span.color-body-font {
+
+.color-white {
+  color: #fff; }
+
+.color-body-font {
   color: #4A4A4A; }
-span.color-body-bg {
+
+.color-body-bg {
   color: #ECEDEC; }
-span.color-1 {
+
+.color-1 {
   color: #7AB929; }
-span.color-2 {
+
+.color-2 {
   color: #6DC1AE; }
-span.color-3 {
+
+.color-3 {
   color: #4E9ED8; }
-span.color-4 {
+
+.color-4 {
   color: #7D83BF; }
-span.color-5 {
+
+.color-5 {
   color: #9C6FAE; }
-span.color-6 {
+
+.color-6 {
   color: #E8308A; }
-span.color-7 {
+
+.color-7 {
   color: #E50051; }
-span.color-8 {
+
+.color-8 {
   color: #EC6608; }
-span.color-9 {
+
+.color-9 {
   color: #F4B003; }
-span.color-10 {
+
+.color-10 {
   color: #B5BBB4; }
+
+.bg-primary {
+  background-color: #C20E1A; }
+
+.bg-secondary {
+  background-color: #B5BBB4; }
+
+.bg-black {
+  background-color: #000; }
+
+.bg-white {
+  background-color: #fff; }
+
+.bg-body-font {
+  background-color: #4A4A4A; }
+
+.bg-body-bg {
+  background-color: #ECEDEC; }
+
+.bg-1 {
+  background-color: #7AB929; }
+
+.bg-2 {
+  background-color: #6DC1AE; }
+
+.bg-3 {
+  background-color: #4E9ED8; }
+
+.bg-4 {
+  background-color: #7D83BF; }
+
+.bg-5 {
+  background-color: #9C6FAE; }
+
+.bg-6 {
+  background-color: #E8308A; }
+
+.bg-7 {
+  background-color: #E50051; }
+
+.bg-8 {
+  background-color: #EC6608; }
+
+.bg-9 {
+  background-color: #F4B003; }
+
+.bg-10 {
+  background-color: #B5BBB4; }
 
 meta.foundation-version {
   font-family: "/5.5.1/"; }
@@ -1687,6 +1752,15 @@ body {
       -moz-transition: opacity 0.3s;
       transition: opacity 0.3s;
       opacity: 1; }
+
+.l-feed_carousel .slide {
+  height: 300px; }
+  @media only screen and (min-width: 961px) {
+    .l-feed_carousel .slide {
+      height: 500px; } }
+  @media only screen and (min-width: 961px) {
+    .l-feed_carousel .slide {
+      height: 600px; } }
 
 .l-page.l-page_detail-full .l-page--container {
   background-color: #f5f5f5; }
