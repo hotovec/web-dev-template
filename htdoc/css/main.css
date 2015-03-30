@@ -2622,8 +2622,9 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 10; }
-  .m-card_thumb:hover .m-item--image:before {
+    z-index: 10;
+    margin: 0; }
+  .m-card_thumb.mm-has-hover:hover .m-item--image:before {
     opacity: 0; }
   .m-card_thumb.mm-color-1 .m-item--image:before {
     background-color: #7AB929; }
