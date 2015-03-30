@@ -98,53 +98,50 @@
     }
 
     .m-section--header {
-        @include column(4/12, $gut: 0);
-        height: 100%;
-    }
 
-    .m-section--nav {
-        @include column(2/12, $gut: 0);
-        height: 100%;
-    }
-
-    .m-section--carousel {
-        position: absolute;
-        width: 50%;
-        right: 0;
-        top: 0;
-        bottom: 0;
+        @include column(1, $gut:0);
+        //height: 70px;
         overflow: hidden;
+        margin-bottom: 0;
 
-        .slide {
-            position: absolute;
-            width: 100%;
+        @include media(C) {
+            @include column(4/12, $gut: 0);
             height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
-    }
 
-    .m-section--header {
         color: white;
-        padding-top: 50px;
-        padding-bottom: 50px;
     }
 
     .m-section--nav {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        height: 64px;
+        @include column(1);
+
+        @include media(C) {
+            @include column(2/12, $gut: 0);
+            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
 
         ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
+
             li {
-                position: relative;
+                width: (100 / 6) * 1%;
+                overflow: hidden;
+                float: left;
                 a {
                     display: block;
-                    height: 64px;
-                    line-height: 64px;
                     color: white;
                     font-weight: 600;
                     text-decoration: none;
+                    height: 64px;
+                    line-height: 64px;
                 }
 
                 &.active {
@@ -161,7 +158,7 @@
                         position: absolute;
                         top: 0;
                         right: -64px;
-                        z-index: 2;
+                        z-index: 100;
 
                         font: normal normal normal 14px/62px FontAwesome;
                         font-size: inherit;
@@ -173,13 +170,65 @@
                     }
                 }
             }
+
+            @include media(C) {
+                li {
+
+                    float: none;
+                    width: 100%;
+
+                    position: relative;
+                    a {
+                        display: block;
+
+                        color: white;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: 800;
+                        }
+                        &:after {
+
+                        }
+                    }
+
+                }
+            }
+
         }
     }
 
     .m-section--carousel {
-        .slide {
-            background: $secondary-color;
+        overflow: hidden;
+        position: absolute;
+
+        top: 164px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        @include media(C) {
+            left: 50%;
+            width: 50%;
+            right: 0;
+            top: 0;
+            bottom: 0;
         }
+
+        .slide {
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background: $secondary-color;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
     }
 }
 
