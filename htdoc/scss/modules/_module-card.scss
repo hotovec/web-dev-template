@@ -286,15 +286,22 @@
     @include m-card();
     background-color: $color-secondary;
 
-    article {
+    article,
+    header {
         height: 140px;
         width: 100%;
         position: relative;
         //cursor: pointer;
     }
 
+    .m-item--hed {
+        position: relative;
+        height: 100%;
+    }
+
     .m-item--hed a {
-        padding: 30px;
+        @include vertical-align();
+        padding: 20px;
         position: absolute;
         height: 100%;
         font-size: rem-calc(16);
