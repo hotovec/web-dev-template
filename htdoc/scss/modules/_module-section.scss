@@ -45,16 +45,23 @@
 .m-section--hed {
     font-size: rem-calc(30);
     text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 800;
 
-    &.mm-huge {
+
+    &.mm-small {
+        font-size: rem-calc(16);
+    }
+    &.mm-medium {
+        font-size: rem-calc(36);
+    }
+
+    &.mm-big {
         font-size: rem-calc(50);
-        font-weight: 200;
-        line-height: 1.2em;
-        margin-bottom: 90px;
     }
 
     &.mm-tiny {
-        font-size: rem-calc(16);
+        font-weight: 200;
     }
 
     &.mm-center {
@@ -82,6 +89,7 @@
 .m-section {
     @include m-section-base();
 }
+
 
 .m-section_vertical-tabs {
     position: relative;
