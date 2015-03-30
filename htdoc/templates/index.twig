@@ -56,8 +56,6 @@
                     $('.hero-slides').slick('slickGoTo', slide);
                     oldSlick = $(this);
                 });
-
-
             });
         });
 
@@ -92,23 +90,6 @@
             slidesToScroll: 1,
             adaptiveHeight: true
         });
-
-
-        // custom selector
-        $(function () {
-
-            $(".custom-select").each(function(){
-                $(this).wrap("<span class='select-wrapper'></span>");
-                $(this).after("<span class='holder'></span>");
-            });
-
-            $(".custom-select").change(function(){
-                var selectedOption = $(this).find(":selected").text();
-                var holder = $(this).next(".holder");
-                holder.text(selectedOption);
-                console.log(selectedOption);
-            }).trigger('change');
-        })
 
     </script>
 {% endblock %}
