@@ -92,6 +92,7 @@
 }
 
 .l-section_support {
+
     .m-section--item {
 
         &:nth-of-type(1) {
@@ -121,6 +122,22 @@
                 @include move(3/12);
             }
         }
+    }
+
+    .input-group {
+        @include container();
+
+        .prefix {
+            @include column(1/6, $gut:0);
+            display: none;
+        }
+        input {
+            @include column(5/6,$gut:0);
+        }
+        .postfix {
+            @include column(1/6,$gut:0);
+        }
+
     }
 
 }

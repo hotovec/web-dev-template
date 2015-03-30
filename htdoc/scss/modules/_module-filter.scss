@@ -1,7 +1,7 @@
+
 .m-filter {
 
     height: 48px;
-
 
     .l-full {
         @include cf();
@@ -14,71 +14,32 @@
 
     .m-filter--items {
         @include inline-list(left, 2px);
-    }
 
+        li {
+            width: 160px;
 
-    .select-wrapper{
-        float: left;
-        display: inline-block;
-        cursor: pointer;
-        margin-right: 2px;
-        background-color: $color-secondary;
-        color: white;
-        position: relative;
+            &:first-child {
+                margin-right: 20px;
+                width: auto;
+            }
+        }
 
-        .holder{
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            border: none;
             display: block;
-            margin: 0 35px 0 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            cursor: pointer;
-            position: relative;
-            color: black;
-            padding: 0 10px;
-            height: 48px;
-            line-height: 48px;
-        }
+            padding-left: 20px;
+            height: 50px;
 
-        &:before {
-            font-family: "FontAwesome";
-            content: "\f063";
-            height: 48px;
-            width: auto;
-            right: 10px;
-
-            display: block;
-            position: absolute;
-            color: $color-black;
-            line-height: 48px;
-        }
-
-        &:hover{
-           background-color: darken($color-secondary, 10%);
-        }
-
-        select{
-            margin: 0;
-            position: absolute;
-            z-index: 2;
-            cursor: pointer;
+            border-radius: 0;
             outline: none;
-            opacity: 0;
+            background-color: $color-secondary;
+            color: $color-black;
 
-            /* CSS hacks for older browsers */
-            _noFocusLine: expression(this.hideFocus=true);
-            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-            filter: alpha(opacity=0);
-            -khtml-opacity: 0;
-            -moz-opacity: 0;
         }
     }
-
-    .select-wrapper,
-    .select-wrapper select{
-        width: 160px;
-        height: auto;
-    }
-
-
 
 }
