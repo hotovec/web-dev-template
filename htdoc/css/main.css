@@ -2780,6 +2780,83 @@ body {
   .m-card_faq:hover {
     background-color: #C20E1A; }
 
+.m-filter {
+  height: 48px; }
+  .m-filter .l-full {
+    *zoom: 1;
+    overflow: visible;
+    margin-bottom: 30px;
+    line-height: 48px; }
+    .m-filter .l-full:before, .m-filter .l-full:after {
+      content: '';
+      display: table; }
+    .m-filter .l-full:after {
+      clear: both; }
+  .m-filter .m-filter--items {
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    margin: 0; }
+    .m-filter .m-filter--items > li {
+      list-style: none;
+      float: left;
+      margin-left: 0;
+      margin-right: 2px;
+      display: block;
+      height: 100%; }
+      .m-filter .m-filter--items > li:last-child {
+        margin-right: 0; }
+      .m-filter .m-filter--items > li > * {
+        display: inline-block; }
+  .m-filter .select-wrapper {
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 2px;
+    background-color: #B5BBB4;
+    color: white;
+    position: relative; }
+    .m-filter .select-wrapper .holder {
+      display: block;
+      margin: 0 35px 0 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      color: black;
+      padding: 0 10px;
+      height: 48px;
+      line-height: 48px; }
+    .m-filter .select-wrapper:before {
+      font-family: "FontAwesome";
+      content: "\f063";
+      height: 48px;
+      width: auto;
+      right: 10px;
+      display: block;
+      position: absolute;
+      color: #000;
+      line-height: 48px; }
+    .m-filter .select-wrapper:hover {
+      background-color: #9ba399; }
+    .m-filter .select-wrapper select {
+      margin: 0;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      outline: none;
+      opacity: 0;
+      /* CSS hacks for older browsers */
+      _noFocusLine: expression(this.hideFocus=true);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+      -khtml-opacity: 0;
+      -moz-opacity: 0; }
+  .m-filter .select-wrapper,
+  .m-filter .select-wrapper select {
+    width: 160px;
+    height: auto; }
+
 .hero-tabs {
   height: 620px;
   position: relative;
