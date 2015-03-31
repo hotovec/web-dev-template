@@ -1,13 +1,13 @@
-    <footer class="m-footer m-section l-footer {% if footer.isSticky %}is-sticky{% endif %}">
-        <div class="m-footer--container">
+<footer class="m-footer m-section l-footer {% if footer.isSticky %}is-sticky{% endif %}">
+    <div class="m-footer--container">
+        <div class="row">
+
 
             <section class="m-footer--section">
                 <a class="m-footer--logo" href="/">
                     <div class="mm-has-svg" style="background-image: url(http://readwrite.com/site/images/readwrite-logo.svg);"></div>
                 </a>
-                <a class="m-footer--copyright" href="/">
-                    <a href="">Koma</a>
-                </a>
+
             </section>
 
 
@@ -23,16 +23,36 @@
 
             <section class="m-footer--section">
                 <ul class="m-footer--menu-secondary">
-                    {% for link in footer.menuSecondary %}
-                        <li class="m-footer--menu-link">
-                            <a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a>
-                        </li>
-                    {% endfor %}
+
+                    <li class="m-footer--menu-link">
+                        <a href="" target="" title=""><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="m-footer--menu-link">
+                        <a href="" target="" title=""><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li class="m-footer--menu-link">
+                        <a href="" target="" title=""><i class="fa fa-youtube"></i></a>
+                    </li>
                 </ul>
+
+            </section>
+        </div>
+
+        <div class="row">
+
+            <section class="m-footer--subsection">
+                <a class="m-footer--author" href="/">
+                    <a href="">Koma</a>
+                </a>
+            </section>
+
+            <section class="m-footer--subsection">
                 <a class="m-footer--author" href="/">
                     <a href="">Od Oka</a>
                 </a>
             </section>
-
         </div>
-    </footer>
+
+
+    </div>
+</footer>
