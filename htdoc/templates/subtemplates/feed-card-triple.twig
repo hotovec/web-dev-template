@@ -1,77 +1,40 @@
-
 <div class="m-section l-feed_triple-card">
 
-    <div class="l-grid">
-        <h2 class="m-section--hed mm-huge mm-center">Jsme přední český výrobce <span>modulární výstavby</span></h2>
+    <div class="row">
+        <header class="m-section--header">
+            <div class="l-full">
+                <h2 class="m-section--hed mm-big mm-tiny mm-center">Jsme přední český výrobce<br /><span class="color-primary">modulární výstavby</span>
+                </h2>
+            </div>
+        </header>
     </div>
 
     <div class="row">
 
-        <div class="m-card_standard l-single">
+        {% for c in 1..3 %}
+            <div class="m-card_thumb l-single">
 
-            <article class="m-story">
-                <header>
-                    <div class="m-item--image">
-                        <a href="">
-                            <img src="http://lorempixel.com/400/600" alt="" />
-                        </a>
-                    </div>
-                    <h1 class="m-item--hed">
-                        <a href="">titulek titulek</a>
-                    </h1>
+                <article class="m-story">
+                    <header>
+                        <div class="m-item--image" style="background-image: url(http://lorempixel.com/400/600)">
+                            <a href="">
+                                <img src="http://lorempixel.com/400/600" alt="" />
+                            </a>
+                        </div>
+                        <h1 class="m-item--hed">
+                            <a href="">titulek titulek</a>
+                        </h1>
 
-                    <div class="m-item--description">
-                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                    </div>
+                        <div class="m-item--description">
+                            <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                        </div>
+                    </header>
                     <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                </header>
-            </article>
+                </article>
 
-        </div>
+            </div>
+        {% endfor %}
 
-        <div class="m-card_standard l-single">
-
-            <article class="m-story">
-                <header>
-                    <div class="m-item--image">
-                        <a href="">
-                            <img src="http://lorempixel.com/400/600" alt="" />
-                        </a>
-                    </div>
-                    <h1 class="m-item--hed">
-                        <a href="">titulek titulek</a>
-                    </h1>
-
-                    <div class="m-item--description">
-                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                    </div>
-                    <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                </header>
-            </article>
-
-        </div>
-
-        <div class="m-card_standard l-single">
-
-            <article class="m-story">
-                <header>
-                    <div class="m-item--image">
-                        <a href="">
-                            <img src="http://lorempixel.com/400/600" alt="" />
-                        </a>
-                    </div>
-                    <h1 class="m-item--hed">
-                        <a href="">titulek titulek</a>
-                    </h1>
-
-                    <div class="m-item--description">
-                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                    </div>
-                    <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                </header>
-            </article>
-
-        </div>
 
     </div>
 

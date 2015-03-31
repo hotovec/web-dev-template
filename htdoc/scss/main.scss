@@ -23,7 +23,7 @@
 
 
 // layouts and modules
-@import "modules/module-page-scroll";
+@import "layouts/layout-base";
 @import "layouts/layout-section";
 @import "layouts/layout-navbar";
 @import "layouts/layout-footer";
@@ -31,12 +31,15 @@
 
 @import "layouts/layout-page-detail-full";
 
+@import "modules/module-page-scroll";
 @import "modules/module-navbar";
 @import "modules/module-footer";
 @import "modules/module-coverlines";
+@import "modules/module-section";
 
 @import "modules/module-content-item";
 @import "modules/module-card";
+@import "modules/module-filter";
 
 
 
@@ -44,3 +47,5 @@
 
 @import "not-modular/hero-tabs";
 // dev
+
+

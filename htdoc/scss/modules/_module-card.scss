@@ -35,13 +35,7 @@
 
 }
 
-.m-card_standard {
-    @include m-card();
-
-    border: 1px solid red;
-}
-
-.m-card_image {
+@mixin m-card-image {
     @include m-card();
 
     height: 240px;
@@ -56,14 +50,14 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        height: auto;
         overflow: hidden;
+        width: 100%;
+        height: 100%;
+
         a {
             display: block;
             width: 100%;
             height: 100%;
-
-            border-top: 4px solid transparent;
 
             &:before {
                 position: absolute;
@@ -72,8 +66,9 @@
                 width: 100%;
                 height: 100%;
                 background-color: transparent;
-                opacity: 0.4;
+                opacity: 0.2;
             }
+
         }
     }
 
@@ -82,7 +77,7 @@
         bottom: 20px;
         left: 25px;
         color: white;
-        text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+        text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
         a {
             color: white;
         }
@@ -98,6 +93,31 @@
         top: 20px;
         left: 30px;
         color: white;
+    }
+
+}
+
+.m-card_standard {
+    @include m-card();
+}
+
+.m-card_image {
+    @include m-card-image();
+
+    @each $colorName, $colorValue in $pallete {
+        &.mm-color-#{$colorName} {
+            .m-item--image {
+                a {
+                    border-top: 4px solid transparent;
+                    border-top-color: $colorValue; //pallete(1);
+                    &:before {
+                        background-color: $colorValue; //pallete(1);
+                        opacity: .4;
+                    }
+                }
+
+            }
+        }
     }
 
     &:hover {
@@ -117,15 +137,125 @@
         }
     }
 
+}
+
+.m-card_thumb {
+    @include m-card-image();
+
+    .m-card--more {
+        display: none;
+    }
+
+    .m-item--image {
+
+        img {
+            display: none;
+        }
+
+        a {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+        }
+        &:before {
+            display: block;
+            position: absolute;
+            z-index: 0;
+            content: "";
+            background-color: black;
+            opacity: .6;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .m-item--description {
+        display: none;
+    }
+
+    .m-item--hed {
+        text-align: center;
+        left: 0;
+        @include vertical-align();
+        z-index: 10;
+        margin: 0;
+    }
+
+    &.mm-has-hover {
+        &:hover {
+            .m-item--image:before {
+                opacity: 0;
+            }
+
+        }
+    }
+
     @each $colorName, $colorValue in $pallete {
         &.mm-color-#{$colorName} {
-            .m-item--image a {
-                border-top-color: $colorValue; //pallete(1);
+            .m-item--image {
                 &:before {
                     background-color: $colorValue; //pallete(1);
                 }
             }
         }
+    }
+
+}
+
+.m-card_reference {
+    @include m-card();
+
+    height: 240px;
+    overflow: hidden;
+
+    article,
+    header {
+        height: 100%;
+        position: relative;
+    }
+
+    .m-item--image {
+
+        background-position: 50% 50%;
+
+        img {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+    }
+    .m-item--summary {
+        position: absolute;
+        bottom: 20px;
+        left: 25px;
+        width: 300px;
+        height: auto;
+        background-color: transparentize($color-white, 0.4);
+        padding: 20px;
+        //padding-top: 10px;
+        color: $color-body-font;
+    }
+
+    .m-item--hed {
+        margin: 0;
+        margin-bottom: 30px;
+
+        text-transform: uppercase;
+        a {
+            color: $color-body-font;
+        }
+    }
+
+    .m-item--description {
+        pointer-events: none;
+        font-weight: 400;
+        color: $color-black;
+    }
+
+    .m-card--more {
+        display: none;
     }
 
 }
@@ -156,15 +286,22 @@
     @include m-card();
     background-color: $color-secondary;
 
-    article {
+    article,
+    header {
         height: 140px;
         width: 100%;
         position: relative;
         //cursor: pointer;
     }
 
+    .m-item--hed {
+        position: relative;
+        height: 100%;
+    }
+
     .m-item--hed a {
-        padding: 30px;
+        @include vertical-align();
+        padding: 20px;
         position: absolute;
         height: 100%;
         font-size: rem-calc(16);

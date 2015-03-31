@@ -8,19 +8,18 @@
         {% include "subtemplates/module-navbar.twig" %}
     </div>
 
-    {% include "subtemplates/hero-tabs.twig" %}
-    {% include "subtemplates/section-side-triple.twig" %}
-    {% include "subtemplates/feed-block-carousel.twig" %}
+    {#{% include "subtemplates/hero-tabs.twig" %}#}
+    {#{% include "subtemplates/feed-carousel.twig" %}#}
+    {#{% include "subtemplates/section-side-triple.twig" %}#}
+    {#{% include "subtemplates/feed-block-carousel.twig" %}#}
     {% include "subtemplates/feed-card-triple.twig" %}
     {% include "subtemplates/feed-three_faq.twig" %}
     {% include "subtemplates/feed-three_obory.twig" %}
     {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/section-vertical-tabs.twig" %}
     {% include "subtemplates/module-support.twig" %}
 
-    <div class="l-footer {% if footer.isSticky %}is-sticky{% endif %}">
-        {% include "subtemplates/module-footer.twig" %}
-    </div>
-
+    {% include "subtemplates/module-footer.twig" %}
     {% include "subtemplates/module-page-scroll.twig" %}
 
     {{ parent() }}
@@ -30,6 +29,7 @@
 {% block scripts %}
 
     <script>
+
         $(function () {
             // hero - tabs js
             var homeSlick = $('.hero-slides').slick({
@@ -54,8 +54,6 @@
                     $('.hero-slides').slick('slickGoTo', slide);
                     oldSlick = $(this);
                 });
-
-
             });
         });
 
@@ -63,7 +61,7 @@
         // block feed JS
 
         var blogSlick = $('.block-feed-slider').slick({
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 300,
             slidesToShow: 2,
@@ -78,6 +76,17 @@
                     }
                 }
             ]
+        });
+
+        // full size carousel
+
+        var blogSlick = $('.full-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
         });
 
     </script>

@@ -1,0 +1,45 @@
+
+.m-filter {
+
+    height: 48px;
+
+    .l-full {
+        @include cf();
+        overflow: visible;
+        margin-bottom: 30px;
+
+        line-height: 48px;
+
+    }
+
+    .m-filter--items {
+        @include inline-list(left, 2px);
+
+        li {
+            width: 160px;
+
+            &:first-child {
+                margin-right: 20px;
+                width: auto;
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            border: none;
+            display: block;
+            padding-left: 20px;
+            height: 50px;
+
+            border-radius: 0;
+            outline: none;
+            background-color: $color-secondary;
+            color: $color-black;
+
+        }
+    }
+
+}

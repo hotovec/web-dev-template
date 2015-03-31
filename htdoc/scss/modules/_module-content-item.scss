@@ -1,4 +1,14 @@
-.m-item {
+.m-item { }
 
+.m-item--image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &.mm-bg-only {
+        img {
+            visibility: hidden;
+            pointer-events: none;
+        }
+    }
 }
-

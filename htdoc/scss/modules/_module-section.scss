@@ -1,0 +1,247 @@
+@mixin m-section-base() {
+    border: 2px solid gray;
+    padding: 50px 0;
+    height: auto;
+    position: relative;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+.m-section--header,
+.m-section--footer {
+
+    @include cf();
+
+    text-transform: uppercase;
+    font-weight: 800;
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+}
+
+.m-section--header {
+    margin-bottom: 50px;
+}
+
+.m-section--footer {
+    //margin-top: 50px;
+    //background-color: palegreen;
+}
+
+.m-section--top {
+}
+
+.m-section--more {
+    text-align: right;
+}
+
+// base section hed style
+.m-section--hed {
+    font-size: rem-calc(30);
+    text-transform: uppercase;
+    line-height: 1.2em;
+    font-weight: 800;
+
+
+    &.mm-small {
+        font-size: rem-calc(16);
+    }
+    &.mm-medium {
+        font-size: rem-calc(36);
+    }
+
+    &.mm-big {
+        font-size: rem-calc(50);
+    }
+
+    &.mm-tiny {
+        font-weight: 200;
+    }
+
+    &.mm-center {
+        text-align: center;
+    }
+
+}
+
+// base section underlay
+.m-section--underlay {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+}
+
+// base section module style
+.m-section {
+    @include m-section-base();
+}
+
+
+.m-section_vertical-tabs {
+    position: relative;
+    background-color: $primary-color;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    height: 500px;
+
+    .m-section--container {
+        height: 100%;
+        position: relative;
+    }
+
+    .m-section--header {
+
+        @include column(1, $gut:0);
+        //height: 70px;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        @include media(C) {
+            @include column(4/12, $gut: 0);
+            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        color: white;
+    }
+
+    .m-section--nav {
+        height: 64px;
+        @include column(1);
+
+        @include media(C) {
+            @include column(2/12, $gut: 0);
+            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                width: (100 / 6) * 1%;
+                overflow: hidden;
+                float: left;
+                a {
+                    display: block;
+                    color: white;
+                    font-weight: 600;
+                    text-decoration: none;
+                    height: 64px;
+                    line-height: 64px;
+                }
+
+                &.active {
+                    a {
+                        font-weight: 800;
+                    }
+                    &:after {
+                        display: block;
+                        width: 64px;
+                        height: 64px;
+                        background-color: $primary-color;
+                        color: white;
+                        text-align: center;
+                        position: absolute;
+                        top: 0;
+                        right: -64px;
+                        z-index: 100;
+
+                        font: normal normal normal 14px/62px FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        transform: translate(0, 0);
+                        content: "\f061";
+                    }
+                }
+            }
+
+            @include media(C) {
+                li {
+
+                    float: none;
+                    width: 100%;
+
+                    position: relative;
+                    a {
+                        display: block;
+
+                        color: white;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: 800;
+                        }
+                        &:after {
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .m-section--carousel {
+        overflow: hidden;
+        position: absolute;
+
+        top: 164px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        @include media(C) {
+            left: 50%;
+            width: 50%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .slide {
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            background: $secondary-color;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+}
+

@@ -1,0 +1,58 @@
+<div class="m-section l-feed_carousel">
+
+    <div class="row">
+        <header class="m-section--header">
+            <div class="l-full">
+                <h2 class="m-section--hed mm-big">Reference</h2>
+            </div>
+        </header>
+    </div>
+
+    <div class="row">
+        <div class="l-full">
+            <div class="slides full-carousel">
+
+                {% for s in 1..6 %}
+                    <div class="m-card_reference l-single slide">
+
+                        <article class="m-story">
+                            <header>
+                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/900/600)">
+                                    <a href="">
+                                        <img src="http://lorempixel.com/400/600" alt="" />
+                                    </a>
+                                </div>
+                                <div class="m-item--summary">
+                                    <h1 class="m-item--hed">
+                                        <a href="">titulek titulek</a>
+                                    </h1>
+
+                                    <div class="m-item--description">
+                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.
+                                            <span class="color-body-font">[2012]</span></p>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
+                        </article>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <footer class="m-section--footer">
+            <div class="l-half">
+                <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+            </div>
+            <div class="l-half">
+                <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+            </div>
+        </footer>
+    </div>
+
+</div>

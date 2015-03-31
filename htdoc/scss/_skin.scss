@@ -7,6 +7,7 @@ $color-secondary:   #B5BBB4;
 
 // color base text
 $color-black:       #000;
+$color-white:       #fff;
 $color-body-font:   #4A4A4A;
 $color-body-bg:     #ECEDEC;
 
@@ -29,14 +30,28 @@ $pallete: (
     @return map-get($pallete, $key);
 }
 
-span {
-    &.color-primary { color: $color-primary; }
-    &.color-secondary { color: $color-secondary; }
-    &.color-black { color: $color-black; }
-    &.color-body-font { color: $color-body-font; }
-    &.color-body-bg { color: $color-body-bg; }
+// colors
 
-    @each $colorName, $colorValue in $pallete {
-        &.color-#{$colorName} { color: $colorValue; }
-    }
+.color-primary { color: $color-primary; }
+.color-secondary { color: $color-secondary; }
+.color-black { color: $color-black; }
+.color-white { color: $color-white; }
+.color-body-font { color: $color-body-font; }
+.color-body-bg { color: $color-body-bg; }
+
+@each $colorName, $colorValue in $pallete {
+    .color-#{$colorName} { color: $colorValue; }
+}
+
+// bg colors
+
+.bg-primary { background-color: $color-primary; }
+.bg-secondary { background-color: $color-secondary; }
+.bg-black { background-color: $color-black; }
+.bg-white { background-color: $color-white; }
+.bg-body-font { background-color: $color-body-font; }
+.bg-body-bg { background-color: $color-body-bg; }
+
+@each $colorName, $colorValue in $pallete {
+    .bg-#{$colorName} { background-color: $colorValue; }
 }
