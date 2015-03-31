@@ -1,7 +1,7 @@
 // fonts
 $font-family-body: "Purista","purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
 $font-family-headline: "Purista","purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
-$font-family-secondary: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-secondary: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
 $font-family-sans-serif: $font-family-headline !default; // "Futura PT Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 
 
@@ -12,7 +12,7 @@ $font-family-sans-serif: $font-family-headline !default; // "Futura PT Web", "He
 // breakpoints
 $media-break-A: 640px;
 $media-break-B: 960px;
-$media-break-C: 1296px;
+$media-break-C: 1330px;
 $media-break-D: 1600px;
 
 // layout widhts for each media
@@ -20,4 +20,3 @@ $layout-width-A: 100%;
 $layout-width-B: 640px;
 $layout-width-C: 960px;
 $layout-width-D: 1296px;
-
