@@ -10,7 +10,6 @@ $footer-copyright-height: 64px !default;
     width: 100%;
 
     .m-footer--container {
-        @include l-grid();
         color: white;
         font-weight: 600;
     }
@@ -30,28 +29,67 @@ $footer-copyright-height: 64px !default;
     .m-footer--section {
 
         &:nth-of-type(1) {
-            @include column(3/12);
+            @include column(1);
+            margin-bottom: 16px;
 
         }
         &:nth-of-type(2) {
-            @include column(6/12);
+            @include column(1);
+            margin-bottom: 6px;
 
         }
         &:nth-of-type(3) {
-            @include column(3/12);
-            text-align: right;
-
+            @include column(1);
+            text-align: left;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid white;
         }
 
+        @include media(C) {
+            &:nth-of-type(1) {
+                @include column(3/12);
+                margin-bottom: 0;
+
+            }
+            &:nth-of-type(2) {
+                @include column(6/12);
+                margin-bottom: 0;
+            }
+            &:nth-of-type(3) {
+                @include column(3/12);
+                text-align: right;
+                border: none;
+                margin-bottom: 0;
+
+            }
+
+        }
+    }
+
+    .m-footer--subsection {
+        &:nth-of-type(1) {
+            @include column(6/12);
+            text-align: left;
+        }
+
+        &:nth-of-type(2) {
+            @include column(6/12);
+            text-align: right;
+        }
     }
 
     .m-footer--menu-primary {
-        @include inline-list(left, 50px);
         text-transform: uppercase;
+        @include inline-list(left, 30px);
     }
     .m-footer--menu-secondary {
-        @include inline-list(right, 30px);
         text-transform: uppercase;
+        @include inline-list(left, 16px);
+
+        @include media(C) {
+            @include inline-list(right, 30px);
+        }
     }
 
     .m-footer--author {

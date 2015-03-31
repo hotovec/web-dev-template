@@ -71,7 +71,9 @@
 
         }
     }
-
+    .m-item--summary {
+        height: 100%;
+    }
     .m-item--hed {
         position: absolute;
         bottom: 20px;
@@ -97,8 +99,204 @@
 
 }
 
+@mixin m-card-vertical() {
+    @include m-card();
+    height: auto;
+    position: relative;
+
+    article {
+        height: 400px;
+        position: relative;
+        background-color: white;
+        padding-bottom: 24px;
+        header {
+            height: 100%;
+        }
+    }
+
+    .m-item--image {
+        margin: 0;
+        width: 100%;
+        height: 170px;
+
+        img {
+            display: none;
+        }
+    }
+
+    .m-item--summary {
+        position: relative;
+        height: 100%;
+        padding: 20px;
+        padding-top: 64px;
+    }
+
+    .m-item--hed {
+        font-size: rem-calc(18);
+        line-height: 1.2em;
+        margin-bottom: .5em;
+        font-weight: 600;
+    }
+
+    .m-item--description {
+        position: relative;
+        font-size: rem-calc(14);
+        //height: 60px;
+        overflow: hidden;
+        //display: none;
+    }
+
+    .m-item--meta {
+        position: absolute;
+        font-family: $font-family-secondary;
+        top: 16px;
+        left: 0px;
+        font-size: rem-calc(14);
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .m-card--more {
+        position: absolute;
+        bottom: 16px;
+        left: 20px;
+    }
+
+    @include media(B) {
+        .m-item--image {
+            height: 150px;
+
+        }
+    }
+
+    @include media(C) {
+
+        .m-item--image {
+            height: 181px;
+        }
+
+        .m-item--meta {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    @each $colorName, $colorValue in $pallete {
+        &.mm-color-#{$colorName} {
+            &:before {
+                height: 4px;
+                background-color: $colorValue;
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                content: "";
+                z-index: 1;
+
+            }
+            .colored {
+                color: $colorValue;
+            }
+            a:hover {
+                color: $colorValue;
+            }
+        }
+    }
+
+}
+
 .m-card_standard {
     @include m-card();
+    background-color: white;
+    padding-bottom: 24px;
+
+    .m-item--image {
+        height: 181px;
+        overflow: hidden;
+    }
+
+    .m-item--hed {
+        margin-bottom: 14px;
+    }
+
+    .m-item--summary {
+        padding: 20px;
+    }
+    .m-card--more {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+.m-card_vertical {
+    @include m-card-vertical();
+}
+
+.m-card_horizontal {
+
+    @include m-card-vertical();
+
+
+
+    @include media(D) {
+
+        article {
+            height: 280px;
+        }
+
+        .m-item--image {
+            margin: 0;
+            width: 260px;
+            height: 280px;
+            float: left;
+            margin-right: 35px;
+
+            img {
+                display: none;
+            }
+        }
+
+        .m-item--summary {
+            height: 280px;
+            padding-top: 60px;
+        }
+
+        .m-item--hed {
+            font-size: rem-calc(20);
+            line-height: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .m-item--meta,
+        .m-item--description {
+            position: absolute;
+            left: 0;
+            margin: 0;
+            padding-left: 295px;
+            padding-right: 30px;
+
+            width: 100%;
+
+        }
+
+        .m-item--description {
+            bottom: 30px;
+        }
+
+        .m-item--meta {
+            position: absolute;
+            top: 30px;
+
+            span {
+                display: inline-block;
+            }
+
+            font-size: rem-calc(13);
+        }
+    }
+
 }
 
 .m-card_image {

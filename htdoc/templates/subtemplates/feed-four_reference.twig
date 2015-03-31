@@ -1,19 +1,18 @@
 {# obory #}
-<div class="m-section l-feed_three">
+<div class="m-section l-feed_four">
 
     <div class="row">
         <header class="m-section--header">
             <div class="l-full">
-                <h2 class="m-section--hed">Objekty <span class="color-primary">dle účelu</span></h2>
+                <h2 class="m-section--hed mm-big">Reference / <span class="color-primary">archiv referencí</span></h2>
             </div>
         </header>
     </div>
 
-    {% include "subtemplates/module-filter.twig" %}
 
     <div class="row">
-        {% for a in 1..6 %}
-            <div class="m-card_image mm-color-{{ a }} l-single">
+        {% for a in 1..8 %}
+            <div class="m-card_vertical mm-color-{{ a }} l-single">
 
                 <article class="m-story">
                     <header>
@@ -24,16 +23,20 @@
                         </div>
                         <div class="m-item--summary">
                             <h1 class="m-item--hed">
-                                <a href="">titulek titulek</a>
+                                <a href="">titulek titulek titulek titulek titulek</a>
                             </h1>
 
                             <div class="m-item--description">
-                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                                <p>Morbi vulpctum ex, enim sit amet ult  s hendrerit.</p>
+                            </div>
+                            <div class="m-item--meta">
+                                <span>Modulární výstavba ve světě / </span>
+                                <span class="colored">21. 08. 2012</span>
                             </div>
                         </div>
                     </header>
-                    <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
                 </article>
+                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
             </div>
         {% endfor %}
     </div>
