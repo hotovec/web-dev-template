@@ -1,30 +1,32 @@
 <div class="m-section_vertical-tabs">
 
     <div class="m-section--container">
+        <div slick>
+            <div class="row">
 
-        <div class="row">
+                <header class="m-section--header">
+                    <div class="l-full">
+                        <h2 class="m-section--hed mm-big">Služby</h2>
+                    </div>
+                </header>
 
-            <header class="m-section--header">
-                <div class="l-full">
-                    <h2 class="m-section--hed mm-big">Služby</h2>
+
+                <div class="m-section--nav" carouselnav>
+                    <nav>
+                        <ul>
+                            <li slick-to="1"><a href="">Morbi vulputate ac quam quis</a></li>
+                            <li slick-to="2"><a href="">Morbi quam quis</a></li>
+                            <li slick-to="3"><a href="">odkaz</a></li>
+
+                            <li slick-to="4"><a href="">odkaz</a></li>
+                            <li slick-to="5"><a href="">odkaz</a></li>
+                            <li slick-to="6"><a href="">odkaz</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
-
-            <div class="m-section--nav">
-                <nav>
-                    <ul>
-                        <li><a href="">odkaz</a></li>
-                        <li><a href="">odkaz</a></li>
-                        <li><a href="">odkaz</a></li>
-
-                        <li><a href="">odkaz</a></li>
-                        <li class="active"><a href="">odkaz</a></li>
-                        <li><a href="">odkaz</a></li>
-                    </ul>
-                </nav>
             </div>
 
-            <div class="m-section--carousel">
+            <div class="m-section--carousel" carousel>
 
                 {% for s in 1..6 %}
                     <div class="slide m-card_thumb">
@@ -50,7 +52,6 @@
             </div>
 
         </div>
-
     </div>
 
 

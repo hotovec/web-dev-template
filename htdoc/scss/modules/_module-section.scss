@@ -103,7 +103,8 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    height: 500px;
+    //height: 500px;
+    overflow: hidden;
 
     .m-section--container {
         height: 100%;
@@ -113,7 +114,6 @@
     .m-section--header {
 
         @include column(1, $gut:0);
-        //height: 70px;
         overflow: hidden;
         margin-bottom: 0;
 
@@ -125,14 +125,21 @@
         }
 
         color: white;
+
     }
 
     .m-section--nav {
-        height: 64px;
+
+        position: relative;
+
         @include column(1);
+        border: 1px solid pink;
+        height: auto;
+        display: block;
 
         @include media(C) {
             @include column(2/12, $gut: 0);
+            margin: 0;
             height: 100%;
             padding-top: 50px;
             padding-bottom: 50px;
@@ -140,63 +147,71 @@
         }
 
         ul {
+            height: 100%;
             margin: 0;
             padding: 0;
             list-style-type: none;
+            @include cf();
 
-            li {
-                width: (100 / 6) * 1%;
-                overflow: hidden;
-                float: left;
-                a {
-                    display: block;
-                    color: white;
-                    font-weight: 600;
-                    text-decoration: none;
-                    height: 64px;
-                    line-height: 64px;
-                }
+                        li {
+                            width: (100 / 6) * 1%;
+                            float: left;
+                            display: table;
+                            a {
 
-                &.active {
-                    a {
-                        font-weight: 800;
-                    }
-                    &:after {
-                        display: block;
-                        width: 64px;
-                        height: 64px;
-                        background-color: $primary-color;
-                        color: white;
-                        text-align: center;
-                        position: absolute;
-                        top: 0;
-                        right: -64px;
-                        z-index: 100;
+                                display: table-cell;
+                                vertical-align: middle;
+                                color: white;
+                                font-weight: 600;
+                                text-decoration: none;
+                                height: 64px;
+                            }
 
-                        font: normal normal normal 14px/62px FontAwesome;
-                        font-size: inherit;
-                        text-rendering: auto;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        transform: translate(0, 0);
-                        content: "\f061";
-                    }
-                }
-            }
+                            &.active {
+                                a {
+                                    font-weight: 800;
+                                }
+                                &:after {
+                                    display: block;
+                                    width: 64px;
+                                    height: 64px;
+                                    background-color: $primary-color;
+                                    color: white;
+                                    text-align: center;
+                                    position: absolute;
+                                    top: 0;
+                                    right: -64px;
+                                    z-index: 100;
+
+                                    font: normal normal normal 14px/62px FontAwesome;
+                                    font-size: inherit;
+                                    text-rendering: auto;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    transform: translate(0, 0);
+                                    content: "\f061";
+                                }
+                            }
+                        }
 
             @include media(C) {
-                li {
 
+                li {
+                    overflow: visible;
                     float: none;
                     width: 100%;
+                    margin: 0;
+                    padding: 0;
 
                     position: relative;
                     a {
-                        display: block;
 
                         color: white;
                         font-weight: 600;
                         text-decoration: none;
+                        margin: 0;
+                        padding: 0;
+
                     }
 
                     &.active {
@@ -215,33 +230,42 @@
     }
 
     .m-section--carousel {
-        overflow: hidden;
-        position: absolute;
 
-        top: 164px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-
-        @include media(C) {
-            left: 50%;
-            width: 50%;
-            right: 0;
-            top: 0;
-            bottom: 0;
-        }
+        @include cf();
+        width: 100%;
+        height: 300px;
 
         .slide {
-            position: absolute;
-            z-index: 0;
             width: 100%;
-            height: 100%;
+            height: 300px;
             background: $secondary-color;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
+        &.slick-slider {
+            margin-bottom: 0;
+        }
+
+        @include media(C) {
+            height: 500px;
+
+            overflow: hidden;
+            position: absolute;
+
+            margin: auto;
+
+
+            left: 50%;
+            width: 50%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            .slide {
+                height: 500px;
+            }
+        }
     }
 }
 

@@ -2121,7 +2121,7 @@ body {
   background-color: #C20E1A;
   padding-top: 0;
   padding-bottom: 0;
-  height: 500px; }
+  overflow: hidden; }
   .m-section_vertical-tabs .m-section--container {
     height: 100%;
     position: relative; }
@@ -2139,33 +2139,44 @@ body {
         padding-top: 50px;
         padding-bottom: 50px; } }
   .m-section_vertical-tabs .m-section--nav {
-    height: 64px;
+    position: relative;
     float: left;
     width: calc(100% * 1 - 30px);
     margin-left: 15px;
-    margin-right: 15px; }
+    margin-right: 15px;
+    border: 1px solid pink;
+    height: auto;
+    display: block; }
     @media only screen and (min-width: 961px) {
       .m-section_vertical-tabs .m-section--nav {
         float: left;
         width: calc(100% * 0.1666666667);
+        margin: 0;
         height: 100%;
         padding-top: 50px;
         padding-bottom: 50px; } }
     .m-section_vertical-tabs .m-section--nav ul {
+      height: 100%;
       margin: 0;
       padding: 0;
-      list-style-type: none; }
+      list-style-type: none;
+      *zoom: 1; }
+      .m-section_vertical-tabs .m-section--nav ul:before, .m-section_vertical-tabs .m-section--nav ul:after {
+        content: '';
+        display: table; }
+      .m-section_vertical-tabs .m-section--nav ul:after {
+        clear: both; }
       .m-section_vertical-tabs .m-section--nav ul li {
         width: 16.6666666667%;
-        overflow: hidden;
-        float: left; }
+        float: left;
+        display: table; }
         .m-section_vertical-tabs .m-section--nav ul li a {
-          display: block;
+          display: table-cell;
+          vertical-align: middle;
           color: white;
           font-weight: 600;
           text-decoration: none;
-          height: 64px;
-          line-height: 64px; }
+          height: 64px; }
         .m-section_vertical-tabs .m-section--nav ul li.active a {
           font-weight: 800; }
         .m-section_vertical-tabs .m-section--nav ul li.active:after {
@@ -2188,39 +2199,50 @@ body {
           content: "\f061"; }
       @media only screen and (min-width: 961px) {
         .m-section_vertical-tabs .m-section--nav ul li {
+          overflow: visible;
           float: none;
           width: 100%;
+          margin: 0;
+          padding: 0;
           position: relative; }
           .m-section_vertical-tabs .m-section--nav ul li a {
-            display: block;
             color: white;
             font-weight: 600;
-            text-decoration: none; }
+            text-decoration: none;
+            margin: 0;
+            padding: 0; }
           .m-section_vertical-tabs .m-section--nav ul li.active a {
             font-weight: 800; } }
   .m-section_vertical-tabs .m-section--carousel {
-    overflow: hidden;
-    position: absolute;
-    top: 164px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; }
+    *zoom: 1;
+    width: 100%;
+    height: 300px; }
+    .m-section_vertical-tabs .m-section--carousel:before, .m-section_vertical-tabs .m-section--carousel:after {
+      content: '';
+      display: table; }
+    .m-section_vertical-tabs .m-section--carousel:after {
+      clear: both; }
+    .m-section_vertical-tabs .m-section--carousel .slide {
+      width: 100%;
+      height: 300px;
+      background: #B5BBB4;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .m-section_vertical-tabs .m-section--carousel.slick-slider {
+      margin-bottom: 0; }
     @media only screen and (min-width: 961px) {
       .m-section_vertical-tabs .m-section--carousel {
+        height: 500px;
+        overflow: hidden;
+        position: absolute;
+        margin: auto;
         left: 50%;
         width: 50%;
         right: 0;
         top: 0;
-        bottom: 0; } }
-    .m-section_vertical-tabs .m-section--carousel .slide {
-      position: absolute;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      background: #B5BBB4;
-      background-repeat: no-repeat;
-      background-size: cover; }
+        bottom: 0; }
+        .m-section_vertical-tabs .m-section--carousel .slide {
+          height: 500px; } }
 
 .m-item--image {
   background-size: cover;
