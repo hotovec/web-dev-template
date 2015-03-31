@@ -114,23 +114,27 @@
         @include column(1, $gut: 0);
         overflow: hidden;
         margin-bottom: 0;
+        color: white;
 
         @include media(C) {
             @include column(4/12, $gut: 0);
             height: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
         }
+    }
 
-        color: white;
-
+    .m-section--hed {
+        margin-bottom: 20px;
+        text-align: center;
+        @include media(C) {
+            text-align: left;
+            }
     }
 
     .m-section--nav {
 
-        position: relative;
-
         @include column(1);
+
+        position: relative;
         height: auto;
         display: block;
 
@@ -147,52 +151,50 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            padding-bottom: 40px;
             list-style-type: none;
             @include cf();
 
             li {
-                width: (100 / 6) * 1%;
+                width: (100 / 2) * 1%;
                 float: left;
                 display: table;
                 a {
-
                     display: table-cell;
                     vertical-align: middle;
                     color: white;
                     font-weight: 600;
                     text-decoration: none;
-                    height: 64px;
-                }
-
-                &.active {
-                    a {
-                        font-weight: 800;
-                    }
-                    &:after {
-                        display: block;
-                        width: 64px;
-                        height: 64px;
-                        background-color: $primary-color;
-                        color: white;
-                        text-align: center;
-                        position: absolute;
-                        top: 0;
-                        right: -64px;
-                        z-index: 100;
-
-                        font: normal normal normal 14px/62px FontAwesome;
-                        font-size: inherit;
-                        text-rendering: auto;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        transform: translate(0, 0);
-                        content: "\f061";
-                    }
+                    height: 36px;
+                    text-align: center;
                 }
             }
 
-            @include media(C) {
+            @include media(B) {
 
+                li {
+                    width: (100 / 6) * 1%;
+                    a {
+
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+
+                        height: 64px;
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: 800;
+                        }
+
+                    }
+                }
+
+            }
+
+            @include media(C) {
+                padding-bottom: 16px;
                 li {
                     overflow: visible;
                     float: none;
@@ -209,6 +211,7 @@
                         margin: 0;
                         padding: 0;
                         padding-right: 10px;
+                        text-align: left;
 
                     }
 
@@ -217,7 +220,24 @@
                             font-weight: 800;
                         }
                         &:after {
+                            display: block;
+                            width: 64px;
+                            height: 64px;
+                            background-color: $primary-color;
+                            color: white;
+                            text-align: center;
+                            position: absolute;
+                            top: 0;
+                            right: -64px;
+                            z-index: 100;
 
+                            font: normal normal normal 14px/62px FontAwesome;
+                            font-size: inherit;
+                            text-rendering: auto;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            transform: translate(0, 0);
+                            content: "\f061";
                         }
                     }
 
@@ -295,7 +315,6 @@
     .m-section--item {
         overflow: hidden;
         padding-top: 70px;
-
 
         &:nth-of-type(1) {
             @include column(1);
