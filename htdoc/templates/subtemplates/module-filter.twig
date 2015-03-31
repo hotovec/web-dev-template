@@ -1,11 +1,19 @@
-<div class="l-grid">
+<div class="m-filter">
+    <div class="l-grid">
+        <form action="">
+            <div class="l-left">
 
-    <div class="m-filter">
-        <div class="l-full">
-
-            <form action="">
                 <ul class="m-filter--items">
-                    <li><div>vyber</div></li>
+                    <li class="label">
+                        <div>vyber</div>
+                    </li>
+                    <li>
+                        <select name="timepass">
+                            {% for opt in 1..20 %}
+                                <option value="val{{ opt }}">Option {{ opt }}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
                     <li>
                         <select name="timepass">
                             {% for opt in 1..20 %}
@@ -21,33 +29,34 @@
                         </select>
                     </li>
                     <li>
-                        <select name="timepass" >
+                        <select name="timepass">
                             {% for opt in 1..20 %}
                                 <option value="val{{ opt }}">Option {{ opt }}</option>
                             {% endfor %}
                         </select>
                     </li>
                     <li>
-                        <select name="timepass" >
-                            {% for opt in 1..20 %}
-                                <option value="val{{ opt }}">Option {{ opt }}</option>
-                            {% endfor %}
-                        </select>
-                    </li>
-                    <li>
-                        <select name="timepass" >
+                        <select name="timepass">
                             {% for opt in 1..20 %}
                                 <option value="val{{ opt }}">Option {{ opt }}</option>
                             {% endfor %}
                         </select>
                     </li>
                 </ul>
-            </form>
+            </div>
 
+            <div class="l-right">
+                <ul class=" m-filter--items">
+                    <li>
+                        <select name="timepass">
+                            {% for opt in 1..20 %}
+                                <option value="val{{ opt }}">rok {{ opt }}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                </ul>
+            </div>
 
-
-
-        </div>
+        </form>
     </div>
-
 </div>

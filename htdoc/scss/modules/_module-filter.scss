@@ -2,25 +2,25 @@
 .m-filter {
 
     height: 48px;
-
-    .l-full {
-        @include cf();
-        overflow: visible;
-        margin-bottom: 30px;
-
-        line-height: 48px;
-
-    }
+    overflow: hidden;
+    margin-bottom: 30px;
 
     .m-filter--items {
-        @include inline-list(left, 2px);
 
         li {
-            width: 160px;
+            width: auto;
+            line-height: 48px;
+            height: 48px;
+            overflow: hidden;
+            background-color: $color-white;
+            color: $color-black;
+            font-weight: 800;
 
-            &:first-child {
-                margin-right: 20px;
-                width: auto;
+            &.label {
+                background-color: white;
+                padding: 0 20px;
+                height: 46px;
+                color: $color-secondary;
             }
         }
 
@@ -30,16 +30,39 @@
             appearance: none;
 
             border: none;
+            outline: 0;
             display: block;
             padding-left: 20px;
+            padding-right: 20px;
             height: 50px;
+            margin: 0;
 
             border-radius: 0;
             outline: none;
-            background-color: $color-secondary;
-            color: $color-black;
+
 
         }
     }
+
+
+    .l-left,
+    .l-right {
+    }
+
+    .l-left {
+        @include column(9/12);
+        .m-filter--items {
+            @include inline-list(left, 2px);
+
+        }
+    }
+    .l-right {
+        @include column(3/12);
+        .m-filter--items {
+            @include inline-list(right, 2px);
+
+        }
+    }
+
 
 }
