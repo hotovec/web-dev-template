@@ -2383,24 +2383,38 @@ body {
     visibility: hidden;
     pointer-events: none; }
 
-.m-card_standard article,
-.m-card_standard header {
-  position: relative; }
-.m-card_standard a {
-  color: #000;
-  text-decoration: none; }
-  .m-card_standard a:hover {
-    color: #C20E1A;
-    text-decoration: underline; }
-.m-card_standard p {
-  margin: 0; }
-.m-card_standard .m-item--hed {
-  font-size: 1.125rem; }
-.m-card_standard .m-item--description {
-  font-size: 0.875rem; }
-.m-card_standard .m-item--image img {
-  width: 100%;
-  height: auto; }
+.m-card_standard {
+  background-color: white;
+  padding-bottom: 24px; }
+  .m-card_standard article,
+  .m-card_standard header {
+    position: relative; }
+  .m-card_standard a {
+    color: #000;
+    text-decoration: none; }
+    .m-card_standard a:hover {
+      color: #C20E1A;
+      text-decoration: underline; }
+  .m-card_standard p {
+    margin: 0; }
+  .m-card_standard .m-item--hed {
+    font-size: 1.125rem; }
+  .m-card_standard .m-item--description {
+    font-size: 0.875rem; }
+  .m-card_standard .m-item--image img {
+    width: 100%;
+    height: auto; }
+  .m-card_standard .m-item--image {
+    height: 181px;
+    overflow: hidden; }
+  .m-card_standard .m-item--hed {
+    margin-bottom: 14px; }
+  .m-card_standard .m-item--summary {
+    padding: 20px; }
+  .m-card_standard .m-card--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
 
 .m-card_vertical {
   height: auto;
@@ -2877,6 +2891,8 @@ body {
         height: 100%;
         background-color: transparent;
         opacity: 0.2; }
+  .m-card_image .m-item--summary {
+    height: 100%; }
   .m-card_image .m-item--hed {
     position: absolute;
     bottom: 20px;
@@ -3006,6 +3022,8 @@ body {
         height: 100%;
         background-color: transparent;
         opacity: 0.2; }
+  .m-card_thumb .m-item--summary {
+    height: 100%; }
   .m-card_thumb .m-item--hed {
     position: absolute;
     bottom: 20px;

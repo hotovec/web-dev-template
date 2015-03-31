@@ -71,7 +71,9 @@
 
         }
     }
-
+    .m-item--summary {
+        height: 100%;
+    }
     .m-item--hed {
         position: absolute;
         bottom: 20px;
@@ -206,6 +208,26 @@
 
 .m-card_standard {
     @include m-card();
+    background-color: white;
+    padding-bottom: 24px;
+
+    .m-item--image {
+        height: 181px;
+        overflow: hidden;
+    }
+
+    .m-item--hed {
+        margin-bottom: 14px;
+    }
+
+    .m-item--summary {
+        padding: 20px;
+    }
+    .m-card--more {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
 }
 
 .m-card_vertical {
