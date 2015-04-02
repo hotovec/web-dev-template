@@ -1,0 +1,258 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+    <div class="m-section l-detail-page">
+
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a class="unavailable" href="#">Gene Splicing</a>
+                        <a class="current" href="#">Cloning</a>
+                    </nav>
+
+                </div>
+            </header>
+        </div>
+
+        <article class="m-reference">
+            <header>
+                <div class="m-reference--image" style="background-image: url(http://lorempixel.com/650/500)">
+                    <a href=""><img src="http://lorempixel.com/650/500" alt="" /></a>
+                </div>
+
+                <div class="m-reference--summary">
+
+                    <h1 class="m-reference--hed"><a href="">Nová modulární KOMA jídelna konečně otevřena!</a></h1>
+
+                    <div class="m-reference--description">
+                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
+                    </div>
+
+                    <div class="m-reference--meta">
+
+                        <dl>
+                            <dt>Zařazení</dt><dd>Stavby pro stravování – restaurace</dd>
+                        </dl>
+
+                        <dl>
+                            <dt>Rok realizace</dt><dd>2014</dd>
+                        </dl>
+
+                        <dl>
+                            <dt>Místo realizace</dt><dd>Vizovice, Česká republika</dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="mm-label">Technické specifikace</dt>
+                            <dt class="mm-sub">počet modulů</dt><dd>58</dd>
+                            <dt class="mm-sub">doba realizace</dt><dd>12 týdnů</dd>
+                            <dt class="mm-sub">užitná plocha</dt><dd>4587 m<sup>2</sup></dd>
+                            <dt class="mm-sub">kapacita</dt><dd>7 lidí ve stoje</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="m-reference--content">
+
+
+                <div class="m-body--content">
+
+                    <p>Dlouho avizovaná modulární multifunkční stavba v areálu KOMA ve Vizovicích je dokončena. Jídelna a moderní zázemí pro pracovníky firmy tak slouží vedle svého hlavního účelu i pro kulturní a společenské akce. </p>
+
+                    <p>Nová modulární budova, navržená architekty Chybíkem a Krištofem naplňuje filozofii firmy, jež tvrdí, že kvalitní produkty mohou vytvářet pouze kvalitní a spokojení zaměstnanci. Architektonický návrh proto elegantně řeší interiér budovy, kdy vnitřní prostory odrážejí nejnovější trendy, jsou barvené a působí svěžím a příjemným dojmem. Navíc vytváří pro lidi prostory, kam rádi zajdou a ač jsou stále v areálu firmy, tak si od práce dokáží odpočinout. Budova je díky velikým oknům nádherně prosvětlená. Exteriérové řešení působí již na první dojem atraktivně. Nejde jen o zajímavou skladbu modulů a terasy, ale také o nápadité fasádní řešení, na kterém se v těchto dnech pracuje (projekt počítá s osazením sekundární fasády z tahokovu, která bude instalovaná do konce února 2014).  </p>
+
+                    <p>Modulární architektura má jednoduše budoucnost!</p>
+                </div>
+
+
+                <aside>
+
+                    <div class="m-aside-block">
+                        <header class="m-aside-block--header">
+                            <div class="m-aside-block--summary">
+
+                                <h2 class="m-aside-block--hed"><i class="fa fa-arrow-right"></i> Fotogalerie</h2>
+
+                                <div class="m-aside-block--meta">
+                                    (43 fotografií)
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="m-aside-block--content">
+
+                            <div class="m-gallery">
+                                {% for i in 1..8 %}
+                                    <div class="m-gallery-item">
+                                        <div class="m-gallery-item--image" style="background-image: url(http://lorempixel.com/400/300)">
+                                            <a href=""><img src="http://lorempixel.com/400/300" alt="" /></a>
+                                        </div>
+                                        <div class="m-gallery-item--summary">
+                                            <h2 class="m-gallery-item--hed">Item header</h2>
+
+                                            <div class="m-gallery-item--description">Description</div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+
+                        <footer class="m-aside-block--footer">
+                            <div class="l-half">
+                                <div class="m-aside-block--top"><a href="">Block footer<i class="fa fa-arrow-up"></i></a></div>
+                            </div>
+                            <div class="l-half">
+                                <div class="m-aside-block--more"><a href="">Block footer2<i class="fa fa-arrow-right"></i></a></div>
+                            </div>
+                        </footer>
+                    </div>
+
+                </aside>
+
+
+
+            </div>
+
+        </article>
+
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+
+    {% include "subtemplates/module-support.twig" %}
+    {% include "subtemplates/module-footer.twig" %}
+    {% include "subtemplates/module-page-scroll.twig" %}
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+
+        // slick controll
+        $(function () {
+
+            //
+            $('[slick]').each(function () {
+                var SlickWrapper = $(this);
+                var carousel = SlickWrapper.find('[carousel]');
+                var oldActive = null;
+                var nav = SlickWrapper.find('[carouselnav]');
+
+                if (carousel) {
+                    carousel.slick({
+                        dots: false,
+                        infinite: true,
+                        //fade: true,
+                        //cssEase: 'linear',
+                        draggable: false,
+                        speed: 300,
+                        slidesToShow: 1,
+                        adaptiveHeight: true
+                    })
+                }
+
+                if (nav) {
+                    console.log("nav");
+                    var count = 0;
+                    var items = nav.find('[slick-to]');
+                    for (var i = 0; i < items.length; i++) {
+                        var item = $(items[i]);
+
+                        if (nav.attr("slick-method") == "mouseenter") {
+                            item.mouseenter(function (e) {
+
+                                if (oldActive) {
+                                    oldActive.removeClass("active");
+                                }
+
+                                e.preventDefault();
+                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                                $(this).addClass("active");
+                                oldActive = $(this);
+                            });
+                        } else {
+                            item.click(function (e) {
+
+                                if (oldActive) {
+                                    oldActive.removeClass("active");
+                                }
+
+                                e.preventDefault();
+                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                                $(this).addClass("active");
+                                oldActive = $(this);
+                            });
+                        }
+
+
+                    }
+                }
+
+            });
+
+        });
+
+
+        // block feed JS
+
+        var blogSlick = $('.block-feed-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        // full size carousel
+
+        var blogSlick = $('.full-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
+        });
+
+    </script>
+{% endblock %}
+
