@@ -1,0 +1,24 @@
+.m-aside-block { }
+
+.m-aside-block--header {
+    @include cf();
+    margin-bottom: 20px;
+}
+
+.m-aside-block--footer {
+    @include cf();
+}
+
+.m-aside-block--hed,
+.m-aside-block--meta {
+    display: inline-block;
+    font-size: rem-calc(18);
+
+    .fa {
+        font-size: 18px;
+        line-height: rem-calc(18);
+    }
+}
+
+
+
