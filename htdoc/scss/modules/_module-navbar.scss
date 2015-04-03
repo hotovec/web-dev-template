@@ -121,7 +121,8 @@ $navbar-text-transform: uppercase !default;
             display: block;
             height: 100%;
             line-height: $navbar-height;
-            padding: 0 10px;
+            //padding: 0 10px;
+            margin: 0 10px;
 
             cursor: pointer;
 
@@ -131,6 +132,8 @@ $navbar-text-transform: uppercase !default;
             &:hover {
                 color: $navbar-hover-color;
                 background-color: $navbar-hover-bg-color;
+
+                border-bottom: 2px solid $navbar-hover-color;
             }
         }
     }
