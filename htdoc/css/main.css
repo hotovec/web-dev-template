@@ -1359,14 +1359,6 @@ body {
   width: 100%;
   top: 0; }
 
-.l-footer {
-  overflow: hidden;
-  background-color: lightgoldenrodyellow; }
-  .l-footer.is-sticky {
-    position: fixed;
-    width: 100%;
-    bottom: 0; }
-
 .l-feed_triple-card .l-single {
   float: left;
   width: calc(100% * 1 - 60px);
@@ -1873,6 +1865,8 @@ body {
   background-color: #C20E1A;
   height: 100%;
   width: 100%; }
+  .m-footer.m-section {
+    padding-bottom: 20px; }
   .m-footer .m-footer--container {
     color: white;
     font-weight: 600; }
@@ -1883,60 +1877,65 @@ body {
     text-decoration: none; }
     .m-footer a:hover {
       text-decoration: underline; }
-  .m-footer .m-footer--section:nth-of-type(1) {
-    float: left;
-    width: calc(100% * 1 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 16px; }
-  .m-footer .m-footer--section:nth-of-type(2) {
-    float: left;
-    width: calc(100% * 1 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 6px; }
-  .m-footer .m-footer--section:nth-of-type(3) {
-    float: left;
-    width: calc(100% * 1 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: left;
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid white; }
-  @media only screen and (min-width:961px) {
+  .m-footer .m-footer--section {
+    font-size: 0.875rem; }
     .m-footer .m-footer--section:nth-of-type(1) {
       float: left;
-      width: calc(100% * 0.25 - 30px);
+      width: calc(100% * 1 - 30px);
       margin-left: 15px;
       margin-right: 15px;
-      margin-bottom: 0; }
+      margin-bottom: 16px; }
     .m-footer .m-footer--section:nth-of-type(2) {
+      float: left;
+      width: calc(100% * 1 - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 6px; }
+    .m-footer .m-footer--section:nth-of-type(3) {
+      float: left;
+      width: calc(100% * 1 - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: left;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid white; }
+    @media only screen and (min-width:961px) {
+      .m-footer .m-footer--section:nth-of-type(1) {
+        float: left;
+        width: calc(100% * 0.25 - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 0; }
+      .m-footer .m-footer--section:nth-of-type(2) {
+        float: left;
+        width: calc(100% * 0.5 - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 0; }
+      .m-footer .m-footer--section:nth-of-type(3) {
+        float: left;
+        width: calc(100% * 0.25 - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: right;
+        border: none;
+        margin-bottom: 0; } }
+  .m-footer .m-footer--subsection {
+    margin-top: 20px;
+    font-size: 0.75rem; }
+    .m-footer .m-footer--subsection:nth-of-type(1) {
       float: left;
       width: calc(100% * 0.5 - 30px);
       margin-left: 15px;
       margin-right: 15px;
-      margin-bottom: 0; }
-    .m-footer .m-footer--section:nth-of-type(3) {
+      text-align: left; }
+    .m-footer .m-footer--subsection:nth-of-type(2) {
       float: left;
-      width: calc(100% * 0.25 - 30px);
+      width: calc(100% * 0.5 - 30px);
       margin-left: 15px;
       margin-right: 15px;
-      text-align: right;
-      border: none;
-      margin-bottom: 0; } }
-  .m-footer .m-footer--subsection:nth-of-type(1) {
-    float: left;
-    width: calc(100% * 0.5 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: left; }
-  .m-footer .m-footer--subsection:nth-of-type(2) {
-    float: left;
-    width: calc(100% * 0.5 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: right; }
+      text-align: right; }
   .m-footer .m-footer--menu-primary {
     text-transform: uppercase;
     padding: 0;
@@ -1988,6 +1987,8 @@ body {
             margin-left: 0; }
           .m-footer .m-footer--menu-secondary > li > * {
             display: inline-block; } }
+  .m-footer .m-footer--menu-link i {
+    font-size: 1.5rem; }
   .m-footer .m-footer--author {
     text-align: right; }
   .m-footer .m-footer--logo {
