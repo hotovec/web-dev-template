@@ -540,13 +540,27 @@
 
     article {
         &:hover {
-            .m-item--image a {
-                background-color: rgba(0,0,0,.25);
+            .m-item--image a:after {
+                font-family: FontAwesome;
+
+                display: block;
+                position: absolute;
+                content: "";
+
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                text-align: center;
+                color: white;
+                line-height: 53px;
+                background-color: rgba(0, 0, 0, .45);
             }
 
             .m-item--hed a {
                 color: $primary-color;
-                text-decoration: underline;
+                text-decoration: none;
             }
         }
 

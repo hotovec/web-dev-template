@@ -14,22 +14,28 @@
 
     .l-prev {
         text-align: left;
-        .m-item--image {
-            float: left;
-            margin-right: 20px;
-        }
 
+            .m-item--image {
+                float: left;
+                margin-right: 20px;
+                a:after {
+                    content: "\f060" !important;
+                }
+            }
         .m-item--summary {
             margin-left: 70px;
         }
+
     }
 
-    .l-next  {
+    .l-next {
         @include move(4/12);
         text-align: right;
 
         .m-item--image {
-
+            a:after {
+                content: "\f061" !important;
+            }
             margin-left: 20px;
             float: right;
         }
