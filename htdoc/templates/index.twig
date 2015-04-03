@@ -8,13 +8,10 @@
         {% include "subtemplates/module-navbar.twig" %}
     </div>
 
-
-
     {% include "subtemplates/module-next-prev.twig" %}
-
-    {#{% include "subtemplates/feed-four_reference.twig" %}#}
-    {#{% include "subtemplates/feed-two_zpravodaj.twig" %}#}
-    {#{% include "subtemplates/section-side-triple.twig" %}#}
+    {% include "subtemplates/feed-four_reference.twig" %}
+    {% include "subtemplates/feed-two_zpravodaj.twig" %}
+    {% include "subtemplates/section-side-triple.twig" %}
     {#{% include "subtemplates/feed-three_obory.twig" %}#}
     {#{% include "subtemplates/hero-tabs.twig" %}#}
     {#{% include "subtemplates/feed-carousel.twig" %}#}
@@ -63,10 +60,10 @@
                     console.log("nav");
                     var count = 0;
                     var items = nav.find('[slick-to]');
-                    for(var i=0;i< items.length; i++) {
+                    for (var i = 0; i < items.length; i++) {
                         var item = $(items[i]);
 
-                        if(nav.attr("slick-method")=="mouseenter") {
+                        if (nav.attr("slick-method") == "mouseenter") {
                             item.mouseenter(function (e) {
 
                                 if (oldActive) {
@@ -93,12 +90,53 @@
                         }
 
 
-
-
                     }
                 }
 
             });
+
+
+            // mega menu
+
+            var lastMegaTab = null;
+
+            $('[mega-open]').each(function () {
+                var item = $(this);
+                var mega = $("#mega");
+                var tabName = item.attr("mega-open");
+                var tab = $(tabName);
+
+                item.click(function (e) {
+                    e.preventDefault();
+
+                    if (lastMegaTab) {
+                        lastMegaTab.removeClass("is-active");
+                    }
+
+                    mega.addClass("is-open");
+                    tab.addClass("is-active");
+                    lastMegaTab = tab;
+                });
+
+            });
+
+            $('[mega-close]').each(function () {
+                var item = $(this);
+                var mega = $("#mega");
+
+                item.click(function (e) {
+                    e.preventDefault();
+                    if (lastMegaTab) {
+                        lastMegaTab.removeClass("is-active");
+                    }
+                    mega.removeClass("is-open");
+                    lastMegaTab.removeClass("is-active");
+                });
+
+            });
+
+            // end mega menu
+
 
         });
 
@@ -133,6 +171,7 @@
             slidesToScroll: 1,
             adaptiveHeight: true
         });
+
 
     </script>
 {% endblock %}

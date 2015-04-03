@@ -21,31 +21,235 @@
         </ul>#}
 
         {# logo #}
-        <a class="m-navbar--logo" href="/"><div class="mm-has-svg" style="background-image: url('/sites/koma/assets/images/logo-koma-modular.svg');"></div></a>
+        <a class="m-navbar--logo" href="/">
+            <div class="mm-has-svg" style="background-image: url('/sites/koma/assets/images/logo-koma-modular.svg');"></div>
+        </a>
 
         {# social #}
         <ul class="m-navbar--menu m-navbar--menu-secondary">
-            {% for link in navbar.menuSecondary %}
-                <li class="m-navbar--menu-link"><a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a></li>
-            {% endfor %}
-
-            {#<li class="m-navbar--menu-social m-navbar--menu-twitter">
-                <a target="_blank" title="" href="https://twitter.com/rww">
-                    <em class="">Twitter</em>
-                </a>
+            <li class="m-navbar--menu-link">
+                <a target="" title=""><em class="">Kontakt</em></a>
             </li>
-
-            <li class="m-navbar--menu-social m-navbar--menu-facebook">
-                <a target="_blank" title="" href="https://twitter.com/rww">
-                    <em class="">Facebook</em>
-                </a>
+            <li class="m-navbar--menu-link">
+                <a target="" title="" mega-open="#megaFirma"><em class="">Firma a lidé</em></a>
             </li>
-
-            <li class="m-navbar--menu-social m-navbar--menu-instagram">
-                <a target="_blank" title="" href="https://twitter.com/rww">
-                    <em class="">Instagram</em>
-                </a>
-            </li>#}
+            <li class="m-navbar--menu-link">
+                <a target="" title="" mega-open="#megaReference"><em class="">Reference</em></a>
+            </li>
+            <li class="m-navbar--menu-link">
+                <a target="" title="" mega-open="#megaObjekty"><em class="">Objekty dle účelu</em></a>
+            </li>
+            <li class="m-navbar--menu-link">
+                <a target="" title="" mega-open="#megaProdukty"><em class="">Produkty a služby</em></a>
+            </li>
         </ul>
     </div>
 </div>
+
+
+<div class="m-mega" id="mega">
+    <div class="m-mega--container">
+
+        <div class="m-mega--tab" id="megaProdukty">
+            <div class="m-mega--section l-double">
+                <div class="m-mega--hed">
+                    Produkty a služby
+                </div>
+                <div class="m-mega--description">
+                    KOMA Modular je česká výrobní firma
+                </div>
+            </div>
+
+            <div class="m-mega--section l-double">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+
+                    <ul>
+                        <li><a href="" title="">Menu c1 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="" title="">Menu c2 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="m-mega--tab" id="megaObjekty">
+            <div class="m-mega--section l-double">
+                <div class="m-mega--hed">
+                   Objekty dle účelu
+                </div>
+                <div class="m-mega--description">
+                    KOMA Modular je česká výrobní firma zaměřená na kvalitu, s vypracovaným žebříčkem hodnot.
+                </div>
+            </div>
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="m-mega--section l-double">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+
+                    <ul>
+                        <li><a href="" title="">Menu c1 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="" title="">Menu c2 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="m-mega--tab" id="megaReference">
+            <div class="m-mega--section l-double">
+                <div class="m-mega--hed">
+                    Reference
+                </div>
+                <div class="m-mega--description">
+                    KOMA s vypracovaným žebříčkem hodnot.
+                </div>
+            </div>
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="m-mega--section l-double">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+
+                    <ul>
+                        <li><a href="" title="">Menu c1 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="" title="">Menu c2 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="m-mega--tab" id="megaFirma">
+            <div class="m-mega--section l-double">
+                <div class="m-mega--hed">
+                    Firma a lidé
+                </div>
+                <div class="m-mega--description">
+                    KOMA s vypracovaným žebříčkem hodnot.
+                </div>
+            </div>
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="m-mega--section l-double">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+
+                    <ul>
+                        <li><a href="" title="">Menu c1 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="" title="">Menu c2 item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="m-mega--section l-single">
+                <nav>
+                    <div class="m-mega--label">Titulek</div>
+                    <ul>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                        <li><a href="" title="">Menu item</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="m-mega--close" mega-close><i class="fa fa-close"></i></div>
+    </div>
+
+</div>
+
