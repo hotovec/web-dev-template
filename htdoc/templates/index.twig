@@ -12,15 +12,15 @@
     {% include "subtemplates/feed-four_reference.twig" %}
     {% include "subtemplates/feed-two_zpravodaj.twig" %}
     {% include "subtemplates/section-side-triple.twig" %}
-    {#{% include "subtemplates/feed-three_obory.twig" %}#}
-    {#{% include "subtemplates/hero-tabs.twig" %}#}
-    {#{% include "subtemplates/feed-carousel.twig" %}#}
-    {#{% include "subtemplates/feed-block-carousel.twig" %}#}
-    {#{% include "subtemplates/feed-card-triple.twig" %}#}
-    {#{% include "subtemplates/feed-three_faq.twig" %}#}
-    {#{% include "subtemplates/feed-six_certifikace.twig" %}#}
-    {#{% include "subtemplates/section-vertical-tabs.twig" %}#}
-    {#{% include "subtemplates/module-support.twig" %}#}
+    {% include "subtemplates/feed-three_obory.twig" %}
+    {% include "subtemplates/hero-tabs.twig" %}
+    {% include "subtemplates/feed-carousel.twig" %}
+    {% include "subtemplates/feed-block-carousel.twig" %}
+    {% include "subtemplates/feed-card-triple.twig" %}
+    {% include "subtemplates/feed-three_faq.twig" %}
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/section-vertical-tabs.twig" %}
+    {% include "subtemplates/module-support.twig" %}
 
     {% include "subtemplates/module-footer.twig" %}
     {% include "subtemplates/module-page-scroll.twig" %}
@@ -34,11 +34,11 @@
     <script>
 
         // slick controll
-        $(function () {
+        jQuery(function () {
 
             //
-            $('[slick]').each(function () {
-                var SlickWrapper = $(this);
+            jQuery('[slick]').each(function () {
+                var SlickWrapper = jQuery(this);
                 var carousel = SlickWrapper.find('[carousel]');
                 var oldActive = null;
                 var nav = SlickWrapper.find('[carouselnav]');
@@ -61,7 +61,7 @@
                     var count = 0;
                     var items = nav.find('[slick-to]');
                     for (var i = 0; i < items.length; i++) {
-                        var item = $(items[i]);
+                        var item = jQuery(items[i]);
 
                         if (nav.attr("slick-method") == "mouseenter") {
                             item.mouseenter(function (e) {
@@ -71,9 +71,9 @@
                                 }
 
                                 e.preventDefault();
-                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
-                                $(this).addClass("active");
-                                oldActive = $(this);
+                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
+                                jQuery(this).addClass("active");
+                                oldActive = jQuery(this);
                             });
                         } else {
                             item.click(function (e) {
@@ -83,9 +83,9 @@
                                 }
 
                                 e.preventDefault();
-                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
-                                $(this).addClass("active");
-                                oldActive = $(this);
+                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
+                                jQuery(this).addClass("active");
+                                oldActive = jQuery(this);
                             });
                         }
 
@@ -100,11 +100,11 @@
 
             var lastMegaTab = null;
 
-            $('[mega-open]').each(function () {
-                var item = $(this);
-                var mega = $("#mega");
+            jQuery('[mega-open]').each(function () {
+                var item = jQuery(this);
+                var mega = jQuery("#mega");
                 var tabName = item.attr("mega-open");
-                var tab = $(tabName);
+                var tab = jQuery(tabName);
 
                 item.click(function (e) {
                     e.preventDefault();
@@ -120,9 +120,9 @@
 
             });
 
-            $('[mega-close]').each(function () {
-                var item = $(this);
-                var mega = $("#mega");
+            jQuery('[mega-close]').each(function () {
+                var item = jQuery(this);
+                var mega = jQuery("#mega");
 
                 item.click(function (e) {
                     e.preventDefault();
@@ -143,7 +143,7 @@
 
         // block feed JS
 
-        var blogSlick = $('.block-feed-slider').slick({
+        var blogSlick = jQuery('.block-feed-slider').slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -163,7 +163,7 @@
 
         // full size carousel
 
-        var blogSlick = $('.full-carousel').slick({
+        var blogSlick = jQuery('.full-carousel').slick({
             dots: true,
             infinite: true,
             speed: 300,
