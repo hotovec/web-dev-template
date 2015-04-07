@@ -1,11 +1,27 @@
 .m-gallery {
     @include row();
+
     .m-gallery-item {
         @include column (2/6);
         margin-bottom: 30px;
     }
 
+    &.mm-medium {
+        .m-gallery-item {
+            @include column (3/12);
+            margin-bottom: 30px;
+        }
+    }
+
+    &.mm-tiny {
+        .m-gallery-item {
+            @include column (1/6);
+            margin-bottom: 30px;
+        }
+    }
 }
+
+
 
 .m-gallery-item {
 
