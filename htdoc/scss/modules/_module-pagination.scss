@@ -1,0 +1,7 @@
+.m-pagination {
+    @include pagination-container(true);
+}
+
+.m-pagination--container {
+    @include pagination();
+}

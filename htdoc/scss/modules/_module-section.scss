@@ -28,6 +28,16 @@
             text-decoration: underline;
         }
     }
+
+    .l-left,
+    .l-right {
+        @include column(3/12);
+    }
+    .l-center {
+        @include column(6/12);
+        text-align: center;
+    }
+
 }
 
 .m-section--header {
@@ -127,7 +137,7 @@
         text-align: center;
         @include media(C) {
             text-align: left;
-            }
+        }
     }
 
     .m-section--nav {
@@ -396,8 +406,6 @@
 
 }
 
-
-
 .m-section {
     &.l-login {
 
@@ -430,10 +438,8 @@
             }
         }
 
-
-
-
     }
+
 }
 
 

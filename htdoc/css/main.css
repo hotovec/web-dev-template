@@ -1127,6 +1127,50 @@ input.error, textarea.error, select.error {
 label.error {
   color: #C20E1A; }
 
+ul.pagination {
+  display: block;
+  min-height: 1.5rem;
+  margin-left: -0.3125rem; }
+  ul.pagination li {
+    height: 1.5rem;
+    color: #222222;
+    font-size: 0.875rem;
+    margin-left: 0.3125rem; }
+    ul.pagination li a, ul.pagination li button {
+      display: block;
+      padding: 0.0625rem 0.625rem 0.0625rem;
+      color: #999999;
+      background: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: inherit;
+      transition: background-color 300ms ease-out; }
+    ul.pagination li:hover a, ul.pagination li a:focus, ul.pagination li:hover button, ul.pagination li button:focus {
+      background: #e6e6e6; }
+    ul.pagination li.unavailable a, ul.pagination li.unavailable button {
+      cursor: default;
+      color: #999999; }
+    ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus, ul.pagination li.unavailable:hover button, ul.pagination li.unavailable button:focus {
+      background: transparent; }
+    ul.pagination li.current a, ul.pagination li.current button {
+      background: #C20E1A;
+      color: #FFFFFF;
+      font-weight: bold;
+      cursor: default; }
+      ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
+        background: #C20E1A; }
+  ul.pagination li {
+    float: left;
+    display: block; }
+
+/* Pagination centred wrapper */
+.pagination-centered {
+  text-align: center; }
+  .pagination-centered ul.pagination li {
+    float: none;
+    display: inline-block; }
+
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
@@ -1831,6 +1875,46 @@ body {
 .m-navbar.mm-secondary ~ .m-navbar {
   border-top: none; }
 
+.m-pagination {
+  text-align: center; }
+
+.m-pagination--container {
+  display: block;
+  min-height: 1.5rem;
+  margin-left: -0.3125rem; }
+  .m-pagination--container li {
+    height: 1.5rem;
+    color: #222222;
+    font-size: 0.875rem;
+    margin-left: 0.3125rem; }
+    .m-pagination--container li a, .m-pagination--container li button {
+      display: block;
+      padding: 0.0625rem 0.625rem 0.0625rem;
+      color: #999999;
+      background: none;
+      border-radius: 3px;
+      font-weight: normal;
+      font-size: 1em;
+      line-height: inherit;
+      transition: background-color 300ms ease-out; }
+    .m-pagination--container li:hover a, .m-pagination--container li a:focus, .m-pagination--container li:hover button, .m-pagination--container li button:focus {
+      background: #e6e6e6; }
+    .m-pagination--container li.unavailable a, .m-pagination--container li.unavailable button {
+      cursor: default;
+      color: #999999; }
+    .m-pagination--container li.unavailable:hover a, .m-pagination--container li.unavailable a:focus, .m-pagination--container li.unavailable:hover button, .m-pagination--container li.unavailable button:focus {
+      background: transparent; }
+    .m-pagination--container li.current a, .m-pagination--container li.current button {
+      background: #C20E1A;
+      color: #FFFFFF;
+      font-weight: bold;
+      cursor: default; }
+      .m-pagination--container li.current a:hover, .m-pagination--container li.current a:focus, .m-pagination--container li.current button:hover, .m-pagination--container li.current button:focus {
+        background: #C20E1A; }
+  .m-pagination--container li {
+    float: left;
+    display: block; }
+
 .m-mega {
   position: absolute;
   z-index: 900;
@@ -2179,6 +2263,17 @@ body {
     .m-section--header a:hover, .m-section--footer a:hover {
       color: #C20E1A;
       text-decoration: underline; }
+  .m-section--header .l-left, .m-section--header .l-right, .m-section--footer .l-left, .m-section--footer .l-right {
+    float: left;
+    width: calc(100% * 0.25 - 30px);
+    margin-left: 15px;
+    margin-right: 15px; }
+  .m-section--header .l-center, .m-section--footer .l-center {
+    float: left;
+    width: calc(100% * 0.5 - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center; }
 
 .m-section--header {
   margin-bottom: 50px; }
