@@ -352,6 +352,7 @@
             height: 100%;
             width: 100%;
             display: inline-block;
+
         }
         &:before {
             display: block;
@@ -377,6 +378,7 @@
         @include vertical-align();
         z-index: 10;
         margin: 0;
+        padding: 10%;
     }
 
     &.mm-has-hover {
@@ -397,7 +399,6 @@
             }
         }
     }
-
 }
 
 .m-card_reference {

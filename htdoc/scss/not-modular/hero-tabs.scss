@@ -1,9 +1,17 @@
 .hero-tabs {
-    //background-color: black;
+    background-color: darken($color-secondary, 10%);
 
     height: 620px;
     position: relative;
     color: white;
+
+    @include media(B) {
+        height: 620px;
+    }
+
+    @include media(D) {
+        height: 840px;
+    }
 
     .content-tab {
 
@@ -17,9 +25,15 @@
         padding-top: 20px;
 
         @include media(B) {
-
             font-size: rem-calc(24px);
             padding-top: 60px;
+            height: 620px;
+        }
+
+        @include media(D) {
+            font-size: rem-calc(32px);
+            padding-top: 80px;
+            height: 840px;
         }
 
         .description {
@@ -88,6 +102,14 @@
                 color: white;
                 text-decoration: none;
                 display: block;
+                min-height: 72px;
+
+                @include media(C) {
+                    min-height: 94px;
+                }
+                @include media(D) {
+                    min-height: 72px;
+                }
             }
 
             @include transition(all 0.3s);

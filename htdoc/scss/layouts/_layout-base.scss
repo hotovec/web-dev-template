@@ -26,3 +26,16 @@
     right: 0;
     bottom: 0;
 }
+
+.mm-pad-top {
+    padding-top: $space;
+}
+
+.mm-pad-bottom {
+    padding-bottom: $space;
+}
+
+.mm-pad-zero {
+    padding-top: 0;
+    padding-bottom: 0;
+}

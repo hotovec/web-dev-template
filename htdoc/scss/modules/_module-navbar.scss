@@ -56,15 +56,21 @@ $navbar-text-transform: uppercase !default;
     &.mm-secondary {
 
         .m-navbar--menu-primary {
-            @include column(.4);
+            //@include column(.4);
+            width: auto;
+            float: right;
         }
 
         .m-navbar--menu-secondary {
-            @include column(.3);
+            //@include column(.1);
+            width: auto;
+            float: right;
         }
 
         .m-navbar--menu-tertiary {
-            @include column(.3);
+            //@include column(.16);
+            width: auto;
+            float: right;
         }
 
         display: none;
@@ -138,7 +144,8 @@ $navbar-text-transform: uppercase !default;
         @include inline-list(left);
     }
 
-    .m-navbar--menu-secondary {
+    .m-navbar--menu-secondary,
+    .m-navbar--menu-tertiary {
         @include inline-list(right);
     }
 

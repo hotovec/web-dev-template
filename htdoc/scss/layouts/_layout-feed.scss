@@ -8,19 +8,23 @@
 
     .l-single {
         @include column(1, $gut: 60px);
+        margin-bottom: $space;
+        position: relative;
 
         @include media(B) {
-            @include column(1/3);
+            @include column(1, $gut: 60px);
         }
 
         @include media(C) {
             @include column(1/3, $gut: 80px);
+            min-height: 394px;
         }
 
         @include media(D) {
             @include column(1/3, $gut: 150px);
-
+            min-height: 364px;
         }
+
     }
 }
 
