@@ -176,9 +176,14 @@ $navbar-text-transform: uppercase !default;
             }
             a {
                 padding: 0;
+                &:hover {
+                    color: $navbar-hover-color;
+                    background-color: $navbar-hover-bg-color;
+                    border-bottom: none;
+                }
             }
 
-            &:last-of-type {
+            &:first-of-type {
                 border: none;
                 > li {
                     padding-right: 0;

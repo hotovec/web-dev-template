@@ -1871,9 +1871,13 @@ body {
         padding: 0 10px; }
       .m-navbar.mm-secondary .m-navbar--menu a {
         padding: 0; }
-      .m-navbar.mm-secondary .m-navbar--menu:last-of-type {
+        .m-navbar.mm-secondary .m-navbar--menu a:hover {
+          color: #C20E1A;
+          background-color: transparent;
+          border-bottom: none; }
+      .m-navbar.mm-secondary .m-navbar--menu:first-of-type {
         border: none; }
-        .m-navbar.mm-secondary .m-navbar--menu:last-of-type > li {
+        .m-navbar.mm-secondary .m-navbar--menu:first-of-type > li {
           padding-right: 0; }
     .m-navbar.mm-secondary a {
       font-size: 0.75rem;
