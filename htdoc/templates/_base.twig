@@ -46,7 +46,7 @@
     {#{% include "typekit.twig" %}#}
 </head>
 
-<body class="l-page">
+<body class="l-page {% block bodyClasses %}{% endblock %}">
     {% block body %}{% endblock %}
 
     <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
