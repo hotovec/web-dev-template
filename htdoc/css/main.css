@@ -4123,6 +4123,79 @@ body {
         .hero-tabs .navigation .tab.color-10.active {
           background-color: #B5BBB4; }
 
+.messages {
+  box-sizing: border-box;
+  *zoom: 1;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 10px 20px !important;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .messages:before, .messages:after {
+    content: '';
+    display: table; }
+  .messages:after {
+    clear: both; }
+  @media only screen and (min-width:641px) {
+    .messages {
+      max-width: 640px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width:961px) {
+    .messages {
+      max-width: 960px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width:1331px) {
+    .messages {
+      max-width: 1296px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+
+#first-time {
+  box-sizing: border-box;
+  *zoom: 1;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  #first-time:before, #first-time:after {
+    content: '';
+    display: table; }
+  #first-time:after {
+    clear: both; }
+  @media only screen and (min-width:641px) {
+    #first-time {
+      max-width: 640px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width:961px) {
+    #first-time {
+      max-width: 960px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media only screen and (min-width:1331px) {
+    #first-time {
+      max-width: 1296px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+
 * {
   box-sizing: border-box; }
 

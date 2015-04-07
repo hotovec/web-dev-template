@@ -1,0 +1,10 @@
+.messages {
+    @include l-grid();
+    padding: 10px 20px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#first-time {
+    @include l-grid();
+}
