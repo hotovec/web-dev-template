@@ -3524,44 +3524,46 @@ body {
         .m-filter .l-right .m-filter--items > li > * {
           display: inline-block; }
 
-.m-admin fieldset {
-  border: none; }
-  .m-admin fieldset legend {
-    background-color: transparent; }
-.m-admin form {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.9375rem; }
-  .m-admin form a {
-    color: #4A4A4A;
-    text-decoration: none; }
-    .m-admin form a:hover {
-      color: #000;
-      text-decoration: underline; }
-.m-admin button, .m-admin .button {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  padding: 8px 20px;
-  background-color: #677066;
-  border-radius: 5px; }
-.m-admin .f-half {
-  float: left;
-  width: calc(100% * 0.5); }
-.m-admin .f-third {
-  float: left;
-  width: calc(100% * 0.3333333333); }
-.m-admin .f-25 {
-  float: left;
-  width: calc(100% * 0.25); }
-.m-admin .f-75 {
-  float: left;
-  width: calc(100% * 0.75); }
-.m-admin .f-right {
-  text-align: right; }
-.m-admin .f-left {
-  text-align: left; }
-.m-admin .f-row {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto; }
+.m-admin {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  .m-admin fieldset {
+    border: none; }
+    .m-admin fieldset legend {
+      background-color: transparent; }
+  .m-admin form {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 0.9375rem; }
+    .m-admin form a {
+      color: #4A4A4A;
+      text-decoration: none; }
+      .m-admin form a:hover {
+        color: #000;
+        text-decoration: underline; }
+  .m-admin button, .m-admin .button {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    padding: 8px 20px;
+    background-color: #677066;
+    border-radius: 5px; }
+  .m-admin .f-half {
+    float: left;
+    width: calc(100% * 0.5); }
+  .m-admin .f-third {
+    float: left;
+    width: calc(100% * 0.3333333333); }
+  .m-admin .f-25 {
+    float: left;
+    width: calc(100% * 0.25); }
+  .m-admin .f-75 {
+    float: left;
+    width: calc(100% * 0.75); }
+  .m-admin .f-right {
+    text-align: right; }
+  .m-admin .f-left {
+    text-align: left; }
+  .m-admin .f-row {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; }
 
 .l-detail-page .m-section--footer {
   margin-top: 50px; }
