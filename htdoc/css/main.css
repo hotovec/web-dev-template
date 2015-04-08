@@ -3689,8 +3689,7 @@ body {
 .m-filter {
   margin-bottom: 30px; }
   .m-filter .m-filter--items li {
-    width: auto;
-    line-height: 48px;
+    width: 120px;
     color: #000; }
     .m-filter .m-filter--items li.label {
       padding: 0 20px;
@@ -3743,6 +3742,31 @@ body {
           margin-left: 0; }
         .m-filter .l-right .m-filter--items > li > * {
           display: inline-block; }
+
+.chosen-container-single .chosen-single {
+  height: 48px;
+  padding: 10px;
+  font-size: 0.9375rem; }
+.chosen-container-single .chosen-single, .chosen-container-single .chosen-drop {
+  border: 0 !important;
+  border-radius: 0;
+  background: white;
+  box-shadow: none;
+  font-weight: 600; }
+.chosen-container-single .chosen-with-drop .chosen-single, .chosen-container-single .chosen-with-drop .chosen-drop {
+  border: 0 !important;
+  background: white;
+  box-shadow: none; }
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  background: white;
+  box-shadow: none; }
+
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 0 14px !important; }
 
 .page-user-login, .m-admin {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
