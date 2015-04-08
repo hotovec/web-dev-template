@@ -63,7 +63,7 @@ $navbar-text-transform: uppercase !default;
 
     &.mm-secondary {
 
-        z-index: 9999;
+        z-index: 20;
         top: 0;
         @include transform(translateY(0));
 
@@ -216,7 +216,7 @@ $navbar-text-transform: uppercase !default;
 
 .m-navbar {
     @include transition(all 0.2s);
-    &.is-sticky {
+    &.is-collapsed {
         padding-top: 10px;
         padding-bottom: 10px;
         @include transform(translateY(0px));

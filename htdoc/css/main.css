@@ -1781,7 +1781,7 @@ body {
         margin-left: 15px;
         margin-right: 15px; } }
   .m-navbar.mm-secondary {
-    z-index: 9999;
+    z-index: 20;
     top: 0;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -1902,7 +1902,7 @@ body {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s; }
-  .m-navbar.is-sticky {
+  .m-navbar.is-collapsed {
     padding-top: 10px;
     padding-bottom: 10px;
     -webkit-transform: translateY(0px);
@@ -4039,6 +4039,7 @@ body {
     background-image: url("http://lorempixel.com/1000/700");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 50%;
     height: 620px;
     font-size: 1.25rem;
     font-weight: 800;
