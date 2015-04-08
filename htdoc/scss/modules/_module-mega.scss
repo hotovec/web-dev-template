@@ -1,7 +1,8 @@
 .m-mega {
 
-    position: absolute;
+    position: fixed;
     z-index: 900;
+    top: 150px;
     left: 0;
     width: 100%;
     height: auto;
@@ -130,4 +131,14 @@
         }
     }
 
+}
+
+.m-navbar ~ .m-mega {
+    top: 0;
+    @include transform(translateY(150px));
+}
+.m-navbar.is-sticky ~ .m-mega {
+    top: 0;
+    @include transition(all 0.2s);
+    @include transform(translateY(68px));
 }

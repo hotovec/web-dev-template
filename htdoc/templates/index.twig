@@ -137,6 +137,31 @@
 
             // end mega menu
 
+            // resize Navbar
+
+            var navbarPrimary = jQuery('#navbarPrimary');
+            var navbarSecondary = jQuery('#navbarSecondary');
+            var scrollDriver = jQuery('body');
+
+            var currentTop = function () {
+                return scrollDriver.scrollTop();
+            }
+
+            jQuery(window).scroll(function () {
+                if (currentTop() > 40) {
+                    if (!navbarPrimary.hasClass("is-sticky")) {
+                        navbarPrimary.addClass("is-sticky");
+                    }
+                    if (!navbarSecondary.hasClass("is-hidden")) {
+                        navbarSecondary.addClass("is-hidden");
+                    }
+                } else {
+                    navbarPrimary.removeClass("is-sticky");
+                    navbarSecondary.removeClass("is-hidden");
+                }
+            });
+
+            // end resize Navbar
 
         });
 
