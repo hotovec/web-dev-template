@@ -29,6 +29,7 @@
     "angular-once": "~0.1.8",
     "slick-carousel": "~1.4.1",
     "bower-foundation5": "~5.0.3",
-    "lost-grid": "1.0.1"
+    "lost-grid": "1.0.1",
+    "chosen": "~1.4.2"
   }
 }

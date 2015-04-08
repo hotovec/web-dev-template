@@ -8,6 +8,8 @@
         {% include "subtemplates/module-navbar.twig" %}
     </div>
 
+
+
     {% include "subtemplates/module-next-prev.twig" %}
     {% include "subtemplates/feed-four_reference.twig" %}
     {% include "subtemplates/feed-two_zpravodaj.twig" %}
@@ -199,5 +201,14 @@
 
 
     </script>
+
+    <script>
+        $(".ch-select").chosen({
+            create_option: true,
+            persistent_create_option: true,
+            create_option_text: 'add'
+        });
+    </script>
+
 {% endblock %}
 

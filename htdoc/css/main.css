@@ -1879,11 +1879,17 @@ body {
     margin: 0 10px;
     cursor: pointer;
     color: #666;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    transition: color .3s; }
     .m-navbar .m-navbar--menu a:hover {
       color: #C20E1A;
       background-color: transparent;
-      border-bottom: 2px solid #C20E1A; }
+      border-bottom: 2px solid #C20E1A;
+      -webkit-transition: color .3s;
+      -moz-transition: color .3s;
+      transition: color .3s; }
   .m-navbar .m-navbar--menu, .m-navbar .m-navbar--menu-primary {
     padding: 0;
     list-style: none;
@@ -2681,7 +2687,7 @@ body {
 .m-section.l-login {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   right: 0;
   margin: auto; }
@@ -3681,35 +3687,18 @@ body {
   font-size: 0.875rem; }
 
 .m-filter {
-  height: 48px;
-  overflow: hidden;
   margin-bottom: 30px; }
   .m-filter .m-filter--items li {
     width: auto;
     line-height: 48px;
-    height: 48px;
-    overflow: hidden;
-    background-color: #fff;
-    color: #000;
-    font-weight: 800; }
+    color: #000; }
     .m-filter .m-filter--items li.label {
-      background-color: white;
       padding: 0 20px;
-      height: 46px;
       color: #B5BBB4; }
-  .m-filter .m-filter--items select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    outline: 0;
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 50px;
-    margin: 0;
-    border-radius: 0;
-    outline: none; }
+  .m-filter .active-result {
+    font-weight: 400; }
+  .m-filter .category {
+    font-weight: 800; }
   .m-filter .l-left {
     float: left;
     width: calc(100% * 0.75 - 30px);
@@ -3719,7 +3708,8 @@ body {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      margin: 0; }
+      margin: 0;
+      overflow: visible; }
       .m-filter .l-left .m-filter--items > li {
         list-style: none;
         float: left;
@@ -3740,7 +3730,8 @@ body {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      margin: 0; }
+      margin: 0;
+      overflow: visible; }
       .m-filter .l-right .m-filter--items > li {
         list-style: none;
         float: right;
@@ -3753,46 +3744,52 @@ body {
         .m-filter .l-right .m-filter--items > li > * {
           display: inline-block; }
 
-.m-admin {
+.page-user-login, .m-admin {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
-  .m-admin fieldset {
+  .page-user-login fieldset, .m-admin fieldset {
     border: none; }
-    .m-admin fieldset legend {
+    .page-user-login fieldset legend, .m-admin fieldset legend {
       background-color: transparent; }
-  .m-admin form {
+  .page-user-login form, .m-admin form {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.9375rem; }
-    .m-admin form a {
+    .page-user-login form a, .m-admin form a {
       color: #4A4A4A;
       text-decoration: none; }
-      .m-admin form a:hover {
+      .page-user-login form a:hover, .m-admin form a:hover {
         color: #000;
         text-decoration: underline; }
-  .m-admin button, .m-admin .button {
+  .page-user-login button, .page-user-login .button, .m-admin button, .m-admin .button {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     padding: 8px 20px;
     background-color: #677066;
     border-radius: 5px; }
-  .m-admin .f-half {
+  .page-user-login .f-half, .m-admin .f-half {
     float: left;
     width: calc(100% * 0.5); }
-  .m-admin .f-third {
+  .page-user-login .f-third, .m-admin .f-third {
     float: left;
     width: calc(100% * 0.3333333333); }
-  .m-admin .f-25 {
+  .page-user-login .f-25, .m-admin .f-25 {
     float: left;
     width: calc(100% * 0.25); }
-  .m-admin .f-75 {
+  .page-user-login .f-75, .m-admin .f-75 {
     float: left;
     width: calc(100% * 0.75); }
-  .m-admin .f-right {
+  .page-user-login .f-right, .m-admin .f-right {
     text-align: right; }
-  .m-admin .f-left {
+  .page-user-login .f-left, .m-admin .f-left {
     text-align: left; }
-  .m-admin .f-row {
+  .page-user-login .f-row, .m-admin .f-row {
     width: 100%;
     max-width: 500px;
     margin: 0 auto; }
+  .page-user-login .m-navbar, .m-admin .m-navbar {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; }
 
 .l-detail-page .m-section--footer {
   margin-top: 50px; }
