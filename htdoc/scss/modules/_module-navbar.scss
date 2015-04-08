@@ -24,7 +24,6 @@ $navbar-text-transform: uppercase !default;
     top: 0;
     @include transform(translateY(30px));
 
-
     width: 100%;
     height: auto;
     @include cf();
@@ -213,15 +212,22 @@ $navbar-text-transform: uppercase !default;
 
 }
 
-
 .m-navbar {
     @include transition(all 0.2s);
+
     &.is-collapsed {
         padding-top: 10px;
         padding-bottom: 10px;
         @include transform(translateY(0px));
         @include transition(all 0.3s);
+
+        .m-navbar--logo {
+            .mm-has-svg {
+                background-size: auto 32px;
+            }
+        }
     }
+
     &.is-hidden {
         @include transform(translateY(-30px));
     }

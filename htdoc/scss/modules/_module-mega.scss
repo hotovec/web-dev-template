@@ -137,7 +137,7 @@
     top: 0;
     @include transform(translateY(150px));
 }
-.m-navbar.is-sticky ~ .m-mega {
+.m-navbar.is-collapsed ~ .m-mega {
     top: 0;
     @include transition(all 0.2s);
     @include transform(translateY(68px));

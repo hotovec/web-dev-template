@@ -56,3 +56,16 @@ $pallete: (
 @each $colorName, $colorValue in $pallete {
     .bg-#{$colorName} { background-color: $colorValue; }
 }
+
+// colors
+
+.firstline-primary { &:first-line { color: $color-primary; }}
+.firstline-secondary {  &:first-line {color: $color-secondary; }}
+.firstline-black {  &:first-line {color: $color-black; }}
+.firstline-white {  &:first-line {color: $color-white; }}
+.firstline-body-font {  &:first-line {color: $color-body-font; }}
+.firstline-body-bg {  &:first-line {color: $color-body-bg; }}
+
+@each $colorName, $colorValue in $pallete {
+    .firstline-#{$colorName} {  &:first-line {color: $colorValue; }}
+}
