@@ -187,8 +187,9 @@ $navbar-text-transform: none !default;
             border-right: 1px solid $color-secondary;
 
             > li {
-                padding: 0 10px;
+                padding: 0 0;
             }
+
             a {
                 padding: 0;
                 &:hover {
@@ -212,6 +213,11 @@ $navbar-text-transform: none !default;
             height: $navbar-secondary-height;
             line-height: $navbar-secondary-height;
         }
+
+        .m-navbar--menu-primary > li:last-child {
+            margin-right: 10px;
+        }
+
     }
 
 }

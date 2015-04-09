@@ -1944,7 +1944,7 @@ body {
       padding: 0;
       border-right: 1px solid #B5BBB4; }
       .m-navbar.mm-secondary .m-navbar--menu > li {
-        padding: 0 10px; }
+        padding: 0 0; }
       .m-navbar.mm-secondary .m-navbar--menu a {
         padding: 0; }
         .m-navbar.mm-secondary .m-navbar--menu a:hover {
@@ -1959,6 +1959,8 @@ body {
       font-size: 0.75rem;
       height: 30px;
       line-height: 30px; }
+    .m-navbar.mm-secondary .m-navbar--menu-primary > li:last-child {
+      margin-right: 10px; }
 
 .m-navbar {
   -webkit-transition: all 0.2s;
