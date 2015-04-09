@@ -1594,10 +1594,12 @@ body {
     height: 210px; }
     @media only screen and (min-width:961px) {
       .l-feed_block-carousel .l-section--content .l-single, .l-feed_block-carousel .l-section--content .l-double, .l-feed_block-carousel .l-section--content .l-half {
-        height: 210px; } }
+        height: 210px;
+        margin-bottom: 30px; } }
     @media only screen and (min-width:1331px) {
       .l-feed_block-carousel .l-section--content .l-single, .l-feed_block-carousel .l-section--content .l-double, .l-feed_block-carousel .l-section--content .l-half {
-        height: 294px; } }
+        height: 294px;
+        margin-bottom: 30px; } }
   .l-feed_block-carousel .l-single {
     float: left;
     width: calc(100% * 0.5 - 30px);
@@ -1860,7 +1862,7 @@ body {
   font-family: "Purista", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
-  text-transform: uppercase; }
+  text-transform: none; }
   .m-navbar em {
     font-style: normal; }
   .m-navbar .m-navbar--logo .mm-has-svg {
@@ -1880,13 +1882,15 @@ body {
     cursor: pointer;
     color: #666;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    border-bottom-color: transparent;
     -webkit-transition: color .3s;
     -moz-transition: color .3s;
     transition: color .3s; }
     .m-navbar .m-navbar--menu a:hover {
       color: #C20E1A;
       background-color: transparent;
-      border-bottom: 2px solid #C20E1A;
+      border-bottom-color: #C20E1A;
       -webkit-transition: color .3s;
       -moz-transition: color .3s;
       transition: color .3s; }
@@ -4339,6 +4343,21 @@ body {
       margin-left: auto;
       padding-left: 0;
       padding-right: 0; } }
+
+.slick-prev, .slick-next {
+  height: 40px;
+  margin-top: -38px; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'FontAwesome';
+  font-size: 2.625rem;
+  color: #4A4A4A; }
+
+.slick-prev:before {
+  content: "\f104"; }
+
+.slick-next:before {
+  content: "\f105"; }
 
 * {
   box-sizing: border-box; }

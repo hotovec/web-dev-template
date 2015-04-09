@@ -12,7 +12,7 @@ $navbar-border-color: #dfdfe3 !default;
 $navbar-font-size: rem(14) !default;
 $navbar-secondary-font-size: rem(12) !default;
 $navbar-font-weight: 600 !default;
-$navbar-text-transform: uppercase !default;
+$navbar-text-transform: none !default;
 
 // module inner default layout
 
@@ -140,12 +140,15 @@ $navbar-text-transform: uppercase !default;
 
             color: $navbar-color;
             text-decoration: none;
+            border-bottom: 2px solid transparent;
+            border-bottom-color: transparent;
             @include transition(color .3s);
             &:hover {
                 color: $navbar-hover-color;
                 background-color: $navbar-hover-bg-color;
 
-                border-bottom: 2px solid $navbar-hover-color;
+                //border-bottom: 2px solid $navbar-hover-color;
+                border-bottom-color:  $navbar-hover-color;
                 @include transition(color .3s);
             }
         }

@@ -146,9 +146,11 @@
 
             @include media(C) {
                 height: 210px;
+                margin-bottom: 30px;
             }
             @include media(D) {
                 height: 294px;
+                margin-bottom: 30px;
             }
         }
     }

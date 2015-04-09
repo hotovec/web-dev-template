@@ -48,6 +48,26 @@
 
 @import "drupal/drupal-override";
 
+// slick override
+
+.slick-prev, .slick-next {
+    height: 40px;
+    margin-top: -38px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'FontAwesome';
+    font-size: rem-calc(42);
+    color: $color-body-font;
+}
+.slick-prev:before {
+    content: "\f104";
+}
+.slick-next:before {
+    content: "\f105";
+}
+
+
 // dev
 
 * {
