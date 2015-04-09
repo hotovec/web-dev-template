@@ -44,7 +44,7 @@
                 var carousel = SlickWrapper.find('[carousel]');
                 var oldActive = null;
                 var nav = SlickWrapper.find('[carouselnav]');
-
+                var gotoFirst = false;
                 if (carousel) {
                     carousel.slick({
                         dots: false,
@@ -55,18 +55,29 @@
                         speed: 300,
                         slidesToShow: 1,
                         adaptiveHeight: true
-                    })
+                    });
+
+                    carousel.on( "rewind", function() {
+                        //carousel.slick('slickGoTo', 0);
+                    });
+
+                    carousel.mouseout(function(e) {
+                        //console.log("ven z karuselu");
+                        //jQuery( carousel ).trigger( "rewind", true );
+                    });
                 }
 
                 if (nav) {
                     console.log("nav");
                     var count = 0;
                     var items = nav.find('[slick-to]');
+
                     for (var i = 0; i < items.length; i++) {
                         var item = jQuery(items[i]);
 
                         if (nav.attr("slick-method") == "mouseenter") {
                             item.mouseenter(function (e) {
+
 
                                 if (oldActive) {
                                     oldActive.removeClass("active");
