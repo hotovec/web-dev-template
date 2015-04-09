@@ -20,7 +20,7 @@ $navbar-text-transform: none !default;
 
     position: fixed;
     background-color: white;
-    z-index: 9999;
+    z-index: 100;
     top: 0;
     @include transform(translateY(30px));
 

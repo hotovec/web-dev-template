@@ -8,3 +8,26 @@
 #first-time {
     @include l-grid();
 }
+
+.l-page.admin-menu {
+
+    padding-top: 180px;
+
+    .m-navbar {
+        @include transform(translateY(60px));
+
+        &.mm-secondary {
+            @include transform(translateY(30px));
+        }
+    }
+
+    .m-navbar ~ .m-mega {
+        top: 0;
+        @include transform(translateY(180px));
+    }
+    .m-navbar.is-collapsed ~ .m-mega {
+        top: 0;
+        @include transition(all 0.2s);
+        @include transform(translateY(128px));
+    }
+}
