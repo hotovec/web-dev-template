@@ -57,13 +57,14 @@
                         adaptiveHeight: true
                     });
 
-                    carousel.on( "rewind", function() {
-                        //carousel.slick('slickGoTo', 0);
+                    carousel.on("rewind", function () {
+                //        carousel.slick('slickGoTo', 0);
+
                     });
 
-                    carousel.mouseout(function(e) {
+                    carousel.mouseleave(function (e) {
                         //console.log("ven z karuselu");
-                        //jQuery( carousel ).trigger( "rewind", true );
+                  //      jQuery(carousel).trigger("rewind", true);
                     });
                 }
 
@@ -84,8 +85,8 @@
                                 }
 
                                 e.preventDefault();
-                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
                                 jQuery(this).addClass("active");
+                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
                                 oldActive = jQuery(this);
                             });
                         } else {
@@ -96,13 +97,11 @@
                                 }
 
                                 e.preventDefault();
-                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
                                 jQuery(this).addClass("active");
+                                carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
                                 oldActive = jQuery(this);
                             });
                         }
-
-
                     }
                 }
 

@@ -1,0 +1,273 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+    <div class="m-section l-detail-page">
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-half">
+                    <h2 class="m-section--hed mm-medium">Kontakt</h2>
+                </div>
+                <div class="l-half">
+                    <ul class="m-section--nav inline-right">
+                        <li><a href="" target="" title=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="" target="" title=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="" target="" title=""><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <article class="m-contact">
+            <header>
+
+                <div class="m-contact--summary">
+                    <h1 class="m-contact--hed color-black">KOMA Modular s.r.o.</h1>
+
+                    <div class="m-contact--description">
+                        Říčanská 1191 <br />
+                        763 12 Vizovice<br />
+                        Česká republika<br />
+
+                        <span class="color-primary">T</span> +420 577 007 711<br />
+                        <span class="color-primary">F</span> +420 577 452 839<br />
+                        <span class="color-primary">E</span> info@container.cz<br />
+                    </div>
+
+                    <div class="m-contact--meta"></div>
+
+                </div>
+
+                <div class="m-contact--image" style="background-image: url(http://lorempixel.com/650/500)">
+                    <a href=""><img src="http://lorempixel.com/650/500" alt="" /></a>
+                </div>
+
+                <div class="m-contact--map" style="background-image: url(http://lorempixel.com/650/500)">
+                    <a href=""><img src="http://lorempixel.com/650/500" alt="" /></a>
+                </div>
+
+
+            </header>
+        </article>
+
+        <div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <button class="button">Zeptejte se nás</button>
+                </div>
+                <div class="l-half">
+                    <ul class="m-section--nav inline-right">
+                        <li><a href="">Kariéra v KOMA </a></li>
+                        <li><a href="">Adresář </a></li>
+                        <li><a href=""><i class="fa fa-arrow-down"></i> Kontaktní formulář</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+    <div class="m-section l-detail-page bg-white">
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-half">
+                    <h2 class="m-section--hed mm-small color-primary">Adresář firmy</h2>
+                </div>
+            </header>
+        </div>
+
+
+        <div class="m-contact-form">
+            <div class="row">
+
+
+                {# column 1 #}
+                <div class="m-contact-form--column">
+                    {% for c in 1..10 %}
+                        <div class="m-contact-tab">
+                            <header class="m-contact-tab--header">
+                                <h3 class="m-contact-tab--hed">Oddělení</h3>
+
+                                <div class="m-contact-tab--action"><a href=""><i class="fa fa-envelope-o"></i></a></div>
+                            </header>
+
+                            <div class="m-contact-tab--content ">
+
+                                {% for a in 1..4 %}
+                                    <div class="m-contact-tab--address">
+                                        <div class="m-address">
+                                            <div class="m-address--name">Hana Babjarová</div>
+                                            <div class="m-address--job">Vedoucí útvaru</div>
+                                            <div class="m-address--phone"><span>T</span> +420 577 007 726</div>
+                                            <div class="m-address--phone"><span>M</span> +420 602 572 371</div>
+                                            <div class="m-address--fax"><span>F</span> +420 577 452 839</div>
+                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz</div>
+                                            <div class="m-address--action"><a href="" title="">Odeslat zprávu <i class="fa fa-envelope-o"></i></a></div>
+                                        </div>
+
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+                {# column 2 #}
+                <div class="m-contact-form--column ">
+                    {% for c in 1..10 %}
+                        <div class="m-contact-tab is-open">
+                            <header class="m-contact-tab--header">
+                                <h3 class="m-contact-tab--hed">Oddělení</h3>
+
+                                <div class="m-contact-tab--action"><a href=""><i class="fa fa-envelope-o"></i></a></div>
+                            </header>
+
+                            <div class="m-contact-tab--content ">
+
+                                {% for a in 1..4 %}
+                                    <div class="m-contact-tab--address">
+                                        <div class="m-address">
+                                            <div class="m-address--name">Hana Babjarová</div>
+                                            <div class="m-address--job">Vedoucí útvaru</div>
+                                            <div class="m-address--phone"><span>T</span> +420 577 007 726</div>
+                                            <div class="m-address--phone"><span>M</span> +420 602 572 371</div>
+                                            <div class="m-address--fax"><span>F</span> +420 577 452 839</div>
+                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz</div>
+                                            <div class="m-address--action"><a href="" title="">Odeslat zprávu <i class="fa fa-envelope-o"></i></a></div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/module-support.twig" %}
+    {% include "subtemplates/module-footer.twig" %}
+    {% include "subtemplates/module-page-scroll.twig" %}
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+
+        // slick controll
+        $(function () {
+
+            //
+            $('[slick]').each(function () {
+                var SlickWrapper = $(this);
+                var carousel = SlickWrapper.find('[carousel]');
+                var oldActive = null;
+                var nav = SlickWrapper.find('[carouselnav]');
+
+                if (carousel) {
+                    carousel.slick({
+                        dots: false,
+                        infinite: true,
+                        //fade: true,
+                        //cssEase: 'linear',
+                        draggable: false,
+                        speed: 300,
+                        slidesToShow: 1,
+                        adaptiveHeight: true
+                    })
+                }
+
+                if (nav) {
+                    console.log("nav");
+                    var count = 0;
+                    var items = nav.find('[slick-to]');
+                    for (var i = 0; i < items.length; i++) {
+                        var item = $(items[i]);
+
+                        if (nav.attr("slick-method") == "mouseenter") {
+                            item.mouseenter(function (e) {
+
+                                if (oldActive) {
+                                    oldActive.removeClass("active");
+                                }
+
+                                e.preventDefault();
+                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                                $(this).addClass("active");
+                                oldActive = $(this);
+                            });
+                        } else {
+                            item.click(function (e) {
+
+                                if (oldActive) {
+                                    oldActive.removeClass("active");
+                                }
+
+                                e.preventDefault();
+                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                                $(this).addClass("active");
+                                oldActive = $(this);
+                            });
+                        }
+
+
+                    }
+                }
+
+            });
+
+        });
+
+
+        // block feed JS
+
+        var blogSlick = $('.block-feed-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        // full size carousel
+
+        var blogSlick = $('.full-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
+        });
+
+    </script>
+{% endblock %}
+

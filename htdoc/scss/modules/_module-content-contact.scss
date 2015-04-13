@@ -1,0 +1,143 @@
+.m-contact {
+
+}
+
+.l-detail-page {
+    .m-contact {
+
+        > header {
+            @include l-grid();
+        }
+
+        .m-contact--image,
+        .m-contact--map,
+        {
+            margin-bottom: $space * 0.5;
+
+            @include column(6/12);
+
+            @include media(B) {
+                @include column(3/12);
+            }
+            @include media(D) {
+                @include column(3/12);
+            }
+        }
+
+        .m-contact--image {
+            @include media(D) {
+                @include offset(3/12);
+            }
+        }
+
+        .m-contact--summary {
+            @include column(12/12);
+            @include media(B) {
+
+                @include column(6/12);
+            }
+            @include media(D) {
+                @include column(3/12);
+            }
+        }
+
+        .m-contact--summary {
+        }
+
+    }
+}
+
+.m-address {
+    @include cf();
+    font-size: rem-calc(12);
+    .m-address--name {
+        font-size: rem-calc(14);
+    }
+    .m-address--job {
+        margin-bottom: 1em;
+    }
+    span {
+        color: $primary-color;
+    }
+
+    .m-address--action  {
+        padding-top: 10px;
+        a {
+        color: gray;
+        font-weight: bold;
+        text-decoration: none;
+        }
+    }
+
+}
+
+.m-contact-form {
+
+    .m-contact-form--column {
+        @include column(12/12);
+
+        @include media(C) {
+
+            @include column(6/12);
+        }
+    }
+
+    .m-contact-tab {
+
+        margin-bottom: $space *.4;
+
+        .m-contact-tab--content {
+            height: 0;
+            overflow: hidden;
+        }
+
+        &.is-open {
+            .m-contact-tab--content {
+                height: auto;
+                overflow: hidden;
+            }
+        }
+
+    }
+
+    .m-contact-tab--header {
+        @include cf();
+
+        background-color: gray;
+        color: white;
+        padding: 10px;
+        margin-bottom: 15px;
+
+        a {
+            color: white;
+        }
+
+    }
+
+    .m-contact-tab--hed {
+        @include column(9/12);
+    }
+    .m-contact-tab--action {
+        @include column(3/12);
+        text-align: right;
+    }
+
+    .m-contact-tab--content {
+        @include cf();
+        background-color: white;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .m-contact-tab--address {
+        @include column(6/12);
+
+        @include media(D) {
+            @include column(4/12);
+        }
+    }
+
+    .m-address {
+        margin-bottom: $space * 0.8;
+    }
+}
