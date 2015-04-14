@@ -3,7 +3,7 @@
 {% block body %}
 
 
-    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}" xmlns="http://www.w3.org/1999/html">
         {% include "subtemplates/module-navbar-secondary.twig" %}
         {% include "subtemplates/module-navbar.twig" %}
     </div>
@@ -74,7 +74,7 @@
     </div>
 
 
-    <div class="m-section l-detail-page bg-white">
+    <div class="m-section bg-white">
         <div class="row">
             <header class="m-section--header">
                 <div class="l-half">
@@ -84,15 +84,15 @@
         </div>
 
 
-        <div class="m-contact-form">
+        <div class="m-contact-list">
             <div class="row">
 
 
                 {# column 1 #}
-                <div class="m-contact-form--column">
-                    {% for c in 1..10 %}
+                <div class="m-contact-list--column">
+                    {% for c in 1..5 %}
                         <div class="m-contact-tab">
-                            <header class="m-contact-tab--header">
+                            <header class="m-contact-tab--header" collapsible data-target="parent">
                                 <h3 class="m-contact-tab--hed">Oddělení</h3>
 
                                 <div class="m-contact-tab--action"><a href=""><i class="fa fa-envelope-o"></i></a></div>
@@ -108,8 +108,11 @@
                                             <div class="m-address--phone"><span>T</span> +420 577 007 726</div>
                                             <div class="m-address--phone"><span>M</span> +420 602 572 371</div>
                                             <div class="m-address--fax"><span>F</span> +420 577 452 839</div>
-                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz</div>
-                                            <div class="m-address--action"><a href="" title="">Odeslat zprávu <i class="fa fa-envelope-o"></i></a></div>
+                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz
+                                            </div>
+                                            <div class="m-address--action">
+                                                <a href="" title="" fillform data-subject="Pro vedoucí útvaru" data-name="Hana Babjarová" data-email="Hana.Babjarova@container.cz">Odeslat zprávu
+                                                    <i class="fa fa-envelope-o"></i></a></div>
                                         </div>
 
                                     </div>
@@ -122,10 +125,10 @@
                 </div>
 
                 {# column 2 #}
-                <div class="m-contact-form--column ">
-                    {% for c in 1..10 %}
-                        <div class="m-contact-tab is-open">
-                            <header class="m-contact-tab--header">
+                <div class="m-contact-list--column ">
+                    {% for c in 1..5 %}
+                        <div class="m-contact-tab">
+                            <header class="m-contact-tab--header" collapsible data-target="parent">
                                 <h3 class="m-contact-tab--hed">Oddělení</h3>
 
                                 <div class="m-contact-tab--action"><a href=""><i class="fa fa-envelope-o"></i></a></div>
@@ -141,8 +144,11 @@
                                             <div class="m-address--phone"><span>T</span> +420 577 007 726</div>
                                             <div class="m-address--phone"><span>M</span> +420 602 572 371</div>
                                             <div class="m-address--fax"><span>F</span> +420 577 452 839</div>
-                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz</div>
-                                            <div class="m-address--action"><a href="" title="">Odeslat zprávu <i class="fa fa-envelope-o"></i></a></div>
+                                            <div class="m-address--mail"><span>E</span> Hana.Babjarova@container.cz
+                                            </div>
+                                            <div class="m-address--action">
+                                                <a href="" title="" fillform data-subject="Pro vedoucí útvaru" data-name="Hana Babjarová" data-email="Hana.Babjarova@container.cz">Odeslat zprávu
+                                                    <i class="fa fa-envelope-o"></i></a></div>
                                         </div>
                                     </div>
                                 {% endfor %}
@@ -155,8 +161,71 @@
 
 
             </div>
+
+            <div class="row">
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="m-section" id="formSection">
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+                    <h2 class="m-section--hed mm-tiny mm-medium mm-center">Chcete se na něco zeptat?
+                        <span class="color-primary"> Napište Nám</span></h2>
+                </div>
+            </header>
+        </div>
+
+        <div class="row">
+            <div class="m-contact-form">
+                <header>
+                    <i class="fa fa-paper-plane-o"></i> Kontaktní formulář bude odeslán na adresu:
+                    <span id="targetMailInfo">adresa@koma.cz</span>
+                </header>
+
+                <div class="m-contact-form--content">
+                    <form action="">
+                        <input type="hidden" name="mailto" id="mailto" value="" />
+                        <input type="text" id="name" name="name" placeholder="Vaše jméno a příjmení" required />
+                        <input type="email" id="email" name="email" placeholder="Váš email" required />
+                        <textarea id="body" name="body" style="height: 200px" required placeholder="Text sdělení vašeho dotazu"></textarea>
+                        <button type="submit" class="button">Odeslat zprávu <i class="fa fa-paper-plane-o"></i></button>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </div>
+
+    <div class="m-section">
+
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+                    <h2 class="m-section--hed mm-tiny mm-medium mm-center">Formulář byl úspěšně odeslán</h2>
+                </div>
+            </header>
+        </div>
+
+        <div class="row">
+            <div class="m-contact-form mm-sent">
+                <div class="m-contact-form--content">
+                    <p>
+                        <i class="fa fa-paper-plane-o"></i> Formulář byl úspěšně odeslán na adresu: <span>@email</span>
+                        <br />a na vámi zadanou adresu <span>@formemail</span>
+                    </p>
+                    <button class="button">Odeslat novou zprávu <i class="fa fa-paper-plane-o"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
 
 
     {% include "subtemplates/feed-six_certifikace.twig" %}
@@ -234,6 +303,71 @@
 
             });
 
+            // mega menu
+
+            var lastMegaTab = null;
+
+            jQuery('[mega-open]').each(function () {
+                var item = jQuery(this);
+                var mega = jQuery("#mega");
+                var tabName = item.attr("mega-open");
+                var tab = jQuery(tabName);
+
+                item.click(function (e) {
+                    e.preventDefault();
+
+                    if (lastMegaTab) {
+                        lastMegaTab.removeClass("is-active");
+                    }
+
+                    mega.addClass("is-open");
+                    tab.addClass("is-active");
+                    lastMegaTab = tab;
+                });
+
+            });
+
+            jQuery('[mega-close]').each(function () {
+                var item = jQuery(this);
+                var mega = jQuery("#mega");
+
+                item.click(function (e) {
+                    e.preventDefault();
+                    if (lastMegaTab) {
+                        lastMegaTab.removeClass("is-active");
+                    }
+                    mega.removeClass("is-open");
+                    lastMegaTab.removeClass("is-active");
+                });
+
+            });
+
+            // end mega menu
+
+            // resize Navbar
+
+            var navbarPrimary = jQuery('#navbarPrimary');
+            var navbarSecondary = jQuery('#navbarSecondary');
+            var scrollDriver = jQuery('body');
+
+            var currentTop = function () {
+                return scrollDriver.scrollTop();
+            }
+
+            jQuery(window).scroll(function () {
+                if (currentTop() > 40) {
+                    if (!navbarPrimary.hasClass("is-collapsed")) {
+                        navbarPrimary.addClass("is-collapsed");
+                    }
+                    if (!navbarSecondary.hasClass("is-hidden")) {
+                        navbarSecondary.addClass("is-hidden");
+                    }
+                } else {
+                    navbarPrimary.removeClass("is-collapsed");
+                    navbarSecondary.removeClass("is-hidden");
+                }
+            });
+
         });
 
 
@@ -267,6 +401,57 @@
             slidesToScroll: 1,
             adaptiveHeight: true
         });
+
+
+        // script
+
+
+        $('[collapsible]').each(function () {
+            var el = $(this);
+
+            if (el.data('target') == "parent") {
+                el.click(function () {
+                    el.parent().toggleClass("is-open");
+                });
+            } else if (el.data('target')) {
+                el.click(function () {
+                    var tgt = $(el.data('target'));
+                    tgt.toggleClass("is-open");
+                });
+            } else {
+                el.click(function () {
+                    el.toggleClass("is-open");
+                });
+            }
+
+        });
+
+        // push data to form
+
+        var targetFormField = $("#mailto");
+        var targetInfoElement = $("#targetMailInfo");
+
+        $('[fillform]').each(function () {
+            var el = $(this);
+
+            el.click(function (e) {
+                e.preventDefault();
+
+                var injectName = el.data('name');
+                var injectSubject = el.data('subject');
+                var injectEmail = el.data('email');
+
+                targetFormField.attr('value', injectEmail);
+                targetInfoElement.text(injectEmail);
+
+                var scrollTo = $('#formSection').position().top - 100;
+
+                $('body').animate({scrollTop:scrollTo}, '500', 'swing', function() {
+                    console.log('Fill form with: ' + injectName, injectEmail, injectSubject);
+                });
+            });
+        });
+
 
     </script>
 {% endblock %}

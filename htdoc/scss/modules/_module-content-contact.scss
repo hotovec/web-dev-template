@@ -60,20 +60,20 @@
         color: $primary-color;
     }
 
-    .m-address--action  {
+    .m-address--action {
         padding-top: 10px;
         a {
-        color: gray;
-        font-weight: bold;
-        text-decoration: none;
+            color: gray;
+            font-weight: bold;
+            text-decoration: none;
         }
     }
 
 }
 
-.m-contact-form {
+.m-contact-list {
 
-    .m-contact-form--column {
+    .m-contact-list--column {
         @include column(12/12);
 
         @include media(C) {
@@ -140,4 +140,33 @@
     .m-address {
         margin-bottom: $space * 0.8;
     }
+}
+
+
+.m-contact-form {
+    width: 60%;
+    margin: 0 auto;
+    header {
+        text-align: center;
+        margin-bottom: $space;
+        color: $color-body-font;
+        span {
+            color: $color-black;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    &.mm-sent {
+
+
+    }
+
+}
+
+
+[collapsible] {
+    cursor: pointer;
 }
