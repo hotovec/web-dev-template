@@ -3825,6 +3825,45 @@ body {
     -o-transform: none;
     transform: none; }
 
+.m-properties {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.875rem; }
+  .m-properties dl {
+    position: relative;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+    *zoom: 1; }
+    .m-properties dl:before, .m-properties dl:after {
+      content: '';
+      display: table; }
+    .m-properties dl:after {
+      clear: both; }
+    .m-properties dl dt, .m-properties dl dd {
+      display: block;
+      float: left;
+      margin: 0; }
+    .m-properties dl dt {
+      font-weight: bold;
+      margin-right: 6px;
+      clear: left; }
+      .m-properties dl dt:after {
+        display: block;
+        content: ":";
+        float: right;
+        margin-left: 4px; }
+      .m-properties dl dt.mm-label {
+        display: block; }
+        .m-properties dl dt.mm-label:after {
+          display: none; }
+      .m-properties dl dt.mm-sub {
+        font-weight: 400; }
+        .m-properties dl dt.mm-sub ~ dd {
+          color: #979797; }
+    .m-properties dl:first-of-type {
+      border-top: 1px solid black; }
+
 .l-detail-page .m-section--footer {
   margin-top: 50px; }
 .l-detail-page .m-story > header {
@@ -4066,44 +4105,6 @@ body {
     text-decoration: none;
     pointer-events: none;
     color: black; }
-.l-detail-page .m-reference .m-reference--meta {
-  display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-size: 0.875rem; }
-  .l-detail-page .m-reference .m-reference--meta dl {
-    position: relative;
-    margin: 0;
-    padding: 8px 0;
-    border-bottom: 1px solid black;
-    *zoom: 1; }
-    .l-detail-page .m-reference .m-reference--meta dl:before, .l-detail-page .m-reference .m-reference--meta dl:after {
-      content: '';
-      display: table; }
-    .l-detail-page .m-reference .m-reference--meta dl:after {
-      clear: both; }
-    .l-detail-page .m-reference .m-reference--meta dl dt, .l-detail-page .m-reference .m-reference--meta dl dd {
-      display: block;
-      float: left;
-      margin: 0; }
-    .l-detail-page .m-reference .m-reference--meta dl dt {
-      font-weight: bold;
-      margin-right: 6px;
-      clear: left; }
-      .l-detail-page .m-reference .m-reference--meta dl dt:after {
-        display: block;
-        content: ":";
-        float: right;
-        margin-left: 4px; }
-      .l-detail-page .m-reference .m-reference--meta dl dt.mm-label {
-        display: block; }
-        .l-detail-page .m-reference .m-reference--meta dl dt.mm-label:after {
-          display: none; }
-      .l-detail-page .m-reference .m-reference--meta dl dt.mm-sub {
-        font-weight: 400; }
-        .l-detail-page .m-reference .m-reference--meta dl dt.mm-sub ~ dd {
-          color: #979797; }
-    .l-detail-page .m-reference .m-reference--meta dl:first-of-type {
-      border-top: 1px solid black; }
 
 .l-detail-page .m-contact > header {
   box-sizing: border-box;
