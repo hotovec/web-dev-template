@@ -4,6 +4,7 @@
 
 $color-primary:     #C20E1A;
 $color-secondary:   #B5BBB4;
+$color-secondary-light:   #F8F8F8;
 
 
 // color base text
@@ -35,6 +36,7 @@ $pallete: (
 
 .color-primary { color: $color-primary; }
 .color-secondary { color: $color-secondary; }
+.color-secondary-light { color: $color-secondary-light; }
 .color-black { color: $color-black; }
 .color-white { color: $color-white; }
 .color-body-font { color: $color-body-font; }
@@ -48,6 +50,7 @@ $pallete: (
 
 .bg-primary { background-color: $color-primary; }
 .bg-secondary { background-color: $color-secondary; }
+.bg-secondary-light { background-color: $color-secondary-light; }
 .bg-black { background-color: $color-black; }
 .bg-white { background-color: $color-white; }
 .bg-body-font { background-color: $color-body-font; }
@@ -61,6 +64,7 @@ $pallete: (
 
 .firstline-primary { &:first-line { color: $color-primary; }}
 .firstline-secondary {  &:first-line {color: $color-secondary; }}
+.firstline-secondary-light {  &:first-line {color: $color-secondary-light; }}
 .firstline-black {  &:first-line {color: $color-black; }}
 .firstline-white {  &:first-line {color: $color-white; }}
 .firstline-body-font {  &:first-line {color: $color-body-font; }}

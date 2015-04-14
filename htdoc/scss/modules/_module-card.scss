@@ -457,6 +457,41 @@
 
 }
 
+.m-card_reference-horizontal {
+    @include m-card();
+    background-color: $color-secondary-light;
+    article {
+        header {
+            @include cf();
+            position: relative;
+            height: 310px;
+
+        }
+    }
+
+    .m-item--image,
+    .m-item--summary,
+    .m-properties {
+        @include column(4/12,$gut:0);
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+    .m-item--summary,
+    .m-properties {
+        padding: ($space * .7);
+    }
+
+    .m-item--hed {
+        margin-bottom: 1em;
+        font-size: rem-calc(30);
+        font-weight: 400;
+
+    }
+
+}
+
 .m-card_certificate {
     @include m-card();
 

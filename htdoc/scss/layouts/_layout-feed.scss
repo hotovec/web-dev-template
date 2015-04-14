@@ -2,7 +2,18 @@
 // feed can be list, grid or any other content loop
 
 .l-feed {
+
+
 }
+
+.l-feed_list {
+    .l-single {
+        @include column(1);
+        margin-bottom: $space;
+        position: relative;
+    }
+}
+
 
 .l-feed_triple-card {
 

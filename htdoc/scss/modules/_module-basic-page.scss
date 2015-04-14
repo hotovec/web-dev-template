@@ -1,0 +1,64 @@
+article {
+    header {
+        figure {
+            margin: 0;
+            position: relative;
+
+            figcaption {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: $body-font-color;
+                background-color: $color-white;
+                padding: 0 20px;
+                width: 30%;
+            }
+        }
+    }
+}
+
+.m-basic-page {
+
+    position: relative;
+    @include l-grid();
+
+    .m-basic-page--header {
+        @include column(12/12);
+        margin-bottom: $space;
+    }
+
+    .m-body--content {
+        @include column(7/12);
+        @include move(2/12);
+    }
+
+    aside {
+        background-color: orangered;
+        @include column(3/12);
+        @include move(2/12);
+    }
+
+    .m-basic-page--hed {
+        font-size: rem-calc(40);
+        margin-bottom: $space;
+        margin-top: 0;
+    }
+
+    .m-basic-page--image {
+        background-position: center;
+        background-size: cover;
+        img {
+            visibility: hidden;
+        }
+    }
+
+    .m-basic-page--summary {
+
+    }
+
+    .m-basic-page--description {
+
+    }
+
+}
+

@@ -9,40 +9,45 @@
     </div>
 
 
-    <div class="m-section">
-        <article>
-            <header>
-                <div class="m-item--image" style="background-image: url(http://lorempixel.com/400/600)">
-                    <a href="">
-                        <img src="http://lorempixel.com/400/600" alt="" />
-                    </a>
-                </div>
-                <div class="m-item--summary">
-                    <h1 class="m-item--hed">
-                        <a href="">titulek titulek titulek titulek titulek</a>
-                    </h1>
+    <div class="m-section l-detail-page bg-white">
 
-                    <div class="m-item--description">
-                        <p>Morbi vulpctum ex, enim sit amet ult fsadfasdf fasd fasdf asdfas dfa sd fasdf asdfasdfasdf sfadfasdriciericies hendrerit.
-                            <i class="fa fa-arrow-right"></i></p>
-                    </div>
-                    <div class="m-item--meta">
-                        <span>Modulární výstavba ve světě /</span> <span class="colored">21. 08. 2012</span>
-                    </div>
+        <div class="row">
+            <header class="m-section--header">
+                <div class="l-full">
+
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a class="unavailable" href="#">Gene Splicing</a>
+                        <a class="current" href="#">Cloning</a>
+                    </nav>
+
                 </div>
             </header>
+        </div>
 
+        {% include "subtemplates/content-basic-page.twig" %}
 
-        </article>
+        {#<div class="row">
+            <footer class="m-section--footer">
+                <div class="l-half">
+                    <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+                </div>
+                <div class="l-half">
+                    <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+                </div>
+            </footer>
+        </div>#}
+
     </div>
 
 
-    <div class="m-section l-feed_list">
+    <div class="m-section l-feed_list bg-white">
         <div class="row">
 
         {% for i in 1..10 %}
-            <div class="m-card_horizontal l-single">
-                <article class="m-story">
+            <div class="m-card_reference-horizontal l-single">
+                <article class="m-reference ">
                     <header>
                         <div class="m-item--image" style="background-image: url(http://lorempixel.com/400/600)">
                             <a href="">
@@ -58,9 +63,28 @@
                                 <p>Morbi vulpctum ex, enim sit amet ult fsadfasdf fasd fasdf asdfas dfa sd fasdf asdfasdfasdf sfadfasdriciericies hendrerit.
                                     <i class="fa fa-arrow-right"></i></p>
                             </div>
-                            <div class="m-item--meta">
-                                <span>Modulární výstavba ve světě /</span> <span class="colored">21. 08. 2012</span>
-                            </div>
+                        </div>
+                        <div class="m-properties">
+
+                            <dl>
+                                <dt>Zařazení</dt><dd>Stavby pro stravování – restaurace</dd>
+                            </dl>
+
+                            <dl>
+                                <dt>Rok realizace</dt><dd>2014</dd>
+                            </dl>
+
+                            <dl>
+                                <dt>Místo realizace</dt><dd>Vizovice, Česká republika</dd>
+                            </dl>
+
+                            <dl>
+                                <dt class="mm-label">Technické specifikace</dt>
+                                <dt class="mm-sub">počet modulů</dt><dd>58</dd>
+                                <dt class="mm-sub">doba realizace</dt><dd>12 týdnů</dd>
+                                <dt class="mm-sub">užitná plocha</dt><dd>4587 m<sup>2</sup></dd>
+                                <dt class="mm-sub">kapacita</dt><dd>7 lidí ve stoje</dd>
+                            </dl>
                         </div>
                     </header>
                 </article>
