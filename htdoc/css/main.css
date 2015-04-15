@@ -2821,6 +2821,18 @@ body {
     font-weight: 200; }
   .m-section--hed.mm-center {
     text-align: center; }
+  .m-section--hed.mm-border {
+    border: 2px solid black;
+    display: inline-block;
+    line-height: 1em;
+    padding: 12px;
+    padding-top: 8px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 .m-section--underlay {
   z-index: -1;
@@ -2841,6 +2853,9 @@ body {
   .m-section h1, .m-section h2, .m-section h3, .m-section h4, .m-section h5, .m-section h6 {
     margin-top: 0;
     margin-bottom: 0; }
+  .m-section.mm-has-background {
+    background-position: center;
+    background-size: cover; }
 
 .m-section_vertical-tabs {
   position: relative;
@@ -4097,6 +4112,40 @@ body {
   margin-bottom: 30px; }
 .m-card_certificate .m-item--hed {
   margin-bottom: 15px; }
+
+.m-card_centered-text {
+  background-color: transparent; }
+  .m-card_centered-text article, .m-card_centered-text header {
+    position: relative; }
+  .m-card_centered-text a {
+    color: #000;
+    text-decoration: none; }
+    .m-card_centered-text a:hover {
+      color: #C20E1A;
+      text-decoration: underline; }
+  .m-card_centered-text p {
+    margin: 0; }
+  .m-card_centered-text .m-item--hed {
+    font-size: 1.125rem; }
+  .m-card_centered-text .m-item--description {
+    font-size: 0.875rem; }
+  .m-card_centered-text .m-item--image img {
+    width: 100%;
+    height: auto; }
+  .m-card_centered-text article {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px; }
+  .m-card_centered-text .m-item--hed {
+    margin-bottom: 50px;
+    font-size: 1.875rem;
+    font-weight: 400; }
+  .m-card_centered-text .m-item--description {
+    font-size: 1rem; }
+    .m-card_centered-text .m-item--description p {
+      line-height: 1.4em;
+      margin-bottom: 1.4em; }
 
 .m-card_faq {
   background-color: #B5BBB4; }

@@ -10,6 +10,11 @@
         margin-bottom: 0;
     }
 
+    &.mm-has-background {
+        background-position: center;
+        background-size: cover;
+    }
+
 }
 
 .m-section--header,
@@ -74,6 +79,17 @@
 
     &.mm-center {
         text-align: center;
+    }
+
+    &.mm-border {
+        border: 2px solid black;
+        display: inline-block;
+        line-height: 1em;
+        padding: 12px;
+        padding-top: 8px;
+
+        margin-left: 50%;
+        @include transform(translateX(-50%));
     }
 
 }

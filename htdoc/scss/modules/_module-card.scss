@@ -612,6 +612,34 @@
 
 }
 
+
+.m-card_centered-text {
+    @include m-card();
+    background-color: transparent;
+
+    article {
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: $space;
+    }
+
+
+    .m-item--hed {
+        margin-bottom: $space;
+        font-size: rem-calc(30);
+        font-weight: 400;
+    }
+    .m-item--description{
+        font-size: rem-calc(16);
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+    }
+
+}
+
 .m-card_faq {
     @include m-card();
     background-color: $color-secondary;
