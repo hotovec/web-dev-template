@@ -40,7 +40,9 @@
     padding-bottom: 0;
 }
 
-
 .l-page {
-    padding-top: 150px;
+    padding-top: 48px; // navbar height
+    @include media(C) {
+        padding-top: 150px;
+    }
 }

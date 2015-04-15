@@ -1,10 +1,10 @@
 // push data to form
 
-var targetFormField = $("#mailto");
-var targetInfoElement = $("#targetMailInfo");
+var targetFormField = jQuery("#mailto");
+var targetInfoElement = jQuery("#targetMailInfo");
 
-$('[fillform]').each(function () {
-    var el = $(this);
+jQuery('[fillform]').each(function () {
+    var el = jQuery(this);
 
     el.click(function (e) {
         e.preventDefault();
@@ -16,9 +16,9 @@ $('[fillform]').each(function () {
         targetFormField.attr('value', injectEmail);
         targetInfoElement.text(injectEmail);
 
-        var scrollTo = $('#formSection').position().top - 100;
+        var scrollTo = jQuery('#formSection').position().top - 100;
 
-        $('body').animate({scrollTop:scrollTo}, '500', 'swing', function() {
+        jQuery('body').animate({scrollTop:scrollTo}, '500', 'swing', function() {
             console.log('Fill form with: ' + injectName, injectEmail, injectSubject);
         });
     });
