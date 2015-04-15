@@ -516,7 +516,7 @@
 
 .m-card_bigteaser {
     @include m-card();
-    background-color: transparent;
+
     article {
         header {
             @include cf();

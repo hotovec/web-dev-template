@@ -4006,71 +4006,69 @@ body {
     line-height: 1.2em;
     font-weight: 400; }
 
-.m-card_bigteaser {
-  background-color: transparent; }
-  .m-card_bigteaser article, .m-card_bigteaser header {
-    position: relative; }
-  .m-card_bigteaser a {
-    color: #000;
-    text-decoration: none; }
-    .m-card_bigteaser a:hover {
-      color: #C20E1A;
-      text-decoration: underline; }
-  .m-card_bigteaser p {
-    margin: 0; }
-  .m-card_bigteaser .m-item--hed {
-    font-size: 1.125rem; }
-  .m-card_bigteaser .m-item--description {
-    font-size: 0.875rem; }
+.m-card_bigteaser article, .m-card_bigteaser header {
+  position: relative; }
+.m-card_bigteaser a {
+  color: #000;
+  text-decoration: none; }
+  .m-card_bigteaser a:hover {
+    color: #C20E1A;
+    text-decoration: underline; }
+.m-card_bigteaser p {
+  margin: 0; }
+.m-card_bigteaser .m-item--hed {
+  font-size: 1.125rem; }
+.m-card_bigteaser .m-item--description {
+  font-size: 0.875rem; }
+.m-card_bigteaser .m-item--image img {
+  width: 100%;
+  height: auto; }
+.m-card_bigteaser article header {
+  *zoom: 1;
+  position: relative;
+  height: auto; }
+  .m-card_bigteaser article header:before, .m-card_bigteaser article header:after {
+    content: '';
+    display: table; }
+  .m-card_bigteaser article header:after {
+    clear: both; }
+  @media only screen and (min-width:1331px) {
+    .m-card_bigteaser article header {
+      height: 540px; } }
+.m-card_bigteaser .m-item--image, .m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
+  overflow: hidden; }
+  @media only screen and (min-width:961px) {
+    .m-card_bigteaser .m-item--image, .m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
+      height: 100%;
+      float: left;
+      width: calc(100% * 0.5); } }
+.m-card_bigteaser .m-item--image {
+  height: 310px;
+  background-position: center; }
   .m-card_bigteaser .m-item--image img {
-    width: 100%;
-    height: auto; }
-  .m-card_bigteaser article header {
-    *zoom: 1;
-    position: relative;
-    height: auto; }
-    .m-card_bigteaser article header:before, .m-card_bigteaser article header:after {
-      content: '';
-      display: table; }
-    .m-card_bigteaser article header:after {
-      clear: both; }
-    @media only screen and (min-width:1331px) {
-      .m-card_bigteaser article header {
-        height: 540px; } }
-  .m-card_bigteaser .m-item--image, .m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
-    overflow: hidden; }
-    @media only screen and (min-width:961px) {
-      .m-card_bigteaser .m-item--image, .m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
-        height: 100%;
-        float: left;
-        width: calc(100% * 0.5); } }
-  .m-card_bigteaser .m-item--image {
-    height: 310px;
-    background-position: center; }
-    .m-card_bigteaser .m-item--image img {
-      visibility: hidden; }
-    @media only screen and (min-width:961px) {
-      .m-card_bigteaser .m-item--image {
-        height: 100%; } }
-  .m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
-    padding: 35px; }
-  .m-card_bigteaser .m-item--hed {
-    margin-bottom: 1em;
-    font-size: 1.625rem;
-    line-height: 1.2em;
-    font-weight: 400; }
-  .m-card_bigteaser .m-item--description {
-    font-size: 1rem; }
-    .m-card_bigteaser .m-item--description p {
-      line-height: 1.4em;
-      margin-bottom: 1.4em; }
-  .m-card_bigteaser .m-card--more {
-    display: inline-block;
-    padding: 10px 20px;
-    font-weight: bold;
+    visibility: hidden; }
+  @media only screen and (min-width:961px) {
+    .m-card_bigteaser .m-item--image {
+      height: 100%; } }
+.m-card_bigteaser .m-item--summary, .m-card_bigteaser .m-properties {
+  padding: 35px; }
+.m-card_bigteaser .m-item--hed {
+  margin-bottom: 1em;
+  font-size: 1.625rem;
+  line-height: 1.2em;
+  font-weight: 400; }
+.m-card_bigteaser .m-item--description {
+  font-size: 1rem; }
+  .m-card_bigteaser .m-item--description p {
+    line-height: 1.4em;
+    margin-bottom: 1.4em; }
+.m-card_bigteaser .m-card--more {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white; }
+  .m-card_bigteaser .m-card--more a {
     color: white; }
-    .m-card_bigteaser .m-card--more a {
-      color: white; }
 
 .m-card_certificate article, .m-card_certificate header {
   position: relative; }
