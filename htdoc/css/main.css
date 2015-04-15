@@ -2402,7 +2402,9 @@ body {
 .m-section--header, .m-section--footer {
   *zoom: 1;
   text-transform: uppercase;
-  font-weight: 800; }
+  font-weight: 800;
+  padding-top: 50px;
+  padding-bottom: 50px; }
   .m-section--header:before, .m-section--header:after, .m-section--footer:before, .m-section--footer:after {
     content: '';
     display: table; }
@@ -2425,12 +2427,6 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     text-align: center; }
-
-.m-section--header {
-  margin-bottom: 50px; }
-
-.m-section--footer {
-  margin-top: 50px; }
 
 .m-section--more {
   text-align: right; }
@@ -2464,7 +2460,7 @@ body {
 
 .m-section {
   border-bottom: 1px solid #99f;
-  padding: 50px 0;
+  padding: 0;
   height: auto;
   position: relative; }
   .m-section h1, .m-section h2, .m-section h3, .m-section h4, .m-section h5, .m-section h6 {

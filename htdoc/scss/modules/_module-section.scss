@@ -1,6 +1,7 @@
 @mixin m-section-base() {
     border-bottom: 1px solid #99f;
-    padding: $space 0;
+    //padding: $space 0;
+    padding: 0;
     height: auto;
     position: relative;
 
@@ -18,6 +19,8 @@
 
     text-transform: uppercase;
     font-weight: 800;
+    padding-top: $space;
+    padding-bottom: $space;
 
     a {
         text-decoration: none;
@@ -38,15 +41,6 @@
         text-align: center;
     }
 
-}
-
-.m-section--header {
-    margin-bottom: 50px;
-}
-
-.m-section--footer {
-    margin-top: $space;
-    //background-color: palegreen;
 }
 
 .m-section--top {
