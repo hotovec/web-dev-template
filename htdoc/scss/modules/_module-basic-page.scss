@@ -24,7 +24,6 @@ article {
 
     .m-basic-page--header {
         background-color: $color-secondary-light;
-        margin-bottom: $space;
         padding-bottom: $space;
     }
 
@@ -46,6 +45,12 @@ article {
             @include column(3/12);
             @include move(3/12);
         }
+    }
+
+    .m-basic-page--content {
+        @include cf();
+        padding-top: $space;
+        padding-bottom: $space;
     }
 
     .m-basic-page--hed {
