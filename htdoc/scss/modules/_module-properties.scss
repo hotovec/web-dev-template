@@ -50,5 +50,20 @@
         &:first-of-type {
             border-top: 1px solid black;
         }
+
+        a {
+            color: $body-font-color;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        &.mm-nolabels {
+            dt {
+                display: none;
+            }
+        }
+        &.mm-noborder {
+            border-bottom: none;
+        }
     }
 }

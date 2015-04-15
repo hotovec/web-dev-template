@@ -464,17 +464,38 @@
         header {
             @include cf();
             position: relative;
-            height: 310px;
 
+            height: auto;
+
+            @include media(C) {
+                height: 340px;
+            }
+            @include media(D) {
+                height: 310px;
+            }
         }
     }
 
     .m-item--image,
     .m-item--summary,
     .m-properties {
-        @include column(4/12,$gut:0);
-        height: 100%;
         overflow: hidden;
+        @include media(C) {
+            height: 100%;
+            @include column(4/12, $gut: 0);
+        }
+    }
+
+    .m-item--image {
+        height: 310px;
+        background-position: center;
+        img {
+
+        visibility: hidden;
+        }
+        @include media(C) {
+            height: 100%;
+            }
     }
 
 
@@ -485,7 +506,8 @@
 
     .m-item--hed {
         margin-bottom: 1em;
-        font-size: rem-calc(30);
+        font-size: rem-calc(26);
+        line-height: 1.2em;
         font-weight: 400;
 
     }
