@@ -514,6 +514,82 @@
 
 }
 
+.m-card_bigteaser {
+    @include m-card();
+    background-color: transparent;
+    article {
+        header {
+            @include cf();
+            position: relative;
+
+            height: auto;
+
+            @include media(C) {
+                //height: 340px;
+            }
+            @include media(D) {
+                height: 540px;
+            }
+        }
+    }
+
+    .m-item--image,
+    .m-item--summary,
+    .m-properties {
+        overflow: hidden;
+        @include media(C) {
+            height: 100%;
+            @include column(6/12, $gut: 0);
+        }
+    }
+
+    .m-item--image {
+        height: 310px;
+        background-position: center;
+        img {
+            visibility: hidden;
+        }
+        @include media(C) {
+            height: 100%;
+        }
+    }
+
+
+    .m-item--summary,
+    .m-properties {
+        padding: ($space * .7);
+    }
+
+    .m-item--hed {
+        margin-bottom: 1em;
+        font-size: rem-calc(26);
+        line-height: 1.2em;
+        font-weight: 400;
+
+    }
+
+    .m-item--description{
+        font-size: rem-calc(16);
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+    }
+
+    .m-card--more {
+
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: white;
+        a {
+        color: white;
+
+        }
+    }
+
+}
+
 .m-card_certificate {
     @include m-card();
 
