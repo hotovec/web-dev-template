@@ -6,7 +6,7 @@
     .m-page-scroll--item {
         color: $color-primary;
         font-size: rem-calc(13);
-        @include transform(rotate(-90deg) translateY(20px));
+        @include transform(rotate(-90deg) translateY(40px));
     }
 
     .scroll-sipka {
