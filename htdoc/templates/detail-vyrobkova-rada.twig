@@ -1,0 +1,49 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}" xmlns="http://www.w3.org/1999/html">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+
+    <div class="m-section l-detail-page bg-white">
+
+        <header class="m-section--header bg-secondary-light">
+            <div class="row ">
+                <div class="l-full">
+
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a class="unavailable" href="#">Gene Splicing</a>
+                        <a class="current" href="#">Cloning</a>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        {% include "subtemplates/content-basic-page.twig" %}
+
+    </div>
+
+
+
+
+    {% include "subtemplates/feed-three_faq.twig" %}
+    {% include "subtemplates/feed-block-carousel.twig" %} {# @todo musi byt bez hlavičky a patičky#}
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/module-support.twig" %}
+    {% include "subtemplates/module-footer.twig" %}
+    {% include "subtemplates/module-page-scroll.twig" %}
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+

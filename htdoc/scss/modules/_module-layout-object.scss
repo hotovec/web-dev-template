@@ -1,0 +1,30 @@
+.m-layout-object {
+    figure {
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+
+    figcaption {
+        font-size: rem-calc(12);
+        font-weight: bold;
+        padding-top: 0.5em;
+        line-height: 1.2em;
+    }
+
+    &.mm-small {
+        width: 180px;
+        height: auto;
+    }
+
+    &.mm-left {
+        float: left;
+        margin-top: 20px;
+        margin-right: 20px;
+        @include media(C) {
+            margin-left: -220px;
+        }
+    }
+
+}

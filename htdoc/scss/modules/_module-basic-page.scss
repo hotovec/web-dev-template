@@ -21,7 +21,6 @@ article {
 
     position: relative;
 
-
     .m-basic-page--header {
         background-color: $color-secondary-light;
         padding-bottom: $space;
@@ -29,7 +28,6 @@ article {
 
     .m-body--content {
         @include column(12/12);
-        //@include move(2/12);
 
         @include media(C) {
             @include column(6/12);
