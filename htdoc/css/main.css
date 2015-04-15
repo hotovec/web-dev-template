@@ -3962,46 +3962,11 @@ article header figure {
     width: 30%; }
 
 .m-basic-page {
-  position: relative;
-  box-sizing: border-box;
-  *zoom: 1;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0; }
-  .m-basic-page:before, .m-basic-page:after {
-    content: '';
-    display: table; }
-  .m-basic-page:after {
-    clear: both; }
-  @media only screen and (min-width:641px) {
-    .m-basic-page {
-      max-width: 640px;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0; } }
-  @media only screen and (min-width:961px) {
-    .m-basic-page {
-      max-width: 960px;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0; } }
-  @media only screen and (min-width:1331px) {
-    .m-basic-page {
-      max-width: 1296px;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      padding-right: 0; } }
+  position: relative; }
   .m-basic-page .m-basic-page--header {
-    float: left;
-    width: calc(100% * 1 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 50px; }
+    background-color: #F8F8F8;
+    margin-bottom: 50px;
+    padding-bottom: 50px; }
   .m-basic-page .m-body--content {
     float: left;
     width: calc(100% * 1 - 30px);

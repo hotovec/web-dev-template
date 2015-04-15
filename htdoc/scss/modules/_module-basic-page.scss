@@ -20,11 +20,12 @@ article {
 .m-basic-page {
 
     position: relative;
-    @include l-grid();
+
 
     .m-basic-page--header {
-        @include column(12/12);
+        background-color: $color-secondary-light;
         margin-bottom: $space;
+        padding-bottom: $space;
     }
 
     .m-body--content {
