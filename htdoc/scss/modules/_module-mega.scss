@@ -2,16 +2,23 @@
 
     position: fixed;
     z-index: 900;
-    top: 150px;
+    top: 48px;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: auto;
+    overflow-y: scroll;
     background-color: $color-secondary;
 
     display: none;
 
     &.is-open {
         display: block;
+    }
+
+    @include media(C) {
+        top: 150px;
     }
 
     .m-mega--container {
@@ -21,8 +28,11 @@
     }
 
     .m-mega--tab {
-        @include l-grid();
         @include cf();
+
+        @include media(C) {
+            @include l-grid();
+        }
 
         display: none;
 
@@ -100,45 +110,62 @@
 
     .m-mega--section {
 
-        border-left: 1px solid white ;
-        padding-left: 20px;
+        &.l-single,
+        &.l-double {
+            @include column(1);
+            text-align: center;
+        }
 
         &:first-of-type {
-            border: none;
-            padding-left:0;
+            @include column(1);
+            margin-bottom: $space * 0.5;
         }
 
-        &.l-single {
-            @include column(2/12);
-        }
+        @include media(C) {
 
-        &.l-double {
-            @include column(4/12);
-            @include cf();
+            border-left: 1px solid white;
+            padding-left: 20px;
 
-            .m-mega--label {
-
+            &:first-of-type {
+                border: none;
+                padding-left: 0;
             }
 
-            ul {
-                width: 50%;
-                float: left;
-            }
-            ul + ul {
-                padding-left: 20px;
+            &.l-single {
+                @include column(2/12);
             }
 
+            &.l-double {
+                @include column(4/12);
+                @include cf();
+
+                .m-mega--label {
+
+                }
+
+                ul {
+                    width: 50%;
+                    float: left;
+                }
+                ul + ul {
+                    padding-left: 20px;
+                }
+
+            }
         }
     }
 
 }
 
-.m-navbar ~ .m-mega {
-    top: 0;
-    @include transform(translateY(150px));
-}
-.m-navbar.is-collapsed ~ .m-mega {
-    top: 0;
-    @include transition(all 0.2s);
-    @include transform(translateY(68px));
+@include media(C) {
+
+    .m-navbar ~ .m-mega {
+        top: 0;
+        @include transform(translateY(150px));
+    }
+    .m-navbar.is-collapsed ~ .m-mega {
+        top: 0;
+        @include transition(all 0.2s);
+        @include transform(translateY(68px));
+    }
 }

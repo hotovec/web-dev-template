@@ -28,7 +28,9 @@ $navbar-text-transform: none !default;
     @include cf();
 
     .m-navbar--container {
-        @include l-grid();
+        @include media(C) {
+            @include l-grid();
+        }
     }
 
     .m-navbar--menu-logo,
@@ -44,18 +46,20 @@ $navbar-text-transform: none !default;
         .m-navbar--logo,
         .m-navbar--menu-primary,
         .m-navbar--menu-secondary {
-            @include column(1/3);
             text-align: center;
         }
+
         .m-navbar--logo {
+            @include column(1/4);
             height: $navbar-height;
             overflow: hidden;
             .mm-has-svg {
-                height: $navbar-height;
+                @include vertical-align();
+                height: $navbar-height - 20;
                 min-height: auto;
+                background-position: left;
             }
         }
-
 
         @include media(C) {
             padding-top: 40px;

@@ -74,10 +74,12 @@ $(function () {
 
             if (lastMegaTab) {
                 lastMegaTab.removeClass("is-active");
+                jQuery('body').removeClass("scroll-lock");
             }
 
             mega.addClass("is-open");
             tab.addClass("is-active");
+            jQuery('body').addClass("scroll-lock");
             lastMegaTab = tab;
         });
 
@@ -91,9 +93,11 @@ $(function () {
             e.preventDefault();
             if (lastMegaTab) {
                 lastMegaTab.removeClass("is-active");
+                jQuery('body').removeClass("scroll-lock");
             }
             mega.removeClass("is-open");
             lastMegaTab.removeClass("is-active");
+            jQuery('body').removeClass("scroll-lock");
         });
 
     });
