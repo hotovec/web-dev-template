@@ -56,9 +56,17 @@ $navbar-text-transform: none !default;
             .mm-has-svg {
                 @include vertical-align();
                 height: $navbar-height - 20;
-                min-height: auto;
+                //min-height: auto;
                 background-position: left;
+                @include media(A-only) {
+
+                    min-height: auto;
+                }
             }
+        }
+
+        .m-navbar--menu-secondary {
+            @include inline-list($direction: right, $margin-opposite: 22px, $margin-dir: 0);
         }
 
         @include media(C) {
@@ -132,13 +140,13 @@ $navbar-text-transform: none !default;
     .m-navbar--logo {
         .mm-has-svg {
             width: 100%;
-            min-height: $navbar-height;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 50% 50%;
 
             @include media(C) {
                 background-position: 0 50%;
+                min-height: $navbar-height;
             }
         }
     }
@@ -176,7 +184,7 @@ $navbar-text-transform: none !default;
 
     .m-navbar--menu-secondary,
     .m-navbar--menu-tertiary {
-        @include inline-list(right);
+        @include inline-list($direction: right);
     }
 
     .m-navbar--menu-social {

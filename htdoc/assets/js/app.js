@@ -108,7 +108,7 @@ $(function () {
 
     var navbarPrimary = jQuery('#navbarPrimary');
     var navbarSecondary = jQuery('#navbarSecondary');
-    var scrollDriver = jQuery('body');
+    var scrollDriver = jQuery(window);
 
     var currentTop = function () {
         return scrollDriver.scrollTop();

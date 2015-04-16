@@ -9,6 +9,10 @@
             @include l-grid();
         }
 
+        .m-contact--hed {
+            font-size: rem-calc(18);
+        }
+
         .m-contact--image,
         .m-contact--map,
         {
@@ -49,15 +53,21 @@
 
 .m-address {
     @include cf();
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: rem-calc(12);
     .m-address--name {
         font-size: rem-calc(14);
+        font-weight: 600;
     }
     .m-address--job {
+        font-size: rem-calc(14);
         margin-bottom: 1em;
     }
     span {
-        color: $primary-color;
+        font-weight: bold;
+        color: $color-secondary;
+        display: inline-block;
+        width: 12px;
     }
 
     .m-address--action {
@@ -96,6 +106,7 @@
                 height: auto;
                 overflow: hidden;
             }
+
         }
 
     }
@@ -103,23 +114,54 @@
     .m-contact-tab--header {
         @include cf();
 
-        background-color: gray;
-        color: white;
-        padding: 10px;
+        background-color: #CBCFCA;
+        color: $color-body-font;
+        padding: 12px;
         margin-bottom: 15px;
+        line-height: rem-calc(18);
+        vertical-align: baseline;
+        position: relative;
 
         a {
-            color: white;
+            color: $color-body-font;
+            //color: white;
+        }
+        .fa {
+            font-size: rem-calc(18);
         }
 
     }
 
     .m-contact-tab--hed {
-        @include column(9/12);
+        @include column(11/12);
+        font-size: rem-calc(15);
+        color: $color-black;
+        line-height: 1.4em;
+        padding-left: 20px;
+        font-weight: 400;
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     }
+
     .m-contact-tab--action {
-        @include column(3/12);
         text-align: right;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 20px;
+        display: block;
+        line-height: 1em;
+
+        @include transform(translateY(-50%));
+    }
+
+    .m-contact-tab--mark {
+        text-align: left;
+        position: absolute;
+        left: 20px;
+
+        top: 50%;
+        content:"+";
+        @include transform(translateY(-50%));
     }
 
     .m-contact-tab--content {
@@ -131,9 +173,11 @@
 
     .m-contact-tab--address {
         @include column(6/12);
+        @include cycle(2);
 
         @include media(D) {
             @include column(4/12);
+            @include cycle(3);
         }
     }
 

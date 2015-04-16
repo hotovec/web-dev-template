@@ -45,6 +45,12 @@
         @include column(6/12);
         text-align: center;
     }
+    .l-half {
+        overflow: visible;
+    }
+    .button {
+        margin-top: -14px;
+    }
 
 }
 

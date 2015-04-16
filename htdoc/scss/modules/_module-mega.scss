@@ -19,6 +19,7 @@
 
     @include media(C) {
         top: 150px;
+        bottom: auto;
     }
 
     .m-mega--container {
@@ -32,6 +33,9 @@
 
         @include media(C) {
             @include l-grid();
+
+            min-height: 240px;
+            position: relative;
         }
 
         display: none;
@@ -101,6 +105,15 @@
         padding-top: 14px;
         overflow: hidden;
         margin-bottom: 30px;
+
+        a {
+            color: $body-font-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
     }
 
     .m-mega--description {
@@ -109,6 +122,7 @@
     }
 
     .m-mega--section {
+
 
         &.l-single,
         &.l-double {
@@ -122,8 +136,8 @@
         }
 
         @include media(C) {
-
-            border-left: 1px solid white;
+            height: 100%;
+            border-left: 1px solid #CBCFCA;
             padding-left: 20px;
 
             &:first-of-type {
@@ -133,11 +147,13 @@
 
             &.l-single {
                 @include column(2/12);
+                text-align: left;
             }
 
             &.l-double {
                 @include column(4/12);
                 @include cf();
+                text-align: left;
 
                 .m-mega--label {
 

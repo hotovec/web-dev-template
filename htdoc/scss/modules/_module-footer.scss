@@ -5,7 +5,8 @@ $footer-copyright-height: 64px !default;
 .m-footer {
 
     &.m-section {
-        padding-bottom: 20px;
+        padding-top: $space;
+        padding-bottom: $space * .5;
     }
 
     background-color: $color-primary;

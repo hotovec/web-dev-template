@@ -491,13 +491,12 @@
         background-position: center;
         img {
 
-        visibility: hidden;
+            visibility: hidden;
         }
         @include media(C) {
             height: 100%;
-            }
+        }
     }
-
 
     .m-item--summary,
     .m-properties {
@@ -554,7 +553,6 @@
         }
     }
 
-
     .m-item--summary,
     .m-properties {
         padding: ($space * .7);
@@ -568,7 +566,7 @@
 
     }
 
-    .m-item--description{
+    .m-item--description {
         font-size: rem-calc(16);
         p {
             line-height: 1.4em;
@@ -583,7 +581,7 @@
         font-weight: bold;
         color: white;
         a {
-        color: white;
+            color: white;
 
         }
     }
@@ -598,20 +596,45 @@
     }
 
     .m-item--image {
+
         width: 130px;
         height: 130px;
+        background-size: contain;
+
         overflow: hidden;
         margin: 0 auto;
 
         margin-bottom: 30px;
+        position: relative;
+        img {
+            visibility: hidden;
+        }
+        a {
+            display: block;
+            height: 100%;
+        }
+
     }
 
     .m-item--hed {
         margin-bottom: 15px;
+        font-size: rem-calc(13);
+        color: $primary-color;
+        a {
+        color: $primary-color;
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+
+    .m-item--description,
+    .m-item--description p
+    {
+        font-size: rem-calc(11);
     }
 
 }
-
 
 .m-card_centered-text {
     @include m-card();
@@ -624,13 +647,12 @@
         padding-bottom: $space;
     }
 
-
     .m-item--hed {
         margin-bottom: $space;
         font-size: rem-calc(30);
         font-weight: 400;
     }
-    .m-item--description{
+    .m-item--description {
         font-size: rem-calc(16);
         p {
             line-height: 1.4em;
