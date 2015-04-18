@@ -66,7 +66,11 @@ $navbar-text-transform: none !default;
         }
 
         .m-navbar--menu-secondary {
-            @include inline-list($direction: right, $margin-opposite: 22px, $margin-dir: 0);
+            @include inline-list($direction: right, $margin-opposite: 0, $margin-dir: 0);
+        }
+
+        .m-navbar--menu-link {
+            display: none !important;
         }
 
         @include media(C) {
@@ -78,7 +82,14 @@ $navbar-text-transform: none !default;
             }
 
             .m-navbar--menu-secondary {
-                @include column(.7);
+                @include inline-list($direction: right, $margin-opposite: 22px, $margin-dir: 0);
+            }
+
+            .m-navbar--menu-toc {
+                display: none !important;
+            }
+            .m-navbar--menu-link {
+                display: block !important;
             }
         }
     }

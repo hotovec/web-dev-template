@@ -15,6 +15,27 @@
         background-size: cover;
     }
 
+    .m-section--close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: "x";
+        color: white;
+        display: block;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        line-height: 26px;
+        text-align: center;
+
+        cursor: pointer;
+    }
+}
+
+.m-section.bg-secondary-light {
+    .m-section--close {
+        color: $color-secondary;
+    }
 }
 
 .m-section--header,

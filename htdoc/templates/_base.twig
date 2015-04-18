@@ -54,9 +54,14 @@
     <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/components/chosen/chosen.jquery.min.js"></script>
     <script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/components/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/components/foundation/js/foundation/foundation.clearing.js"></script>
     <script type="text/javascript" src="/assets/js/app.js"></script>
 
     {% block scripts %}{% endblock %}
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 
 </html>
