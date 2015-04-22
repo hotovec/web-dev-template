@@ -20,7 +20,7 @@ $navbar-text-transform: none !default;
 
     position: fixed;
     background-color: white;
-    z-index: 100;
+    z-index: 10;
     top: 0;
 
     width: 100%;
@@ -285,3 +285,6 @@ $navbar-text-transform: none !default;
 .m-navbar.mm-secondary ~ .m-navbar {
     border-top: none;
 }
+
+
+
