@@ -69,8 +69,9 @@ jQuery(function () {
         var tabName = item.attr("mega-open");
         var tab = jQuery(tabName);
 
-        item.click(function (e) {
-            e.preventDefault();
+        item.hover(
+            function (e) {
+            //e.preventDefault();
 
             if (lastMegaTab) {
                 lastMegaTab.removeClass("is-active");
@@ -81,7 +82,11 @@ jQuery(function () {
             tab.addClass("is-active");
             jQuery('body').addClass("scroll-lock");
             lastMegaTab = tab;
-        });
+        },
+            function(e) {
+                console.log("hover");
+            }
+        );
 
     });
 
