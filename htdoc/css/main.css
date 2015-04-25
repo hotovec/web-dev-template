@@ -5548,6 +5548,8 @@ article header figure {
   background-size: cover; }
   .l-detail-page .m-reference .m-reference--image img {
     display: none; }
+  .l-detail-page .m-reference .m-reference--image .mm-preview-fit {
+    background-size: fit; }
 .l-detail-page .m-reference .m-reference--hed {
   font-size: 2.625rem;
   line-height: 1.3em;
