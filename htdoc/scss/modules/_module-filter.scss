@@ -1,18 +1,7 @@
 
 .m-filter {
     margin-bottom: 30px;
-    .m-filter--items {
 
-        li {
-            width: 120px;
-            color: $color-black;
-
-            &.label {
-                padding: 0 20px;
-                color: $color-secondary;
-            }
-        }
-    }
 
     .l-left,
     .l-right {
@@ -29,22 +18,46 @@
     .l-left {
         @include column(9/12);
         .m-filter--items {
-            @include inline-list(left, 2px);
+            @include inline-list(left);
             overflow: visible;
         }
     }
     .l-right {
         @include column(3/12);
         .m-filter--items {
-            @include inline-list(right, 2px);
+            @include inline-list(right);
             overflow: visible;
 
+        }
+    }
+
+    .m-filter--items {
+
+        > li {
+            width: 120px;
+            color: $color-black;
+            height: 48px;
+            display: block;
+
+            &.label {
+                padding: 0 14px;
+                color: $color-secondary;
+                background-color: white;
+                height: 48px;
+                margin-right: 1px;
+                line-height: 42px;
+                width: auto;
+            }
         }
     }
 
 }
 
 // chosen override
+
+.chosen-container {
+    width: calc(100%-1px);
+}
 
 .chosen-container-single {
 

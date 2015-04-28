@@ -5450,12 +5450,6 @@ button:focus {
 
 .m-filter {
   margin-bottom: 30px; }
-  .m-filter .m-filter--items li {
-    width: 120px;
-    color: #000; }
-    .m-filter .m-filter--items li.label {
-      padding: 0 20px;
-      color: #B5BBB4; }
   .m-filter .active-result {
     font-weight: 400; }
   .m-filter .category {
@@ -5475,7 +5469,7 @@ button:focus {
         list-style: none;
         float: left;
         margin-left: 0;
-        margin-right: 2px;
+        margin-right: 0px;
         display: block;
         height: 100%; }
         .m-filter .l-left .m-filter--items > li:last-child {
@@ -5497,13 +5491,29 @@ button:focus {
         list-style: none;
         float: right;
         margin-right: 0;
-        margin-left: 2px;
+        margin-left: 0px;
         display: block;
         height: 100%; }
         .m-filter .l-right .m-filter--items > li:last-child {
           margin-left: 0; }
         .m-filter .l-right .m-filter--items > li > * {
           display: inline-block; }
+  .m-filter .m-filter--items > li {
+    width: 120px;
+    color: #000;
+    height: 48px;
+    display: block; }
+    .m-filter .m-filter--items > li.label {
+      padding: 0 14px;
+      color: #B5BBB4;
+      background-color: white;
+      height: 48px;
+      margin-right: 1px;
+      line-height: 42px;
+      width: auto; }
+
+.chosen-container {
+  width: calc(100%-1px); }
 
 .chosen-container-single .chosen-single {
   height: 48px;
