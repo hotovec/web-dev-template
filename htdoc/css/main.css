@@ -5513,7 +5513,12 @@ button:focus {
       width: auto; }
 
 .chosen-container {
-  width: calc(100%-1px); }
+  width: 100% !important;
+  padding-right: 1px; }
+
+.l-right .chosen-container {
+  padding-left: 1px;
+  padding-right: 0px; }
 
 .chosen-container-single .chosen-single {
   height: 48px;
