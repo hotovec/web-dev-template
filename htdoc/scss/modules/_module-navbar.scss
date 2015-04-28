@@ -207,6 +207,14 @@ $navbar-text-transform: none !default;
         }
     }
 
+    .m-navbar--menu-dropdown {
+        ul {
+            padding: 0;
+            margin-left: -11px;
+            width: 120px;
+        }
+    }
+
     // secondary navbar
     &.mm-secondary {
         font-size: $navbar-secondary-font-size;

@@ -79,7 +79,7 @@
 
     a {
         text-decoration: none;
-        color: $color-black;
+        color: $color-body-font;
 
         &:hover {
             color: $color-primary;
@@ -118,32 +118,6 @@
     line-height: 1.2em;
     font-weight: 800;
 
-    /*&.mm-small {
-        font-size: rem-calc(16);
-    }
-    &.mm-medium {
-        font-size: rem-calc(36);
-    }
-
-    &.mm-big {
-        font-size: rem-calc(50);
-    }
-
-    &.mm-tiny {
-        font-weight: 200;
-    }
-
-    &.mm-normal {
-        font-weight: 400;
-    }
-
-    &.mm-bold {
-        font-weight: 400;
-    }
-
-    &.mm-center {
-        text-align: center;
-    }*/
 
     &.mm-border {
         border: 2px solid black;
