@@ -6583,6 +6583,64 @@ article header figure {
     -o-transform: translateY(128px);
     transform: translateY(128px); }
 
+.tb-megamenu {
+  position: inherit !important;
+  background-color: transparent; }
+  .tb-megamenu .dropup,
+  .tb-megamenu .dropdown {
+    position: initial !important; }
+  .tb-megamenu .dropdown-menu {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #B5BBB4 !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: auto !important;
+    font-size: 0.9375rem !important;
+    font-weight: normal !important; }
+    .tb-megamenu .dropdown-menu a {
+      color: #4A4A4A !important;
+      text-decoration: none !important; }
+      .tb-megamenu .dropdown-menu a:hover {
+        color: white !important; }
+    .tb-megamenu .dropdown-menu .mega-dropdown-inner {
+      box-sizing: border-box;
+      *zoom: 1;
+      max-width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 50px;
+      margin-bottom: 50px; }
+      .tb-megamenu .dropdown-menu .mega-dropdown-inner:before, .tb-megamenu .dropdown-menu .mega-dropdown-inner:after {
+        content: '';
+        display: table; }
+      .tb-megamenu .dropdown-menu .mega-dropdown-inner:after {
+        clear: both; }
+      @media only screen and (min-width: 641px) {
+        .tb-megamenu .dropdown-menu .mega-dropdown-inner {
+          max-width: 640px;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 0;
+          padding-right: 0; } }
+      @media only screen and (min-width: 961px) {
+        .tb-megamenu .dropdown-menu .mega-dropdown-inner {
+          max-width: 960px;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 0;
+          padding-right: 0; } }
+      @media only screen and (min-width: 1331px) {
+        .tb-megamenu .dropdown-menu .mega-dropdown-inner {
+          max-width: 1296px;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 0;
+          padding-right: 0; } }
+
 .slick-prev, .slick-next {
   height: 40px;
   margin-top: -38px; }

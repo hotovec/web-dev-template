@@ -1,0 +1,38 @@
+.tb-megamenu {
+        position: inherit !important;
+        background-color: transparent;
+
+    .dropup,
+    .dropdown {
+        position: initial !important;
+    }
+
+    .dropdown-menu {
+        border: none !important;
+        //display: block !important;
+        box-shadow: none !important;
+        background-color: $color-secondary !important;
+
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: auto !important;
+        font-size: rem-calc(15)!important;
+        font-weight: normal !important;
+
+        a {
+            color: $body-font-color !important;
+            text-decoration: none !important;
+            &:hover {
+                color: white !important;
+            }
+        }
+
+        .mega-dropdown-inner {
+            @include l-grid();
+            margin-top: $space;
+            margin-bottom: $space;
+        }
+    }
+
+}
