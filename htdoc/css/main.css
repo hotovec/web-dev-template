@@ -3763,6 +3763,9 @@ button:focus {
     line-height: 26px;
     text-align: center;
     cursor: pointer; }
+  .m-section .row.rowfix {
+    margin-bottom: -31px;
+    overflow: hidden; }
 
 .m-section_vertical-tabs {
   position: relative;
@@ -5499,7 +5502,8 @@ button:focus {
         .m-filter .l-right .m-filter--items > li > * {
           display: inline-block; }
   .m-filter .m-filter--items > li {
-    width: 120px;
+    width: auto;
+    max-width: 140px;
     color: #000;
     height: 48px;
     display: block; }
@@ -5522,7 +5526,7 @@ button:focus {
 
 .chosen-container-single .chosen-single {
   height: 48px;
-  padding: 10px;
+  padding: 10px 16px;
   font-size: 0.9375rem; }
 
 .chosen-container-single .chosen-single,

@@ -59,6 +59,11 @@
 
         cursor: pointer;
     }
+
+    .row.rowfix {
+        margin-bottom: -31px;
+        overflow: hidden;
+    }
 }
 
 .m-section.bg-secondary-light {
