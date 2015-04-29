@@ -5,6 +5,7 @@ jQuery(function () {
         var SlickWrapper = jQuery(this);
         var carousel = SlickWrapper.find('[carousel]');
         var oldActive = null;
+
         var nav = SlickWrapper.find('[carouselnav]');
 
         if (carousel) {
