@@ -78,7 +78,7 @@ $navbar-text-transform: none !default;
             padding-bottom: 40px;
 
             .m-navbar--logo {
-                @include column(.3);
+                @include column(.2);
             }
 
             .m-navbar--menu-secondary {
@@ -212,6 +212,9 @@ $navbar-text-transform: none !default;
             padding: 0;
             margin-left: -11px;
             width: 120px;
+        }
+        a.active {
+            color: black;
         }
     }
 

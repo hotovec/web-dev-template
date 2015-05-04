@@ -373,6 +373,22 @@
     .m-item--hed {
         margin-bottom: 30px;
         line-height: 1.2em;
+        position: relative;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .m-item--hed-icon {
+        width: 49px;
+        height: 45px;
+        position: absolute;
+        left: -70px;
+        top: -10px;
+
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .m-item--description {
@@ -380,7 +396,7 @@
     }
 
     .m-section--item {
-        overflow: hidden;
+        //overflow: hidden;
         padding-top: 70px;
 
         &:nth-of-type(1) {
@@ -446,6 +462,7 @@
     }
 
     .input-group {
+
         @include container();
 
         .prefix {
@@ -454,9 +471,18 @@
         }
         input {
             @include column(5/6, $gut: 0);
+            padding-left: 18px;
         }
         .postfix {
             @include column(1/6, $gut: 0);
+            .fa {
+                font-size: 26px;
+                line-height: 59px;
+            }
+        }
+
+        input, button {
+            height: 59px;
         }
 
     }

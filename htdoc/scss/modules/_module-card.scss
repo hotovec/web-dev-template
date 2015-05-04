@@ -22,6 +22,8 @@
         font-size: rem-calc(18);
     }
 
+
+
     .m-item--description {
         font-size: rem-calc(14);
     }
@@ -70,6 +72,11 @@
             }
 
         }
+
+        img {
+            display: none;
+        }
+
     }
     .m-item--summary {
         height: 100%;
@@ -385,6 +392,16 @@
 .m-card_image {
     @include m-card-image();
 
+    .m-item--image {
+        a {
+            &:before {
+                background-color: $color-primary; //pallete(1);
+                opacity: 0;
+            }
+        }
+
+    }
+
     @each $colorName, $colorValue in $pallete {
         &.mm-color-#{$colorName} {
             .m-item--image {
@@ -501,13 +518,14 @@
     .m-item--image {
 
         background-position: 50% 50%;
+        height: 100%;
 
         img {
             visibility: hidden;
             pointer-events: none;
         }
-
     }
+
     .m-item--summary {
         position: absolute;
         bottom: 20px;
@@ -801,10 +819,22 @@
         padding-bottom: $space;
     }
 
+    .header {
+        margin-bottom: $space * 0.3;
+    }
+
     .m-item--hed {
         margin-bottom: $space;
         font-size: rem-calc(30);
         font-weight: 400;
+
+        a {
+            color: $body-font-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
     .m-item--description {
         font-size: rem-calc(16);
@@ -812,20 +842,33 @@
             line-height: 1.4em;
             margin-bottom: 1.4em;
         }
+
     }
+
+
     .m-card--more {
         text-align: center;
+    }
+
+    .m-gallery {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: $space;
     }
 }
 
 .m-card_faq {
     @include m-card();
     background-color: $color-secondary;
+        height: 140px;
+        width: 100%;
+        padding: 20px;
+
+
+
 
     article,
     header {
-        height: 140px;
-        width: 100%;
         position: relative;
         //cursor: pointer;
     }
@@ -833,37 +876,31 @@
     .m-item--hed {
         position: relative;
         height: 100%;
+        margin-bottom: 0.2em;
     }
 
     .m-item--hed a {
         @include vertical-align();
-        padding: 20px;
-        position: absolute;
+        //position: absolute;
         height: 100%;
         font-size: rem-calc(16);
         font-weight: 600;
         color: $color-black;
+        line-height: 1em;
+        margin: 0;
         &:hover {
-            color: white;
-            text-decoration: none;
+            text-decoration: underline;
         }
-    }
-
-    .m-item--description {
-        padding: 30px;
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 140px;
     }
 
     &:hover {
         background-color: $color-primary;
-        .m-item--description {
-            // display: block;
-        }
-        .m-item--hed {
-            //display: none;
+
+        color: white;
+        text-decoration: none;
+
+         .m-item--hed a {
+                color: white;
         }
     }
 }

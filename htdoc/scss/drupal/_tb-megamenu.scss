@@ -1,6 +1,25 @@
+.xmega {
+    @include column(.8);
+    float: right;
+    margin-right: -15px;
+}
+
+
 .tb-megamenu {
         position: inherit !important;
         background-color: transparent;
+        color: $body-font-color;
+    a {
+        color: $body-font-color;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+     .nav > li {
+        float: right ;
+        margin-right: 0;
+    }
 
     .dropup,
     .dropdown {
@@ -8,14 +27,18 @@
     }
 
     .dropdown-menu {
+        display: block !important;
+
         border: none !important;
-        //display: block !important;
         box-shadow: none !important;
         background-color: $color-secondary !important;
 
         position: fixed;
         left: 0;
         right: 0;
+        top:0;
+        -webkit-transform: translate3d(0,0,0);
+
         width: auto !important;
         font-size: rem-calc(15)!important;
         font-weight: normal !important;
@@ -33,6 +56,103 @@
             margin-top: $space;
             margin-bottom: $space;
         }
+    }
+
+    .tb-block .block-title {
+        font-size: rem-calc(22);
+        color: $body-font-color;
+        display: block;
+        line-height: 20px;
+        margin: 0 0 20px;
+        text-transform: none;
+    }
+
+    .dropdown-menu li > a {
+        border-top: none !important;
+        padding: 5px 20px;
+        text-shadow: none;
+        font-weight: 400 !important;
+
+    }
+
+    .nav > li > a {
+        border-right: none;
+        border-top: 0;
+        color: $body-font-color;
+        font-weight: 400;
+        padding: 15px 20px;
+        text-shadow: none;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-color !important;
+        }
+    }
+
+    .nav li.dropdown > .dropdown-toggle .caret {
+        display: none !important;
+    }
+
+    .dropdown-menu .mega-dropdown-inner {
+
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+
+     .mega-nav .mega-group > .mega-group-title,
+     .dropdown-menu .mega-nav .mega-group > .mega-group-title,
+     .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+        text-transform: none !important;
+         display: block !important;
+         min-height: 44px !important;
+    }
+
+    .mega > .mega-dropdown-menu {
+        padding-bottom: 30px !important;
+        padding-top: 30px !important;
+    }
+
+    [data-showblocktitle]:nth-of-type(1) {
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .nav li.dropdown.active > .dropdown-toggle,
+    .nav li.dropdown.open.active > .dropdown-toggle,
+    .nav > li.dropdown.open.active > a:hover {
+        background-color: transparent;
+        border: none;
+        color: $primary-color;
+    }
+
+    .dropdown-menu .active > a,
+    .dropdown-menu .active > a:hover {
+        text-decoration: none;
+        color: $primary-color !important;
+        outline: 0;
+        background-image: none !important;
+        background-color: transparent;
+    }
+
+    .dropdown-menu .active .mega-group-title,
+    .dropdown-menu .active .mega-group-title:hover {
+        text-decoration: none;
+        color: $color-black !important;
+        font-weight: bold !important;
+        outline: 0;
+        background-image: none !important;
+        background-color: transparent;
+    }
+
+    .dropdown-menu .active .mega-group-title:hover {
+        color: $color-primary !important;
+    }
+
+    .dropdown-menu .mega-group-title,
+    .dropdown-menu .mega-group-title:hover {
+        font-weight: bold !important;
     }
 
 }

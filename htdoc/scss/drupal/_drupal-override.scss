@@ -31,3 +31,64 @@
         @include transform(translateY(128px));
     }
 }
+
+.m-bulletin {
+
+    input {
+        border-color: $primary-color !important;
+        border-right: none;
+    }
+    .button {
+        background-color: white;
+        color: $color-secondary;
+        width: 30px;
+
+        border: 1px solid $primary-color;
+        border-left: none;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+    }
+}
+
+
+.button-group {
+
+    .text-label-button,
+    .text-double-button {
+        border-left: 1px solid white;
+        font-weight: 800;
+        text-align: center;
+        max-width: 148px;
+        padding: 0 10px;
+
+        span {
+            display: block;
+            font-weight: 400;
+            text-align: center;
+            font-size: rem-calc(12);
+        }
+        a {
+            color: $color-black;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .text-label-button {
+        font-weight: 400;
+        text-align: right;
+        font-size: rem-calc(12);
+    }
+}
+
+.l-two-thirds {
+    .button-group {
+        float: right;
+    }
+}
