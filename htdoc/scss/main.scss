@@ -29,7 +29,8 @@
 @import "modules/module-page-scroll";
 @import "modules/module-navbar";
 @import "modules/module-pagination";
-@import "modules/module-mega";
+//@import "modules/module-mega";
+@import "modules/module-xmega";
 @import "modules/module-footer";
 @import "modules/module-coverlines";
 @import "modules/module-section";
@@ -54,7 +55,7 @@
 // custom drupal overrides
 
 @import "drupal/drupal-override";
-@import "drupal/tb-megamenu";
+//@import "drupal/tb-megamenu";
 
 // dev
 

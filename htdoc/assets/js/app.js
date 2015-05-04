@@ -209,3 +209,11 @@ jQuery(".ch-select").chosen({
     disable_search_threshold: 40,
     //allow_single_deselect: true
 });
+
+// pocita sloupce na mega
+jQuery(".m-mega .columns").each(function () {
+    var el = jQuery(this);
+    var cols = el.find("> .column");
+    console.log(cols.length);
+    el.attr("cols",cols.length);
+});

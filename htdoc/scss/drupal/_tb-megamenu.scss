@@ -5,6 +5,7 @@
 }
 
 
+
 .tb-megamenu {
         position: inherit !important;
         background-color: transparent;
@@ -21,13 +22,14 @@
         margin-right: 0;
     }
 
+
     .dropup,
     .dropdown {
         position: initial !important;
     }
 
     .dropdown-menu {
-        display: block !important;
+        //display: block !important;
 
         border: none !important;
         box-shadow: none !important;
@@ -36,7 +38,6 @@
         position: fixed;
         left: 0;
         right: 0;
-        top:0;
         -webkit-transform: translate3d(0,0,0);
 
         width: auto !important;
