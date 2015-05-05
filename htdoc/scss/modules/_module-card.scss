@@ -237,6 +237,30 @@
     }
 }
 
+.m-card_list {
+    @include m-card();
+    background-color: white;
+
+    .m-item--image {
+        height: 60px;
+        width: 120px;
+        overflow: hidden;
+        float: left;
+        //margin-right: 30px;
+
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .m-item--hed,
+    .m-item--summary {
+        margin-left: 160px;
+    }
+
+}
+
 .m-card_product {
     @include m-card();
     background-color: white;

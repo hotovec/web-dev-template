@@ -19,12 +19,25 @@
                     color: $color-primary;
                 }
             }
+
+
+        }
+
+        .item {
+            &.active {
+                color: $primary-color;
+                a {
+                    color: $primary-color;
+                }
+            }
         }
     }
 
     .item-submenu {
         display: none !important;
     }
+
+
 
 }
 
@@ -145,6 +158,14 @@
         display: block;
         .m-mega--sub > .item-submenu.is-opened {
             display: block;
+        }
+    }
+
+    .item:not(.mega-group) {
+        &.active {
+            > a {
+                color: $primary-color;
+            }
         }
     }
 

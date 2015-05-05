@@ -2,22 +2,19 @@
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
-
 // skin variables
 @import "skin";
 @import "settings";
-
 // foundation
 @import "foundation/settings";
 @import "foundation/foundation";
 @import "foundation/foundation-media-wrapper";
-@import "foundation/override-inline-lists"; // can break foundation one
-
+@import "foundation/override-inline-lists";
+// can break foundation one
 // settings
 @import "base/grid";
 @import "base/globals";
 @import "lib/vertical-align";
-
 // layouts and modules
 @import "layouts/layout-base";
 @import "layouts/layout-section";
@@ -25,7 +22,6 @@
 @import "layouts/layout-feed";
 @import "layouts/layout-navigation";
 @import "layouts/layout-page-detail-full";
-
 @import "modules/module-page-scroll";
 @import "modules/module-navbar";
 @import "modules/module-pagination";
@@ -45,21 +41,17 @@
 @import "modules/module-attachment";
 @import "modules/module-layout-object";
 @import "modules/module-basic-page";
-
 @import "modules/module-content-product";
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
 @import "modules/module-content-contact";
 @import "not-modular/hero-tabs";
-
 // custom drupal overrides
-
 @import "drupal/drupal-override";
+
 //@import "drupal/tb-megamenu";
 
 // dev
-
-
 
 // slick override
 
@@ -73,6 +65,7 @@
     font-size: rem-calc(42);
     color: $color-body-font;
 }
+
 .slick-prev:before {
     content: "\f104";
 }
@@ -85,4 +78,63 @@
 
 * {
     box-sizing: border-box;
+}
+
+// search
+
+.m-search--hed {
+    text-align: center;
+    padding-bottom: $space * .75;
+}
+
+.m-search--filters {
+
+    .views-exposed-widget:nth-of-type(1) {
+        float: left;
+        width: calc(100% - 100px);
+        padding: 0;
+    }
+    .views-exposed-widget:nth-of-type(2) {
+        float: left;
+        width: 100px;
+        padding: 0;
+    }
+
+    label {
+        display: none;
+    }
+
+    .form-submit,
+    .form-text {
+        height: 59px;
+        margin: 0 !important;
+        display: inline-block;
+    }
+    .form-text {
+        width: 100%;
+    }
+    .form-submit {
+        border: 0;
+        width: 100%;
+        background-color: $primary-color;
+        color: white;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+}
+
+.m-search--description {
+    line-height: 1.8em;
+}
+
+.m-search--noresults {
+    .m-search--description {
+        max-width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
