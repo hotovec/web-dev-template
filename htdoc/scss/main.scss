@@ -11,10 +11,12 @@
 @import "foundation/foundation-media-wrapper";
 @import "foundation/override-inline-lists";
 // can break foundation one
+
 // settings
 @import "base/grid";
 @import "base/globals";
 @import "lib/vertical-align";
+
 // layouts and modules
 @import "layouts/layout-base";
 @import "layouts/layout-section";
@@ -22,14 +24,15 @@
 @import "layouts/layout-feed";
 @import "layouts/layout-navigation";
 @import "layouts/layout-page-detail-full";
+
 @import "modules/module-page-scroll";
 @import "modules/module-navbar";
 @import "modules/module-pagination";
-//@import "modules/module-mega";
 @import "modules/module-xmega";
 @import "modules/module-footer";
 @import "modules/module-coverlines";
 @import "modules/module-section";
+
 @import "modules/module-aside-block";
 @import "modules/module-gallery";
 @import "modules/module-content-item";
@@ -60,10 +63,19 @@
     margin-top: -38px;
 }
 
+.slick-next {
+    right: 30px;
+}
+
+.slick-prev {
+    left: 30px;
+}
+
 .slick-prev:before, .slick-next:before {
     font-family: 'FontAwesome';
     font-size: rem-calc(42);
-    color: $color-body-font;
+    color: $color-white;
+    text-shadow: 0 0 3px rgba(0,0,0,.8);
 }
 
 .slick-prev:before {

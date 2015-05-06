@@ -101,7 +101,7 @@
         }
 
         @include media(C) {
-            @include column(1/3);
+            @include column(1/2);
         }
 
         @include media(D) {
@@ -203,6 +203,9 @@
 
 }
 
+
+//todo: fix this, move params to slick component
+.m-basic-page--header,
 .l-feed_carousel {
 
     .slides {

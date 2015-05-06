@@ -1,13 +1,17 @@
 .m-gallery {
-    margin: 0;
-    padding: 0;
     @include row();
+    padding: 0;
+    margin: 0;
 
 
     .m-gallery--item {
         //border: 1px solid red;
         @include column (2/6);
         margin-bottom: 30px;
+
+        img {
+            width: 100%;
+        }
     }
 
     &.mm-medium {
@@ -34,7 +38,8 @@
 
 .m-gallery {
     li.clearing-featured-img {
-        width: auto;
+        width: 100%;
+        margin: 0;
     }
 }
 

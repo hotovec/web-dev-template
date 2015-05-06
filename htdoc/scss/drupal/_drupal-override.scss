@@ -11,7 +11,7 @@
 
 .l-page.admin-menu {
 
-    padding-top: 180px;
+  //  padding-top: 180px;
 
     .m-navbar {
         @include transform(translateY(60px));
@@ -91,4 +91,14 @@
     .button-group {
         float: right;
     }
+}
+
+
+.slides [class*="m-card"] {
+    /*border: 3px solid orangered;
+    height: 300px;
+    @include media(C) {
+    height: 500px;
+        }*/
+
 }
