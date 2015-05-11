@@ -1,7 +1,12 @@
+// property table
+
+
+
 .m-properties {
     display: block;
     font-family: $font-family-secondary;
     font-size: rem-calc(14);
+
     dl {
         position: relative;
         margin: 0;
@@ -62,6 +67,7 @@
                 display: none;
             }
         }
+
         &.mm-noborder {
             border-bottom: none;
         }

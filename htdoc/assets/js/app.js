@@ -1,8 +1,8 @@
-jQuery(function () {
+$(function () {
 
     //
-    jQuery('[slick]').each(function () {
-        var SlickWrapper = jQuery(this);
+    $('[slick]').each(function () {
+        var SlickWrapper = $(this);
         var carousel = SlickWrapper.find('[carousel]');
         var oldActive = null;
 
@@ -26,7 +26,7 @@ jQuery(function () {
             var count = 0;
             var items = nav.find('[slick-to]');
             for (var i = 0; i < items.length; i++) {
-                var item = jQuery(items[i]);
+                var item = $(items[i]);
 
                 if (nav.attr("slick-method") == "mouseenter") {
                     item.mouseenter(function (e) {
@@ -36,9 +36,9 @@ jQuery(function () {
                         }
 
                         e.preventDefault();
-                        carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
-                        jQuery(this).addClass("active");
-                        oldActive = jQuery(this);
+                        carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                        $(this).addClass("active");
+                        oldActive = $(this);
                     });
                 } else {
                     item.click(function (e) {
@@ -48,9 +48,9 @@ jQuery(function () {
                         }
 
                         e.preventDefault();
-                        carousel.slick('slickGoTo', jQuery(this).attr('slick-to'));
-                        jQuery(this).addClass("active");
-                        oldActive = jQuery(this);
+                        carousel.slick('slickGoTo', $(this).attr('slick-to'));
+                        $(this).addClass("active");
+                        oldActive = $(this);
                     });
                 }
 
@@ -64,11 +64,11 @@ jQuery(function () {
 
     var lastMegaTab = null;
 
-    jQuery('[mega-open]').each(function () {
-        var item = jQuery(this);
-        var mega = jQuery("#mega");
+    $('[mega-open]').each(function () {
+        var item = $(this);
+        var mega = $("#mega");
         var tabName = item.attr("mega-open");
-        var tab = jQuery(tabName);
+        var tab = $(tabName);
 
         item.hover(
             function (e) {
@@ -76,12 +76,12 @@ jQuery(function () {
 
             if (lastMegaTab) {
                 lastMegaTab.removeClass("is-active");
-                jQuery('body').removeClass("scroll-lock");
+                $('body').removeClass("scroll-lock");
             }
 
             mega.addClass("is-open");
             tab.addClass("is-active");
-            jQuery('body').addClass("scroll-lock");
+            $('body').addClass("scroll-lock");
             lastMegaTab = tab;
         },
             function(e) {
@@ -91,19 +91,19 @@ jQuery(function () {
 
     });
 
-    jQuery('[mega-close]').each(function () {
-        var item = jQuery(this);
-        var mega = jQuery("#mega");
+    $('[mega-close]').each(function () {
+        var item = $(this);
+        var mega = $("#mega");
 
         item.click(function (e) {
             e.preventDefault();
             if (lastMegaTab) {
                 lastMegaTab.removeClass("is-active");
-                jQuery('body').removeClass("scroll-lock");
+                $('body').removeClass("scroll-lock");
             }
             mega.removeClass("is-open");
             lastMegaTab.removeClass("is-active");
-            jQuery('body').removeClass("scroll-lock");
+            $('body').removeClass("scroll-lock");
         });
 
     });
@@ -112,15 +112,15 @@ jQuery(function () {
 
     // resize Navbar
 
-    var navbarPrimary = jQuery('#navbarPrimary');
-    var navbarSecondary = jQuery('#navbarSecondary');
-    var scrollDriver = jQuery(window);
+    var navbarPrimary = $('#navbarPrimary');
+    var navbarSecondary = $('#navbarSecondary');
+    var scrollDriver = $(window);
 
     var currentTop = function () {
         return scrollDriver.scrollTop();
     }
 
-    jQuery(window).scroll(function () {
+    $(window).scroll(function () {
         if (currentTop() > 40) {
             if (!navbarPrimary.hasClass("is-collapsed")) {
                 navbarPrimary.addClass("is-collapsed");
@@ -139,7 +139,7 @@ jQuery(function () {
 
 // block feed JS
 
-var blogSlick = jQuery('.block-feed-slider').slick({
+var blogSlick = $('.block-feed-slider').slick({
     dots: false,
     infinite: true,
     speed: 300,
@@ -159,7 +159,7 @@ var blogSlick = jQuery('.block-feed-slider').slick({
 
 // full size carousel
 
-var blogSlick = jQuery('.full-carousel').slick({
+var blogSlick = $('.full-carousel').slick({
     dots: true,
     infinite: true,
     speed: 300,
@@ -172,8 +172,8 @@ var blogSlick = jQuery('.full-carousel').slick({
 // script
 
 
-jQuery('[collapsible]').each(function () {
-    var el = jQuery(this);
+$('[collapsible]').each(function () {
+    var el = $(this);
 
     if (el.data('target') == "parent") {
         el.click(function () {
@@ -181,7 +181,7 @@ jQuery('[collapsible]').each(function () {
         });
     } else if (el.data('target')) {
         el.click(function () {
-            var tgt = jQuery(el.data('target'));
+            var tgt = $(el.data('target'));
             tgt.toggleClass("is-open");
         });
     } else {
@@ -192,8 +192,8 @@ jQuery('[collapsible]').each(function () {
 
 });
 
-jQuery('[close-section]').each(function () {
-    var el = jQuery(this);
+$('[close-section]').each(function () {
+    var el = $(this);
     el.click(function () {
         el.parent().css("display", "none");
     });
@@ -201,7 +201,7 @@ jQuery('[close-section]').each(function () {
 
 // chosen filters - select boxes
 
-jQuery(".ch-select").chosen({
+$(".ch-select").chosen({
     width: "95%",
     create_option: true,
     persistent_create_option: true,
@@ -210,10 +210,3 @@ jQuery(".ch-select").chosen({
     //allow_single_deselect: true
 });
 
-// pocita sloupce na mega
-jQuery(".m-mega .columns").each(function () {
-    var el = jQuery(this);
-    var cols = el.find("> .column");
-    console.log(cols.length);
-    el.attr("cols",cols.length);
-});
