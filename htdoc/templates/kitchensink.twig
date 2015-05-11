@@ -1,0 +1,47 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+    {#
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+    #}
+
+    {# feeds #}
+
+    {% include "subtemplates/feed-block-carousel.twig" %}
+    {% include "subtemplates/feed-carousel.twig" %}
+    {% include "subtemplates/feed-single.twig" %}
+
+    {% include "subtemplates/feed-four_reference.twig" %}
+    {% include "subtemplates/feed-two_zpravodaj.twig" %}
+    {% include "subtemplates/feed-three_obory.twig" %}
+    {% include "subtemplates/feed-three_faq.twig" %}
+
+    {# navs #}
+
+    {% include "subtemplates/module-next-prev.twig" %}
+    {% include "subtemplates/section-side-triple.twig" %}
+    {% include "subtemplates/module-support.twig" %}
+
+
+    {# panels & tools #}
+    {% include "subtemplates/hero-tabs.twig" %}
+    {% include "subtemplates/section-vertical-tabs.twig" %}
+    {% include "subtemplates/module-side-panel.twig" %}
+
+
+    {% include "subtemplates/module-footer.twig" %}
+
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}
+

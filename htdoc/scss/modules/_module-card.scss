@@ -342,3 +342,76 @@
     }
 }
 
+
+.m-card_nav {
+    @include m-card();
+
+    article,
+    header,
+    .m-item--summary {
+        position: relative;
+        height: 100%;
+    }
+
+    article {
+        &:hover {
+            .m-item--image a:after {
+                font-family: FontAwesome;
+
+                display: block;
+                position: absolute;
+                content: "";
+
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                text-align: center;
+                color: white;
+                line-height: 53px;
+                background-color: rgba(0, 0, 0, .45);
+            }
+
+            .m-item--hed a {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .m-item--image {
+        width: 70px;
+        height: 53px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    }
+
+    .m-item--description,
+    .m-item--meta {
+        display: none;
+    }
+
+    .m-item--hed {
+        @include vertical-align();
+        font-weight: 400;
+        font-size: rem-calc(14);
+
+    }
+
+}
+
+

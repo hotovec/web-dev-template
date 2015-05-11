@@ -6,26 +6,9 @@
 
     <div class="row">
         {% for a in 1..6 %}
-            <div class="m-card_certificate l-single">
+            <div class="m-card_standard l-single">
 
-                <article class="m-story">
-                    <header>
-                        <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                            <a href="">
-                                <img src="http://lorempixel.com/300/300" alt="" />
-                            </a>
-                        </div>
-                        <div class="m-item--summary">
-                            <h1 class="m-item--hed">
-                                <a href="">titulek titulek</a>
-                            </h1>
-
-                            <div class="m-item--description">
-                                <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                            </div>
-                        </div>
-                    </header>
-                </article>
+                {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': ''} %}
 
             </div>
         {% endfor %}
