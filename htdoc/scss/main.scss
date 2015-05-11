@@ -2,19 +2,26 @@
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
+
+// fonts
+@import "fonts";
+
 // skin variables
 @import "skin";
 @import "settings";
+
 // foundation
 @import "foundation/settings";
 @import "foundation/foundation";
 @import "foundation/foundation-media-wrapper";
 @import "foundation/override-inline-lists";
+
 // can break foundation one
 // settings
 @import "base/grid";
 @import "base/globals";
 @import "lib/vertical-align";
+
 // layouts and modules
 @import "layouts/layout-base";
 @import "layouts/layout-section";
@@ -22,6 +29,8 @@
 @import "layouts/layout-footer";
 @import "layouts/layout-feed";
 @import "layouts/layout-page-detail-full";
+
+
 
 @import "modules/module-page-scroll";
 @import "modules/module-navbar";
@@ -33,7 +42,6 @@
 @import "modules/module-content-item";
 @import "modules/module-card";
 @import "modules/module-filter";
-
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
 @import "not-modular/hero-tabs";

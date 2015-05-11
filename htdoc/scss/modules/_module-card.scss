@@ -30,6 +30,7 @@
         img {
             width: 100%;
             height: auto;
+            display: none;
         }
     }
 
@@ -70,6 +71,11 @@
             }
 
         }
+
+        img {
+            display: none;
+        }
+
     }
     .m-item--summary {
         height: 100%;
@@ -210,6 +216,7 @@
     @include m-card();
     background-color: white;
     padding-bottom: 24px;
+    position: relative;
 
     .m-item--image {
         height: 181px;
@@ -222,11 +229,145 @@
 
     .m-item--summary {
         padding: 20px;
+        min-height: 120px;
+
+        @include media(C-only) {
+            min-height: 220px;
+        }
     }
     .m-card--more {
         position: absolute;
         left: 20px;
         bottom: 20px;
+    }
+
+    &.mm-promo {
+        background-color: transparent;
+        .m-item--hed {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .m-item--summary {
+            text-align: center;
+            min-height: 80px;
+            padding-top: 30px;
+            font-size: rem-calc(24px);
+        }
+        .m-card--more {
+            display: none;
+        }
+        &:hover {
+            background-color: white;
+        }
+    }
+
+}
+
+.m-card_list {
+    @include m-card();
+    background-color: white;
+
+    .m-item--image {
+        height: 60px;
+        width: 120px;
+        overflow: hidden;
+        float: left;
+        //margin-right: 30px;
+
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .m-item--hed,
+    .m-item--summary {
+        margin-left: 160px;
+    }
+
+}
+
+.m-card_product {
+    @include m-card();
+    background-color: white;
+    position: relative;
+
+    > article {
+        padding: 0;
+        header {
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 100px;
+        }
+    }
+
+    .m-item--image {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            opacity: 0.9;
+            background-color: $color-secondary;
+            color: white;
+            img {
+                display: none;
+            }
+        }
+    }
+
+    .m-item--hed {
+        margin-bottom: 14px;
+        a {
+            color: $color-body-font;
+        }
+    }
+
+    .m-item--summary {
+        color: $color-body-font;
+        height: 200px;
+        pointer-events: none;
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+    }
+    .m-card--more {
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        width: 100%;
+        height: 100px;
+        display: table;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            vertical-align: bottom;
+            padding-left: 20px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    &:hover {
+        .m-item--image a {
+            @include transition(all 0.3s);
+            background-color: $primary-color;
+        }
+        .m-item--summary,
+        .m-item--hed {
+            color: white;
+            a {
+                color: white;
+            }
+        }
     }
 }
 
@@ -237,8 +378,6 @@
 .m-card_horizontal {
 
     @include m-card-vertical();
-
-
 
     @include media(D) {
 
@@ -302,6 +441,16 @@
 .m-card_image {
     @include m-card-image();
 
+    .m-item--image {
+        a {
+            &:before {
+                background-color: $color-primary; //pallete(1);
+                opacity: 0;
+            }
+        }
+
+    }
+
     @each $colorName, $colorValue in $pallete {
         &.mm-color-#{$colorName} {
             .m-item--image {
@@ -354,6 +503,7 @@
             height: 100%;
             width: 100%;
             display: inline-block;
+
         }
         &:before {
             display: block;
@@ -379,6 +529,7 @@
         @include vertical-align();
         z-index: 10;
         margin: 0;
+        padding: 10%;
     }
 
     &.mm-has-hover {
@@ -399,7 +550,6 @@
             }
         }
     }
-
 }
 
 .m-card_reference {
@@ -417,13 +567,14 @@
     .m-item--image {
 
         background-position: 50% 50%;
+        height: 100%;
 
         img {
             visibility: hidden;
             pointer-events: none;
         }
-
     }
+
     .m-item--summary {
         position: absolute;
         bottom: 20px;
@@ -458,76 +609,51 @@
 
 }
 
-.m-card_certificate {
-    @include m-card();
+
+.m-card_centered-text {
+    //@include m-card();
+    background-color: transparent;
 
     article {
         text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: $space;
     }
 
-    .m-item--image {
-        width: 130px;
-        height: 130px;
-        overflow: hidden;
-        margin: 0 auto;
-
-        margin-bottom: 30px;
-    }
-
-    .m-item--hed {
-        margin-bottom: 15px;
-    }
-
-}
-
-.m-card_faq {
-    @include m-card();
-    background-color: $color-secondary;
-
-    article,
-    header {
-        height: 140px;
-        width: 100%;
-        position: relative;
-        //cursor: pointer;
+    .header {
+        margin-bottom: $space * 0.3;
     }
 
     .m-item--hed {
-        position: relative;
-        height: 100%;
-    }
+        margin-bottom: $space;
+        font-size: rem-calc(30);
+        font-weight: 400;
 
-    .m-item--hed a {
-        @include vertical-align();
-        padding: 20px;
-        position: absolute;
-        height: 100%;
-        font-size: rem-calc(16);
-        font-weight: 600;
-        color: $color-black;
-        &:hover {
-            color: white;
+        a {
+            color: $body-font-color;
             text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
         }
     }
-
     .m-item--description {
-        padding: 30px;
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 140px;
+        font-size: rem-calc(16);
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+
     }
 
-    &:hover {
-        background-color: $color-primary;
-        .m-item--description {
-            // display: block;
-        }
-        .m-item--hed {
-            //display: none;
-        }
+    .m-card--more {
+        text-align: center;
+    }
+
+    .m-gallery {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: $space;
     }
 }
-
-
