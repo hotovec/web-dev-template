@@ -1,15 +1,13 @@
 {# FAQ #}
 <div class="m-section l-feed_three">
 
-    <div class="row">
-        <header class="m-section--header">
-            <div class="l-full">
-                <h2 class="m-section--hed mm-big">Faq / Znalostní báze</h2>
-            </div>
-        </header>
-    </div>
+    <header class="m-section--header">
+        <div class="l-full">
+            <h2 class="m-section--hed mm-big">Faq / Znalostní báze</h2>
+        </div>
+    </header>
 
-    <div class="row">
+    <div class="m-section--content">
         {% for a in 1..6 %}
             <div class="m-card_faq l-single">
                 {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': ''} %}
@@ -17,19 +15,15 @@
         {% endfor %}
     </div>
 
-
-    <div class="row">
-        <footer class="m-section--footer">
-            <div class="l-half">
-                <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
-            </div>
-            <div class="l-half">
-                <ul class="m-section--nav inline-right">
-                    <li><a href="" title="Novinky">Technická pomoc</a></li>
-                    <li><a href="">informace pro architekty</a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-
+    <footer class="m-section--footer">
+        <div class="l-half">
+            <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+        </div>
+        <div class="l-half">
+            <ul class="m-section--nav inline-right">
+                <li><a href="" title="Novinky">Technická pomoc</a></li>
+                <li><a href="">informace pro architekty</a></li>
+            </ul>
+        </div>
+    </footer>
 </div>

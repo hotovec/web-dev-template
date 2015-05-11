@@ -4,7 +4,7 @@
         <h2 class="m-section--hed mm-medium mm-center">Zpravodaj</h2>
     </header>
 
-    <div class="row">
+    <div class="m-section--content">
         {% for a in 1..6 %}
             <div class="m-card_horizontal l-single">
                 {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': ''} %}
@@ -12,15 +12,13 @@
         {% endfor %}
     </div>
 
-    <div class="row">
-        <footer class="m-section--footer">
-            <div class="l-half">
-                <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
-            </div>
-            <div class="l-half">
-                <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
-            </div>
-        </footer>
-    </div>
+    <footer class="m-section--footer">
+        <div class="l-half">
+            <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
+        </div>
+        <div class="l-half">
+            <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
+        </div>
+    </footer>
 
 </div>

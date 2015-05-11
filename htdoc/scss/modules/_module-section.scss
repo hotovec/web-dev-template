@@ -80,6 +80,13 @@
 }
 
 .m-section--header,
+.m-section--footer,
+.m-section--content {
+    @include l-grid();
+}
+
+
+.m-section--header,
 .m-section--footer {
 
     @include cf();
