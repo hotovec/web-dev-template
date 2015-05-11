@@ -152,39 +152,45 @@
 
 .l-feed_block-carousel {
 
+    $block-carousel-gutter:30px;
+
     width: 100%;
     overflow: hidden;
+
     .m-section--content {
         .l-single,
         .l-double,
         .l-half {
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: $block-carousel-gutter;
             height: 210px;
 
             @include media(C) {
                 height: 210px;
-                margin-bottom: 30px;
+                margin-bottom: $block-carousel-gutter;
             }
             @include media(D) {
                 height: 294px;
-                margin-bottom: 30px;
+                margin-bottom: $block-carousel-gutter;
             }
         }
+
+        // fix row height
+        margin-bottom: - $block-carousel-gutter;
     }
 
     .l-single {
-        @include column(1/2);
+        @include column(1/2, $gut:$block-carousel-gutter);
         @include media(C) {
-            @include column(1/2);
+            @include column(1/2,$gut:$block-carousel-gutter);
         }
     }
 
     .l-double {
-        @include column(1);
+        @include column(1,$gut:$block-carousel-gutter);
 
         @include media(C) {
-            @include column(1);
+            @include column(1,$gut:$block-carousel-gutter);
         }
     }
 

@@ -2690,24 +2690,26 @@ body {
 .l-feed_block-carousel {
   width: 100%;
   overflow: hidden; }
-  .l-feed_block-carousel .m-section--content .l-single,
-  .l-feed_block-carousel .m-section--content .l-double,
-  .l-feed_block-carousel .m-section--content .l-half {
-    overflow: hidden;
-    margin-bottom: 20px;
-    height: 210px; }
-    @media only screen and (min-width: 961px) {
-      .l-feed_block-carousel .m-section--content .l-single,
-      .l-feed_block-carousel .m-section--content .l-double,
-      .l-feed_block-carousel .m-section--content .l-half {
-        height: 210px;
-        margin-bottom: 30px; } }
-    @media only screen and (min-width: 1331px) {
-      .l-feed_block-carousel .m-section--content .l-single,
-      .l-feed_block-carousel .m-section--content .l-double,
-      .l-feed_block-carousel .m-section--content .l-half {
-        height: 294px;
-        margin-bottom: 30px; } }
+  .l-feed_block-carousel .m-section--content {
+    margin-bottom: -30px; }
+    .l-feed_block-carousel .m-section--content .l-single,
+    .l-feed_block-carousel .m-section--content .l-double,
+    .l-feed_block-carousel .m-section--content .l-half {
+      overflow: hidden;
+      margin-bottom: 30px;
+      height: 210px; }
+      @media only screen and (min-width: 961px) {
+        .l-feed_block-carousel .m-section--content .l-single,
+        .l-feed_block-carousel .m-section--content .l-double,
+        .l-feed_block-carousel .m-section--content .l-half {
+          height: 210px;
+          margin-bottom: 30px; } }
+      @media only screen and (min-width: 1331px) {
+        .l-feed_block-carousel .m-section--content .l-single,
+        .l-feed_block-carousel .m-section--content .l-double,
+        .l-feed_block-carousel .m-section--content .l-half {
+          height: 294px;
+          margin-bottom: 30px; } }
   .l-feed_block-carousel .l-single {
     float: left;
     width: calc(100% * 0.5 - 30px);
@@ -3508,6 +3510,7 @@ button:focus {
   background-attachment: fixed; }
 
 .m-section {
+  border-bottom: 1px solid #99f;
   padding: 0;
   height: auto;
   position: relative; }
