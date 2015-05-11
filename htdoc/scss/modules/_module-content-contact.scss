@@ -114,7 +114,7 @@
     .m-contact-tab--header {
         @include cf();
 
-        background-color: #CBCFCA;
+        background-color: $color-secondary-light;
         color: $color-body-font;
         padding: 12px;
         margin-bottom: 15px;

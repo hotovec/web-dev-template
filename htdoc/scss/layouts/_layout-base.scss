@@ -14,15 +14,22 @@
 }
 
 .l-third {
-    @include column(1/3);
+    @include column(1);
+
+    @include media(C) {
+        @include column(1/3);
+    }
     overflow: hidden;
 }
 
 .l-two-thirds {
-    @include column(2/3);
+    @include column(1);
+
+    @include media(C) {
+        @include column(2/3);
+    }
     overflow: hidden;
 }
-
 
 .l-single {
     overflow: hidden;

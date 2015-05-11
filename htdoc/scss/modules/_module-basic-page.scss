@@ -9,9 +9,14 @@ article {
                 bottom: 20px;
                 left: 20px;
                 color: $body-font-color;
-                background-color: $color-white;
+                background-color: rgba($color-white, 0.9);
                 padding: 0 20px;
-                width: 30%;
+                font-size: rem-calc(12);
+                width: 60%;
+                @include media(C) {
+                    font-size: rem-calc(14);
+                    width: 30%;
+                }
             }
         }
     }
@@ -20,7 +25,6 @@ article {
 .m-body--content iframe {
     width: 100%;
 }
-
 
 .m-basic-page {
 
@@ -41,8 +45,8 @@ article {
     }
 
     aside {
-            @include column(4/12);
-            //@include move(3/12);
+        @include column(4/12);
+        //@include move(3/12);
 
         @include media(C) {
             @include column(3/12);
@@ -57,9 +61,15 @@ article {
     }
 
     .m-basic-page--hed {
-        font-size: rem-calc(40);
-        margin-bottom: $space;
         margin-top: 0;
+        margin-bottom: $space * 0.5;
+        font-size: rem-calc(26);
+
+        @include media(C) {
+            font-size: rem-calc(40);
+            margin-bottom: $space;
+
+        }
     }
 
     .m-basic-page--image {
