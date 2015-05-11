@@ -7,7 +7,7 @@
 
     .l-next,
     .l-prev {
-        @include column(4/12, $gut: 0);
+        @include column(4/12);
         height: 53px;
         overflow: hidden;
     }
