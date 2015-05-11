@@ -4318,6 +4318,7 @@ button:focus {
     left: 0;
     width: 100%;
     height: 100%; }
+  .m-card_thumb .m-item--meta,
   .m-card_thumb .m-item--description {
     display: none; }
   .m-card_thumb .m-item--hed {
