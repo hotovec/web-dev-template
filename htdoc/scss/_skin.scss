@@ -2,14 +2,14 @@
 
 //@todo replace skin by maps only
 
-$color-primary:     #C20E1A;
-$color-primary-light:     #C20E1A;
-$color-primary-dark:     #C20E1A;
+$color-primary:         #C20E1A;
+$color-primary-light:   lighten($color-primary, 10%);
+$color-primary-dark:    darken($color-primary,10%);
+
 
 $color-secondary:   #B5BBB4;
-$color-secondary-light:   #F8F8F8;
-$color-secondary-dark:   #F8F8F8;
-
+$color-secondary-light:  lighten($color-secondary, 10%);
+$color-secondary-dark:   darken($color-secondary,10%);
 
 // color base text
 $color-black:       #000;

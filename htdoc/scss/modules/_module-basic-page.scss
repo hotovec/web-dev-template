@@ -8,31 +8,29 @@ article {
                 position: absolute;
                 bottom: 20px;
                 left: 20px;
+                padding: 0 20px;
+                width: 60%;
+
                 color: $body-font-color;
                 background-color: rgba($color-white, 0.9);
-                padding: 0 20px;
+
                 font-size: rem-calc(12);
-                width: 60%;
+
                 @include media(C) {
-                    font-size: rem-calc(14);
                     width: 30%;
+                    font-size: rem-calc(14);
                 }
             }
         }
     }
 }
 
-.m-body--content iframe {
-    width: 100%;
-}
 
 .m-basic-page {
 
     position: relative;
 
     .m-basic-page--header {
-        background-color: $color-secondary-light;
-        padding-bottom: $space;
     }
 
     .m-body--content {
@@ -78,14 +76,6 @@ article {
         img {
             visibility: hidden;
         }
-    }
-
-    .m-basic-page--summary {
-
-    }
-
-    .m-basic-page--description {
-
     }
 
 }

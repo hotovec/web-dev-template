@@ -23,13 +23,15 @@
 @import "layouts/layout-navbar";
 @import "layouts/layout-feed";
 @import "layouts/layout-navigation";
-@import "layouts/layout-page-detail-full";
+//@import "layouts/layout-page-detail-full";
 
-@import "modules/module-page-scroll";
+@import "modules/module-side-panel";
 @import "modules/module-navbar";
-@import "modules/module-pagination";
-@import "modules/module-xmega";
 @import "modules/module-footer";
+
+@import "modules/module-body-content";
+@import "modules/module-pagination";
+
 @import "modules/module-coverlines";
 @import "modules/module-section";
 
@@ -38,21 +40,17 @@
 @import "modules/module-content-item";
 @import "modules/module-card";
 @import "modules/module-filter";
-@import "modules/module-admin";
 @import "modules/module-properties";
 @import "modules/module-banner";
-@import "modules/module-attachment";
 @import "modules/module-layout-object";
 @import "modules/module-basic-page";
-@import "modules/module-content-product";
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
 @import "modules/module-content-contact";
-@import "not-modular/hero-tabs";
-// custom drupal overrides
-@import "drupal/drupal-override";
 
-//@import "drupal/tb-megamenu";
+@import "not-modular/hero-tabs";
+
+@import "not-modular/module-choosen-js-override";
 
 // dev
 

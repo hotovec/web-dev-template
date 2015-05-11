@@ -1,0 +1,51 @@
+
+.l-detail-page {
+
+    .m-reference {
+
+        //layout
+
+        & > header {
+            @include l-grid();
+            margin-bottom: 80px;
+            position: relative;
+            height: 480px;
+        }
+
+        .m-reference--image,
+        .m-reference--summary {
+            @include column(6/12);
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .m-reference--summary {
+            @include move(-6/12);
+            position: relative;
+        }
+
+        .m-reference--meta {
+            position: absolute;
+            bottom: 0;
+            width: 335px;
+        }
+
+        .m-reference--image {
+            @include move(6/12);
+        }
+
+        .m-reference--description {
+            display: none;
+        }
+
+        .m-reference--content {
+            @include l-grid();
+
+            .m-body--content,
+            aside {
+                @include column(6/12);
+            }
+        }
+
+    }
+}

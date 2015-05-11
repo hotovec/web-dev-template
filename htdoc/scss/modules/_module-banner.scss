@@ -1,8 +1,12 @@
+// fullscrenn label breakout
+
 .m-banner {
+
+    @include cf();
     padding: ($space * 0.5) 0;
+
     text-align: center;
     position: relative;
-    @include cf();
 
     & > header {
         max-width: 600px;
@@ -11,7 +15,7 @@
     }
 
     .m-banner--hed {
-        font-size: 20px;
+        font-size: rem-calc(20);
         font-weight: 400;
 
         a {
@@ -37,33 +41,6 @@
         }
         img {
             visibility: hidden;
-        }
-    }
-}
-
-.bg-primary {
-    .m-banner {
-        color: white;
-        a {
-            color: white;
-        }
-    }
-}
-
-.bg-secondary {
-    .m-banner {
-        color: white;
-        a {
-            color: white;
-        }
-    }
-}
-
-.bg-secondary-light {
-    .m-banner {
-        color: $color-body-font;
-        a {
-            color: $color-black;
         }
     }
 }

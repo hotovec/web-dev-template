@@ -1,0 +1,28 @@
+// basic template for content body
+
+.m-body--content {
+
+    h1, h2, h3, h4, h5, h6 {
+    }
+
+    p {
+    }
+
+    ul {
+        li {
+        }
+    }
+
+    a {
+        &:hover {
+        }
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    blockquote {
+    }
+
+}

@@ -1,0 +1,40 @@
+.l-detail-page {
+    .m-contact {
+
+        > header {
+            @include l-grid();
+        }
+
+        .m-contact--image,
+        .m-contact--map,
+        {
+            margin-bottom: $space * 0.5;
+
+            @include column(6/12);
+
+            @include media(B) {
+                @include column(3/12);
+            }
+            @include media(D) {
+                @include column(3/12);
+            }
+        }
+
+        .m-contact--image {
+            @include media(D) {
+                @include offset(3/12);
+            }
+        }
+
+        .m-contact--summary {
+            @include column(12/12);
+            @include media(B) {
+
+                @include column(6/12);
+            }
+            @include media(D) {
+                @include column(3/12);
+            }
+        }
+    }
+}
