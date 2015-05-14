@@ -21,6 +21,7 @@
     }
 
     .m-item--hed {
+        font-family: $font-family-headline;
         font-size: rem-calc(18);
     }
 
@@ -335,6 +336,7 @@
     }
 
     .m-item--hed {
+        font-family: $font-family-headline;
         margin-bottom: $space;
         font-size: rem-calc(30);
         font-weight: 400;

@@ -71,6 +71,7 @@
         margin-bottom: -31px;
         overflow: hidden;
     }
+
 }
 
 .m-section.bg-secondary-light {
@@ -90,7 +91,7 @@
 .m-section--footer {
 
     @include cf();
-
+    font-family: $font-family-ui;;
     text-transform: uppercase;
     font-weight: 800;
     padding-top: $space;
@@ -132,6 +133,7 @@
 
 // base section hed style
 .m-section--hed {
+    font-family: $font-family-headline;
     font-size: rem-calc(30);
     text-transform: uppercase;
     line-height: 1.2em;
@@ -182,6 +184,7 @@
 }
 
 .m-section_vertical-tabs {
+    @include m-section-base();
     position: relative;
     background-color: $primary-color;
 
@@ -387,7 +390,7 @@
 }
 
 .m-section_support {
-
+    @include m-section-base();
     background-image: url("/sites/koma/assets/images/montaznik-support-background.jpg");
     background-size: auto 422px;
     background-repeat: repeat-x;
@@ -520,52 +523,4 @@
     }
 
 }
-
-.m-section {
-    &.l-login {
-
-        position: absolute;
-
-        top: 0;
-        bottom: 100px;
-        left: 0;
-        right: 0;
-        margin: auto;
-
-        .m-section--container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-
-            > .row {
-                padding-top: 200px;
-                //@include vertical-align();
-            }
-
-        }
-
-        .m-section--footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-            font-weight: 400;
-            font-size: rem-calc(14);
-            text-transform: none;
-
-            a {
-                color: $color-body-font;
-            }
-        }
-
-        .messages {
-            text-align: center;
-            max-width: 600px;
-        }
-
-    }
-
-}
-
 

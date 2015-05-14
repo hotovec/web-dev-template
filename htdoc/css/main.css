@@ -568,7 +568,7 @@ body {
   color: #4A4A4A;
   padding: 0;
   margin: 0;
-  font-family: "Purista", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -687,7 +687,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Purista", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2091,7 +2091,7 @@ select {
   border-color: #cccccc;
   padding: 0.5rem;
   font-size: 1rem;
-  font-family: "Purista", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
@@ -2970,7 +2970,7 @@ body {
   background-color: #fff;
   border-top: 1px solid #dfdfe3;
   border-bottom: 1px solid #dfdfe3;
-  font-family: "Purista", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: none; }
@@ -3431,6 +3431,7 @@ button:focus {
 .m-section--header,
 .m-section--footer {
   *zoom: 1;
+  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 800;
   padding-top: 50px;
@@ -3477,6 +3478,7 @@ button:focus {
   text-align: right; }
 
 .m-section--hed {
+  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1.875rem;
   text-transform: uppercase;
   line-height: 1.2em;
@@ -3559,11 +3561,56 @@ button:focus {
     overflow: hidden; }
 
 .m-section_vertical-tabs {
+  border-bottom: 1px solid #99f;
+  padding: 0;
+  height: auto;
+  position: relative;
   position: relative;
   background-color: #C20E1A;
   padding-top: 0;
   padding-bottom: 0;
   overflow: hidden; }
+  .m-section_vertical-tabs h1, .m-section_vertical-tabs h2, .m-section_vertical-tabs h3, .m-section_vertical-tabs h4, .m-section_vertical-tabs h5, .m-section_vertical-tabs h6 {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .m-section_vertical-tabs .mm-small {
+    font-size: 1rem; }
+  .m-section_vertical-tabs .mm-medium {
+    font-size: 2.25rem; }
+  .m-section_vertical-tabs .mm-big {
+    font-size: 3.125rem; }
+  .m-section_vertical-tabs .mm-tiny {
+    font-weight: 200; }
+  .m-section_vertical-tabs .mm-normal {
+    font-weight: 400; }
+  .m-section_vertical-tabs .mm-bold {
+    font-weight: 600; }
+  .m-section_vertical-tabs .mm-center {
+    text-align: center; }
+  .m-section_vertical-tabs.mm-has-background {
+    background-position: center;
+    background-size: cover; }
+  .m-section_vertical-tabs .m-section--close {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    content: "x";
+    color: white;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer; }
+  .m-section_vertical-tabs .mm-pad-double,
+  .m-section_vertical-tabs.mm-pad-double {
+    padding-top: 75px;
+    padding-bottom: 75px; }
+  .m-section_vertical-tabs .row.rowfix {
+    margin-bottom: -31px;
+    overflow: hidden; }
   .m-section_vertical-tabs .m-section--container {
     height: 100%;
     position: relative; }
@@ -3708,11 +3755,56 @@ button:focus {
         bottom: 0; } }
 
 .m-section_support {
+  border-bottom: 1px solid #99f;
+  padding: 0;
+  height: auto;
+  position: relative;
   background-image: url("/sites/koma/assets/images/montaznik-support-background.jpg");
   background-size: auto 422px;
   background-repeat: repeat-x;
   background-position: 0 0;
   background-color: #f5f5f5; }
+  .m-section_support h1, .m-section_support h2, .m-section_support h3, .m-section_support h4, .m-section_support h5, .m-section_support h6 {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .m-section_support .mm-small {
+    font-size: 1rem; }
+  .m-section_support .mm-medium {
+    font-size: 2.25rem; }
+  .m-section_support .mm-big {
+    font-size: 3.125rem; }
+  .m-section_support .mm-tiny {
+    font-weight: 200; }
+  .m-section_support .mm-normal {
+    font-weight: 400; }
+  .m-section_support .mm-bold {
+    font-weight: 600; }
+  .m-section_support .mm-center {
+    text-align: center; }
+  .m-section_support.mm-has-background {
+    background-position: center;
+    background-size: cover; }
+  .m-section_support .m-section--close {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    content: "x";
+    color: white;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer; }
+  .m-section_support .mm-pad-double,
+  .m-section_support.mm-pad-double {
+    padding-top: 75px;
+    padding-bottom: 75px; }
+  .m-section_support .row.rowfix {
+    margin-bottom: -31px;
+    overflow: hidden; }
   @media only screen and (min-width: 961px) {
     .m-section_support {
       height: 422px; } }
@@ -3817,33 +3909,6 @@ button:focus {
         line-height: 59px; }
     .m-section_support .input-group input, .m-section_support .input-group button {
       height: 59px; }
-
-.m-section.l-login {
-  position: absolute;
-  top: 0;
-  bottom: 100px;
-  left: 0;
-  right: 0;
-  margin: auto; }
-  .m-section.l-login .m-section--container {
-    position: relative;
-    height: 100%;
-    width: 100%; }
-    .m-section.l-login .m-section--container > .row {
-      padding-top: 200px; }
-  .m-section.l-login .m-section--footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-weight: 400;
-    font-size: 0.875rem;
-    text-transform: none; }
-    .m-section.l-login .m-section--footer a {
-      color: #4A4A4A; }
-  .m-section.l-login .messages {
-    text-align: center;
-    max-width: 600px; }
 
 .m-aside-block--header {
   *zoom: 1;
@@ -3970,6 +4035,7 @@ button:focus {
   .m-card_standard p {
     margin: 0; }
   .m-card_standard .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.125rem; }
   .m-card_standard .m-item--description {
     font-size: 0.875rem; }
@@ -4026,6 +4092,7 @@ button:focus {
   .m-card_list p {
     margin: 0; }
   .m-card_list .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.125rem; }
   .m-card_list .m-item--description {
     font-size: 0.875rem; }
@@ -4066,6 +4133,7 @@ button:focus {
   .m-card_image p {
     margin: 0; }
   .m-card_image .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.125rem; }
   .m-card_image .m-item--description {
     font-size: 0.875rem; }
@@ -4277,6 +4345,7 @@ button:focus {
   .m-card_thumb p {
     margin: 0; }
   .m-card_thumb .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.125rem; }
   .m-card_thumb .m-item--description {
     font-size: 0.875rem; }
@@ -4425,6 +4494,7 @@ button:focus {
   .m-card_centered-text .header {
     margin-bottom: 15px; }
   .m-card_centered-text .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     margin-bottom: 50px;
     font-size: 1.875rem;
     font-weight: 400; }
@@ -4459,6 +4529,7 @@ button:focus {
   .m-card_nav p {
     margin: 0; }
   .m-card_nav .m-item--hed {
+    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.125rem; }
   .m-card_nav .m-item--description {
     font-size: 0.875rem; }
@@ -4517,6 +4588,7 @@ button:focus {
     font-size: 0.875rem; }
 
 .m-filter {
+  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin-bottom: 30px; }
   .m-filter .active-result {
     font-weight: 400; }
@@ -4584,7 +4656,7 @@ button:focus {
 
 .m-properties {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 0.875rem; }
   .m-properties dl {
     position: relative;
