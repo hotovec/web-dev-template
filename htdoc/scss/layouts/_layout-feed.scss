@@ -152,7 +152,7 @@
 
 .l-feed_block-carousel {
 
-    $block-carousel-gutter:30px;
+    $block-carousel-gutter:0px;
 
     width: 100%;
     overflow: hidden;
@@ -205,6 +205,11 @@
             @include transition(opacity 0.3s);
             opacity: 1;
         }
+    }
+
+    // override card height to fit block carousel layouts
+    [class*=m-card] {
+        height: 100%;
     }
 
 

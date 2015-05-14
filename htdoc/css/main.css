@@ -2691,47 +2691,47 @@ body {
   width: 100%;
   overflow: hidden; }
   .l-feed_block-carousel .m-section--content {
-    margin-bottom: -30px; }
+    margin-bottom: 0px; }
     .l-feed_block-carousel .m-section--content .l-single,
     .l-feed_block-carousel .m-section--content .l-double,
     .l-feed_block-carousel .m-section--content .l-half {
       overflow: hidden;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
       height: 210px; }
       @media only screen and (min-width: 961px) {
         .l-feed_block-carousel .m-section--content .l-single,
         .l-feed_block-carousel .m-section--content .l-double,
         .l-feed_block-carousel .m-section--content .l-half {
           height: 210px;
-          margin-bottom: 30px; } }
+          margin-bottom: 0px; } }
       @media only screen and (min-width: 1331px) {
         .l-feed_block-carousel .m-section--content .l-single,
         .l-feed_block-carousel .m-section--content .l-double,
         .l-feed_block-carousel .m-section--content .l-half {
           height: 294px;
-          margin-bottom: 30px; } }
+          margin-bottom: 0px; } }
   .l-feed_block-carousel .l-single {
     float: left;
-    width: calc(100% * 0.5 - 30px);
-    margin-left: 15px;
-    margin-right: 15px; }
+    width: calc(100% * 0.5 - 0px);
+    margin-left: 0px;
+    margin-right: 0px; }
     @media only screen and (min-width: 961px) {
       .l-feed_block-carousel .l-single {
         float: left;
-        width: calc(100% * 0.5 - 30px);
-        margin-left: 15px;
-        margin-right: 15px; } }
+        width: calc(100% * 0.5 - 0px);
+        margin-left: 0px;
+        margin-right: 0px; } }
   .l-feed_block-carousel .l-double {
     float: left;
-    width: calc(100% * 1 - 30px);
-    margin-left: 15px;
-    margin-right: 15px; }
+    width: calc(100% * 1 - 0px);
+    margin-left: 0px;
+    margin-right: 0px; }
     @media only screen and (min-width: 961px) {
       .l-feed_block-carousel .l-double {
         float: left;
-        width: calc(100% * 1 - 30px);
-        margin-left: 15px;
-        margin-right: 15px; } }
+        width: calc(100% * 1 - 0px);
+        margin-left: 0px;
+        margin-right: 0px; } }
   .l-feed_block-carousel .slick-list {
     overflow: visible !important; }
   .l-feed_block-carousel .slick-slide {
@@ -2744,6 +2744,8 @@ body {
       -moz-transition: opacity 0.3s;
       transition: opacity 0.3s;
       opacity: 1; }
+  .l-feed_block-carousel [class*=m-card] {
+    height: 100%; }
 
 .m-basic-page--header .slide,
 .l-feed_carousel .slide {
