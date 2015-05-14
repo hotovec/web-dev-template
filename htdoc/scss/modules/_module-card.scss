@@ -1,5 +1,7 @@
 @mixin m-card() {
 
+    position: relative;
+
     article,
     header {
         position: relative;
@@ -46,6 +48,7 @@
     @include m-card();
 
     overflow: hidden;
+
 
     height: 300px;
 

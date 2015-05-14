@@ -3952,6 +3952,7 @@ button:focus {
     pointer-events: none; }
 
 .m-card_standard {
+  position: relative;
   background-color: white;
   padding-bottom: 24px;
   position: relative; }
@@ -4009,6 +4010,7 @@ button:focus {
       background-color: white; }
 
 .m-card_list {
+  position: relative;
   background-color: white; }
   .m-card_list article,
   .m-card_list header {
@@ -4047,6 +4049,7 @@ button:focus {
     margin-left: 160px; }
 
 .m-card_image {
+  position: relative;
   overflow: hidden;
   height: 300px; }
   .m-card_image article,
@@ -4257,6 +4260,7 @@ button:focus {
     display: none; }
 
 .m-card_thumb {
+  position: relative;
   overflow: hidden;
   height: 300px; }
   .m-card_thumb article,
@@ -4439,86 +4443,76 @@ button:focus {
     margin: 0 auto;
     margin-top: 50px; }
 
-.m-card_nav article,
-.m-card_nav header {
+.m-card_nav {
   position: relative; }
-
-.m-card_nav a {
-  color: #000;
-  text-decoration: none; }
-  .m-card_nav a:hover {
-    color: #C20E1A;
-    text-decoration: underline; }
-
-.m-card_nav p {
-  margin: 0; }
-
-.m-card_nav .m-item--hed {
-  font-size: 1.125rem; }
-
-.m-card_nav .m-item--description {
-  font-size: 0.875rem; }
-
-.m-card_nav .m-item--image img {
-  width: 100%;
-  height: auto;
-  display: none; }
-
-.m-card_nav .m-item--more {
-  position: absolute;
-  left: 20px;
-  bottom: 20px; }
-
-.m-card_nav article,
-.m-card_nav header,
-.m-card_nav .m-item--summary {
-  position: relative;
-  height: 100%; }
-
-.m-card_nav article:hover .m-item--image a:after {
-  font-family: FontAwesome;
-  display: block;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  color: white;
-  line-height: 53px;
-  background-color: rgba(0, 0, 0, 0.45); }
-
-.m-card_nav article:hover .m-item--hed a {
-  color: #C20E1A;
-  text-decoration: none; }
-
-.m-card_nav .m-item--image {
-  width: 70px;
-  height: 53px;
-  overflow: hidden;
-  position: relative; }
-  .m-card_nav .m-item--image a {
-    height: 100%;
-    width: 100%;
-    display: block; }
+  .m-card_nav article,
+  .m-card_nav header {
+    position: relative; }
+  .m-card_nav a {
+    color: #000;
+    text-decoration: none; }
+    .m-card_nav a:hover {
+      color: #C20E1A;
+      text-decoration: underline; }
+  .m-card_nav p {
+    margin: 0; }
+  .m-card_nav .m-item--hed {
+    font-size: 1.125rem; }
+  .m-card_nav .m-item--description {
+    font-size: 0.875rem; }
   .m-card_nav .m-item--image img {
     width: 100%;
     height: auto;
     display: none; }
-
-.m-card_nav .m-item--description,
-.m-card_nav .m-item--meta {
-  display: none; }
-
-.m-card_nav .m-item--hed {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-weight: 400;
-  font-size: 0.875rem; }
+  .m-card_nav .m-item--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
+  .m-card_nav article,
+  .m-card_nav header,
+  .m-card_nav .m-item--summary {
+    position: relative;
+    height: 100%; }
+  .m-card_nav article:hover .m-item--image a:after {
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    line-height: 53px;
+    background-color: rgba(0, 0, 0, 0.45); }
+  .m-card_nav article:hover .m-item--hed a {
+    color: #C20E1A;
+    text-decoration: none; }
+  .m-card_nav .m-item--image {
+    width: 70px;
+    height: 53px;
+    overflow: hidden;
+    position: relative; }
+    .m-card_nav .m-item--image a {
+      height: 100%;
+      width: 100%;
+      display: block; }
+    .m-card_nav .m-item--image img {
+      width: 100%;
+      height: auto;
+      display: none; }
+  .m-card_nav .m-item--description,
+  .m-card_nav .m-item--meta {
+    display: none; }
+  .m-card_nav .m-item--hed {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 0.875rem; }
 
 .m-filter {
   margin-bottom: 30px; }
