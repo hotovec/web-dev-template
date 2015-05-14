@@ -1,5 +1,63 @@
 $(function () {
 
+
+    function digestCard() {
+        console.log("card diggest");
+        $('[keep-height]').each(function () {
+            var root = $(this);
+
+            var maxHeight = -1;
+            root.children('div').each(function () {
+                $(this).children('article').removeClass("mm-auto");
+                var h = $(this).children('article').height();
+                maxHeight = Math.max(maxHeight, h);
+            });
+            // update height
+            root.children('div').each(function () {
+                $(this).css("height", maxHeight);
+                $(this).children('article').addClass("mm-auto");
+            });
+        });
+    }
+
+    $(window).setBreakpoints({
+        // use only largest available vs use all available
+        distinct: true,
+
+        // array of widths in pixels where breakpoints should be triggered
+        breakpoints: [0, 640, 960, 1330, 1600 ]
+    });
+
+    $(window).bind('enterBreakpoint640', function () {
+        diggest(640);
+    });
+
+    $(window).bind('enterBreakpoint960', function () {
+        diggest(960);
+    });
+
+    /*$(window).bind('exitBreakpoint768',function() {
+     ...
+     });*/
+
+    $(window).bind('enterBreakpoint1330', function () {
+        diggest(1330);
+    });
+
+    $(window).bind('enterBreakpoint1600', function () {
+        diggest(1600);
+    });
+
+    /*$(window).bind('exitBreakpoint1024',function() {
+     ...
+     });*/
+
+
+    function diggest(bpw) {
+        console.log("Digest: " + bpw);
+        digestCard();
+    }
+
     //
     $('[slick]').each(function () {
         var SlickWrapper = $(this);
@@ -72,19 +130,19 @@ $(function () {
 
         item.hover(
             function (e) {
-            //e.preventDefault();
+                //e.preventDefault();
 
-            if (lastMegaTab) {
-                lastMegaTab.removeClass("is-active");
-                $('body').removeClass("scroll-lock");
-            }
+                if (lastMegaTab) {
+                    lastMegaTab.removeClass("is-active");
+                    $('body').removeClass("scroll-lock");
+                }
 
-            mega.addClass("is-open");
-            tab.addClass("is-active");
-            $('body').addClass("scroll-lock");
-            lastMegaTab = tab;
-        },
-            function(e) {
+                mega.addClass("is-open");
+                tab.addClass("is-active");
+                $('body').addClass("scroll-lock");
+                lastMegaTab = tab;
+            },
+            function (e) {
                 console.log("hover");
             }
         );
@@ -209,4 +267,5 @@ $(".ch-select").chosen({
     disable_search_threshold: 40,
     //allow_single_deselect: true
 });
+
 

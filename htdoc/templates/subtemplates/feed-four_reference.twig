@@ -8,10 +8,19 @@
     </header>
 
 
-    <div class="m-section--content">
-        {% for a in 1..8 %}
-            <div class="m-card_vertical mm-color-{{ a }} l-single">
-                {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': ''} %}
+    <div class="m-section--content" -keep-height>
+        <div class="l-single">
+            {% set tClass = ['m-card_image mm-low', ' mm-color-', a]|join('') %}
+            {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': tClass } %}
+        </div>
+        <div class="l-single">
+            {% set tClass = ['m-card_image mm-tall', ' mm-color-', a]|join('') %}
+            {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': tClass } %}
+        </div>
+        {% for a in 1..6 %}
+            <div class="l-single">
+                {% set tClass = ['m-card_image', ' mm-color-', a]|join('') %}
+                {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': tClass } %}
             </div>
         {% endfor %}
     </div>

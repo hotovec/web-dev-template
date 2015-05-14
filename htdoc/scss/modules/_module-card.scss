@@ -34,13 +34,35 @@
         }
     }
 
+    .m-item--more {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+
 }
 
 @mixin m-card-image {
     @include m-card();
 
-    height: 240px;
     overflow: hidden;
+
+    height: 300px;
+
+    &.mm-auto {
+        height: 100% !important;
+    }
+
+    &.mm-tall {
+        height: 350px;
+
+        @include media(D) {
+            height: 600px;
+        }
+    }
+    &.mm-low {
+        height: 200px;
+    }
 
     article,
     header {
@@ -295,7 +317,6 @@
     }
 }
 
-
 .m-card_centered-text {
     background-color: transparent;
 
@@ -342,7 +363,6 @@
         margin-top: $space;
     }
 }
-
 
 .m-card_nav {
     @include m-card();

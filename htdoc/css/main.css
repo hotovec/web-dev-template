@@ -3974,6 +3974,10 @@ button:focus {
     width: 100%;
     height: auto;
     display: none; }
+  .m-card_standard .m-item--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
   .m-card_standard .m-item--image {
     height: 181px;
     overflow: hidden; }
@@ -4025,6 +4029,10 @@ button:focus {
     width: 100%;
     height: auto;
     display: none; }
+  .m-card_list .m-item--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
   .m-card_list .m-item--image {
     height: 60px;
     width: 120px;
@@ -4039,8 +4047,8 @@ button:focus {
     margin-left: 160px; }
 
 .m-card_image {
-  height: 240px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 300px; }
   .m-card_image article,
   .m-card_image header {
     position: relative; }
@@ -4060,6 +4068,19 @@ button:focus {
     width: 100%;
     height: auto;
     display: none; }
+  .m-card_image .m-item--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
+  .m-card_image.mm-auto {
+    height: 100% !important; }
+  .m-card_image.mm-tall {
+    height: 350px; }
+    @media only screen and (min-width: 1331px) {
+      .m-card_image.mm-tall {
+        height: 600px; } }
+  .m-card_image.mm-low {
+    height: 200px; }
   .m-card_image article,
   .m-card_image header {
     height: 100%; }
@@ -4236,8 +4257,8 @@ button:focus {
     display: none; }
 
 .m-card_thumb {
-  height: 240px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 300px; }
   .m-card_thumb article,
   .m-card_thumb header {
     position: relative; }
@@ -4257,6 +4278,19 @@ button:focus {
     width: 100%;
     height: auto;
     display: none; }
+  .m-card_thumb .m-item--more {
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
+  .m-card_thumb.mm-auto {
+    height: 100% !important; }
+  .m-card_thumb.mm-tall {
+    height: 350px; }
+    @media only screen and (min-width: 1331px) {
+      .m-card_thumb.mm-tall {
+        height: 600px; } }
+  .m-card_thumb.mm-low {
+    height: 200px; }
   .m-card_thumb article,
   .m-card_thumb header {
     height: 100%; }
@@ -4429,6 +4463,11 @@ button:focus {
   width: 100%;
   height: auto;
   display: none; }
+
+.m-card_nav .m-item--more {
+  position: absolute;
+  left: 20px;
+  bottom: 20px; }
 
 .m-card_nav article,
 .m-card_nav header,
