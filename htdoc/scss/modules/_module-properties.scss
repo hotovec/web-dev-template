@@ -4,7 +4,7 @@
 
 .m-properties {
     display: block;
-    font-family: $font-family-ui;
+    @include font-ui();
     font-size: rem-calc(14);
 
     dl {

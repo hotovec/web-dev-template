@@ -21,12 +21,8 @@
     }
 
     .m-item--hed {
-        font-family: $font-family-headline;
-        font-size: rem-calc(18);
     }
-
     .m-item--description {
-        font-size: rem-calc(14);
     }
 
     .m-item--image {
@@ -49,7 +45,6 @@
     @include m-card();
 
     overflow: hidden;
-
 
     height: 300px;
 
@@ -135,7 +130,7 @@
     @include m-card();
     background-color: white;
     padding-bottom: 24px;
-    position: relative;
+
 
     .m-item--image {
         height: 181px;
@@ -336,7 +331,7 @@
     }
 
     .m-item--hed {
-        font-family: $font-family-headline;
+
         margin-bottom: $space;
         font-size: rem-calc(30);
         font-weight: 400;

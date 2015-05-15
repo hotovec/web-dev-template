@@ -91,7 +91,7 @@
 .m-section--footer {
 
     @include cf();
-    font-family: $font-family-ui;;
+    @include font-ui();
     text-transform: uppercase;
     font-weight: 800;
     padding-top: $space;
@@ -133,11 +133,11 @@
 
 // base section hed style
 .m-section--hed {
-    font-family: $font-family-headline;
+    @include font-headline();
     font-size: rem-calc(30);
     text-transform: uppercase;
     line-height: 1.2em;
-    font-weight: 800;
+    font-weight: 100;
 
     &.mm-border {
         border: 2px solid black;

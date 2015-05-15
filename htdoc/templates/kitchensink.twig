@@ -9,6 +9,17 @@
     </div>
     #}
 
+    <div class="row">
+        {% include "subtemplates/base-body-copy.twig" %}
+    </div>
+
+    <div class="row">
+        {% include "subtemplates/base-properties.twig" %}
+    </div>
+    <div class="row">
+        {% include "subtemplates/base-filter.twig" %}
+    </div>
+
     {# feeds #}
 
     {% include "subtemplates/feed-block-carousel.twig" %}
@@ -19,6 +30,8 @@
     {% include "subtemplates/feed-two_zpravodaj.twig" %}
     {% include "subtemplates/feed-three_obory.twig" %}
     {% include "subtemplates/feed-three_faq.twig" %}
+
+    {% include "subtemplates/base-banner.twig" %}
 
     {# navs #}
 

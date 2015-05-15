@@ -3,6 +3,7 @@
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
 // skin variables
+@import "fonts";
 @import "skin";
 @import "settings";
 // foundation
@@ -15,6 +16,7 @@
 // settings
 @import "base/grid";
 @import "base/globals";
+@import "base/typography";
 @import "lib/vertical-align";
 
 // layouts and modules

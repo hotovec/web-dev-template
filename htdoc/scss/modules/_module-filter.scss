@@ -1,6 +1,6 @@
 
 .m-filter {
-    font-family: $font-family-ui;
+    @include font-ui();
     margin-bottom: 30px;
 
     .active-result {
@@ -12,7 +12,8 @@
     }
 
     .l-left {
-        @include column(9/12);
+        @include column(9/12, $gut:0);
+        margin-left: 0;
 
         .m-filter--items {
             @include inline-list(left);
@@ -21,8 +22,10 @@
     }
 
     .l-right {
-        @include column(3/12);
+        @include column(3/12, $gut:0);
+
         text-align: right;
+        margin-right: 0;
 
         .m-filter--items {
             @include inline-list(right);

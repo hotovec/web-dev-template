@@ -1,0 +1,62 @@
+$fnt-debug: true;
+$fnt-base-size: 16px;
+
+$fnt-headline: $ff-montserrat;
+$fnt-headline-size: 30px;
+$fnt-headline-weight: 100;
+$fnt-headline-line: 1.2em;
+
+$fnt-subhed: Helvetica Neue;
+$fnt-subhed-size: 24px;
+$fnt-subhed-weight: 400;
+$fnt-subhed-line: 1.4em;
+
+$fnt-ui: Helvetica Neue;
+$fnt-ui-size: 24px;
+$fnt-ui-weight: 400;
+$fnt-ui-line: 1.4em;
+
+$fnt-body: Georgia;
+$fnt-body-size: $fnt-base-size;
+$fnt-body-weight: 400;
+$fnt-body-line: 1.4em;
+
+@mixin font-debug($id) {
+    @if $fnt-debug {
+        &:after {
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            content: "#{$id}";
+            background-color: red;
+            color: white;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+            font-weight: 600;
+        }
+    }
+}
+
+@mixin font-headline() {
+    font-family: $fnt-headline;
+    @include font-debug("H");
+}
+
+@mixin font-subhed() {
+    font-family: $fnt-subhed;
+    @include font-debug("S");
+}
+
+@mixin font-ui() {
+    font-family: $fnt-ui;
+    @include font-debug("U");
+}
+
+@mixin font-body() {
+    font-family: $fnt-body;
+    @include font-debug("B");
+}
+

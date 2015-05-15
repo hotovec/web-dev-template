@@ -15,6 +15,8 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -568,7 +570,7 @@ body {
   color: #4A4A4A;
   padding: 0;
   margin: 0;
-  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif, Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -687,7 +689,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif, Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2091,7 +2093,7 @@ select {
   border-color: #cccccc;
   padding: 0.5rem;
   font-size: 1rem;
-  font-family: "Georgia", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Roboto", sans-serif, Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
@@ -2970,7 +2972,7 @@ body {
   background-color: #fff;
   border-top: 1px solid #dfdfe3;
   border-bottom: 1px solid #dfdfe3;
-  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: none; }
@@ -3431,7 +3433,7 @@ button:focus {
 .m-section--header,
 .m-section--footer {
   *zoom: 1;
-  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Helvetica Neue;
   text-transform: uppercase;
   font-weight: 800;
   padding-top: 50px;
@@ -3444,6 +3446,20 @@ button:focus {
   .m-section--header:after,
   .m-section--footer:after {
     clear: both; }
+  .m-section--header:after,
+  .m-section--footer:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "U";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
   .m-section--header a,
   .m-section--footer a {
     text-decoration: none;
@@ -3478,11 +3494,24 @@ button:focus {
   text-align: right; }
 
 .m-section--hed {
-  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.875rem;
   text-transform: uppercase;
   line-height: 1.2em;
-  font-weight: 800; }
+  font-weight: 100; }
+  .m-section--hed:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
   .m-section--hed.mm-border {
     border: 2px solid black;
     color: black;
@@ -4010,6 +4039,47 @@ button:focus {
 .clearing-blackout .m-gallery--item.clearing-featured-img .m-item--hed {
   display: none; }
 
+.m-item a {
+  color: #000;
+  text-decoration: none; }
+  .m-item a:hover {
+    color: #C20E1A;
+    text-decoration: underline; }
+
+.m-item--hed {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem; }
+  .m-item--hed:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
+
+.m-item--description {
+  font-family: Georgia;
+  font-size: 0.875rem; }
+  .m-item--description:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "B";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
+
 .m-item--image {
   background-size: cover;
   background-repeat: no-repeat;
@@ -4021,8 +4091,7 @@ button:focus {
 .m-card_standard {
   position: relative;
   background-color: white;
-  padding-bottom: 24px;
-  position: relative; }
+  padding-bottom: 24px; }
   .m-card_standard article,
   .m-card_standard header {
     position: relative; }
@@ -4034,11 +4103,6 @@ button:focus {
       text-decoration: underline; }
   .m-card_standard p {
     margin: 0; }
-  .m-card_standard .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.125rem; }
-  .m-card_standard .m-item--description {
-    font-size: 0.875rem; }
   .m-card_standard .m-item--image img {
     width: 100%;
     height: auto;
@@ -4091,11 +4155,6 @@ button:focus {
       text-decoration: underline; }
   .m-card_list p {
     margin: 0; }
-  .m-card_list .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.125rem; }
-  .m-card_list .m-item--description {
-    font-size: 0.875rem; }
   .m-card_list .m-item--image img {
     width: 100%;
     height: auto;
@@ -4132,11 +4191,6 @@ button:focus {
       text-decoration: underline; }
   .m-card_image p {
     margin: 0; }
-  .m-card_image .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.125rem; }
-  .m-card_image .m-item--description {
-    font-size: 0.875rem; }
   .m-card_image .m-item--image img {
     width: 100%;
     height: auto;
@@ -4344,11 +4398,6 @@ button:focus {
       text-decoration: underline; }
   .m-card_thumb p {
     margin: 0; }
-  .m-card_thumb .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.125rem; }
-  .m-card_thumb .m-item--description {
-    font-size: 0.875rem; }
   .m-card_thumb .m-item--image img {
     width: 100%;
     height: auto;
@@ -4494,7 +4543,6 @@ button:focus {
   .m-card_centered-text .header {
     margin-bottom: 15px; }
   .m-card_centered-text .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     margin-bottom: 50px;
     font-size: 1.875rem;
     font-weight: 400; }
@@ -4528,11 +4576,6 @@ button:focus {
       text-decoration: underline; }
   .m-card_nav p {
     margin: 0; }
-  .m-card_nav .m-item--hed {
-    font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1.125rem; }
-  .m-card_nav .m-item--description {
-    font-size: 0.875rem; }
   .m-card_nav .m-item--image img {
     width: 100%;
     height: auto;
@@ -4588,17 +4631,29 @@ button:focus {
     font-size: 0.875rem; }
 
 .m-filter {
-  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Helvetica Neue;
   margin-bottom: 30px; }
+  .m-filter:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "U";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
   .m-filter .active-result {
     font-weight: 400; }
   .m-filter .category {
     font-weight: 800; }
   .m-filter .l-left {
     float: left;
-    width: calc(100% * 0.75 - 30px);
-    margin-left: 15px;
-    margin-right: 15px; }
+    width: calc(100% * 0.75);
+    margin-left: 0; }
     .m-filter .l-left .m-filter--items {
       padding: 0;
       list-style: none;
@@ -4618,10 +4673,9 @@ button:focus {
           display: inline-block; }
   .m-filter .l-right {
     float: left;
-    width: calc(100% * 0.25 - 30px);
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: right; }
+    width: calc(100% * 0.25);
+    text-align: right;
+    margin-right: 0; }
     .m-filter .l-right .m-filter--items {
       padding: 0;
       list-style: none;
@@ -4656,8 +4710,21 @@ button:focus {
 
 .m-properties {
   display: block;
-  font-family: "ClanPro", "purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Helvetica Neue;
   font-size: 0.875rem; }
+  .m-properties:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "U";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
   .m-properties dl {
     position: relative;
     margin: 0;
