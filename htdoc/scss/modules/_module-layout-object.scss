@@ -1,18 +1,22 @@
-
 .m-layout-object {
 
-    figure {
-        padding: 0;
-        margin: 0;
-        width: auto;
-        height: auto;
-    }
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
 
-    figcaption {
-        font-size: rem-calc(12);
-        font-weight: bold;
-        padding-top: 0.5em;
-        line-height: 1.2em;
+
+
+    &.mm-expand {
+       float: none;
+        @include media(C) {
+            margin-left: -176px;
+            margin-right: -176px;
+            }
+        @include media(D) {
+            margin-left: -232px;
+            margin-right: -232px;
+        }
     }
 
     &.mm-small {
@@ -20,7 +24,7 @@
         height: auto;
     }
 
-    &.mm-left {
+    &.mm-small.mm-left {
         float: left;
         margin-top: 20px;
         margin-right: 20px;
@@ -29,4 +33,41 @@
         }
     }
 
+    &.mm-small.mm-right {
+        float: right;
+        margin-top: 20px;
+        margin-left: 20px;
+        @include media(C) {
+            margin-right: -220px;
+        }
+    }
+
+    &.mm-medium,
+    &.mm-medium.mm-left {
+        width: 60%;
+        height: auto;
+        float: left;
+        margin-left: - (200px);
+    }
+
 }
+
+.layout-twocol {
+    .m-layout-object {
+        &.mm-expand {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+/*
+.m-body--copy {
+    .m-layout-object + figure {
+        float: left;
+        width: calc(100% - 220px);
+        margin-right: 20px;
+    }
+
+
+}*/

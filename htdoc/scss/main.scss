@@ -39,17 +39,18 @@
 
 @import "modules/module-aside-block";
 @import "modules/module-gallery";
+@import "modules/module-carousel";
 @import "modules/module-content-item";
 @import "modules/module-card";
 @import "modules/module-filter";
 @import "modules/module-properties";
 @import "modules/module-banner";
-@import "modules/module-layout-object";
 @import "modules/module-basic-page";
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
 @import "modules/module-content-contact";
 
+@import "modules/module-layout-object";
 @import "not-modular/hero-tabs";
 
 @import "not-modular/module-choosen-js-override";

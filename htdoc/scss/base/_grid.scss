@@ -1,11 +1,5 @@
 // base grid settings
 
-
-
-
-
-
-
 // base containers
 @mixin l-grid() {
 
@@ -60,7 +54,7 @@
 }
 
 body {
-    //@include mediaDebug();
+    @include mediaDebug();
 }
 
 
