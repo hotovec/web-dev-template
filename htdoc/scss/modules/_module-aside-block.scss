@@ -1,5 +1,6 @@
 
 .m-aside-block {
+    margin-bottom: $space * .5;
 }
 
 .m-aside-block--header {
@@ -22,8 +23,3 @@
     }
 }
 
-.m-aside-block {
-    &.mm-pad {
-        padding: 16px 20px;
-    }
-}

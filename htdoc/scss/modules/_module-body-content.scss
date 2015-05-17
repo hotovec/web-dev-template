@@ -1,40 +1,71 @@
 // basic template for content body
 
+$content-column-width: 620px;
+$content-column-width_D: 720px;
+$aside-column-width: 300px;
+
 .m-body--content {
+    // centered column
     &.layout-onecol {
+            margin-left: $gutter / 2;
+            margin-right: $gutter / 2;
         .m-body--copy {
             @include media(C) {
-                @include column(8/12);
-                @include move(2/12);
+                width: $content-column-width;
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
             }
-
             @include media(D) {
-                @include column(8/12);
-                @include move(2/12);
+                width: $content-column-width_D;
             }
         }
 
+        // mode has no aside column
         aside {
-            background-color: red;
+            display: none;
         }
 
     }
 
+    // cenered full widht column
+    &.layout-onecol-full {
+        margin-left: $gutter / 2;
+        margin-right: $gutter / 2;
+
+        .m-body--copy {
+
+            @include media(C) {
+
+                float: none;
+            }
+        }
+
+        // mode has no aside column
+        aside {
+            display: none;
+        }
+
+    }
+
+    // two columns mode - content on the left + aside
+
     &.layout-twocol {
         .m-body--copy {
+            margin-left: $gutter / 2;
+            margin-right: $gutter / 2;
 
             @include media(C) {
                 @include column(8/12);
             }
-            @include media(D) {
-                @include column(8/12);
+        }
+        aside {
+            @include column(1);
+            @include media(C) {
+                @include column(4/12);
             }
         }
 
-        aside {
-            @include column(4/12);
-            background-color: red;
-        }
     }
 }
 

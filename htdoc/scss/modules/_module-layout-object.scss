@@ -5,59 +5,87 @@
     width: auto;
     height: auto;
 
-
+    @include media(C) {
+        max-width: $layout-width-C;
+    }
+    @include media(D) {
+        max-width: $layout-width-D;
+    }
 
     &.mm-expand {
-       float: none;
+        float: none;
         @include media(C) {
-            margin-left: -176px;
-            margin-right: -176px;
-            }
+            margin-left: -180px;
+            margin-right: -180px;
+        }
         @include media(D) {
-            margin-left: -232px;
-            margin-right: -232px;
+            margin-left: -246px;
+            margin-right: -246px;
         }
     }
 
     &.mm-small {
-        width: 180px;
+        width: 100%;
         height: auto;
+        @include media(C) {
+            width: 250px;
+        }
     }
 
     &.mm-small.mm-left {
         float: left;
-        margin-top: 20px;
-        margin-right: 20px;
+        clear: left;
+        margin-right: 15px;
         @include media(C) {
-            margin-left: -220px;
+            margin-right: 20px;
+            margin-left: -180px;
+        }
+        @include media(D) {
+            margin-left: -270px;
         }
     }
 
     &.mm-small.mm-right {
         float: right;
-        margin-top: 20px;
-        margin-left: 20px;
+        margin-left: 15px;
+        clear: right;
         @include media(C) {
-            margin-right: -220px;
+            margin-left: 20px;
+            margin-right: -180px;
         }
-    }
 
-    &.mm-medium,
-    &.mm-medium.mm-left {
-        width: 60%;
-        height: auto;
-        float: left;
-        margin-left: - (200px);
+        @include media(D) {
+            margin-right: -270px;
+        }
     }
 
 }
 
+figure.m-layout-object,
+.m-layout-object {
+
+        margin-bottom: $gutter;
+}
+
+// layout modes overrides
+.layout-onecol {
+}
+
+.layout-onecol-full,
 .layout-twocol {
     .m-layout-object {
         &.mm-expand {
             margin-left: 0;
             margin-right: 0;
         }
+
+        &.mm-left {
+            margin-left: 0;
+        }
+        &.mm-right {
+            margin-right: 0;
+        }
+
     }
 }
 
