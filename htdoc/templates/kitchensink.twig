@@ -9,13 +9,16 @@
     </div>
     #}
 
-    <div class="row">
-        {% include "subtemplates/base-body-copy.twig" %}
-    </div>
+    {#
+        <div class="row">
+            {% include "subtemplates/base-body-copy.twig" %}
+        </div>
+        #}
 
-    <div class="row" >
+    <div class="row">
         {% include "subtemplates/base-properties.twig" %}
     </div>
+
     <div class="row">
         {% include "subtemplates/base-filter.twig" %}
     </div>
@@ -48,8 +51,8 @@
 
     {% include "subtemplates/module-footer.twig" %}
 
-
     {{ parent() }}
+
 
 {% endblock %}
 

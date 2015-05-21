@@ -3346,7 +3346,8 @@ body {
     color: black; }
   .m-body--copy h1 {
     font-size: 3rem;
-    font-weight: 200; }
+    font-weight: 200;
+    color: red; }
   .m-body--copy h2 {
     font-size: 1.875rem; }
   .m-body--copy h3 {
@@ -4184,10 +4185,9 @@ button:focus {
 
 .m-card_standard {
   position: relative;
-  background-color: white;
-  padding-bottom: 24px; }
+  background-color: white; }
   .m-card_standard article,
-  .m-card_standard header {
+  .m-card_standard .m-item--header {
     position: relative; }
   .m-card_standard a {
     color: #000;
@@ -4213,13 +4213,30 @@ button:focus {
   .m-card_standard .m-item--summary {
     padding: 20px;
     min-height: 120px; }
-    @media only screen and (min-width: 1041px) and (max-width: 1320px) {
-      .m-card_standard .m-item--summary {
-        min-height: 220px; } }
-  .m-card_standard .m-card--more {
-    position: absolute;
-    left: 20px;
-    bottom: 20px; }
+  .m-card_standard .m-item--more {
+    display: none; }
+  .m-card_standard[min-width~="600"] {
+    position: relative;
+    height: 300px; }
+    .m-card_standard[min-width~="600"] .m-item--header {
+      height: 100%; }
+    .m-card_standard[min-width~="600"] .m-item--image {
+      float: left;
+      width: 50%;
+      height: 100%;
+      margin-right: 30px; }
+      .m-card_standard[min-width~="600"] .m-item--image a {
+        height: 100%;
+        width: auto;
+        display: block;
+        background-size: cover; }
+    .m-card_standard[min-width~="600"] .m-item--more {
+      display: block;
+      left: calc(50% + 30px); }
+  .m-card_standard[min-width~="1200"] .m-item--image {
+    width: 75%; }
+  .m-card_standard[min-width~="1200"] .m-item--more {
+    left: calc(75% + 30px); }
   .m-card_standard.mm-promo {
     background-color: transparent; }
     .m-card_standard.mm-promo .m-item--hed {
@@ -4239,7 +4256,7 @@ button:focus {
   position: relative;
   background-color: white; }
   .m-card_list article,
-  .m-card_list header {
+  .m-card_list .m-item--header {
     position: relative; }
   .m-card_list a {
     color: #000;
@@ -4275,7 +4292,7 @@ button:focus {
   overflow: hidden;
   height: 300px; }
   .m-card_image article,
-  .m-card_image header {
+  .m-card_image .m-item--header {
     position: relative; }
   .m-card_image a {
     color: #000;
@@ -4482,7 +4499,7 @@ button:focus {
   overflow: hidden;
   height: 300px; }
   .m-card_thumb article,
-  .m-card_thumb header {
+  .m-card_thumb .m-item--header {
     position: relative; }
   .m-card_thumb a {
     color: #000;
@@ -4660,7 +4677,7 @@ button:focus {
 .m-card_nav {
   position: relative; }
   .m-card_nav article,
-  .m-card_nav header {
+  .m-card_nav .m-item--header {
     position: relative; }
   .m-card_nav a {
     color: #000;

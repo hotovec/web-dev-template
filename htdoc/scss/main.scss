@@ -13,11 +13,13 @@
 @import "foundation/override-inline-lists";
 // can break foundation one
 
+@import "lib/vertical-align";
+@import "lib/element-queries";
+
 // settings
 @import "base/grid";
 @import "base/globals";
 @import "base/typography";
-@import "lib/vertical-align";
 
 // layouts and modules
 @import "layouts/layout-base";

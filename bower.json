@@ -32,6 +32,7 @@
     "lost-grid": "1.0.1",
     "chosen": "~1.4.2",
     "jquery.breakpoints": "*",
-    "jeet": "~6.1.2"
+    "jeet": "~6.1.2",
+    "css-element-queries": "~0.2.1"
   }
 }

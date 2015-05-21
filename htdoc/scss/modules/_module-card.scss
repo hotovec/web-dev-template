@@ -3,7 +3,7 @@
     position: relative;
 
     article,
-    header {
+    .m-item--header {
         position: relative;
     }
 
@@ -129,8 +129,6 @@
 .m-card_standard {
     @include m-card();
     background-color: white;
-    padding-bottom: 24px;
-
 
     .m-item--image {
         height: 181px;
@@ -144,16 +142,51 @@
     .m-item--summary {
         padding: 20px;
         min-height: 120px;
+    }
 
-        @include media(C-only) {
-            min-height: 220px;
+    .m-item--more {
+        display: none;
+    }
+
+    // if card is bigger then 600px
+    @include cw(600) {
+        position: relative;
+        height: 300px;
+
+        .m-item--header {
+            height: 100%;
+        }
+
+        .m-item--image {
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin-right: 30px;
+            a {
+                height: 100%;
+                width: auto;
+                display: block;
+                background-size: cover;
+            }
+        }
+
+        .m-item--more {
+            display: block;
+            left: calc(50% + 30px);
+        }
+
+    }
+
+    // if card is bigger then 600px
+    @include cw(1200) {
+        .m-item--image {
+            width: 75%;
+        }
+        .m-item--more {
+            left: calc(75% + 30px);
         }
     }
-    .m-card--more {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-    }
+
 
     &.mm-promo {
         background-color: transparent;
