@@ -135,17 +135,32 @@
         overflow: hidden;
     }
 
+    .m-item--header {
+        position: relative;
+    }
+
     .m-item--hed {
         margin-bottom: 14px;
     }
 
     .m-item--summary {
+        position: relative;
         padding: 20px;
         min-height: 120px;
+        //border: 1px solid red;
+        height: 100%;
+    }
+
+    .m-item--meta {
+        font-size: rem-calc(12);
+        padding-left: 20px;
+        padding-bottom: 20px;
     }
 
     .m-item--more {
         display: none;
+        position: absolute;
+
     }
 
     // if card is bigger then 600px
@@ -170,7 +185,15 @@
             }
         }
 
+        .m-item--meta {
+            padding-bottom: 0;
+            position: absolute;
+            bottom: 48px;
+            left: calc(50% + 10px);
+        }
+
         .m-item--more {
+
             display: block;
             left: calc(50% + 30px);
         }
@@ -179,9 +202,16 @@
 
     // if card is bigger then 600px
     @include cw(1200) {
+        height: 500px;
         .m-item--image {
             width: 75%;
         }
+
+        .m-item--meta {
+            display: block;
+            left: calc(75% + 10px);
+        }
+
         .m-item--more {
             left: calc(75% + 30px);
         }

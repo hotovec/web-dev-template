@@ -4208,13 +4208,22 @@ button:focus {
   .m-card_standard .m-item--image {
     height: 181px;
     overflow: hidden; }
+  .m-card_standard .m-item--header {
+    position: relative; }
   .m-card_standard .m-item--hed {
     margin-bottom: 14px; }
   .m-card_standard .m-item--summary {
+    position: relative;
     padding: 20px;
-    min-height: 120px; }
+    min-height: 120px;
+    height: 100%; }
+  .m-card_standard .m-item--meta {
+    font-size: 0.75rem;
+    padding-left: 20px;
+    padding-bottom: 20px; }
   .m-card_standard .m-item--more {
-    display: none; }
+    display: none;
+    position: absolute; }
   .m-card_standard[min-width~="600"] {
     position: relative;
     height: 300px; }
@@ -4230,13 +4239,23 @@ button:focus {
         width: auto;
         display: block;
         background-size: cover; }
+    .m-card_standard[min-width~="600"] .m-item--meta {
+      padding-bottom: 0;
+      position: absolute;
+      bottom: 48px;
+      left: calc(50% + 10px); }
     .m-card_standard[min-width~="600"] .m-item--more {
       display: block;
       left: calc(50% + 30px); }
-  .m-card_standard[min-width~="1200"] .m-item--image {
-    width: 75%; }
-  .m-card_standard[min-width~="1200"] .m-item--more {
-    left: calc(75% + 30px); }
+  .m-card_standard[min-width~="1200"] {
+    height: 500px; }
+    .m-card_standard[min-width~="1200"] .m-item--image {
+      width: 75%; }
+    .m-card_standard[min-width~="1200"] .m-item--meta {
+      display: block;
+      left: calc(75% + 10px); }
+    .m-card_standard[min-width~="1200"] .m-item--more {
+      left: calc(75% + 30px); }
   .m-card_standard.mm-promo {
     background-color: transparent; }
     .m-card_standard.mm-promo .m-item--hed {
