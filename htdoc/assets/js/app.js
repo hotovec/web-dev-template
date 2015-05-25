@@ -118,55 +118,6 @@ $(function () {
 
     });
 
-    // mega menu
-
-    var lastMegaTab = null;
-
-    $('[mega-open]').each(function () {
-        var item = $(this);
-        var mega = $("#mega");
-        var tabName = item.attr("mega-open");
-        var tab = $(tabName);
-
-        item.hover(
-            function (e) {
-                //e.preventDefault();
-
-                if (lastMegaTab) {
-                    lastMegaTab.removeClass("is-active");
-                    $('body').removeClass("scroll-lock");
-                }
-
-                mega.addClass("is-open");
-                tab.addClass("is-active");
-                $('body').addClass("scroll-lock");
-                lastMegaTab = tab;
-            },
-            function (e) {
-                console.log("hover");
-            }
-        );
-
-    });
-
-    $('[mega-close]').each(function () {
-        var item = $(this);
-        var mega = $("#mega");
-
-        item.click(function (e) {
-            e.preventDefault();
-            if (lastMegaTab) {
-                lastMegaTab.removeClass("is-active");
-                $('body').removeClass("scroll-lock");
-            }
-            mega.removeClass("is-open");
-            lastMegaTab.removeClass("is-active");
-            $('body').removeClass("scroll-lock");
-        });
-
-    });
-
-    // end mega menu
 
     // resize Navbar
 

@@ -2,15 +2,12 @@
 
 {% block body %}
 
-    {% include "subtemplates/base-section.twig" %}
 
 
-    {#
     <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
         {% include "subtemplates/module-navbar-secondary.twig" %}
         {% include "subtemplates/module-navbar.twig" %}
     </div>
-    #}
 
        {# <div class="row">
             {% include "subtemplates/base-body-copy.twig" %}
@@ -24,6 +21,8 @@
         {% include "subtemplates/base-filter.twig" %}
     </div>#}
 
+
+    {% include "subtemplates/base-section.twig" %}
     {# feeds #}
 
     {% include "subtemplates/feed-block-carousel.twig" %}
