@@ -2475,12 +2475,6 @@ body {
   padding-top: 0;
   padding-bottom: 0; }
 
-.l-page {
-  padding-top: 48px; }
-  @media only screen and (min-width: 1041px) {
-    .l-page {
-      padding-top: 142px; } }
-
 .scroll-lock {
   overflow: hidden; }
 

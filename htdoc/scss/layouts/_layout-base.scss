@@ -22,7 +22,6 @@
     overflow: hidden;
 }
 
-
 .l-two-thirds {
     @include column(1);
 
@@ -58,13 +57,6 @@
 .mm-pad-zero {
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.l-page {
-    padding-top: 48px; // navbar height
-    @include media(C) {
-        padding-top: 142px;
-    }
 }
 
 .scroll-lock {
