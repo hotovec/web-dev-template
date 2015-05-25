@@ -2,6 +2,9 @@
 
 {% block body %}
 
+    {% include "subtemplates/base-section.twig" %}
+
+
     {#
     <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
         {% include "subtemplates/module-navbar-secondary.twig" %}
@@ -25,20 +28,15 @@
 
     {% include "subtemplates/feed-block-carousel.twig" %}
     {% include "subtemplates/feed-carousel.twig" %}
-    {% include "subtemplates/feed-single.twig" %}
 
-    {% include "subtemplates/feed-four_reference.twig" %}
-    {% include "subtemplates/feed-two_zpravodaj.twig" %}
-    {% include "subtemplates/feed-three_obory.twig" %}
-    {% include "subtemplates/feed-three_faq.twig" %}
 
     {% include "subtemplates/base-banner.twig" %}
+
+
 
     {# navs #}
 
     {% include "subtemplates/module-next-prev.twig" %}
-    {% include "subtemplates/section-side-triple.twig" %}
-    {% include "subtemplates/module-support.twig" %}
 
 
     {# panels & tools #}

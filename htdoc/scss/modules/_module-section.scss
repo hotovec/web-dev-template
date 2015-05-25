@@ -1,6 +1,5 @@
 @mixin m-section-base() {
-    border-bottom: 1px solid #99f;
-    //padding: $space 0;
+    border: 1px solid #99f;
     padding: 0;
     height: auto;
     position: relative;
@@ -8,6 +7,17 @@
     h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    &.mm-no-header {
+        .m-section--header {
+            display: none;
+        }
+    }
+    &.mm-no-footer {
+        .m-section--footer {
+            display: none;
+        }
     }
 
     .mm-small {
@@ -38,8 +48,14 @@
     }
 
     &.mm-has-background {
+         background-position: center;
+         background-size: cover;
+     }
+
+    &.mm-fixed-background {
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
     }
 
     .m-section--close {
@@ -72,20 +88,20 @@
         overflow: hidden;
     }
 
-}
-
-.m-section.bg-secondary-light {
-    .m-section--close {
-        color: $color-secondary;
+    .l-half + .l-half {
+        text-align: right;
     }
+
 }
 
 .m-section--header,
 .m-section--footer,
 .m-section--content {
     @include l-grid();
+    border: 1px solid red;
 }
 
+.m-section--content {}
 
 .m-section--header,
 .m-section--footer {
@@ -106,29 +122,6 @@
             text-decoration: underline;
         }
     }
-
-    .l-left,
-    .l-right {
-        @include column(3/12);
-    }
-    .l-center {
-        @include column(6/12);
-        text-align: center;
-    }
-    .l-half {
-        overflow: visible;
-    }
-    .button {
-        margin-top: -14px;
-    }
-
-}
-
-.m-section--top {
-}
-
-.m-section--more {
-    text-align: right;
 }
 
 // base section hed style
@@ -388,139 +381,3 @@
         }
     }
 }
-
-.m-section_support {
-    @include m-section-base();
-    background-image: url("/sites/koma/assets/images/montaznik-support-background.jpg");
-    background-size: auto 422px;
-    background-repeat: repeat-x;
-    background-position: 0 0;
-
-    background-color: #f5f5f5;
-
-    @include media(C) {
-        height: 422px;
-    }
-
-    &.m-section {
-        padding: 0;
-    }
-
-    .m-item--hed {
-        margin-bottom: 30px;
-        line-height: 1.2em;
-        position: relative;
-    }
-
-    header {
-        position: relative;
-    }
-
-    .m-item--hed-icon {
-        width: 49px;
-        height: 45px;
-        position: absolute;
-        left: -70px;
-        top: -10px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .m-item--description {
-        margin-bottom: 30px;
-    }
-
-    .m-section--item {
-        //overflow: hidden;
-        padding-top: 70px;
-
-        &:nth-of-type(1) {
-            @include column(1);
-        }
-
-        &:nth-of-type(2) {
-            display: none;
-        }
-
-        &:nth-of-type(3) {
-            @include column(1);
-        }
-
-        @include media(B) {
-
-            &:nth-of-type(1) {
-                @include column(6/12);
-                padding-top: 70px;
-            }
-
-            &:nth-of-type(2) {
-                @include column(3/12);
-                @include move(1/12);
-                padding: 0;
-                display: block;
-
-            }
-            &:nth-of-type(3) {
-                @include column(7/12);
-                padding-top: 100px;
-                padding-bottom: 40px;
-            }
-        }
-
-        @include media(C) {
-
-            &:nth-of-type(1) {
-                padding-top: 80px;
-                @include column(3/12);
-                @include offset(1/12);
-            }
-
-            &:nth-of-type(2) {
-                @include column(2/12);
-                @include move(0);
-            }
-
-            &:nth-of-type(3) {
-                padding-top: 80px;
-                @include column(5/12);
-                //@include move(3/12);
-            }
-        }
-
-        &.worker {
-            img {
-                height: 374px;
-                width: auto;
-            }
-        }
-
-    }
-
-    .input-group {
-
-        @include container();
-
-        .prefix {
-            @include column(1/6, $gut: 0);
-            display: none;
-        }
-        input {
-            @include column(5/6, $gut: 0);
-            padding-left: 18px;
-        }
-        .postfix {
-            @include column(1/6, $gut: 0);
-            .fa {
-                font-size: 26px;
-                line-height: 59px;
-            }
-        }
-
-        input, button {
-            height: 59px;
-        }
-    }
-
-}
-

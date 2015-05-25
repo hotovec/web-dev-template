@@ -2,10 +2,12 @@
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
+
 // skin variables
 @import "fonts";
 @import "skin";
 @import "settings";
+
 // foundation
 @import "foundation/settings";
 @import "foundation/foundation";
@@ -20,6 +22,8 @@
 @import "base/grid";
 @import "base/globals";
 @import "base/typography";
+
+@import "modules/module-placeholder";
 
 // layouts and modules
 @import "layouts/layout-base";

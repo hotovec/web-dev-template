@@ -20,11 +20,6 @@
         margin: 0;
     }
 
-    .m-item--hed {
-    }
-    .m-item--description {
-    }
-
     .m-item--image {
         img {
             width: 100%;
@@ -216,7 +211,6 @@
             left: calc(75% + 30px);
         }
     }
-
 
     &.mm-promo {
         background-color: transparent;
