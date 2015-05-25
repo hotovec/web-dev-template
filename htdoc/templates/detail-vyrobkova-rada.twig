@@ -1,0 +1,121 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}" xmlns="http://www.w3.org/1999/html">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+
+    <div class="m-section l-detail-page bg-white">
+
+        <header class="m-section--header bg-secondary-light">
+            <div class="row ">
+                <div class="l-full">
+
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a class="unavailable" href="#">Gene Splicing</a>
+                        <a class="current" href="#">Cloning</a>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        {% include "subtemplates/content-basic-page.twig" %}
+
+    </div>
+
+    {% include "subtemplates/feed-single.twig" %}
+
+
+    blb
+
+    <div class="m-section l-feed_two bg-secondary-light">
+
+        <header class="m-section--header">
+            <h2 class="m-section--hed mm-medium mm-tiny mm-center mm-border">Variabilita</h2>
+        </header>
+
+        <div class="row">
+            {% for a in 1..4 %}
+                <div class="m-card_centered-text l-single bg-secondary-light">
+
+                    <article class="m-story">
+
+                        <header>
+
+                            <div class="m-item--summary">
+                                <h1 class="m-item--hed">
+                                    <a href="">titulek titulek</a>
+                                </h1>
+
+                                <div class="m-item--description">
+                                    <p>Obytné kontejnery si můžete vybrat podle sebe, žádné vaše přání není nerealizovatelné. Renomované specializované firmy nabízí řadu variant: na výběr jsou samostatné obytné a sanitární kontejnery i složité sestavy, které mohou mít i tři patra. Obytné buňky se tak stávají jedinečným řešením třeba pro zmíněné mládežnické ubytovny nebo pro školky, kterých je v Česku stále nedostatek.</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <footer class="m-item--footer">
+                            tady bude fotka, nebo gallerka
+                        </footer>
+
+                    </article>
+
+
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+    <div class="m-section l-feed_one bg-secondary-light mm-has-background" style="background-image: url(http://lorempixel.com/900/600)">
+
+        <header class="m-section--header">
+            <h2 class="m-section--hed mm-medium mm-tiny mm-center mm-border">Mobilita</h2>
+        </header>
+
+        <div class="row">
+                <div class="m-card_centered-text l-single bg-secondary-light">
+
+                    <article class="m-story">
+                        <header class="m-item--header">
+                            <div class="m-item--summary">
+                                <div class="m-item--description">
+                                    <p>Obytné kontejnery si můžete vybrat podle sebe, žádné vaše přání není nerealizovatelné. Renomované specializované firmy nabízí řadu variant: na výběr jsou samostatné obytné a sanitární kontejnery i složité sestavy, které mohou mít i tři patra. Obytné buňky se tak stávají jedinečným řešením třeba pro zmíněné mládežnické ubytovny nebo pro školky, kterých je v Česku stále nedostatek.</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <footer class="m-item--footer">
+                            tady bude fotka, nebo gallerka
+                        </footer>
+                    </article>
+                </div>
+        </div>
+
+    </div>
+
+
+
+    {% include "subtemplates/feed-block-carousel.twig" %} {# @todo musi byt bez hlavičky a patičky#}
+    {% include "subtemplates/section-vertical-tabs.twig" %}
+
+    {% include "subtemplates/feed-three_faq.twig" %}
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/module-support.twig" %}
+    {% include "subtemplates/module-footer.twig" %}
+    {% include "subtemplates/module-page-scroll.twig" %}
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+

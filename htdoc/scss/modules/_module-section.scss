@@ -1,6 +1,7 @@
 @mixin m-section-base() {
-    border: 2px solid gray;
-    padding: 50px 0;
+    border-bottom: 1px solid #99f;
+    //padding: $space 0;
+    padding: 0;
     height: auto;
     position: relative;
 
@@ -9,34 +10,118 @@
         margin-bottom: 0;
     }
 
+    .mm-small {
+        font-size: rem-calc(16);
+    }
+    .mm-medium {
+        font-size: rem-calc(36);
+    }
+
+    .mm-big {
+        font-size: rem-calc(50);
+    }
+
+    .mm-tiny {
+        font-weight: 200;
+    }
+
+    .mm-normal {
+        font-weight: 400;
+    }
+
+    .mm-bold {
+        font-weight: 600;
+    }
+
+    .mm-center {
+        text-align: center;
+    }
+
+    &.mm-has-background {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .m-section--close {
+        position: absolute;
+        z-index: 1;
+
+        right: 0;
+        top: 0;
+        content: "x";
+        color: white;
+        display: block;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        line-height: 26px;
+        text-align: center;
+
+        cursor: pointer;
+    }
+
+    .mm-pad-double,
+    &.mm-pad-double {
+        padding-top: $space * 1.5;
+        padding-bottom: $space * 1.5;
+    }
+
+
+    .row.rowfix {
+        margin-bottom: -31px;
+        overflow: hidden;
+    }
+
 }
+
+.m-section.bg-secondary-light {
+    .m-section--close {
+        color: $color-secondary;
+    }
+}
+
+.m-section--header,
+.m-section--footer,
+.m-section--content {
+    @include l-grid();
+}
+
 
 .m-section--header,
 .m-section--footer {
 
     @include cf();
-
+    @include font-ui();
     text-transform: uppercase;
     font-weight: 800;
+    padding-top: $space;
+    padding-bottom: $space;
 
     a {
         text-decoration: none;
-        color: $color-black;
+        color: $color-body-font;
 
         &:hover {
             color: $color-primary;
             text-decoration: underline;
         }
     }
-}
 
-.m-section--header {
-    margin-bottom: 50px;
-}
+    .l-left,
+    .l-right {
+        @include column(3/12);
+    }
+    .l-center {
+        @include column(6/12);
+        text-align: center;
+    }
+    .l-half {
+        overflow: visible;
+    }
+    .button {
+        margin-top: -14px;
+    }
 
-.m-section--footer {
-    //margin-top: 50px;
-    //background-color: palegreen;
 }
 
 .m-section--top {
@@ -48,28 +133,32 @@
 
 // base section hed style
 .m-section--hed {
+    @include font-headline();
     font-size: rem-calc(30);
     text-transform: uppercase;
     line-height: 1.2em;
-    font-weight: 800;
+    font-weight: 100;
 
-    &.mm-small {
-        font-size: rem-calc(16);
-    }
-    &.mm-medium {
-        font-size: rem-calc(36);
-    }
+    &.mm-border {
+        border: 2px solid black;
+        color: black;
 
-    &.mm-big {
-        font-size: rem-calc(50);
-    }
+        display: inline-block;
+        line-height: 1em;
+        padding: 12px;
+        padding-top: 8px;
 
-    &.mm-tiny {
-        font-weight: 200;
-    }
+        margin-left: 50%;
 
-    &.mm-center {
-        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include transform(translateX(-50%));
+
+        &.color-white {
+            border-color: white;
+            color: white;
+        }
     }
 
 }
@@ -95,13 +184,14 @@
 }
 
 .m-section_vertical-tabs {
+    @include m-section-base();
     position: relative;
     background-color: $primary-color;
 
     padding-top: 0;
     padding-bottom: 0;
 
-    //height: 500px;
+    //height: 100%;
     overflow: hidden;
 
     .m-section--container {
@@ -127,7 +217,7 @@
         text-align: center;
         @include media(C) {
             text-align: left;
-            }
+        }
     }
 
     .m-section--nav {
@@ -251,11 +341,12 @@
 
         @include cf();
         width: 100%;
-        height: 300px;
+        height: 100%;
+        //height: 300px;
 
         .slide {
             width: 100%;
-            height: 300px;
+            height: 100%;
             background: $secondary-color;
             background-repeat: no-repeat;
             background-size: cover;
@@ -265,8 +356,20 @@
             margin-bottom: 0;
         }
 
+        .slick-list {
+            height: 100% !important;
+        }
+        .slick-track {
+            height: 100%;
+        }
+
+        .slick-next,
+        .slick-prev {
+            display: none !important;
+        }
+
         @include media(C) {
-            height: 500px;
+           // height: 500px;
 
             overflow: hidden;
             position: absolute;
@@ -280,14 +383,14 @@
             bottom: 0;
 
             .slide {
-                height: 500px;
+                //height: 500px;
             }
         }
     }
 }
 
 .m-section_support {
-
+    @include m-section-base();
     background-image: url("/sites/koma/assets/images/montaznik-support-background.jpg");
     background-size: auto 422px;
     background-repeat: repeat-x;
@@ -306,6 +409,22 @@
     .m-item--hed {
         margin-bottom: 30px;
         line-height: 1.2em;
+        position: relative;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .m-item--hed-icon {
+        width: 49px;
+        height: 45px;
+        position: absolute;
+        left: -70px;
+        top: -10px;
+
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .m-item--description {
@@ -313,7 +432,7 @@
     }
 
     .m-section--item {
-        overflow: hidden;
+        //overflow: hidden;
         padding-top: 70px;
 
         &:nth-of-type(1) {
@@ -379,6 +498,7 @@
     }
 
     .input-group {
+
         @include container();
 
         .prefix {
@@ -387,11 +507,19 @@
         }
         input {
             @include column(5/6, $gut: 0);
+            padding-left: 18px;
         }
         .postfix {
             @include column(1/6, $gut: 0);
+            .fa {
+                font-size: 26px;
+                line-height: 59px;
+            }
         }
 
+        input, button {
+            height: 59px;
+        }
     }
 
 }

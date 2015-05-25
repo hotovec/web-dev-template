@@ -1,0 +1,31 @@
+
+.m-address {
+    @include cf();
+    @include font-ui();
+
+    font-size: rem-calc(12);
+    .m-address--name {
+        font-size: rem-calc(14);
+        font-weight: 600;
+    }
+    .m-address--job {
+        font-size: rem-calc(14);
+        margin-bottom: 1em;
+    }
+    span {
+        font-weight: bold;
+        color: $color-secondary;
+        display: inline-block;
+        width: 12px;
+    }
+
+    .m-address--action {
+        padding-top: 10px;
+        a {
+            color: gray;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+}

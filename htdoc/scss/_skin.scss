@@ -2,12 +2,19 @@
 
 //@todo replace skin by maps only
 
-$color-primary:     #C20E1A;
+$color-primary:         #C20E1A;
+$color-primary-light:   lighten($color-primary, 10%);
+$color-primary-dark:    darken($color-primary,10%);
+
+
 $color-secondary:   #B5BBB4;
+$color-secondary-light:  lighten($color-secondary, 10%);
+$color-secondary-dark:   darken($color-secondary,10%);
 
 // color base text
 $color-black:       #000;
 $color-white:       #fff;
+
 $color-body-font:   #4A4A4A;
 $color-body-bg:     #ECEDEC;
 
@@ -23,7 +30,17 @@ $pallete: (
         "7": #E50051,
         "8": #EC6608,
         "9": #F4B003,
-        "10": #B5BBB4
+        "10": #B5BBB4,
+        "primary": $color-primary,
+        "primary-light": $color-primary,
+        "primary-dark": $color-primary,
+        "secondary": $color-secondary,
+        "secondary-light": $color-secondary-light,
+        "secondary-dark": $color-secondary-light,
+        "black": $color-black,
+        "white": $color-white,
+        "body-font": $color-body-font,
+        "body": $color-body-bg
 );
 
 @function pallete($key) {
@@ -32,26 +49,11 @@ $pallete: (
 
 // colors
 
-.color-primary { color: $color-primary; }
-.color-secondary { color: $color-secondary; }
-.color-black { color: $color-black; }
-.color-white { color: $color-white; }
-.color-body-font { color: $color-body-font; }
-.color-body-bg { color: $color-body-bg; }
-
 @each $colorName, $colorValue in $pallete {
-    .color-#{$colorName} { color: $colorValue; }
+    .c-#{$colorName} { color: $colorValue; }
 }
 
 // bg colors
-
-.bg-primary { background-color: $color-primary; }
-.bg-secondary { background-color: $color-secondary; }
-.bg-black { background-color: $color-black; }
-.bg-white { background-color: $color-white; }
-.bg-body-font { background-color: $color-body-font; }
-.bg-body-bg { background-color: $color-body-bg; }
-
 @each $colorName, $colorValue in $pallete {
     .bg-#{$colorName} { background-color: $colorValue; }
 }

@@ -2,12 +2,11 @@
 
     <div class="m-section--underlay"></div>
 
-    <div class="l-grid">
         <header class="m-section--header">
-            <div class="l-half">
+            <div class="l-third">
                 <h2 class="m-section--hed mm-small">Koma zpravodaj</h2>
             </div>
-            <div class="l-half">
+            <div class="l-two-thirds">
                 <ul class="m-section--nav inline-right">
                     <li><a href="" title="Novinky">Novinky</a></li>
                     <li><a href=""><a href="">E-Bulletin</a></li>
@@ -15,164 +14,41 @@
                 </ul>
             </div>
         </header>
-    </div>
 
-    <div class="row">
-        <div class="l-section--content slider block-feed-slider">
+        <div class="m-section--content slider block-feed-slider">
             {% for i in 0..3 %}
 
                 <div class="blok-feed-slide">
-                    <div class="m-card_thumb mm-has-hover l-double">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class="l-double">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb mm-has-hover'} %}
                     </div>
 
-                    <div class="m-card_thumb  mm-has-hover l-single">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class="l-single">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb mm-has-hover'} %}
                     </div>
 
-                    <div class="m-card_thumb  mm-has-hover l-single">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class="l-single">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb mm-has-hover'} %}
                     </div>
                 </div>
 
                 <div class="blok-feed-slide">
-                    <div class="m-card_thumb l-single">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class="l-single">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb'} %}
                     </div>
 
-                    <div class="m-card_thumb l-single">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class="l-single">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb'} %}
                     </div>
 
-                    <div class="m-card_thumb l-double">
-
-                        <article class="m-story">
-                            <header>
-                                <div class="m-item--image" style="background-image: url(http://lorempixel.com/300/300)">
-                                    <a href="">
-                                        <img src="http://lorempixel.com/400/600" alt="" />
-                                    </a>
-                                </div>
-                                <div class="m-item--summary">
-                                    <h1 class="m-item--hed">
-                                        <a href="">titulek titulek</a>
-                                    </h1>
-
-                                    <div class="m-item--description">
-                                        <p>Morbi vulputate ac quam quis feugiat. Mauris dapibus dictum ex, at sodales mauris rutrum vel. Suspendisse vestibulum enim sit amet ultricies hendrerit.</p>
-                                    </div>
-                                </div>
-                                <div class="m-card--more"><i class="fa fa-arrow-right"></i></div>
-                            </header>
-                        </article>
-
+                    <div class=" l-double">
+                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_thumb'} %}
                     </div>
+
                 </div>
             {% endfor %}
         </div>
-    </div>
 
-    <div class="row">
         <footer class="m-section--footer">
             <div class="l-half">
                 <div class="m-section--top"><a href="">Nahoru <i class="fa fa-arrow-up"></i></a></div>
@@ -181,6 +57,5 @@
                 <div class="m-section--more"><a href="">Celý archiv <i class="fa fa-arrow-right"></i></a></div>
             </div>
         </footer>
-    </div>
 
 </div>

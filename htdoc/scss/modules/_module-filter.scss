@@ -1,67 +1,58 @@
 
 .m-filter {
-
-    height: 48px;
-    overflow: hidden;
+    @include font-ui();
     margin-bottom: 30px;
 
-    .m-filter--items {
-
-        li {
-            width: auto;
-            line-height: 48px;
-            height: 48px;
-            overflow: hidden;
-            background-color: $color-white;
-            color: $color-black;
-            font-weight: 800;
-
-            &.label {
-                background-color: white;
-                padding: 0 20px;
-                height: 46px;
-                color: $color-secondary;
-            }
-        }
-
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-
-            border: none;
-            outline: 0;
-            display: block;
-            padding-left: 20px;
-            padding-right: 20px;
-            height: 50px;
-            margin: 0;
-
-            border-radius: 0;
-            outline: none;
-
-
-        }
+    .active-result {
+        font-weight: 400;
     }
 
-    .l-left,
-    .l-right {
+    .category {
+        font-weight: 800;
     }
 
     .l-left {
-        @include column(9/12);
-        .m-filter--items {
-            @include inline-list(left, 2px);
+        @include column(9/12, $gut:0);
+        margin-left: 0;
 
+        .m-filter--items {
+            @include inline-list(left);
+            overflow: visible;
         }
     }
+
     .l-right {
-        @include column(3/12);
-        .m-filter--items {
-            @include inline-list(right, 2px);
+        @include column(3/12, $gut:0);
 
+        text-align: right;
+        margin-right: 0;
+
+        .m-filter--items {
+            @include inline-list(right);
+            overflow: visible;
         }
     }
 
+    .m-filter--items {
+
+        > li {
+            width: auto;
+            //max-width: 140px;
+            color: $color-black;
+            height: 48px;
+            display: block;
+
+            &.label {
+                padding: 0 14px;
+                color: $color-secondary;
+                background-color: white;
+                height: 48px;
+                margin-right: 1px;
+                line-height: 42px;
+                width: auto;
+                border: none;
+            }
+        }
+    }
 
 }

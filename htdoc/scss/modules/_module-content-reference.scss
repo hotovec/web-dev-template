@@ -1,139 +1,27 @@
 .m-reference {
-
 }
 
-.l-detail-page {
-
-    .m-section--footer {
-        margin-top: 50px;
+.m-reference--image {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    img {
+        display: none;
     }
+    .mm-preview-fit {
+        background-size: fit;
+    }
+}
 
-    .m-reference {
+.m-reference--hed {
+    font-size: rem-calc(42);
+    line-height: 1.3em;
+    font-weight: 400;
+    margin-top: -.2em;
 
-        //layout
-
-        & > header {
-            @include l-grid();
-            margin-bottom: 80px;
-            position: relative;
-            height: 480px;
-        }
-
-        .m-reference--image,
-        .m-reference--summary {
-            @include column(6/12);
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .m-reference--summary {
-            @include move(-6/12);
-            position: relative;
-        }
-
-        .m-reference--meta {
-            position: absolute;
-            bottom: 0;
-            width: 335px;
-        }
-
-        .m-reference--image {
-            @include move(6/12);
-        }
-
-        .m-reference--description {
-            display: none;
-        }
-
-        .m-reference--content {
-            @include l-grid();
-
-            .m-body--content,
-            aside {
-                @include column(6/12);
-            }
-        }
-
-
-
-        //styles
-
-        .m-reference--image {
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            background-size: cover;
-            img {
-                display: none;
-            }
-        }
-
-        .m-reference--hed {
-            font-size: rem-calc(42);
-            line-height: 1.3em;
-            font-weight: 400;
-            margin-top: -.2em;
-
-            a {
-                text-decoration: none;
-                pointer-events: none;
-                color: black;
-            }
-        }
-
-        .m-reference--meta {
-            display: block;
-            font-family: $font-family-secondary;
-            font-size: rem-calc(14);
-            dl {
-                position: relative;
-                margin: 0;
-                padding: 8px 0;
-                border-bottom: 1px solid black;
-
-                @include cf();
-
-                dt, dd {
-                    display: block;
-                    float: left;
-                    margin: 0;
-
-                }
-                dt {
-                    font-weight: bold;
-                    margin-right: 6px;
-                    clear: left;
-
-                    &:after {
-                        display: block;
-                        content: ":";
-                        float: right;
-                        margin-left: 4px;
-                    }
-
-                    &.mm-label {
-                        display: block;
-                        &:after {
-                            display: none;
-                        }
-                    }
-
-                    &.mm-sub {
-                        font-weight: 400;
-                        & ~ dd {
-                            color: lighten($color-body-font, 30%);
-                        }
-                    }
-
-                }
-
-                dd {
-                }
-
-                &:first-of-type {
-                    border-top: 1px solid black;
-                }
-            }
-        }
-
+    a {
+        text-decoration: none;
+        pointer-events: none;
+        color: black;
     }
 }

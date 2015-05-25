@@ -1,0 +1,74 @@
+// property table
+
+.m-properties {
+    display: block;
+    @include font-ui();
+    font-size: rem-calc(14);
+
+    dl {
+        position: relative;
+        margin: 0;
+        padding: 8px 0;
+        border-bottom: 1px solid black;
+
+        @include cf();
+
+        dt, dd {
+            display: block;
+            float: left;
+            margin: 0;
+
+        }
+        dt {
+            font-weight: bold;
+            margin-right: 6px;
+            clear: left;
+
+            &:after {
+                display: block;
+                content: ":";
+                float: right;
+                margin-left: 4px;
+            }
+
+            &.mm-label {
+                display: block;
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.mm-sub {
+                font-weight: 400;
+                & ~ dd {
+                    color: lighten($color-body-font, 30%);
+                }
+            }
+
+        }
+
+        dd {
+        }
+
+        &:first-of-type {
+            border-top: 1px solid black;
+        }
+
+        a {
+            color: $body-font-color;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        &.mm-nolabels {
+            dt {
+                display: none;
+            }
+        }
+
+        &.mm-noborder {
+            border-bottom: none;
+        }
+    }
+
+}

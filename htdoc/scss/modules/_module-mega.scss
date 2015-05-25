@@ -1,0 +1,187 @@
+.m-mega {
+
+    position: fixed;
+    z-index: 900;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    background-color: $color-secondary;
+
+    //display: none;
+
+    &.is-open {
+        display: block;
+    }
+
+    @include media(C) {
+        top: 150px;
+        bottom: auto;
+    }
+
+    .m-mega--container {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .m-mega--tab {
+        @include cf();
+
+        @include media(C) {
+            @include l-grid();
+
+            min-height: 240px;
+            position: relative;
+        }
+
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+
+    }
+
+    .m-mega--close {
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li,
+        li a {
+            font-size: rem-calc(15);
+            line-height: 1.2em;
+            color: $color-body-font;
+
+            text-decoration: none;
+        }
+
+        a {
+            display: block;
+            padding: 5px 0;
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .m-mega--hed {
+        color: $color-black;
+        font-size: rem-calc(28);
+        font-weight: 800;
+        line-height: 38px;
+        margin-bottom: 30px;
+    }
+
+    .m-mega--label {
+        width: 100%;
+
+        font-size: rem-calc(16);
+        color: $color-body-font;
+        font-weight: 800;
+        display: inline-block;
+        vertical-align: bottom;
+        height: 38px;
+        padding-top: 14px;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        a {
+            color: $body-font-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .m-mega--description {
+        font-size: rem-calc(20);
+        font-weight: 200;
+    }
+
+    .m-mega--section {
+
+
+        &.l-single,
+        &.l-double {
+            @include column(1);
+            text-align: center;
+        }
+
+        &:first-of-type {
+            @include column(1);
+            margin-bottom: $space * 0.5;
+        }
+
+        @include media(C) {
+            height: 100%;
+            border-left: 1px solid #CBCFCA;
+            padding-left: 20px;
+
+            &:first-of-type {
+                border: none;
+                padding-left: 0;
+            }
+
+            &.l-single {
+                @include column(2/12);
+                text-align: left;
+            }
+
+            &.l-double {
+                @include column(4/12);
+                @include cf();
+                text-align: left;
+
+                .m-mega--label {
+
+                }
+
+                ul {
+                    width: 50%;
+                    float: left;
+                }
+                ul + ul {
+                    padding-left: 20px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@include media(C) {
+
+    .m-navbar ~ .m-mega {
+        top: 0;
+        @include transform(translateY(150px));
+    }
+    .m-navbar.is-collapsed ~ .m-mega {
+        top: 0;
+        @include transition(all 0.2s);
+        @include transform(translateY(68px));
+    }
+}

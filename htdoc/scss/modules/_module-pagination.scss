@@ -1,0 +1,12 @@
+.m-pagination {
+    @include pagination-container(true);
+
+    width: auto;
+    display: inline-block;
+}
+
+.m-pagination--container {
+    @include pagination();
+    margin-top: 0;
+    margin-bottom: 0;
+}

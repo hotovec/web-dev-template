@@ -1,29 +1,10 @@
 {% extends "_base.twig" %}
 
 {% block body %}
-
-
-    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
-        {% include "subtemplates/module-navbar-secondary.twig" %}
-        {% include "subtemplates/module-navbar.twig" %}
+    <div class="row">
+        <h1>Web Dev</h1>
+        <p>look at <a href="/?tpl=kitchensink" title="kitchnesink">kitchnesink</a></p>
     </div>
-
-    {% include "subtemplates/feed-four_reference.twig" %}
-    {% include "subtemplates/feed-two_zpravodaj.twig" %}
-    {% include "subtemplates/section-side-triple.twig" %}
-
-    {% include "subtemplates/feed-three_obory.twig" %}
-    {% include "subtemplates/hero-tabs.twig" %}
-    {% include "subtemplates/feed-carousel.twig" %}
-    {% include "subtemplates/feed-block-carousel.twig" %}
-    {% include "subtemplates/feed-card-triple.twig" %}
-    {% include "subtemplates/feed-three_faq.twig" %}
-    {% include "subtemplates/feed-six_certifikace.twig" %}
-    {% include "subtemplates/section-vertical-tabs.twig" %}
-    {% include "subtemplates/module-support.twig" %}
-
-    {% include "subtemplates/module-footer.twig" %}
-    {% include "subtemplates/module-page-scroll.twig" %}
 
     {{ parent() }}
 
@@ -31,106 +12,6 @@
 
 {% block scripts %}
 
-    <script>
 
-        // slick controll
-        $(function () {
-
-            //
-            $('[slick]').each(function () {
-                var SlickWrapper = $(this);
-                var carousel = SlickWrapper.find('[carousel]');
-                var oldActive = null;
-                var nav = SlickWrapper.find('[carouselnav]');
-
-                if (carousel) {
-                    carousel.slick({
-                        dots: false,
-                        infinite: true,
-                        //fade: true,
-                        //cssEase: 'linear',
-                        draggable: false,
-                        speed: 300,
-                        slidesToShow: 1,
-                        adaptiveHeight: true
-                    })
-                }
-
-                if (nav) {
-                    console.log("nav");
-                    var count = 0;
-                    var items = nav.find('[slick-to]');
-                    for(var i=0;i< items.length; i++) {
-                        var item = $(items[i]);
-
-                        if(nav.attr("slick-method")=="mouseenter") {
-                            item.mouseenter(function (e) {
-
-                                if (oldActive) {
-                                    oldActive.removeClass("active");
-                                }
-
-                                e.preventDefault();
-                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
-                                $(this).addClass("active");
-                                oldActive = $(this);
-                            });
-                        } else {
-                            item.click(function (e) {
-
-                                if (oldActive) {
-                                    oldActive.removeClass("active");
-                                }
-
-                                e.preventDefault();
-                                carousel.slick('slickGoTo', $(this).attr('slick-to'));
-                                $(this).addClass("active");
-                                oldActive = $(this);
-                            });
-                        }
-
-
-
-
-                    }
-                }
-
-            });
-
-        });
-
-
-        // block feed JS
-
-        var blogSlick = $('.block-feed-slider').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            adaptiveHeight: true,
-            responsive: [
-                {
-                    breakpoint: 960,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-        // full size carousel
-
-        var blogSlick = $('.full-carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true
-        });
-
-    </script>
 {% endblock %}
 

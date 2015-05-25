@@ -2,49 +2,92 @@
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
-
-// fonts
-@import "fonts";
-
 // skin variables
+@import "fonts";
 @import "skin";
 @import "settings";
-
 // foundation
 @import "foundation/settings";
 @import "foundation/foundation";
 @import "foundation/foundation-media-wrapper";
 @import "foundation/override-inline-lists";
-
 // can break foundation one
+
+@import "lib/vertical-align";
+@import "lib/element-queries";
+
 // settings
 @import "base/grid";
 @import "base/globals";
-@import "lib/vertical-align";
+@import "base/typography";
 
 // layouts and modules
 @import "layouts/layout-base";
 @import "layouts/layout-section";
 @import "layouts/layout-navbar";
-@import "layouts/layout-footer";
 @import "layouts/layout-feed";
-@import "layouts/layout-page-detail-full";
+@import "layouts/layout-navigation";
+//@import "layouts/layout-page-detail-full";
 
-
-
-@import "modules/module-page-scroll";
+@import "modules/module-side-panel";
 @import "modules/module-navbar";
 @import "modules/module-footer";
+
+@import "modules/module-body-content";
+@import "modules/module-pagination";
+
 @import "modules/module-coverlines";
 @import "modules/module-section";
+
 @import "modules/module-aside-block";
 @import "modules/module-gallery";
+@import "modules/module-carousel";
 @import "modules/module-content-item";
 @import "modules/module-card";
 @import "modules/module-filter";
+@import "modules/module-properties";
+@import "modules/module-banner";
+@import "modules/module-basic-page";
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
+@import "modules/module-content-contact";
+
+@import "modules/module-layout-object";
 @import "not-modular/hero-tabs";
+
+@import "not-modular/module-choosen-js-override";
+
+// dev
+
+// slick override
+
+.slick-prev, .slick-next {
+    height: 40px;
+    margin-top: -38px;
+}
+
+.slick-next {
+    right: 30px;
+}
+
+.slick-prev {
+    left: 30px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'FontAwesome';
+    font-size: rem-calc(42);
+    color: $color-white;
+    text-shadow: 0 0 3px rgba(0,0,0,.8);
+}
+
+.slick-prev:before {
+    content: "\f104";
+}
+
+.slick-next:before {
+    content: "\f105";
+}
 
 // dev
 
@@ -52,3 +95,61 @@
     box-sizing: border-box;
 }
 
+// search
+
+.m-search--hed {
+    text-align: center;
+    padding-bottom: $space * .75;
+}
+
+.m-search--filters {
+
+    .views-exposed-widget:nth-of-type(1) {
+        float: left;
+        width: calc(100% - 100px);
+        padding: 0;
+    }
+    .views-exposed-widget:nth-of-type(2) {
+        float: left;
+        width: 100px;
+        padding: 0;
+    }
+
+    label {
+        display: none;
+    }
+
+    .form-submit,
+    .form-text {
+        height: 59px;
+        margin: 0 !important;
+        display: inline-block;
+    }
+    .form-text {
+        width: 100%;
+    }
+    .form-submit {
+        border: 0;
+        width: 100%;
+        background-color: $primary-color;
+        color: white;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+}
+
+.m-search--description {
+    line-height: 1.8em;
+}
+
+.m-search--noresults {
+    .m-search--description {
+        max-width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

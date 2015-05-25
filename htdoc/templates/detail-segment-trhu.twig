@@ -1,0 +1,94 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}" xmlns="http://www.w3.org/1999/html">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+
+    <div class="m-section l-detail-page bg-white">
+
+        <header class="m-section--header bg-secondary-light">
+            <div class="row ">
+                <div class="l-full">
+
+                    <nav class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Features</a>
+                        <a class="unavailable" href="#">Gene Splicing</a>
+                        <a class="current" href="#">Cloning</a>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
+        {% include "subtemplates/content-basic-page.twig" %}
+    </div>
+
+
+    <div class="m-section l-feed_list bg-white">
+        <div class="row">
+
+            {% for i in 1..10 %}
+                <div class="m-card_reference-horizontal l-single">
+                    <article class="m-reference ">
+                        <header>
+                            <div class="m-item--image" style="background-image: url(http://lorempixel.com/400/600)">
+                                <a href="">
+                                    <img src="http://lorempixel.com/400/600" alt="" />
+                                </a>
+                            </div>
+
+                            <div class="m-item--summary">
+                                <h1 class="m-item--hed">
+                                    <a href="">titulek titulek titulek titulek titulek</a>
+                                </h1>
+
+                                <div class="m-item--description">
+                                    <p>Morbi vulpctum ex, enim sit amet ult fsadfasdf fasd fasdf asdfas dfa sd fasdf asdfasdfasdf sfadfasdriciericies hendrerit.
+                                        <i class="fa fa-arrow-right"></i></p>
+                                </div>
+                            </div>
+
+                            <div class="m-properties">
+                                <dl><dt>Zařazení</dt><dd>Stavby pro stravování – restaurace</dd></dl>
+
+                                <dl><dt>Rok realizace</dt><dd>2014</dd></dl>
+
+                                <dl><dt>Místo realizace</dt><dd>Vizovice, Česká republika</dd></dl>
+
+                                <dl>
+                                    <dt class="mm-label">Technické specifikace</dt>
+                                    <dt class="mm-sub">počet modulů</dt><dd>58</dd>
+                                    <dt class="mm-sub">doba realizace</dt><dd>12 týdnů</dd>
+                                    <dt class="mm-sub">užitná plocha</dt><dd>4587 m<sup>2</sup></dd>
+                                    <dt class="mm-sub">kapacita</dt><dd>7 lidí ve stoje</dd>
+                                </dl>
+                            </div>
+
+                        </header>
+                    </article>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% include "subtemplates/feed-three_faq.twig" %}
+    {% include "subtemplates/feed-block-carousel.twig" %} {# @todo musi byt bez hlavičky a patičky#}
+    {% include "subtemplates/feed-six_certifikace.twig" %}
+    {% include "subtemplates/module-support.twig" %}
+    {% include "subtemplates/module-footer.twig" %}
+    {% include "subtemplates/module-page-scroll.twig" %}
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+

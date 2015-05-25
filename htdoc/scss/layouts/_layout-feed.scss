@@ -2,25 +2,47 @@
 // feed can be list, grid or any other content loop
 
 .l-feed {
+
+
+}
+
+.l-feed_list {
+    .l-single {
+        @include column(1);
+        margin-bottom: $space;
+        position: relative;
+    }
 }
 
 .l-feed_triple-card {
 
     .l-single {
         @include column(1, $gut: 60px);
+        margin-bottom: $space;
+        position: relative;
 
         @include media(B) {
-            @include column(1/3);
+            @include column(1, $gut: 60px);
         }
 
         @include media(C) {
             @include column(1/3, $gut: 80px);
+            min-height: 394px;
         }
 
         @include media(D) {
             @include column(1/3, $gut: 150px);
-
+            min-height: 364px;
         }
+
+    }
+}
+
+.l-feed_one {
+
+    .l-single {
+        @include column(1);
+        margin-bottom: 30px;
     }
 }
 
@@ -79,7 +101,7 @@
         }
 
         @include media(C) {
-            @include column(1/3);
+            @include column(1/2);
         }
 
         @include media(D) {
@@ -130,37 +152,45 @@
 
 .l-feed_block-carousel {
 
+    $block-carousel-gutter:0px;
+
     width: 100%;
     overflow: hidden;
-    .l-section--content {
+
+    .m-section--content {
         .l-single,
         .l-double,
         .l-half {
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: $block-carousel-gutter;
             height: 210px;
 
             @include media(C) {
                 height: 210px;
+                margin-bottom: $block-carousel-gutter;
             }
             @include media(D) {
                 height: 294px;
+                margin-bottom: $block-carousel-gutter;
             }
         }
+
+        // fix row height
+        margin-bottom: - $block-carousel-gutter;
     }
 
     .l-single {
-        @include column(1/2);
+        @include column(1/2, $gut:$block-carousel-gutter);
         @include media(C) {
-            @include column(1/2);
+            @include column(1/2,$gut:$block-carousel-gutter);
         }
     }
 
     .l-double {
-        @include column(1);
+        @include column(1,$gut:$block-carousel-gutter);
 
         @include media(C) {
-            @include column(1);
+            @include column(1,$gut:$block-carousel-gutter);
         }
     }
 
@@ -177,8 +207,17 @@
         }
     }
 
+    // override card height to fit block carousel layouts
+    [class*=m-card] {
+        height: 100%;
+    }
+
+
 }
 
+
+//todo: fix this, move params to slick component
+.m-basic-page--header,
 .l-feed_carousel {
 
     .slides {

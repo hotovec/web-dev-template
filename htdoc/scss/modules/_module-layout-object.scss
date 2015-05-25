@@ -1,0 +1,101 @@
+.m-layout-object {
+
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+
+    @include media(C) {
+        max-width: $layout-width-C;
+    }
+    @include media(D) {
+        max-width: $layout-width-D;
+    }
+
+    &.mm-expand {
+        float: none;
+        @include media(C) {
+            margin-left: -180px;
+            margin-right: -180px;
+        }
+        @include media(D) {
+            margin-left: -246px;
+            margin-right: -246px;
+        }
+    }
+
+    &.mm-small {
+        width: 100%;
+        height: auto;
+        @include media(C) {
+            width: 250px;
+        }
+    }
+
+    &.mm-small.mm-left {
+        float: left;
+        clear: left;
+        margin-right: 15px;
+        @include media(C) {
+            margin-right: 20px;
+            margin-left: -180px;
+        }
+        @include media(D) {
+            margin-left: -280px;
+        }
+    }
+
+    &.mm-small.mm-right {
+        float: right;
+        margin-left: 15px;
+        clear: right;
+        @include media(C) {
+            margin-left: 20px;
+            margin-right: -180px;
+        }
+
+        @include media(D) {
+            margin-right: -280px;
+        }
+    }
+
+}
+
+figure.m-layout-object,
+.m-layout-object {
+
+        margin-bottom: $gutter;
+}
+
+// layout modes overrides
+.layout-onecol {
+}
+
+.layout-onecol-full,
+.layout-twocol {
+    .m-layout-object {
+        &.mm-expand {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &.mm-left {
+            margin-left: 0;
+        }
+        &.mm-right {
+            margin-right: 0;
+        }
+
+    }
+}
+
+/*
+.m-body--copy {
+    .m-layout-object + figure {
+        float: left;
+        width: calc(100% - 220px);
+        margin-right: 20px;
+    }
+
+
+}*/

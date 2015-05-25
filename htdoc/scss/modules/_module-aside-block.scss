@@ -1,4 +1,7 @@
-.m-aside-block { }
+
+.m-aside-block {
+    margin-bottom: $space * .5;
+}
 
 .m-aside-block--header {
     @include cf();
@@ -19,6 +22,4 @@
         line-height: rem-calc(18);
     }
 }
-
-
 

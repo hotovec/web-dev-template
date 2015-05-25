@@ -4,6 +4,11 @@ $footer-copyright-height: 64px !default;
 
 .m-footer {
 
+    &.m-section {
+        padding-top: $space;
+        padding-bottom: $space * .5;
+    }
+
     background-color: $color-primary;
 
     height: 100%;
@@ -27,6 +32,9 @@ $footer-copyright-height: 64px !default;
     }
 
     .m-footer--section {
+
+
+        font-size: rem-calc(14);
 
         &:nth-of-type(1) {
             @include column(1);
@@ -68,6 +76,9 @@ $footer-copyright-height: 64px !default;
     }
 
     .m-footer--subsection {
+        margin-top: 20px;
+        font-size: rem-calc(12);
+
         &:nth-of-type(1) {
             @include column(6/12);
             text-align: left;
@@ -89,6 +100,12 @@ $footer-copyright-height: 64px !default;
 
         @include media(C) {
             @include inline-list(right, 30px);
+        }
+    }
+
+    .m-footer--menu-link {
+        i {
+            font-size: rem-calc(24px);
         }
     }
 

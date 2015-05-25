@@ -1,7 +1,9 @@
 @mixin m-card() {
 
+    position: relative;
+
     article,
-    header {
+    .m-item--header {
         position: relative;
     }
 
@@ -19,11 +21,8 @@
     }
 
     .m-item--hed {
-        font-size: rem-calc(18);
     }
-
     .m-item--description {
-        font-size: rem-calc(14);
     }
 
     .m-item--image {
@@ -34,13 +33,35 @@
         }
     }
 
+    .m-item--more {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+
 }
 
 @mixin m-card-image {
     @include m-card();
 
-    height: 240px;
     overflow: hidden;
+
+    height: 300px;
+
+    &.mm-auto {
+        height: 100% !important;
+    }
+
+    &.mm-tall {
+        height: 350px;
+
+        @include media(D) {
+            height: 600px;
+        }
+    }
+    &.mm-low {
+        height: 200px;
+    }
 
     article,
     header {
@@ -105,122 +126,17 @@
 
 }
 
-@mixin m-card-vertical() {
-    @include m-card();
-    height: auto;
-    position: relative;
-
-    article {
-        height: 400px;
-        position: relative;
-        background-color: white;
-        padding-bottom: 24px;
-        header {
-            height: 100%;
-        }
-    }
-
-    .m-item--image {
-        margin: 0;
-        width: 100%;
-        height: 170px;
-
-        img {
-            display: none;
-        }
-    }
-
-    .m-item--summary {
-        position: relative;
-        height: 100%;
-        padding: 20px;
-        padding-top: 64px;
-    }
-
-    .m-item--hed {
-        font-size: rem-calc(18);
-        line-height: 1.2em;
-        margin-bottom: .5em;
-        font-weight: 600;
-    }
-
-    .m-item--description {
-        position: relative;
-        font-size: rem-calc(14);
-        //height: 60px;
-        overflow: hidden;
-        //display: none;
-    }
-
-    .m-item--meta {
-        position: absolute;
-        font-family: $font-family-secondary;
-        top: 16px;
-        left: 0px;
-        font-size: rem-calc(14);
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .m-card--more {
-        position: absolute;
-        bottom: 16px;
-        left: 20px;
-    }
-
-    @include media(B) {
-        .m-item--image {
-            height: 150px;
-
-        }
-    }
-
-    @include media(C) {
-
-        .m-item--image {
-            height: 181px;
-        }
-
-        .m-item--meta {
-            span {
-                display: block;
-            }
-        }
-    }
-
-    @each $colorName, $colorValue in $pallete {
-        &.mm-color-#{$colorName} {
-            &:before {
-                height: 4px;
-                background-color: $colorValue;
-                display: block;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                content: "";
-                z-index: 1;
-
-            }
-            .colored {
-                color: $colorValue;
-            }
-            a:hover {
-                color: $colorValue;
-            }
-        }
-    }
-
-}
-
 .m-card_standard {
     @include m-card();
     background-color: white;
-    padding-bottom: 24px;
-    position: relative;
 
     .m-item--image {
         height: 181px;
         overflow: hidden;
+    }
+
+    .m-item--header {
+        position: relative;
     }
 
     .m-item--hed {
@@ -228,18 +144,79 @@
     }
 
     .m-item--summary {
+        position: relative;
         padding: 20px;
         min-height: 120px;
+        //border: 1px solid red;
+        height: 100%;
+    }
 
-        @include media(C-only) {
-            min-height: 220px;
+    .m-item--meta {
+        font-size: rem-calc(12);
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    .m-item--more {
+        display: none;
+        position: absolute;
+
+    }
+
+    // if card is bigger then 600px
+    @include cw(600) {
+        position: relative;
+        height: 300px;
+
+        .m-item--header {
+            height: 100%;
+        }
+
+        .m-item--image {
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin-right: 30px;
+            a {
+                height: 100%;
+                width: auto;
+                display: block;
+                background-size: cover;
+            }
+        }
+
+        .m-item--meta {
+            padding-bottom: 0;
+            position: absolute;
+            bottom: 48px;
+            left: calc(50% + 10px);
+        }
+
+        .m-item--more {
+
+            display: block;
+            left: calc(50% + 30px);
+        }
+
+    }
+
+    // if card is bigger then 600px
+    @include cw(1200) {
+        height: 500px;
+        .m-item--image {
+            width: 75%;
+        }
+
+        .m-item--meta {
+            display: block;
+            left: calc(75% + 10px);
+        }
+
+        .m-item--more {
+            left: calc(75% + 30px);
         }
     }
-    .m-card--more {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-    }
+
 
     &.mm-promo {
         background-color: transparent;
@@ -283,157 +260,6 @@
     .m-item--hed,
     .m-item--summary {
         margin-left: 160px;
-    }
-
-}
-
-.m-card_product {
-    @include m-card();
-    background-color: white;
-    position: relative;
-
-    > article {
-        padding: 0;
-        header {
-            height: 200px;
-            overflow: hidden;
-            margin-bottom: 100px;
-        }
-    }
-
-    .m-item--image {
-        height: 200px;
-        width: 100%;
-        overflow: hidden;
-        position: absolute;
-
-        a {
-            display: block;
-            height: 100%;
-            width: 100%;
-            opacity: 0.9;
-            background-color: $color-secondary;
-            color: white;
-            img {
-                display: none;
-            }
-        }
-    }
-
-    .m-item--hed {
-        margin-bottom: 14px;
-        a {
-            color: $color-body-font;
-        }
-    }
-
-    .m-item--summary {
-        color: $color-body-font;
-        height: 200px;
-        pointer-events: none;
-        position: relative;
-        z-index: 1;
-        padding: 20px;
-    }
-    .m-card--more {
-        position: absolute;
-        left: 0;
-        bottom: 20px;
-        width: 100%;
-        height: 100px;
-        display: table;
-
-        a {
-            width: 100%;
-            height: 100%;
-            display: table-cell;
-            vertical-align: bottom;
-            padding-left: 20px;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-
-    }
-
-    &:hover {
-        .m-item--image a {
-            @include transition(all 0.3s);
-            background-color: $primary-color;
-        }
-        .m-item--summary,
-        .m-item--hed {
-            color: white;
-            a {
-                color: white;
-            }
-        }
-    }
-}
-
-.m-card_vertical {
-    @include m-card-vertical();
-}
-
-.m-card_horizontal {
-
-    @include m-card-vertical();
-
-    @include media(D) {
-
-        article {
-            height: 280px;
-        }
-
-        .m-item--image {
-            margin: 0;
-            width: 260px;
-            height: 280px;
-            float: left;
-            margin-right: 35px;
-
-            img {
-                display: none;
-            }
-        }
-
-        .m-item--summary {
-            height: 280px;
-            padding-top: 60px;
-        }
-
-        .m-item--hed {
-            font-size: rem-calc(20);
-            line-height: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        .m-item--meta,
-        .m-item--description {
-            position: absolute;
-            left: 0;
-            margin: 0;
-            padding-left: 295px;
-            padding-right: 30px;
-
-            width: 100%;
-
-        }
-
-        .m-item--description {
-            bottom: 30px;
-        }
-
-        .m-item--meta {
-            position: absolute;
-            top: 30px;
-
-            span {
-                display: inline-block;
-            }
-
-            font-size: rem-calc(13);
-        }
     }
 
 }
@@ -519,6 +345,7 @@
         }
     }
 
+    .m-item--meta,
     .m-item--description {
         display: none;
     }
@@ -552,66 +379,7 @@
     }
 }
 
-.m-card_reference {
-    @include m-card();
-
-    height: 240px;
-    overflow: hidden;
-
-    article,
-    header {
-        height: 100%;
-        position: relative;
-    }
-
-    .m-item--image {
-
-        background-position: 50% 50%;
-        height: 100%;
-
-        img {
-            visibility: hidden;
-            pointer-events: none;
-        }
-    }
-
-    .m-item--summary {
-        position: absolute;
-        bottom: 20px;
-        left: 25px;
-        width: 300px;
-        height: auto;
-        background-color: transparentize($color-white, 0.4);
-        padding: 20px;
-        //padding-top: 10px;
-        color: $color-body-font;
-    }
-
-    .m-item--hed {
-        margin: 0;
-        margin-bottom: 30px;
-
-        text-transform: uppercase;
-        a {
-            color: $color-body-font;
-        }
-    }
-
-    .m-item--description {
-        pointer-events: none;
-        font-weight: 400;
-        color: $color-black;
-    }
-
-    .m-card--more {
-        display: none;
-    }
-
-}
-
-
 .m-card_centered-text {
-    //@include m-card();
     background-color: transparent;
 
     article {
@@ -626,6 +394,7 @@
     }
 
     .m-item--hed {
+
         margin-bottom: $space;
         font-size: rem-calc(30);
         font-weight: 400;
@@ -657,3 +426,76 @@
         margin-top: $space;
     }
 }
+
+.m-card_nav {
+    @include m-card();
+
+    article,
+    header,
+    .m-item--summary {
+        position: relative;
+        height: 100%;
+    }
+
+    article {
+        &:hover {
+            .m-item--image a:after {
+                font-family: FontAwesome;
+
+                display: block;
+                position: absolute;
+                content: "";
+
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                text-align: center;
+                color: white;
+                line-height: 53px;
+                background-color: rgba(0, 0, 0, .45);
+            }
+
+            .m-item--hed a {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .m-item--image {
+        width: 70px;
+        height: 53px;
+        overflow: hidden;
+        position: relative;
+
+        a {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    }
+
+    .m-item--description,
+    .m-item--meta {
+        display: none;
+    }
+
+    .m-item--hed {
+        @include vertical-align();
+        font-weight: 400;
+        font-size: rem-calc(14);
+
+    }
+
+}
+
+

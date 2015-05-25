@@ -1,0 +1,31 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+
+
+    <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}" xmlns="http://www.w3.org/1999/html">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </div>
+
+    <div class="m-section">
+
+        <ul class="clearing-thumbs clearing-feature" data-clearing>
+            <li><a href="/assets/gallery/full/img-1.jpg"><img src="/assets/gallery/thumb/img-1.jpg"></a></li>
+            <li><a href="/assets/gallery/full/img-2.jpg"><img src="/assets/gallery/thumb/img-2.jpg"></a></li>
+            <li><a href="/assets/gallery/full/img-3.jpg"><img src="/assets/gallery/thumb/img-3.jpg"></a></li>
+            <li class="clearing-featured-img"><a href="/assets/gallery/full/img-4.jpg"><img src="/assets/gallery/thumb/img-4.jpg"></a></li>
+            <li><a href="/assets/gallery/full/img-5.jpg"><img src="/assets/gallery/thumb/img-5.jpg"></a></li>
+        </ul>
+
+    </div>
+
+    {{ parent() }}
+
+{% endblock %}
+
+{% block scripts %}
+
+
+{% endblock %}
+

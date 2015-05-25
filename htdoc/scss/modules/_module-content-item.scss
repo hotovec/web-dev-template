@@ -1,4 +1,23 @@
-.m-item { }
+.m-item {
+    a {
+        color: $color-black;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.m-item--hed {
+    @include font-headline();
+    font-size: rem-calc(18);
+}
+
+.m-item--description {
+    @include font-body();
+    font-size: rem-calc(14);
+}
 
 .m-item--image {
     background-size: cover;

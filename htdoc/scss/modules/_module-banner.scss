@@ -1,0 +1,46 @@
+// fullscrenn label breakout
+
+.m-banner {
+
+    @include cf();
+    padding: ($space * 0.5) 0;
+
+    text-align: center;
+    position: relative;
+
+    & > header {
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .m-banner--hed {
+        font-size: rem-calc(20);
+        font-weight: 400;
+
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .m-banner--image {
+        height: 60px;
+        width: 100px;
+        overflow: hidden;
+        margin-right: 20px;
+        float: left;
+        background-size: cover;
+        background-position: center;
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        img {
+            visibility: hidden;
+        }
+    }
+}
