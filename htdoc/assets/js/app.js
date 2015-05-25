@@ -168,7 +168,7 @@ var blogSlick = $('.block-feed-slider').slick({
 
 // full size carousel
 
-var blogSlick = $('.full-carousel').slick({
+var blogSlick = $('[slick-full]').slick({
     dots: true,
     infinite: true,
     speed: 300,

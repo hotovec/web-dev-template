@@ -4,7 +4,8 @@
 @mixin base-l-feed() {
 
     $card-radius: 0;
-    $card-shadow: 0 3px 1px rgba(0,0,0,.2);
+    $card-shadow: 0 3px 1px rgba(0, 0, 0, .2);
+    $card-shadow: none;
 
     @include cf();
 
@@ -147,7 +148,6 @@
 
 }
 
-
 // test custom layouts
 .l-feed[layout-dancer] {
     .l-single {
@@ -190,8 +190,6 @@
         }
     }
 }
-
-
 
 .l-feed_block-carousel {
 
@@ -257,31 +255,32 @@
 
 }
 
-//todo: fix this, move params to slick component
-.m-basic-page--header,
 .l-feed_carousel {
 
-    .slides {
-    }
-    .slide {
-
-        height: 300px;
-
-        @include media(C) {
-            height: 500px;
+        .slide {
+            height: 300px;
+            @include media(C) {
+                height: 500px;
+            }
+            @include media(C) {
+                height: 600px;
+            }
+        }
+        .slick-slider {
+            margin-bottom: 0;
+        }
+        // modify slick nav
+        .slick-dots {
+            position: absolute;
+            margin: 0;
+            bottom: 20px;
         }
 
-        @include media(C) {
-            height: 600px;
+        // override card height to fit block carousel layouts
+        [class*=m-card] {
+            height: 100%;
         }
-
     }
 
-    // modify slick nav
-    .slick-dots {
-        position: absolute;
-        margin: 0;
-        bottom: 20px;
-    }
 
-}
+

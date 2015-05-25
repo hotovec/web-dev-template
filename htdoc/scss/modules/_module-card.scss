@@ -129,35 +129,6 @@
 
     }
 
-    @include cw(300) {
-         .m-item--hed {
-            font-size: rem-calc(24);
-         }
-        .m-item--description {
-            font-size: rem-calc(18);
-        }
-     }
-
-    @include cw(400) {
-        .m-item--hed {
-            font-size: rem-calc(28);
-        }
-        .m-item--description {
-            font-size: rem-calc(20);
-        }
-    }
-
-    @include cw(800) {
-        min-height: 450px;
-        .m-item--hed {
-            font-size: rem-calc(36);
-        }
-        .m-item--description {
-            font-size: rem-calc(22);
-            width: 60%;
-        }
-    }
-
 
     .m-item--image {
         a {
