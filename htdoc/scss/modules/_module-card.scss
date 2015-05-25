@@ -1,10 +1,20 @@
+@mixin m-card-autolayout() {
+    &.mm-auto {
+        height: 100% !important;
+    }
+}
+
 @mixin m-card() {
 
+    @include m-card-autolayout();
+
     position: relative;
+    overflow: hidden;
 
     article,
     .m-item--header {
         position: relative;
+        height: 100%;
     }
 
     a {
@@ -39,29 +49,7 @@
 @mixin m-card-image {
     @include m-card();
 
-    overflow: hidden;
-
     height: 300px;
-
-    &.mm-auto {
-        height: 100% !important;
-    }
-
-    &.mm-tall {
-        height: 350px;
-
-        @include media(D) {
-            height: 600px;
-        }
-    }
-    &.mm-low {
-        height: 200px;
-    }
-
-    article,
-    header {
-        height: 100%;
-    }
 
     .m-item--image {
         position: absolute;
@@ -96,6 +84,7 @@
     .m-item--summary {
         height: 100%;
     }
+
     .m-item--hed {
         position: absolute;
         bottom: 20px;
@@ -108,17 +97,64 @@
     }
 
     .m-item--description {
-        display: none;
+        @include transition(opacity .3s);
+        opacity: 0;
         pointer-events: none;
     }
 
-    .m-card--more {
+    .m-item--more {
         position: absolute;
         top: 20px;
         left: 30px;
         color: white;
     }
 
+    .m-item--image {
+        a {
+            &:before {
+                @include transition(all 0.3s);
+                background-color: $color-primary; //pallete(1);
+                opacity: 0;
+            }
+        }
+
+    }
+
+    @each $colorName, $colorValue in $pallete {
+        &.mm-color-#{$colorName} {
+            .m-item--image {
+                a {
+                    border-top: 4px solid transparent;
+                    border-top-color: $colorValue; //pallete(1);
+                    &:before {
+                        background-color: $colorValue; //pallete(1);
+                        opacity: .4;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &:hover {
+        .m-item--image a:before {
+            @include transition(all 0.3s);
+            opacity: 0.8;
+        }
+
+        .m-item--description {
+            position: absolute;
+            //display: block;
+            opacity: 1;
+            padding: 30px;
+            color: white;
+            @include transition(opacity .3s);
+        }
+
+        .m-card--more {
+            display: none;
+        }
+    }
 }
 
 .m-card_standard {
@@ -142,7 +178,6 @@
         position: relative;
         padding: 20px;
         min-height: 120px;
-        //border: 1px solid red;
         height: 100%;
     }
 
@@ -155,7 +190,6 @@
     .m-item--more {
         display: none;
         position: absolute;
-
     }
 
     // if card is bigger then 600px
@@ -211,252 +245,49 @@
             left: calc(75% + 30px);
         }
     }
-
-    &.mm-promo {
-        background-color: transparent;
-        .m-item--hed {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .m-item--summary {
-            text-align: center;
-            min-height: 80px;
-            padding-top: 30px;
-            font-size: rem-calc(24px);
-        }
-        .m-card--more {
-            display: none;
-        }
-        &:hover {
-            background-color: white;
-        }
-    }
-
-}
-
-.m-card_list {
-    @include m-card();
-    background-color: white;
-
-    .m-item--image {
-        height: 60px;
-        width: 120px;
-        overflow: hidden;
-        float: left;
-        //margin-right: 30px;
-
-        a {
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .m-item--hed,
-    .m-item--summary {
-        margin-left: 160px;
-    }
-
 }
 
 .m-card_image {
     @include m-card-image();
-
-    .m-item--image {
-        a {
-            &:before {
-                background-color: $color-primary; //pallete(1);
-                opacity: 0;
-            }
-        }
-
-    }
-
-    @each $colorName, $colorValue in $pallete {
-        &.mm-color-#{$colorName} {
-            .m-item--image {
-                a {
-                    border-top: 4px solid transparent;
-                    border-top-color: $colorValue; //pallete(1);
-                    &:before {
-                        background-color: $colorValue; //pallete(1);
-                        opacity: .4;
-                    }
-                }
-
-            }
-        }
-    }
-
-    &:hover {
-        .m-item--image a:before {
-            opacity: 0.8;
-        }
-
-        .m-item--description {
-            position: absolute;
-            display: block;
-            padding: 30px;
-            color: white;
-        }
-
-        .m-card--more {
-            display: none;
-        }
-    }
-
-}
-
-.m-card_thumb {
-    @include m-card-image();
-
-    .m-card--more {
-        display: none;
-    }
-
-    .m-item--image {
-
-        img {
-            display: none;
-        }
-
-        a {
-            height: 100%;
-            width: 100%;
-            display: inline-block;
-
-        }
-        &:before {
-            display: block;
-            position: absolute;
-            z-index: 0;
-            content: "";
-            background-color: black;
-            opacity: .6;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .m-item--meta,
-    .m-item--description {
-        display: none;
-    }
-
-    .m-item--hed {
-        text-align: center;
-        left: 0;
-        @include vertical-align();
-        z-index: 10;
-        margin: 0;
-        padding: 10%;
-    }
-
-    &.mm-has-hover {
-        &:hover {
-            .m-item--image:before {
-                opacity: 0;
-            }
-
-        }
-    }
-
-    @each $colorName, $colorValue in $pallete {
-        &.mm-color-#{$colorName} {
-            .m-item--image {
-                &:before {
-                    background-color: $colorValue; //pallete(1);
-                }
-            }
-        }
-    }
-}
-
-.m-card_centered-text {
-    background-color: transparent;
-
-    article {
-        text-align: center;
-        padding-left: 20%;
-        padding-right: 20%;
-        padding-bottom: $space;
-    }
-
-    .header {
-        margin-bottom: $space * 0.3;
-    }
-
-    .m-item--hed {
-
-        margin-bottom: $space;
-        font-size: rem-calc(30);
-        font-weight: 400;
-
-        a {
-            color: $body-font-color;
-            text-decoration: none;
-            &:hover {
-                color: $primary-color;
-            }
-        }
-    }
-    .m-item--description {
-        font-size: rem-calc(16);
-        p {
-            line-height: 1.4em;
-            margin-bottom: 1.4em;
-        }
-
-    }
-
-    .m-card--more {
-        text-align: center;
-    }
-
-    .m-gallery {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: $space;
-    }
 }
 
 .m-card_nav {
     @include m-card();
 
-    article,
-    header,
+    .m-item--more,
+    .m-item--description,
+    .m-item--meta {
+        display: none;
+    }
+
     .m-item--summary {
         position: relative;
         height: 100%;
     }
 
-    article {
-        &:hover {
-            .m-item--image a:after {
-                font-family: FontAwesome;
+    &:hover {
+        .m-item--image a:after {
+            font-family: FontAwesome;
 
-                display: block;
-                position: absolute;
-                content: "";
+            display: block;
+            position: absolute;
+            content: "";
 
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
 
-                text-align: center;
-                color: white;
-                line-height: 53px;
-                background-color: rgba(0, 0, 0, .45);
-            }
-
-            .m-item--hed a {
-                color: $primary-color;
-                text-decoration: none;
-            }
+            text-align: center;
+            color: white;
+            line-height: 53px;
+            background-color: rgba(0, 0, 0, .45);
         }
 
+        .m-item--hed a {
+            color: $primary-color;
+            text-decoration: none;
+        }
     }
 
     .m-item--image {
@@ -478,16 +309,10 @@
         }
     }
 
-    .m-item--description,
-    .m-item--meta {
-        display: none;
-    }
-
     .m-item--hed {
         @include vertical-align();
         font-weight: 400;
         font-size: rem-calc(14);
-
     }
 
 }
