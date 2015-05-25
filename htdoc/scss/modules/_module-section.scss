@@ -99,6 +99,9 @@
 .m-section--content {
     @include l-grid();
     border: 1px solid red;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .m-section--content {}

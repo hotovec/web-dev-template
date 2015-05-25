@@ -2372,6 +2372,13 @@ body {
     .inline-right > li > * {
       display: inline-block; }
 
+.m-placeholder {
+  background-color: lightcoral;
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  padding: 20px; }
+
 .l-grid {
   box-sizing: border-box;
   *zoom: 1;
@@ -3531,7 +3538,10 @@ button:focus {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
-  border: 1px solid red; }
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 100%; }
   .m-section--header:before,
   .m-section--header:after,
   .m-section--footer:before,
