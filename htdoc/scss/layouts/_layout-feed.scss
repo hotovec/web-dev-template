@@ -3,8 +3,8 @@
 
 @mixin base-l-feed() {
 
-    $card-radius: 3px;
-    $card-shadow: 0 1px 10px rgba(0,0,0,.8);
+    $card-radius: 0;
+    $card-shadow: 0 3px 1px rgba(0,0,0,.2);
 
     @include cf();
 
