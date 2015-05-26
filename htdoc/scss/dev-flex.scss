@@ -1,0 +1,43 @@
+*, html {
+    box-sizing: border-box;
+}
+
+.fcontainer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@function frac($frac) {
+    @return $frac * 100%;
+}
+
+@mixin col($frac, $gutter:"") {
+
+    max-width: frac($frac);
+    flex: 0 0 (frac($frac));
+
+    @if $gutter != "" {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
+}
+
+@mixin fpush($frac) {
+    margin-left: frac($frac);
+}
+
+
+.frow {
+    background-color: lightblue;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fcol {
+    border: 1px solid red;
+    &.fc1 { @include col(2/12, 15px); }
+    &.fc2 { @include col(6/12, 15px); }
+    &.fc3 { @include col(4/12, 15px); }
+    &.fc4 { @include col(2/4); @include fpush(1/4); order: 2; }
+    &.fc5 { @include col(1/4); order: 1; }
+}
