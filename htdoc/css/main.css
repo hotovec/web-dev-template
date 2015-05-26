@@ -2817,26 +2817,6 @@ body {
   .l-feed_block-carousel [class*=m-card] {
     height: 100%; }
 
-.l-feed_carousel .slide {
-  height: 300px; }
-  @media only screen and (min-width: 1041px) {
-    .l-feed_carousel .slide {
-      height: 500px; } }
-  @media only screen and (min-width: 1041px) {
-    .l-feed_carousel .slide {
-      height: 600px; } }
-
-.l-feed_carousel .slick-slider {
-  margin-bottom: 0; }
-
-.l-feed_carousel .slick-dots {
-  position: absolute;
-  margin: 0;
-  bottom: 20px; }
-
-.l-feed_carousel [class*=m-card] {
-  height: 100%; }
-
 .l-navigation.m-section {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -4045,8 +4025,29 @@ button:focus {
 .clearing-blackout .m-gallery--item.clearing-featured-img .m-item--hed {
   display: none; }
 
+.m-carousel .slide {
+  height: 300px; }
+  @media only screen and (min-width: 1041px) {
+    .m-carousel .slide {
+      height: 500px; } }
+  @media only screen and (min-width: 1321px) {
+    .m-carousel .slide {
+      height: 600px; } }
+
 .m-carousel.slick-slider {
   margin-bottom: 0; }
+
+.m-carousel .slick-dots {
+  position: absolute;
+  margin: 0;
+  bottom: 20px; }
+
+.m-carousel .slick-dots li button:before {
+  font-size: 12px;
+  color: white; }
+
+.m-carousel [class*=m-card] {
+  height: 100%; }
 
 .m-item a {
   color: #000;

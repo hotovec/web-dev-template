@@ -1,17 +1,7 @@
-<div class="m-section">
-
-    <div class="m-section--content">
-
-        <div class="l-feed_carousel">
-            <div class="slides" slick-full>
-                {% for s in 1..6 %}
-                    <div class="l-single slide">
-                        {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_image'} %}
-                    </div>
-                {% endfor %}
-            </div>
+<div class="m-carousel" slick-full>
+    {% for s in 1..6 %}
+        <div class="l-single slide">
+            {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_image'} %}
         </div>
-
-    </div>
+    {% endfor %}
 </div>
-

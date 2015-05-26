@@ -1,8 +1,31 @@
 .m-carousel {
-
-    // we are using slick as carousel
+    .slide {
+        height: 300px;
+        @include media(C) {
+            height: 500px;
+        }
+        @include media(D) {
+            height: 600px;
+        }
+    }
 
     &.slick-slider {
         margin-bottom: 0;
+    }
+    // modify slick nav
+    .slick-dots {
+        position: absolute;
+        margin: 0;
+        bottom: 20px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+        color: white;
+    }
+
+    // override card height to fit block carousel layouts
+    [class*=m-card] {
+        height: 100%;
     }
 }

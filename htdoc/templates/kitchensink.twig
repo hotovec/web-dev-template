@@ -4,35 +4,33 @@
 
 
 
-   {# <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
-        {% include "subtemplates/module-navbar-secondary.twig" %}
-        {% include "subtemplates/module-navbar.twig" %}
-    </div>#}
+    {# <div class="l-navbar {% if navbar.isSticky %}is-sticky{% endif %}">
+         {% include "subtemplates/module-navbar-secondary.twig" %}
+         {% include "subtemplates/module-navbar.twig" %}
+     </div>#}
 
-       {# <div class="row">
-            {% include "subtemplates/base-body-copy.twig" %}
-        </div>#}
+    {# <div class="row">
+         {% include "subtemplates/base-body-copy.twig" %}
+     </div>#}
 
-   {# <div class="row">
-        {% include "subtemplates/base-properties.twig" %}
-    </div>#}
+    {# <div class="row">
+         {% include "subtemplates/base-properties.twig" %}
+     </div>#}
 
-   {# <div class="row">
-        {% include "subtemplates/base-filter.twig" %}
-    </div>#}
+    {# <div class="row">
+         {% include "subtemplates/base-filter.twig" %}
+     </div>#}
 
 
     {% include "subtemplates/base-section.twig" %}
     {# feeds #}
 
     <div class="row">
-
-    {% include "subtemplates/base-feed.twig" %}
-
+        {% include "subtemplates/base-feed.twig" %}
+        {% include "subtemplates/base-carousel.twig" %}
     </div>
 
     {% include "subtemplates/feed-block-carousel.twig" %}
-    {% include "subtemplates/feed-carousel.twig" %}
 
 
     {% include "subtemplates/base-banner.twig" %}
