@@ -1,0 +1,56 @@
+
+$navbar-secondary-height: 30px !default;
+$navbar-height: 48px !default;
+$navbar-primary-padding: 40px;
+
+.l-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+
+    //border: 1px solid red;
+
+    .m-navbar {
+      //  border: 1px solid blue;
+    }
+
+    .mm-secondary {
+        display: none;
+    }
+
+
+    &.mm-has-secondary {
+
+        .mm-secondary {
+            display: block;
+        }
+
+        .mm-primary {
+
+        }
+
+    }
+
+    // animations and hiding
+
+    @include transition(all 0.2s);
+
+    &.is-hidden-secondary {
+        $offset: ($navbar-secondary-height) * -1 ;
+        @include transform(translateY(-30px));
+        @include transition(all 0.2s);
+    }
+
+    &.is-hidden {
+        //$offset: ($navbar-height + $navbar-secondary-height + (2 * $navbar-primary-padding)) * -1 ;
+        $offset: -99px;
+        @include transform(translateY($offset));
+        @include transition(all 0.2s);
+    }
+}
+
+
+

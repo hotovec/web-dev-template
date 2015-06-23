@@ -25,7 +25,7 @@ $(function () {
         distinct: true,
 
         // array of widths in pixels where breakpoints should be triggered
-        breakpoints: [0, 640, 960, 1330, 1600 ]
+        breakpoints: [0, 640, 960, 1330, 1600]
     });
 
     $(window).bind('enterBreakpoint640', function () {
@@ -119,29 +119,44 @@ $(function () {
     });
 
 
-    // resize Navbar
+    // sticky navbar
 
-    /*var navbarPrimary = $('#navbarPrimary');
-    var navbarSecondary = $('#navbarSecondary');
+    var stickyBorder = 300;
+    var navbar = $('.l-sticky');
     var scrollDriver = $(window);
+    var lastScrollTop = 0;
 
     var currentTop = function () {
         return scrollDriver.scrollTop();
     }
+    navbar.addClass("is-hidden");
 
-    $(window).scroll(function () {
-        if (currentTop() > 40) {
-            if (!navbarPrimary.hasClass("is-collapsed")) {
-                navbarPrimary.addClass("is-collapsed");
+    $(window).scroll(function (event) {
+
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            console.log("down");
+
+            if (currentTop() > stickyBorder) {
+                if (!navbar.hasClass("is-hidden")) {
+                    navbar.addClass("is-hidden");
+                }
             }
-            if (!navbarSecondary.hasClass("is-hidden")) {
-                navbarSecondary.addClass("is-hidden");
-            }
+
         } else {
-            navbarPrimary.removeClass("is-collapsed");
-            navbarSecondary.removeClass("is-hidden");
+            console.log("up");
+            if (currentTop() > stickyBorder) {
+                if (navbar.hasClass("is-hidden")) {
+                    navbar.removeClass("is-hidden");
+                }
+            } else {
+                navbar.addClass("is-hidden");
+            }
+
         }
-    });*/
+        lastScrollTop = st;
+
+    });
 
 });
 

@@ -1,6 +1,6 @@
-$navbar-height: 48px;
+//$navbar-height: 48px;
 
-$navbar-secondary-height: 30px !default;
+//$navbar-secondary-height: 30px !default;
 $navbar-status-height: 24px !default;
 $navbar-font-primary: $font-family-headline !default;
 
@@ -96,7 +96,7 @@ $navbar-text-transform: none !default;
 
     &.mm-secondary {
 
-        z-index: 20;
+       // z-index: 20;
         top: 0;
         @include transform(translateY(0));
 
@@ -120,9 +120,6 @@ $navbar-text-transform: none !default;
 
         display: none;
 
-        @include media(C) {
-            display: block;
-        }
     }
 
     &.mm-admin {
@@ -267,14 +264,12 @@ $navbar-text-transform: none !default;
 
 }
 
+.l-sticky {
 .m-navbar {
     @include transition(all 0.2s);
 
-    @include media(C) {
 
-        @include transform(translateY(30px));
 
-        &.is-collapsed {
             padding-top: 10px;
             padding-bottom: 10px;
             @include transform(translateY(0px));
@@ -285,17 +280,15 @@ $navbar-text-transform: none !default;
                     background-size: auto 32px;
                 }
             }
-        }
 
-        &.is-hidden {
-            @include transform(translateY(-30px));
-        }
-    }
+}
 }
 
+/*
 .m-navbar.mm-secondary ~ .m-navbar {
     border-top: none;
 }
+*/
 
 
 
