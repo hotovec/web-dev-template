@@ -2544,6 +2544,15 @@ body {
   .l-section_side-triple .l-section--item:nth-of-type(3) {
     height: 200px; } }
 
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  border: 1px solid red; }
+
 .l-feed {
   *zoom: 1;
   position: relative;
@@ -2868,7 +2877,6 @@ body {
     transform: rotate(-90deg) translateY(40px); }
 
 .m-navbar {
-  position: fixed;
   background-color: white;
   z-index: 10;
   top: 0;

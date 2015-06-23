@@ -121,7 +121,7 @@ $(function () {
 
     // resize Navbar
 
-    var navbarPrimary = $('#navbarPrimary');
+    /*var navbarPrimary = $('#navbarPrimary');
     var navbarSecondary = $('#navbarSecondary');
     var scrollDriver = $(window);
 
@@ -141,7 +141,7 @@ $(function () {
             navbarPrimary.removeClass("is-collapsed");
             navbarSecondary.removeClass("is-hidden");
         }
-    });
+    });*/
 
 });
 
