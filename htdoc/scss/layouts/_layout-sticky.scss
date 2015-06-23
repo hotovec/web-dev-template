@@ -1,9 +1,12 @@
+$navbar-sticky-height: 56px !default;
+
 .l-sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: $navbar-sticky-height;
+    overflow: hidden;
     z-index: 100;
 
     // animations and hiding

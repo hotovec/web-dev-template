@@ -1,8 +1,8 @@
 $navbar-secondary-height: 30px !default;
-$navbar-height: 48px !default;
+
 $navbar-primary-padding: 40px;
 
-//$navbar-height: 48px;
+$navbar-height: 48px;
 
 //$navbar-secondary-height: 30px !default;
 $navbar-status-height: 24px !default;
@@ -57,13 +57,12 @@ $navbar-text-transform: none !default;
             @include column(1/4);
             height: $navbar-height;
             overflow: hidden;
+
             .mm-has-svg {
                 @include vertical-align();
                 height: $navbar-height - 20;
-                //min-height: auto;
                 background-position: left;
                 @include media(A-only) {
-
                     min-height: auto;
                 }
             }
@@ -122,13 +121,8 @@ $navbar-text-transform: none !default;
             float: right;
         }
 
-     //   display: none;
+        //   display: none;
 
-    }
-
-    &.mm-admin {
-        padding-top: 16px;
-        padding-bottom: 16px;
     }
 
 }
@@ -270,16 +264,24 @@ $navbar-text-transform: none !default;
 
 .l-sticky {
     .m-navbar {
-        @include transition(all 0.2s);
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        @include transform(translateY(0px));
-        @include transition(all 0.3s);
+        padding-top: 0;
+        padding-bottom: 0;
+        height: $navbar-sticky-height;
 
         .m-navbar--logo {
+            height: $navbar-sticky-height;
             .mm-has-svg {
+                height: $navbar-sticky-height;
                 background-size: auto 32px;
+
+            }
+        }
+
+        .m-navbar--menu-logo,
+        .m-navbar--menu {
+            height: $navbar-sticky-height;
+            a {
+                line-height: $navbar-sticky-height;
             }
         }
 
