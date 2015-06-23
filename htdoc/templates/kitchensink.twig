@@ -15,10 +15,15 @@
     </div>
 
 
-     <div class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %}  mm-has-secondary">
+     <nav class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %}">
          {#{% include "subtemplates/module-navbar-secondary.twig" %}#}
          {% include "subtemplates/module-navbar.twig" %}
-     </div>
+     </nav>
+
+    <nav class="l-navbar mm-has-secondary">
+        {% include "subtemplates/module-navbar-secondary.twig" %}
+        {% include "subtemplates/module-navbar.twig" %}
+    </nav>
 
     {# <div class="row">
          {% include "subtemplates/base-body-copy.twig" %}

@@ -121,7 +121,7 @@ $(function () {
 
     // sticky navbar
 
-    var stickyBorder = 300;
+    var stickyBorder = 500;
     var navbar = $('.l-sticky');
     var scrollDriver = $(window);
     var lastScrollTop = 0;
@@ -135,7 +135,7 @@ $(function () {
 
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
-            console.log("down");
+            //console.log("down");
 
             if (currentTop() > stickyBorder) {
                 if (!navbar.hasClass("is-hidden")) {
@@ -144,7 +144,7 @@ $(function () {
             }
 
         } else {
-            console.log("up");
+            //console.log("up");
             if (currentTop() > stickyBorder) {
                 if (navbar.hasClass("is-hidden")) {
                     navbar.removeClass("is-hidden");

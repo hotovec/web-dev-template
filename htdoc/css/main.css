@@ -2551,18 +2551,24 @@ body {
   width: 100%;
   height: auto;
   z-index: 100;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
-  .l-sticky .mm-secondary {
-    display: none; }
-  .l-sticky.mm-has-secondary .mm-secondary {
-    display: block; }
-  .l-sticky.is-hidden-secondary {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .l-sticky.is-hidden {
+    -webkit-transform: translateY(-99px);
+    -ms-transform: translateY(-99px);
+    transform: translateY(-99px);
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
+
+.l-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
   .l-sticky.is-hidden {
     -webkit-transform: translateY(-99px);
     -ms-transform: translateY(-99px);
@@ -3018,8 +3024,7 @@ body {
     top: 0;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
-    transform: translateY(0);
-    display: none; }
+    transform: translateY(0); }
     .m-navbar.mm-secondary .m-navbar--menu-primary {
       width: auto;
       float: right; }

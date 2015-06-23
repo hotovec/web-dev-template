@@ -1,3 +1,7 @@
+$navbar-secondary-height: 30px !default;
+$navbar-height: 48px !default;
+$navbar-primary-padding: 40px;
+
 //$navbar-height: 48px;
 
 //$navbar-secondary-height: 30px !default;
@@ -96,7 +100,7 @@ $navbar-text-transform: none !default;
 
     &.mm-secondary {
 
-       // z-index: 20;
+        // z-index: 20;
         top: 0;
         @include transform(translateY(0));
 
@@ -118,7 +122,7 @@ $navbar-text-transform: none !default;
             float: right;
         }
 
-        display: none;
+     //   display: none;
 
     }
 
@@ -265,23 +269,21 @@ $navbar-text-transform: none !default;
 }
 
 .l-sticky {
-.m-navbar {
-    @include transition(all 0.2s);
+    .m-navbar {
+        @include transition(all 0.2s);
 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @include transform(translateY(0px));
+        @include transition(all 0.3s);
 
-
-            padding-top: 10px;
-            padding-bottom: 10px;
-            @include transform(translateY(0px));
-            @include transition(all 0.3s);
-
-            .m-navbar--logo {
-                .mm-has-svg {
-                    background-size: auto 32px;
-                }
+        .m-navbar--logo {
+            .mm-has-svg {
+                background-size: auto 32px;
             }
+        }
 
-}
+    }
 }
 
 /*
