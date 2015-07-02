@@ -1302,7 +1302,7 @@ body {
   background-color: #fff;
   border-top: 1px solid #dfdfe3;
   border-bottom: 1px solid #dfdfe3;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Futura PT Web", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: none; }
@@ -1625,7 +1625,7 @@ body {
       margin-right: 15px; } }
 
 .m-body--copy {
-  font-family: Georgia;
+  font-family: Georgia, sans-serif;
   font-size: rem-calc(18); }
   @media only screen and (min-width: 1321px) {
     .m-body--copy {
@@ -1633,7 +1633,7 @@ body {
   .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
     line-height: 1.2em;
     margin-bottom: 1.6em;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Futura PT Web", sans-serif;
     color: black; }
   .m-body--copy h1 {
     font-size: rem-calc(48);
@@ -1679,7 +1679,7 @@ body {
     .m-body--copy blockquote .author {
       display: block;
       margin-top: 10px;
-      font-family: Helvetica Neue;
+      font-family: "Helvetica Neue", sans-serif;
       font-style: normal;
       font-size: rem-calc(15);
       font-weight: 600;
@@ -1816,7 +1816,7 @@ body {
 .m-section--header,
 .m-section--footer {
   *zoom: 1;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   font-weight: 800;
   padding-top: 50px;
@@ -1839,7 +1839,7 @@ body {
       text-decoration: underline; }
 
 .m-section--hed {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Futura PT Web", sans-serif;
   font-size: rem-calc(30);
   text-transform: uppercase;
   line-height: 1.2em;
@@ -2267,11 +2267,11 @@ body {
     text-decoration: underline; }
 
 .m-item--hed {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Futura PT Web", sans-serif;
   font-size: rem-calc(18); }
 
 .m-item--description {
-  font-family: Georgia;
+  font-family: Georgia, sans-serif;
   font-size: rem-calc(14); }
 
 .m-item--image {
@@ -2653,7 +2653,7 @@ body {
     font-size: rem-calc(14); }
 
 .m-filter {
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue", sans-serif;
   margin-bottom: 30px; }
   .m-filter .active-result {
     font-weight: 400; }
@@ -2719,7 +2719,7 @@ body {
 
 .m-properties {
   display: block;
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: rem-calc(14); }
   .m-properties dl {
     position: relative;
@@ -3378,6 +3378,28 @@ figure.m-layout-object,
   height: 100%;
   background-position: 0 14px !important; }
 
+.slick-prev, .slick-next {
+  height: 40px;
+  margin-top: -38px; }
+
+.slick-next {
+  right: 30px; }
+
+.slick-prev {
+  left: 30px; }
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'FontAwesome';
+  font-size: rem-calc(42);
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
+
+.slick-prev:before {
+  content: "\f104"; }
+
+.slick-next:before {
+  content: "\f105"; }
+
 *, html {
   box-sizing: border-box; }
 
@@ -3416,28 +3438,6 @@ figure.m-layout-object,
     max-width: 25%;
     flex: 0 0 25%;
     order: 1; }
-
-.slick-prev, .slick-next {
-  height: 40px;
-  margin-top: -38px; }
-
-.slick-next {
-  right: 30px; }
-
-.slick-prev {
-  left: 30px; }
-
-.slick-prev:before, .slick-next:before {
-  font-family: 'FontAwesome';
-  font-size: rem-calc(42);
-  color: #fff;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
-
-.slick-prev:before {
-  content: "\f104"; }
-
-.slick-next:before {
-  content: "\f105"; }
 
 * {
   box-sizing: border-box; }

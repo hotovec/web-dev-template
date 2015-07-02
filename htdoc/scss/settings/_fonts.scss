@@ -11,41 +11,44 @@ $ff-roboto: 'Roboto', sans-serif;
 $ff-novecento: 'Novecento Wide', sans-serif;
 $ff-montserrat: 'Montserrat', sans-serif;
 $ff-futura: 'Futura PT Web', sans-serif;
-
-// font setup
-$font-family-body: $ff-roboto, Helvetica, Roboto, Arial, sans-serif !default;
-$font-family-headline:  $ff-montserrat; //"ClanPro","purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
-$font-family-ui: $ff-open-sans;
-$font-family-sans-serif: $font-family-headline !default; // "Futura PT Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$ff-helvetica: 'Helvetica Neue', sans-serif;
+$ff-georgia: Georgia, sans-serif;
 
 // font setup
 
 $fnt-debug: false;
 $fnt-base-size: 16px;
 
-$fnt-headline: $ff-montserrat;
+// headlines
+
+$fnt-headline: $ff-futura;
 $fnt-headline-size: 30px;
 $fnt-headline-weight: 100;
 $fnt-headline-line: 1.2em;
 
-$fnt-subhed: Helvetica Neue;
+// subheds
+
+$fnt-subhed: $ff-helvetica;
 $fnt-subhed-size: 24px;
 $fnt-subhed-weight: 400;
 $fnt-subhed-line: 1.4em;
 
-$fnt-ui: Helvetica Neue;
+// ui, navbars, fonts
+
+$fnt-ui: $ff-helvetica;
 $fnt-ui-size: 24px;
 $fnt-ui-weight: 400;
 $fnt-ui-line: 1.4em;
 
-$fnt-body: Georgia;
+// body copy, text
+
+$fnt-body: $ff-georgia;
 $fnt-body-size: $fnt-base-size;
 $fnt-body-weight: 400;
 $fnt-body-line: 1.4em;
 
 
 // mixins
-
 
 @mixin font-debug($id) {
     @if $fnt-debug {
