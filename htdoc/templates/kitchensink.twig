@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <div class="fcontainer">
+    {#<div class="fcontainer">
 
         <div class="frow">
             <div class="fcol fc1">1</div>
@@ -12,20 +12,19 @@
             <div class="fcol fc5">5</div>
         </div>
 
-    </div>
+    </div>#}
 
 
      <nav class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %}">
-         {#{% include "subtemplates/module-navbar-secondary.twig" %}#}
          {% include "subtemplates/module-navbar.twig" %}
      </nav>
 
-    <nav class="l-navbar">
+    {#<nav class="l-navbar">
         {% include "subtemplates/module-navbar-secondary.twig" %}
         {% include "subtemplates/module-navbar.twig" %}
-    </nav>
+    </nav>#}
 
-    {# <div class="row">
+     {#<div class="row">
          {% include "subtemplates/base-body-copy.twig" %}
      </div>#}
 
