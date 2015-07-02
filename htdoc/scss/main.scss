@@ -3,25 +3,20 @@
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
 
-// skin variables
-@import "fonts";
-@import "skin";
-@import "settings";
-
-// foundation
-@import "foundation/settings";
-@import "foundation/foundation";
-@import "foundation/foundation-media-wrapper";
-@import "foundation/override-inline-lists";
-// can break foundation one
-
+// libraries
+@import "lib/functions";
+@import "lib/inline-lists";
 @import "lib/vertical-align";
 @import "lib/element-queries";
 
 // settings
-@import "base/grid";
+@import "settings/settings";
+@import "settings/fonts";
+@import "settings/colors";
+@import "settings/media";
+@import "settings/grid";
 @import "base/globals";
-@import "base/typography";
+
 
 @import "modules/module-placeholder";
 
@@ -39,7 +34,7 @@
 @import "modules/module-footer";
 
 @import "modules/module-body-content";
-@import "modules/module-pagination";
+//@import "modules/module-pagination";
 
 @import "modules/module-coverlines";
 @import "modules/module-section";
@@ -138,10 +133,10 @@
     .form-submit {
         border: 0;
         width: 100%;
-        background-color: $primary-color;
+        background-color: $color-primary;
         color: white;
         &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: darken($color-primary, 10%);
         }
         input:focus {
             outline: none;

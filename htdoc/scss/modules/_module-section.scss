@@ -182,7 +182,7 @@
 .m-section_vertical-tabs {
     @include m-section-base();
     position: relative;
-    background-color: $primary-color;
+    background-color: $color-primary;
 
     padding-top: 0;
     padding-bottom: 0;
@@ -309,7 +309,7 @@
                             display: block;
                             width: 64px;
                             height: 64px;
-                            background-color: $primary-color;
+                            background-color: $color-primary;
                             color: white;
                             text-align: center;
                             position: absolute;
@@ -343,7 +343,7 @@
         .slide {
             width: 100%;
             height: 100%;
-            background: $secondary-color;
+            background: $color-secondary;
             background-repeat: no-repeat;
             background-size: cover;
         }

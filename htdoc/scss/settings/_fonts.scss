@@ -1,3 +1,25 @@
+// google fonts
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
+$ff-open-sans: 'Open Sans', sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
+$ff-roboto: 'Roboto', sans-serif;
+
+// OPEN SIL
+
+$ff-novecento: 'Novecento Wide', sans-serif;
+$ff-montserrat: 'Montserrat', sans-serif;
+$ff-futura: 'Futura PT Web', sans-serif;
+
+// font setup
+$font-family-body: $ff-roboto, Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-headline:  $ff-montserrat; //"ClanPro","purista-web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-ui: $ff-open-sans;
+$font-family-sans-serif: $font-family-headline !default; // "Futura PT Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+
+// font setup
+
 $fnt-debug: false;
 $fnt-base-size: 16px;
 
@@ -20,6 +42,10 @@ $fnt-body: Georgia;
 $fnt-body-size: $fnt-base-size;
 $fnt-body-weight: 400;
 $fnt-body-line: 1.4em;
+
+
+// mixins
+
 
 @mixin font-debug($id) {
     @if $fnt-debug {

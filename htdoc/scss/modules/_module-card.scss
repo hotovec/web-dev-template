@@ -21,7 +21,7 @@
         color: $color-black;
         text-decoration: none;
         &:hover {
-            color: $primary-color;
+            color: $color-primary;
             text-decoration: underline;
         }
     }
@@ -306,7 +306,7 @@
         }
 
         .m-item--hed a {
-            color: $primary-color;
+            color: $color-primary;
             text-decoration: none;
         }
     }
