@@ -8,6 +8,13 @@ body {
     line-height: 150%;
 }
 
+::selection {
+    background: $color-selection; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: $color-selection; /* Gecko Browsers */
+}
+
 .row {
     @include l-grid();
 }

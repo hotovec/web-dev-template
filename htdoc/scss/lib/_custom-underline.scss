@@ -1,7 +1,7 @@
 // Custom link underline
 // ---------------------
 
-@mixin customUnderline($color: #333, $color-hover: #c00, $color-text-body: #333, $text-bg-color: #fff, $color-selection: rgba(176,214,253, 0.8) ) {
+    @mixin customUnderline($color: #333, $color-hover: #c00, $color-text-body: #333, $text-bg-color: #fff, $color-selection: $color-selection ) {
 
     color: $color;
     text-decoration: none;

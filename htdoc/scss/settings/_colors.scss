@@ -2,35 +2,36 @@
 
 //@todo replace skin by maps only
 
-$color-primary:         #C20E1A;
-$color-primary-light:   lighten($color-primary, 10%);
-$color-primary-dark:    darken($color-primary,10%);
+$color-primary: #c20e1a;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
 
-
-$color-secondary:   #B5BBB4;
-$color-secondary-light:  lighten($color-secondary, 10%);
-$color-secondary-dark:   darken($color-secondary,10%);
+$color-secondary: #b5bbb4;
+$color-secondary-light: lighten($color-secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 10%);
 
 // color base text
-$color-black:       #000;
-$color-white:       #fff;
+$color-black: #000;
+$color-white: #fff;
 
-$color-body-font:   #4A4A4A;
-$color-body-bg:     #ECEDEC;
+$color-body-font: #484848;
+$color-body-bg: #FDFDFD;
+
+$color-selection: rgb(176, 214, 253);
 
 // color custom schema
 
 $pallete: (
-        "1": #7AB929,
-        "2": #6DC1AE,
-        "3": #4E9ED8,
-        "4": #7D83BF,
-        "5": #9C6FAE,
-        "6": #E8308A,
-        "7": #E50051,
-        "8": #EC6608,
-        "9": #F4B003,
-        "10": #B5BBB4,
+        "1": #7ab929,
+        "2": #6dc1ae,
+        "3": #4e9ed8,
+        "4": #7d83bf,
+        "5": #9c6fae,
+        "6": #e8308a,
+        "7": #e50051,
+        "8": #ec6608,
+        "9": #f4b003,
+        "10": #b5bbb4,
         "primary": $color-primary,
         "primary-light": $color-primary,
         "primary-dark": $color-primary,
@@ -50,10 +51,14 @@ $pallete: (
 // colors
 
 @each $colorName, $colorValue in $pallete {
-    .c-#{$colorName} { color: $colorValue; }
+    .c-#{$colorName} {
+        color: $colorValue;
+    }
 }
 
 // bg colors
 @each $colorName, $colorValue in $pallete {
-    .bg-#{$colorName} { background-color: $colorValue; }
+    .bg-#{$colorName} {
+        background-color: $colorValue;
+    }
 }
