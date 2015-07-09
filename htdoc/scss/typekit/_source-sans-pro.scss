@@ -1,0 +1,7 @@
+$ff-source-sans-pro: "source-sans-pro", sans-serif;
+
+@mixin tk-source-sans-pro-bold(){
+    font-family: $ff-source-sans-pro;
+    font-style: normal;
+    font-weight: 700;
+}

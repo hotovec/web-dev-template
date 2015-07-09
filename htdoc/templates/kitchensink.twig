@@ -15,53 +15,55 @@
     </div>#}
 
 
-     <nav class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %}">
-         {% include "subtemplates/module-navbar.twig" %}
-     </nav>
-
-    {#<nav class="l-navbar">
-        {% include "subtemplates/module-navbar-secondary.twig" %}
+    <nav class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %}">
         {% include "subtemplates/module-navbar.twig" %}
-    </nav>#}
-
-     {#<div class="row">
-         {% include "subtemplates/base-body-copy.twig" %}
-     </div>#}
-
-    {# <div class="row">
-         {% include "subtemplates/base-properties.twig" %}
-     </div>#}
-
-    {# <div class="row">
-         {% include "subtemplates/base-filter.twig" %}
-     </div>#}
+    </nav>
 
 
-    {% include "subtemplates/base-section.twig" %}
-    {# feeds #}
+    <div class="l-page--container">
+        <nav class="l-navbar">
+            {% include "subtemplates/module-navbar-secondary.twig" %}
+            {% include "subtemplates/module-navbar.twig" %}
+        </nav>
 
-    <div class="row">
-        {% include "subtemplates/base-feed.twig" %}
-        {% include "subtemplates/base-carousel.twig" %}
+        <div class="row">
+            {% include "subtemplates/base-body-copy.twig" %}
+        </div>
+
+        {# <div class="row">
+             {% include "subtemplates/base-properties.twig" %}
+         </div>#}
+
+        {# <div class="row">
+             {% include "subtemplates/base-filter.twig" %}
+         </div>#}
+
+
+        {% include "subtemplates/base-section.twig" %}
+        {# feeds #}
+
+        <div class="row">
+            {% include "subtemplates/base-feed.twig" %}
+            {% include "subtemplates/base-carousel.twig" %}
+        </div>
+
+        {% include "subtemplates/feed-block-carousel.twig" %}
+
+
+        {% include "subtemplates/base-banner.twig" %}
+
+
+
+        {# navs #}
+
+        {% include "subtemplates/module-next-prev.twig" %}
+
+
+        {# panels & tools #}
+        {% include "subtemplates/hero-tabs.twig" %}
+        {% include "subtemplates/section-vertical-tabs.twig" %}
+        {% include "subtemplates/module-side-panel.twig" %}
     </div>
-
-    {% include "subtemplates/feed-block-carousel.twig" %}
-
-
-    {% include "subtemplates/base-banner.twig" %}
-
-
-
-    {# navs #}
-
-    {% include "subtemplates/module-next-prev.twig" %}
-
-
-    {# panels & tools #}
-    {% include "subtemplates/hero-tabs.twig" %}
-    {% include "subtemplates/section-vertical-tabs.twig" %}
-    {% include "subtemplates/module-side-panel.twig" %}
-
 
     {% include "subtemplates/module-footer.twig" %}
 

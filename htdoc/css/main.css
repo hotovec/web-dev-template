@@ -15,8 +15,6 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -539,12 +537,9 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-  -webkit-font-smoothing: antialiased; }
-
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  line-height: 150%; }
 
 .row {
   box-sizing: border-box;
@@ -1151,7 +1146,7 @@ body {
   right: 0; }
   .m-side-panel .m-side-panel--item {
     color: #C20E1A;
-    font-size: rem-calc(13);
+    font-size: 0.8125rem;
     -webkit-transform: rotate(-90deg) translateY(40px);
     -moz-transform: rotate(-90deg) translateY(40px);
     -ms-transform: rotate(-90deg) translateY(40px);
@@ -1302,7 +1297,7 @@ body {
   background-color: #fff;
   border-top: 1px solid #dfdfe3;
   border-bottom: 1px solid #dfdfe3;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: none; }
@@ -1438,8 +1433,10 @@ body {
 */
 .m-footer {
   background-color: #C20E1A;
-  height: 100%;
-  width: 100%; }
+  height: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0; }
   .m-footer.m-section {
     padding-top: 50px;
     padding-bottom: 25px; }
@@ -1454,7 +1451,7 @@ body {
     .m-footer a:hover {
       text-decoration: underline; }
   .m-footer .m-footer--section {
-    font-size: rem-calc(14); }
+    font-size: 0.875rem; }
     .m-footer .m-footer--section:nth-of-type(1) {
       float: left;
       width: calc(100% * 1 - 30px);
@@ -1499,7 +1496,7 @@ body {
         margin-bottom: 0; } }
   .m-footer .m-footer--subsection {
     margin-top: 20px;
-    font-size: rem-calc(12); }
+    font-size: 0.75rem; }
     .m-footer .m-footer--subsection:nth-of-type(1) {
       float: left;
       width: calc(100% * 0.5 - 30px);
@@ -1564,7 +1561,7 @@ body {
           .m-footer .m-footer--menu-secondary > li > * {
             display: inline-block; } }
   .m-footer .m-footer--menu-link i {
-    font-size: rem-calc(24px); }
+    font-size: 1.5rem; }
   .m-footer .m-footer--author {
     text-align: right; }
   .m-footer .m-footer--logo {
@@ -1625,39 +1622,43 @@ body {
       margin-right: 15px; } }
 
 .m-body--copy {
-  font-family: Georgia, sans-serif;
-  font-size: rem-calc(18); }
-  @media only screen and (min-width: 1321px) {
-    .m-body--copy {
-      font-size: rem-calc(19); } }
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem; }
   .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
     line-height: 1.2em;
     margin-bottom: 1.6em;
-    font-family: "Futura PT Web", sans-serif;
+    font-family: "Nexa Thin", "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 100;
     color: black; }
   .m-body--copy h1 {
-    font-size: rem-calc(48);
-    font-weight: 200;
-    color: red; }
+    font-size: 2.5rem; }
   .m-body--copy h2 {
-    font-size: rem-calc(30); }
+    font-size: 1.875rem; }
   .m-body--copy h3 {
-    font-size: rem-calc(26);
+    font-size: 1.625rem;
     font-weight: 600; }
   .m-body--copy h4 {
-    font-size: rem-calc(26);
+    font-size: 1.625rem;
     font-weight: 400;
     margin-bottom: 1em; }
   .m-body--copy h5 {
-    font-size: rem-calc(20);
+    font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 1em; }
   .m-body--copy h6 {
-    font-size: rem-calc(18);
+    font-size: 1.125rem;
     font-weight: 200;
     margin-bottom: 1em; }
   .m-body--copy p, .m-body--copy ul, .m-body--copy ol, .m-body--copy blockquote, .m-body--copy figure {
     margin-bottom: 2em; }
+  .m-body--copy p:first-of-type span {
+    font-family: "source-sans-pro", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase; }
   .m-body--copy a {
     color: #C20E1A; }
     .m-body--copy a:hover {
@@ -1672,16 +1673,16 @@ body {
     border-bottom: 1px solid #979797;
     font-style: italic;
     font-family: Georgia;
-    font-size: rem-calc(19);
+    font-size: 1.1875rem;
     color: #979797; }
     .m-body--copy blockquote + blockquote {
       border-top: 0; }
     .m-body--copy blockquote .author {
       display: block;
       margin-top: 10px;
-      font-family: "Helvetica Neue", sans-serif;
+      font-family: "source-sans-pro", sans-serif;
       font-style: normal;
-      font-size: rem-calc(15);
+      font-size: 0.9375rem;
       font-weight: 600;
       color: #4A4A4A;
       text-align: right; }
@@ -1694,9 +1695,9 @@ body {
   .m-body--copy figure:not(.m-layout-object) {
     margin: 0; }
   .m-body--copy figcaption {
-    font-size: rem-calc(12);
-    padding-top: 10px;
-    font-weight: bold; }
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    padding-top: 10px; }
     .m-body--copy figcaption strong {
       color: black; }
 
@@ -1816,7 +1817,9 @@ body {
 .m-section--header,
 .m-section--footer {
   *zoom: 1;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   text-transform: uppercase;
   font-weight: 800;
   padding-top: 50px;
@@ -1839,8 +1842,10 @@ body {
       text-decoration: underline; }
 
 .m-section--hed {
-  font-family: "Futura PT Web", sans-serif;
-  font-size: rem-calc(30);
+  font-family: "Nexa Thin", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.875rem;
   text-transform: uppercase;
   line-height: 1.2em;
   font-weight: 100; }
@@ -1887,11 +1892,11 @@ body {
   .m-section.mm-no-footer .m-section--footer {
     display: none; }
   .m-section .mm-small {
-    font-size: rem-calc(16); }
+    font-size: 1rem; }
   .m-section .mm-medium {
-    font-size: rem-calc(36); }
+    font-size: 2.25rem; }
   .m-section .mm-big {
-    font-size: rem-calc(50); }
+    font-size: 3.125rem; }
   .m-section .mm-tiny {
     font-weight: 200; }
   .m-section .mm-normal {
@@ -1949,11 +1954,11 @@ body {
   .m-section_vertical-tabs.mm-no-footer .m-section--footer {
     display: none; }
   .m-section_vertical-tabs .mm-small {
-    font-size: rem-calc(16); }
+    font-size: 1rem; }
   .m-section_vertical-tabs .mm-medium {
-    font-size: rem-calc(36); }
+    font-size: 2.25rem; }
   .m-section_vertical-tabs .mm-big {
-    font-size: rem-calc(50); }
+    font-size: 3.125rem; }
   .m-section_vertical-tabs .mm-tiny {
     font-weight: 200; }
   .m-section_vertical-tabs .mm-normal {
@@ -2158,11 +2163,11 @@ body {
 .m-aside-block--hed,
 .m-aside-block--meta {
   display: inline-block;
-  font-size: rem-calc(18); }
+  font-size: 1.125rem; }
   .m-aside-block--hed .fa,
   .m-aside-block--meta .fa {
     font-size: 18px;
-    line-height: rem-calc(18); }
+    line-height: 1.125rem; }
 
 .m-gallery {
   *zoom: 1;
@@ -2217,7 +2222,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    font-size: rem-calc(18);
+    font-size: 1.125rem;
     color: white;
     text-align: center; }
     .m-gallery--item.clearing-featured-img .m-item--hed .wrapper {
@@ -2267,12 +2272,16 @@ body {
     text-decoration: underline; }
 
 .m-item--hed {
-  font-family: "Futura PT Web", sans-serif;
-  font-size: rem-calc(18); }
+  font-family: "Nexa Thin", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.125rem; }
 
 .m-item--description {
-  font-family: Georgia, sans-serif;
-  font-size: rem-calc(14); }
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem; }
 
 .m-item--image {
   background-size: cover;
@@ -2321,7 +2330,7 @@ body {
     min-height: 120px;
     height: 100%; }
   .m-card_standard .m-item--meta {
-    font-size: rem-calc(12);
+    font-size: 0.75rem;
     padding-left: 20px;
     padding-bottom: 20px; }
   .m-card_standard .m-item--more {
@@ -2650,10 +2659,12 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-weight: 400;
-    font-size: rem-calc(14); }
+    font-size: 0.875rem; }
 
 .m-filter {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 30px; }
   .m-filter .active-result {
     font-weight: 400; }
@@ -2719,8 +2730,10 @@ body {
 
 .m-properties {
   display: block;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: rem-calc(14); }
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem; }
   .m-properties dl {
     position: relative;
     margin: 0;
@@ -2779,7 +2792,7 @@ body {
     margin: 0 auto;
     position: relative; }
   .m-banner .m-banner--hed {
-    font-size: rem-calc(20);
+    font-size: 1.25rem;
     font-weight: 400; }
     .m-banner .m-banner--hed a {
       text-decoration: none; }
@@ -2811,11 +2824,11 @@ article header figure {
     width: 60%;
     color: #4A4A4A;
     background-color: rgba(255, 255, 255, 0.9);
-    font-size: rem-calc(12); }
+    font-size: 0.75rem; }
     @media only screen and (min-width: 1041px) {
       article header figure figcaption {
         width: 30%;
-        font-size: rem-calc(14); } }
+        font-size: 0.875rem; } }
 
 .m-basic-page {
   position: relative; }
@@ -2857,10 +2870,10 @@ article header figure {
   .m-basic-page .m-basic-page--hed {
     margin-top: 0;
     margin-bottom: 25px;
-    font-size: rem-calc(26); }
+    font-size: 1.625rem; }
     @media only screen and (min-width: 1041px) {
       .m-basic-page .m-basic-page--hed {
-        font-size: rem-calc(40);
+        font-size: 2.5rem;
         margin-bottom: 50px; } }
   .m-basic-page .m-basic-page--image {
     background-position: center;
@@ -2993,7 +3006,7 @@ article header figure {
     display: none; }
 
 .l-detail-page .m-story .m-story--hed {
-  font-size: rem-calc(42);
+  font-size: 2.625rem;
   line-height: 1.3em;
   font-weight: 400;
   margin-top: -.2em; }
@@ -3017,7 +3030,7 @@ article header figure {
     background-size: fit; }
 
 .m-reference--hed {
-  font-size: rem-calc(42);
+  font-size: 2.625rem;
   line-height: 1.3em;
   font-weight: 400;
   margin-top: -.2em; }
@@ -3027,7 +3040,7 @@ article header figure {
     color: black; }
 
 .m-contact--hed {
-  font-size: rem-calc(18); }
+  font-size: 1.125rem; }
 
 .m-layout-object {
   padding: 0;
@@ -3123,17 +3136,17 @@ figure.m-layout-object,
     background-size: cover;
     background-position: 50% 50%;
     height: 620px;
-    font-size: rem-calc(20px);
+    font-size: 1.25rem;
     font-weight: 800;
     padding-top: 20px; }
     @media only screen and (min-width: 641px) {
       .hero-tabs .content-tab {
-        font-size: rem-calc(24px);
+        font-size: 1.5rem;
         padding-top: 60px;
         height: 620px; } }
     @media only screen and (min-width: 1321px) {
       .hero-tabs .content-tab {
-        font-size: rem-calc(32px);
+        font-size: 2rem;
         padding-top: 80px;
         height: 840px; } }
     .hero-tabs .content-tab .description {
@@ -3183,7 +3196,7 @@ figure.m-layout-object,
       margin-right: 15px;
       margin-bottom: 16px;
       font-weight: 600;
-      font-size: rem-calc(17);
+      font-size: 1.0625rem;
       line-height: 1.3em;
       color: white;
       border-top: 3px solid white;
@@ -3352,7 +3365,7 @@ figure.m-layout-object,
 .chosen-container-single .chosen-single {
   height: 48px;
   padding: 10px 16px;
-  font-size: rem-calc(15); }
+  font-size: 0.9375rem; }
 
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop {
@@ -3390,7 +3403,7 @@ figure.m-layout-object,
 
 .slick-prev:before, .slick-next:before {
   font-family: 'FontAwesome';
-  font-size: rem-calc(42);
+  font-size: 2.625rem;
   color: #fff;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
 
@@ -3485,5 +3498,10 @@ figure.m-layout-object,
   max-width: 60%;
   margin: 0 auto;
   text-align: center; }
+
+.l-page--container {
+  position: relative;
+  z-index: 10;
+  background-color: #ECEDEC; }
 
 /*# sourceMappingURL=main.css.map */

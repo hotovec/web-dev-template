@@ -2,13 +2,15 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
-}
+
+//*, *:before, *:after {
+//    box-sizing: inherit;
+//    -webkit-font-smoothing: antialiased;
+//}
 
 body {
     overflow-x: hidden;
+    line-height: 150%;
 }
 
 

@@ -37,6 +37,32 @@
 
     <script src="/components/modernizr/modernizr.js"></script>
 
+    <script>
+        (function (d) {
+            var config = {
+                        kitId: 'fon7nim',
+                        scriptTimeout: 3000
+                    },
+                    h = d.documentElement, t = setTimeout(function () {
+                        h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                    }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
+            h.className += " wf-loading";
+            tk.src = '//use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded")return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {
+                }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
     <link rel="stylesheet" href="/components/Font-Awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/components/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="/components/slick-carousel/slick/slick-theme.css" />
@@ -49,21 +75,23 @@
 </head>
 
 <body class="l-page {% block bodyClasses %}{% endblock %}">
-    {% block body %}{% endblock %}
 
-    <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/components/chosen/chosen.jquery.min.js"></script>
-    <script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
-    <script type="text/javascript" src="/components/jquery.breakpoints/breakpoints.js"></script>
-    <script type="text/javascript" src="/components/foundation/js/foundation.min.js"></script>
-    <script type="text/javascript" src="/components/foundation/js/foundation/foundation.clearing.js"></script>
-    <script type="text/javascript" src="/assets/js/app.js"></script>
+{% block body %}{% endblock %}
 
-    {% block scripts %}{% endblock %}
-    <script>$(document).foundation();</script>
+<script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/components/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
+<script type="text/javascript" src="/components/jquery.breakpoints/breakpoints.js"></script>
+<script type="text/javascript" src="/components/foundation/js/foundation.min.js"></script>
+<script type="text/javascript" src="/components/foundation/js/foundation/foundation.clearing.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
 
-    <script src="/components/css-element-queries/src/ResizeSensor.js"></script>
-    <script src="/components/css-element-queries/src/ElementQueries.js"></script>
+{% block scripts %}{% endblock %}
+
+<script>$(document).foundation();</script>
+
+<script src="/components/css-element-queries/src/ResizeSensor.js"></script>
+<script src="/components/css-element-queries/src/ElementQueries.js"></script>
 
 </body>
 

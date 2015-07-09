@@ -3,6 +3,12 @@
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
 
+// typekit
+@import "typekit/base";
+@import "typekit/nexa";
+@import "typekit/proxima-nova";
+@import "typekit/source-sans-pro";
+
 // libraries
 @import "lib/functions";
 @import "lib/inline-lists";
@@ -128,4 +134,11 @@
         margin: 0 auto;
         text-align: center;
     }
+}
+
+.l-page--container {
+    position: relative;
+    z-index: 10;
+
+    background-color: $color-body-bg;
 }

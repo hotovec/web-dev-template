@@ -1,0 +1,17 @@
+@mixin tk-nexa-thin() {
+    font-family: "Nexa Thin", $ff-helvetica;
+    font-style: normal;
+    font-weight: 100;
+}
+
+@mixin tk-nexa-light() {
+    font-family: "Nexa Light", $ff-helvetica;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin tk-nexa-reg() {
+    font-family: "Nexa Regular", $ff-helvetica;
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,48 +1,38 @@
-// google fonts
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
-$ff-open-sans: 'Open Sans', sans-serif;
-
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900,500);
-$ff-roboto: 'Roboto', sans-serif;
-
-// OPEN SIL
-
-$ff-novecento: 'Novecento Wide', sans-serif;
-$ff-montserrat: 'Montserrat', sans-serif;
-$ff-futura: 'Futura PT Web', sans-serif;
-$ff-helvetica: 'Helvetica Neue', sans-serif;
-$ff-georgia: Georgia, sans-serif;
-
 // font setup
 
 $fnt-debug: false;
-$fnt-base-size: 16px;
+$fnt-base-size: 16px !default;
+$rem-base: $fnt-base-size ;
 
 // headlines
 
-$fnt-headline: $ff-futura;
-$fnt-headline-size: 30px;
+$fnt-headline: $ff-proxima-nova;
+$fnt-headline-size: 40px;
+$fnt-headline-weight: 100;
+$fnt-headline-line: 1.2em;
+
+$fnt-headline: $ff-proxima-nova;
+$fnt-headline-size: 40px;
 $fnt-headline-weight: 100;
 $fnt-headline-line: 1.2em;
 
 // subheds
 
-$fnt-subhed: $ff-helvetica;
+$fnt-subhed: $ff-source-sans-pro;
 $fnt-subhed-size: 24px;
 $fnt-subhed-weight: 400;
 $fnt-subhed-line: 1.4em;
 
 // ui, navbars, fonts
 
-$fnt-ui: $ff-helvetica;
+$fnt-ui: $ff-proxima-nova;
 $fnt-ui-size: 24px;
 $fnt-ui-weight: 400;
 $fnt-ui-line: 1.4em;
 
 // body copy, text
 
-$fnt-body: $ff-georgia;
+$fnt-body: $ff-proxima-nova;
 $fnt-body-size: $fnt-base-size;
 $fnt-body-weight: 400;
 $fnt-body-line: 1.4em;
@@ -70,22 +60,29 @@ $fnt-body-line: 1.4em;
 }
 
 @mixin font-headline() {
-    font-family: $fnt-headline;
+    //@include tk-proxima-nova-light();
+    @include tk-nexa-thin();
     @include font-debug("H");
 }
 
 @mixin font-subhed() {
-    font-family: $fnt-subhed;
+    @include tk-source-sans-pro-bold();
+    //@include tk-source-sans-pro-bold();
     @include font-debug("S");
 }
 
 @mixin font-ui() {
-    font-family: $fnt-ui;
+    @include tk-proxima-nova-reg();
+    //@include tk-nexa-reg();
     @include font-debug("U");
 }
 
 @mixin font-body() {
-    font-family: $fnt-body;
+    //@include tk-nexa-reg();
+    @include tk-proxima-nova-reg();
     @include font-debug("B");
 }
+
+// setup and reset font units
+
 

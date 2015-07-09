@@ -7,8 +7,8 @@ $aside-column-width: 300px;
 .m-body--content {
     // centered column
     &.layout-onecol {
-            margin-left: $gutter / 2;
-            margin-right: $gutter / 2;
+        margin-left: $gutter / 2;
+        margin-right: $gutter / 2;
         .m-body--copy {
             @include media(C) {
                 width: $content-column-width;
@@ -71,15 +71,10 @@ $aside-column-width: 300px;
 .m-body--copy {
     @include font-body();
 
-    font-size: rem-calc(18);
-    @include media(D) {
-        font-size: rem-calc(19);
-    }
-
+    font-size: rem-calc(16);
 
 
     h1, h2, h3, h4, h5, h6 {
-        //margin-bottom: 2em;
         line-height: 1.2em;
         margin-bottom: 1.6em;
         @include font-headline();
@@ -87,9 +82,7 @@ $aside-column-width: 300px;
     }
 
     h1 {
-        font-size: rem-calc(48);
-        font-weight: 200;
-        color: red;
+        font-size: rem-calc(40);
     }
 
     h2 {
@@ -117,6 +110,13 @@ $aside-column-width: 300px;
 
     p, ul, ol, blockquote, figure {
         margin-bottom: 2em;
+    }
+
+    p:first-of-type {
+        span {
+            @include font-subhed();
+            text-transform: uppercase;
+        }
     }
 
     ul {
@@ -180,8 +180,9 @@ $aside-column-width: 300px;
 
     figcaption {
         font-size: rem-calc(12);
+        line-height: 1.5em;
         padding-top: 10px;
-        font-weight: bold;
+        //font-weight: bold;
 
         strong {
             color: black;

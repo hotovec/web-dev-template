@@ -1,0 +1,45 @@
+// Proxima NOVA weights
+
+$ff-proxima-nova: "proxima-nova",sans-serif;
+
+@mixin tk-proxima-nova-thin() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 100;
+}
+
+@mixin tk-proxima-nova-light() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin tk-proxima-nova-reg() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin tk-proxima-nova-semibold() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin tk-proxima-nova-bold() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@mixin tk-proxima-nova-extrabold() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 800;
+}
+
+@mixin tk-proxima-nova-black() {
+    font-family: $ff-proxima-nova;
+    font-style: normal;
+    font-weight: 900;
+}
