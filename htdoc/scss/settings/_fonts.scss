@@ -60,9 +60,13 @@ $fnt-body-line: 1.4em;
 }
 
 @mixin font-headline() {
-    //@include tk-proxima-nova-light();
     @include tk-nexa-thin();
     @include font-debug("H");
+}
+
+@mixin font-headline-secondary() {
+    @include tk-proxima-nova-light();
+    @include font-debug("H2");
 }
 
 @mixin font-subhed() {
@@ -71,10 +75,19 @@ $fnt-body-line: 1.4em;
     @include font-debug("S");
 }
 
+@mixin font-subhed-secondary() {
+    @include tk-source-sans-pro-bold();
+    @include font-debug("S2");
+}
+
 @mixin font-ui() {
     @include tk-proxima-nova-reg();
-    //@include tk-nexa-reg();
     @include font-debug("U");
+}
+
+@mixin font-ui-secondary() {
+    @include tk-proxima-nova-reg();
+    @include font-debug("U2");
 }
 
 @mixin font-body() {

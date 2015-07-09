@@ -76,18 +76,25 @@ $aside-column-width: 300px;
 
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.2em;
+        margin-top: 2em;
         margin-bottom: 1.6em;
-        @include font-headline();
-        color: darken($color-body-font, 30%);
+        //color: darken($color-body-font, 30%);
+    }
+
+    h2, h3, h4, h5, h6 {
+        @include font-headline-secondary();
     }
 
     h1 {
+        @include font-headline();
         font-size: rem-calc(40);
+        margin-bottom: 1em;
     }
 
     h2 {
         font-size: rem-calc(30);
     }
+
     h3 {
         font-size: rem-calc(26);
         font-weight: 600;
@@ -99,13 +106,18 @@ $aside-column-width: 300px;
     }
     h5 {
         font-size: rem-calc(20);
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 1em;
+
+        display: inline-block;
+        @include customUnderline();
     }
     h6 {
         font-size: rem-calc(18);
-        font-weight: 200;
+        font-weight: 400;
         margin-bottom: 1em;
+        display: inline-block;
+        @include customUnderline();
     }
 
     p, ul, ol, blockquote, figure {
