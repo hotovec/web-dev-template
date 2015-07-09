@@ -3,16 +3,10 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-//*, *:before, *:after {
-//    box-sizing: inherit;
-//    -webkit-font-smoothing: antialiased;
-//}
-
 body {
     overflow-x: hidden;
     line-height: 150%;
 }
-
 
 .row {
     @include l-grid();
