@@ -1,3 +1,7 @@
+
+
+
+
 $(function () {
 
 
@@ -235,3 +239,9 @@ $(".ch-select").chosen({
 });
 
 
+$('[layout-mansonry]').masonry({
+    // options
+    itemSelector: '[mansonry-item]',
+    columnWidth: 400,
+    gutter: 60
+});

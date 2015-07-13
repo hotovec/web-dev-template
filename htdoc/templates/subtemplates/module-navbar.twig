@@ -1,32 +1,7 @@
 <div class="m-navbar mm-primary" id="navbarPrimary">
     <div class="m-navbar--container">
 
-        {#<ul class="m-navbar--menu m-navbar--menu-primary">
-
-            <li class="m-navbar--menu-sections">
-                <a target="" title="Topics"><em class="">TOC</em></a>
-            </li>
-
-            <li class="m-navbar--menu-search">
-                <a target="" title="Topics"><em class="">Search</em></a>
-            </li>
-
-            <li class="m-navbar--menu-info">
-                <a target="" title="Topics"><em class="">Info</em></a>
-            </li>
-
-            {% for link in navbar.menuPrimary %}
-                <li class="m-navbar--menu-link"><a target="{{ link.target }}" title="{{ link.title }}"><em class="">{{ link.title }}</em></a></li>
-            {% endfor %}
-        </ul>#}
-
-        {# logo #}
-        <a class="m-navbar--logo" href="/">
-            <div class="mm-has-svg" style="background-image: url('/assets/images/site-logo.svg');"></div>
-        </a>
-
-        {# social #}
-        <ul class="m-navbar--menu m-navbar--menu-secondary">
+        <ul class="m-navbar--menu m-navbar--menu-primary">
             <li class="m-navbar--menu-toc">
                 <a target="" title="" mega-open="#megaMobile"><i class="fa fa-bars"></i></a>
             </li>
@@ -49,6 +24,42 @@
                 <a target="" title="" mega-open="#megaProdukty"><em class="">Produkty a služby</em></a>
             </li>
         </ul>
+
+        {# logo #}
+        <a class="m-navbar--logo" href="/">
+            {#<div class="mm-has-svg" style="background-image: url('/assets/images/site-logo.svg');"></div>#}
+            <h1>Michal <span>Hotovec</span></h1>
+        </a>
+
+        <div class="m-navbar--about">
+            {#<div class="mm-has-svg" style="background-image: url('/assets/images/site-logo.svg');"></div>#}
+            <h2>Design + UX + Augmented Reality</h2>
+        </div>
+
+        {# social #}
+        {#<ul class="m-navbar--menu m-navbar--menu-secondary">#}
+            {#<li class="m-navbar--menu-toc">#}
+                {#<a target="" title="" mega-open="#megaMobile"><i class="fa fa-bars"></i></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-search">#}
+                {#<a target="" title=""><i class="fa fa-search"></i></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-link">#}
+                {#<a target="" title="" mega-open="#megaKontakt"><em class="">Kontakt</em></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-link">#}
+                {#<a target="" title="" mega-open="#megaFirma"><em class="">Firma a lidé</em></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-link">#}
+                {#<a target="" title="" mega-open="#megaReference"><em class="">Reference</em></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-link">#}
+                {#<a target="" title="" mega-open="#megaObjekty"><em class="">Objekty dle účelu</em></a>#}
+            {#</li>#}
+            {#<li class="m-navbar--menu-link">#}
+                {#<a target="" title="" mega-open="#megaProdukty"><em class="">Produkty a služby</em></a>#}
+            {#</li>#}
+        {#</ul>#}
     </div>
 </div>
 

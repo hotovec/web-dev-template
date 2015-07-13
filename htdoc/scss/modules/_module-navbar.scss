@@ -32,9 +32,11 @@ $navbar-text-transform: none !default;
     @include cf();
 
     .m-navbar--container {
-        @include media(C) {
-            @include l-grid();
-        }
+        @include l-grid();
+
+        //padding-left: 30px !important;
+        //padding-right: 30px !important;
+
     }
 
     .m-navbar--menu-logo,
@@ -54,9 +56,12 @@ $navbar-text-transform: none !default;
         }
 
         .m-navbar--logo {
-            @include column(1/4);
+            //@include column(3/4);
+            float: left;
+            display: inline-block;
             height: $navbar-height;
             overflow: hidden;
+            text-decoration: none;
 
             .mm-has-svg {
                 @include vertical-align();
@@ -66,10 +71,34 @@ $navbar-text-transform: none !default;
                     min-height: auto;
                 }
             }
+
+            h1 {
+
+                @include tk-nexa-thin();
+                text-align: left;
+                color: #99e0e1;
+                display: inline-block;
+
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 1em;
+
+                span {
+                    color: #f29895;
+                }
+
+                @include media(C) {
+                    display: block;
+                    font-size: 72px;
+                    padding-top: 12px;
+                }
+            }
         }
 
+        .m-navbar--menu-primary,
         .m-navbar--menu-secondary {
-            @include inline-list($direction: right, $margin-opposite: 0, $margin-dir: 0);
+            float: left;
+            @include inline-list($direction: left, $margin-opposite: 0, $margin-dir: 0);
         }
 
         .m-navbar--menu-link {
@@ -81,11 +110,37 @@ $navbar-text-transform: none !default;
             padding-bottom: 40px;
 
             .m-navbar--logo {
-                @include column(.2);
+                @include column(1, $gut:60px);
+                //border: 1px solid red;
+                height: auto;
+                h1 {
+                    margin-left: -4px;
+                }
+
             }
 
+            .m-navbar--about {
+                @include column(1, $gut:60px);
+                @include tk-nexa-thin();
+                line-height: 1em;
+                color: #C2C2C2;
+                font-size: rem-calc(17);
+                margin-top: 0;
+                h2 {
+                margin:0;
+
+                }
+            }
+
+            .m-navbar--menu-primary,
             .m-navbar--menu-secondary {
-                @include inline-list($direction: right, $margin-opposite: 22px, $margin-dir: 0);
+                @include column(1, $gut:60px);
+                @include inline-list($direction: left, $margin-opposite: 0px, $margin-dir: 30px);
+                text-transform: uppercase;
+            }
+
+            .m-navbar--menu-primary {
+                margin-bottom: 1.3em;
             }
 
             .m-navbar--menu-toc {
@@ -132,8 +187,8 @@ $navbar-text-transform: none !default;
 .m-navbar {
 
     background-color: $navbar-bg-color;
-    border-top: 1px solid $navbar-border-color;
-    border-bottom: 1px solid $navbar-border-color;
+    //border-top: 1px solid $navbar-border-color;
+    //border-bottom: 1px solid $navbar-border-color;
     font-family: $navbar-font-primary;
     font-size: $navbar-font-size;
     font-weight: $navbar-font-weight;

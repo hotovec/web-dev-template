@@ -14,7 +14,7 @@
     .l-single,
     .l-double,
     .l-full {
-        margin-bottom: $space * .75;
+        margin-bottom: $space;
         border-radius: $card-radius;
         box-shadow: $card-shadow;
     }
@@ -26,129 +26,90 @@
 
 .l-feed {
 
-    &.mm-one {
-        .l-single,
-        .l-double,
-        .l-full {
-            @include column(1);
+    &[layout-mansonry] {
+
+        > {
+            .l-single,
+            .l-double,
+            .l-full {
+                position: relative;
+                margin: 30px 30px;
+                margin-top: 0;
+
+
+
+                width: calc(100% - 60px);
+                height: auto;
+
+                @include media(B) {
+                    width: 580px;
+
+                    margin: 30px 30px;
+                    margin-top: 0;
+                }
+
+                @include media(B) {
+                    margin: 60px 30px;
+                    margin-top: 0;
+                }
+            }
+
+        }
+
+        @include media(C) {
+            > .l-single {
+                height: 400px;
+                width: 400px;
+
+                //@include media(C) {
+                //    @include column(1/2, $gut: 60px);
+                //}
+                //@include media(D) {
+                //    @include column(1/3, $gut: 60px);
+                //}
+            }
+
+            > .l-double {
+                height: 400px;
+                width: 860px;
+                //@include media(C) {
+                //    @include column(1, $gut: 60px);
+                //}
+                //@include media(D) {
+                //    @include column(2/3, $gut: 60px);
+                //}
+            }
+
+            > .l-full {
+                height: 600px;
+                width: 860px;
+                @include media(D) {
+
+                    width: 1320px;
+                }
+                //@include media(C) {
+                //    @include column(1, $gut: 60px);
+                //}
+                //@include media(D) {
+                //    @include column(2/3, $gut: 60px);
+                //}
+            }
+        }
+
+        .l-tall {
+            height: 600px;
+            @include media(C) {
+            height: 860px;
+
+                }
         }
     }
-
-    &.mm-two {
-        .l-single {
-            @include column(1);
-
-            @include media(B) {
-                @include column(1/2);
-            }
-        }
-        .l-full,
-        .l-double {
-            @include media(B) {
-                @include column(1);
-            }
-        }
-    }
-
-    &.mm-three {
-        .l-single {
-            @include column(1);
-
-            @include media(B) {
-                @include column(1/2);
-            }
-
-            @include media(C) {
-                @include column(1/3);
-            }
-        }
-
-        .l-double {
-            @include media(B) {
-                @include column(1);
-            }
-            @include media(C) {
-                @include column(2/3);
-            }
-        }
-
-        .l-full {
-            @include column(1);
-        }
-    }
-
-    &.mm-four {
-        .l-single {
-            @include column(1);
-
-            @include media(B) {
-                @include column(1/2);
-            }
-
-            @include media(C) {
-                @include column(1/3);
-            }
-
-            @include media(D) {
-                @include column(1/4);
-
-            }
-        }
-
-        .l-double {
-            @include media(B) {
-                @include column(1);
-            }
-            @include media(C) {
-                @include column(2/3);
-            }
-            @include media(D) {
-                @include column(2/4);
-            }
-        }
-
-        .l-full {
-            @include column(1);
-        }
-
-    }
-
-    &.mm-six {
-
-        .l-single {
-            @include column(1/2);
-
-            @include media(B) {
-                @include column(1/3);
-            }
-
-            @include media(C) {
-                @include column(1/6);
-            }
-        }
-
-        .l-double {
-            @include column(1);
-
-            @include media(B) {
-                @include column(2/3);
-            }
-
-            @include media(C) {
-                @include column(2/6);
-            }
-        }
-
-        .l-full {
-            @include column(1);
-        }
-    }
-
-    @include base-l-feed();
+    //@include base-l-feed();
 
 }
 
 // test custom layouts
+/*
 .l-feed[layout-dancer] {
     .l-single {
         &:nth-child(1),
@@ -255,6 +216,7 @@
 
 }
 
+*/
 
 
 

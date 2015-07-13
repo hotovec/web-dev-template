@@ -11,12 +11,20 @@
 
 .m-item--hed {
     @include font-headline();
-    font-size: rem-calc(18);
+    font-size: rem-calc(24);
+    line-height: 1.3em;
+}
+
+.m-item--meta {
+    @include font-headline-secondary();
+    font-size: rem-calc(14);
+    line-height: 1.3em;
+    color: lighten($color-body-font,16%);
 }
 
 .m-item--description {
-    @include font-body();
-    font-size: rem-calc(14);
+    @include font-headline-secondary();
+    font-size: rem-calc(15);
 }
 
 .m-item--image {

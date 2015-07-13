@@ -1,14 +1,38 @@
-<div id="dance" class="l-feed mm-four" keep-height layout-dancer>
-    {% for i in 0..4 %}
-        <div class="l-single">
-            {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+<div id="dance" class="l-feed layout-mansonry" -keep-height layout-dancer layout-mansonry >
+    <div class="l-double" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+    <div class="l-single l-tall" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+    {% for i in 0..2 %}
+        <div class="l-single" mansonry-item>
+            {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}
             {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
         </div>
     {% endfor %}
-    <div class="l-double">
+    <div class="l-double l-tall" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+
+    <div class="l-full" mansonry-item>
+        <div class="m-carousel" slick-full>
+            {% for s in 1..6 %}
+                <div class="l-single slide">
+                    {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="l-double" mansonry-item>
         {% include "subtemplates/base-properties.twig" %}
     </div>
-    <div class="l-single">
+
+    <div class="l-single" mansonry-item>
         {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}
         {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
     </div>

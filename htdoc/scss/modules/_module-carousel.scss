@@ -28,4 +28,31 @@
     [class*=m-card] {
         height: 100%;
     }
+
+
+    .slick-next,
+    .slick-prev {
+        background-color: transparent;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        margin: 0;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
+
+}
+
+// mansonry & feed
+
+.l-feed {
+    .m-carousel {
+
+
+    }
 }

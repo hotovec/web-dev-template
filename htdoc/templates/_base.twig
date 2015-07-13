@@ -79,19 +79,22 @@
 {% block body %}{% endblock %}
 
 <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script>
+
 <script type="text/javascript" src="/components/chosen/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="/components/slick-carousel/slick/slick.min.js"></script>
 <script type="text/javascript" src="/components/jquery.breakpoints/breakpoints.js"></script>
-<script type="text/javascript" src="/components/foundation/js/foundation.min.js"></script>
-<script type="text/javascript" src="/components/foundation/js/foundation/foundation.clearing.js"></script>
+<script src="/components/css-element-queries/src/ResizeSensor.js"></script>
+<script src="/components/css-element-queries/src/ElementQueries.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.js"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.2/packery.pkgd.min.js"></script>#}
+
 <script type="text/javascript" src="/assets/js/app.js"></script>
 
 {% block scripts %}{% endblock %}
 
-<script>$(document).foundation();</script>
 
-<script src="/components/css-element-queries/src/ResizeSensor.js"></script>
-<script src="/components/css-element-queries/src/ElementQueries.js"></script>
+
 
 </body>
 
