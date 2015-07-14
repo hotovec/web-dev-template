@@ -27,7 +27,9 @@
         </nav>
 
         {#<div class="row">#}
-            {#{% include "subtemplates/base-body-copy.twig" %}#}
+            {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol'} %}#}
+            {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol-full'} %}#}
+            {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-twocol'} %}#}
         {#</div>#}
 
         {# <div class="row">

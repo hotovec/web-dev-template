@@ -96,6 +96,14 @@
             }
         }
 
+        .l-mid {
+            height: 400px;
+            @include media(C) {
+                height: 600px;
+
+            }
+        }
+
         .l-tall {
             height: 600px;
             @include media(C) {
@@ -104,7 +112,8 @@
                 }
         }
     }
-    //@include base-l-feed();
+
+    @include base-l-feed();
 
 }
 

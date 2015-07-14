@@ -1,4 +1,5 @@
 .m-carousel {
+
     .slide {
         height: 300px;
         @include media(C) {
@@ -8,6 +9,7 @@
             height: 600px;
         }
     }
+
 
     &.slick-slider {
         margin-bottom: 0;
@@ -29,14 +31,21 @@
         height: 100%;
     }
 
-
     .slick-next,
     .slick-prev {
+        display: none !important;
         background-color: transparent;
-        width: 100px;
+        width: 60px;
         height: 100%;
         top: 0;
         margin: 0;
+
+        @include media(B) {
+            display: block !important;
+        }
+        //@include media(C) {
+        //    width: 100px;
+        //}
     }
 
     .slick-prev {
@@ -46,13 +55,60 @@
         right: 0;
     }
 
-}
+    @include cw(400) {
 
-// mansonry & feed
+        .slick-next,
+        .slick-prev {
+            width: 60px;
+        }
+    }
+    @include cw(800) {
+        .slick-next,
+        .slick-prev {
+            width: 100px;
+        }
+    }
+
+}
 
 .l-feed {
     .m-carousel {
+        .slide {
+            height: 400px;
+            @include media(C) {
+                height: 400px;
+            }
+            @include media(D) {
+                height: 400px;
+            }
 
-
+        }
     }
+
+    .l-full {
+        .m-carousel {
+            .slide {
+                height: 400px;
+                @include media(C) {
+                    height: 600px;
+                }
+
+            }
+        }
+    }
+
+    .l-tall {
+        .m-carousel {
+            .slide {
+                height: 600px;
+
+                @include media(C) {
+                    height: 860px;
+                }
+
+            }
+        }
+    }
+
+
 }

@@ -1,10 +1,22 @@
 <div id="dance" class="l-feed layout-mansonry" -keep-height layout-dancer layout-mansonry >
-    <div class="l-double" mansonry-item>
-        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+    <div class="l-full l-mid" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image mm-dark'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+    <div class="l-double l-tall" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image mm-dark'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+    <div class="l-single l-mid" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image mm-light bg-top mm-boxed ', 'imageUrl': '/assets/images/test-tall.jpg'} %}
+        {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
+    </div>
+    <div class="l-double l-mid" mansonry-item>
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image bg-top', 'imageUrl': '/assets/gallery/full/img-1.jpg'} %}
         {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
     </div>
     <div class="l-single l-tall" mansonry-item>
-        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+        {% include "subtemplates/base-item.twig" with {'contentType': 'm-story', 'class': 'm-card_image mm-dark mm-boxed', 'imageUrl': '/assets/gallery/full/img-1.jpg'} %}
         {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
     </div>
     {% for i in 0..2 %}
@@ -18,6 +30,15 @@
         {#{% include "subtemplates/base-properties.twig" with {'contentType': 'm-story', 'class': 'm-card_standard'} %}#}
     </div>
 
+    <div class="l-single" mansonry-item>
+        <div class="m-carousel" slick-full>
+            {% for s in 1..6 %}
+                <div class="l-single slide">
+                    {% include 'subtemplates/base-item.twig' with {'contentType': 'm-story', 'class': 'm-card_image'} %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
     <div class="l-full" mansonry-item>
         <div class="m-carousel" slick-full>
             {% for s in 1..6 %}
@@ -28,7 +49,7 @@
         </div>
     </div>
 
-    <div class="l-double" mansonry-item>
+    <div class="l-double " mansonry-item>
         {% include "subtemplates/base-properties.twig" %}
     </div>
 

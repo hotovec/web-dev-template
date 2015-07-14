@@ -1,7 +1,16 @@
+
+{# default image #}
+{% set defaultImage = '/assets/images/test-image.jpg' %}
+{% if imageUrl is defined %}
+    {% set image = imageUrl %}
+{% else %}
+    {% set image = defaultImage %}
+{% endif %}
+
 <article class="{{ contentType }} {{ class }}">
     <header class="m-item--header">
-        <div class="m-item--image" style="background-image: url(http://lorempixel.com/900/600)">
-            <a href="/"><img src="http://lorempixel.com/400/600" alt="" /></a>
+        <div class="m-item--image" style="background-image: url({{ image }})">
+            <a href="/"><img src="{{ image }}" alt="" /></a>
         </div>
         <div class="m-item--header-content">
 
