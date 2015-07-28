@@ -1,21 +1,22 @@
+$feature-height: 600px;
+$feature-content-height: $feature-height - 360px;
+
+
 // componentns
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
-
 // typekit
 @import "typekit/base";
 @import "typekit/nexa";
 @import "typekit/proxima-nova";
 @import "typekit/source-sans-pro";
-
 // libraries
 @import "lib/functions";
 @import "lib/custom-underline";
 @import "lib/inline-lists";
 @import "lib/vertical-align";
 @import "lib/element-queries";
-
 // settings
 @import "settings/settings";
 @import "settings/fonts";
@@ -23,10 +24,7 @@
 @import "settings/media";
 @import "settings/grid";
 @import "base/globals";
-
-
 @import "modules/module-placeholder";
-
 // layouts and modules
 @import "layouts/layout-base";
 @import "layouts/layout-section";
@@ -36,17 +34,13 @@
 @import "layouts/layout-feed";
 @import "layouts/layout-navigation";
 //@import "layouts/layout-page-detail-full";
-
 @import "modules/module-side-panel";
 @import "modules/module-navbar";
 @import "modules/module-footer";
-
 @import "modules/module-body-content";
 //@import "modules/module-pagination";
-
 @import "modules/module-coverlines";
 @import "modules/module-section";
-
 @import "modules/module-aside-block";
 @import "modules/module-gallery";
 @import "modules/module-carousel";
@@ -59,21 +53,19 @@
 @import "modules/module-content-story";
 @import "modules/module-content-reference";
 @import "modules/module-content-contact";
-
 @import "modules/module-layout-object";
 @import "not-modular/hero-tabs";
-
 // external JS overrides
-
 @import "external/chosen";
 @import "external/slick";
-
 // dev
-
 @import "dev-flex";
 
-
 // dev
+
+
+
+
 
 * {
     box-sizing: border-box;
@@ -144,5 +136,38 @@
 
     background-color: $color-body-bg;
 }
+
+.l-page {
+
+    .l-feature {
+        position: absolute;
+        height: $feature-height;
+        width: 100%;
+        z-index: -1;
+        display: none;
+    }
+
+    &.mm-feature {
+
+        .l-feature {
+            display: block;
+            //background-color: pink;
+            background-image: url("http://lorempixel.com/900/600");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .l-navbar {
+            height: $feature-height;
+        }
+
+
+    }
+
+    .m-body--content {
+        padding-top: $space * .75;
+    }
+}
+
 
 

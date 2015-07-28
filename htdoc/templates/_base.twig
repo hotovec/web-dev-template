@@ -74,7 +74,7 @@
     {#{% include "typekit.twig" %}#}
 </head>
 
-<body class="l-page {% block bodyClasses %}{% endblock %}">
+<body class="l-page  {% block bodyClasses %}{% endblock %}">
 
 <div class="l-offcanvas">
     <div class="l-offcanvas--pusher">
@@ -89,6 +89,9 @@
         </nav>
 
         <div class="l-page--container l-offcanvas--slide">
+
+            <div class="l-feature">a</div>
+
             <nav class="l-navbar">
                 {#{% include "subtemplates/module-navbar-secondary.twig" %}#}
                 {% include "subtemplates/module-navbar.twig" %}
