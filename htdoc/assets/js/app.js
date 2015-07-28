@@ -197,6 +197,40 @@ var blogSlick = $('[slick-full]').slick({
 });
 
 
+// offcanvas
+
+function toggleNav() {
+    if ($('.l-offcanvas').hasClass('mm-open')) {
+        // Do things on Nav Close
+        $('.l-offcanvas').removeClass('mm-open');
+        $('.l-offcanvas--menu').removeClass('active');
+        $('body').removeClass('scroll-lock');
+
+        $(document).unbind('touchmove');
+
+    } else {
+        // Do things on Nav Open
+        $('.l-offcanvas').addClass('mm-open');
+        $('.l-offcanvas--menu').addClass('active');
+        $('body').addClass('scroll-lock');
+        $(document).bind('touchmove', function(e) {
+            e.preventDefault();
+        });
+    }
+}
+
+$(".m-navbar--menu-toc").click(function() {
+    toggleNav();
+});
+$(".l-offcanvas--overlay").click(function() {
+    toggleNav();
+});
+$(".l-offcanvas--close").click(function() {
+    toggleNav();
+});
+
+
+
 // script
 
 

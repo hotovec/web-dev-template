@@ -31,13 +31,17 @@ $navbar-text-transform: none !default;
     height: auto;
     @include cf();
 
-    //border-bottom: 1px solid $navbar-border-color;
 
     .m-navbar--container {
         @include l-grid();
 
-        //padding-left: 30px !important;
-        //padding-right: 30px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+        @include media(C) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            }
 
     }
 
@@ -74,19 +78,19 @@ $navbar-text-transform: none !default;
         .m-navbar--logo {
             //@include column(3/4);
             float: left;
-            display: inline-block;
+            width: 250px;
+           // display: inline-block;
             height: $navbar-height;
-            padding-bottom: 20px;
+            //
             overflow: hidden;
             text-decoration: none;
+            margin-left: 12px;
 
             .mm-has-svg {
                 //@include vertical-align();
-                height: $navbar-height - 20;
+                height: $navbar-height ;
                 background-position: left;
-                @include media(A-only) {
-                    min-height: auto;
-                }
+
             }
 
         }
@@ -113,6 +117,7 @@ $navbar-text-transform: none !default;
             .m-navbar--logo {
                 @include column(1, $gut: 60px);
                 //border: 1px solid red;
+                padding-bottom: 20px;
                 height: auto;
                 h1 {
                     margin-left: -4px;
@@ -146,7 +151,7 @@ $navbar-text-transform: none !default;
             }
 
             .m-navbar--menu-toc {
-                display: none !important;
+                //display: none !important;
             }
             .m-navbar--menu-link {
                 display: block !important;
@@ -326,10 +331,13 @@ $navbar-text-transform: none !default;
         height: $navbar-sticky-height;
 
         .m-navbar--logo {
-            height: $navbar-sticky-height;
+            //height: $navbar-sticky-height;
+            width: 250px;
+
             .mm-has-svg {
-                height: $navbar-sticky-height;
-                background-size: auto 32px;
+              //  height: $navbar-sticky-height;
+                //background-size: auto 32px;
+                width: 250px;
 
             }
         }

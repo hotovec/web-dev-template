@@ -2,8 +2,7 @@
 
 {% block body %}
     <div class="row">
-        <h1>Web Dev</h1>
-        <p>look at <a href="/?tpl=kitchensink" title="kitchnesink">kitchnesink</a></p>
+        {% include "subtemplates/base-feed.twig" %}
     </div>
 
     {{ parent() }}

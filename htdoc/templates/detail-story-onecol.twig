@@ -1,11 +1,11 @@
 {% extends "_base.twig" %}
 
 {% block body %}
-    {#<div class="row">#}
-    {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol'} %}#}
-    {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol-full'} %}#}
-    {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-twocol'} %}#}
-    {#</div>#}
+    <div class="row">
+        {% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol'} %}
+        {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-onecol-full'} %}#}
+        {#{% include "subtemplates/base-body-copy.twig" with { 'class': 'layout-twocol'} %}#}
+    </div>
 
     {# <div class="row">
          {% include "subtemplates/base-properties.twig" %}
@@ -19,10 +19,10 @@
     {#{% include "subtemplates/base-section.twig" %}#}
     {# feeds #}
 
-    <div class="row">
-        {% include "subtemplates/base-feed.twig" %}
-        {% include "subtemplates/base-carousel.twig" %}
-    </div>
+    {#<div class="row">#}
+        {#{% include "subtemplates/base-feed.twig" %}#}
+        {#{% include "subtemplates/base-carousel.twig" %}#}
+    {#</div>#}
 
     {#{% include "subtemplates/feed-block-carousel.twig" %}#}
 

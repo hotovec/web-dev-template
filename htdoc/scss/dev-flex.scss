@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-.fcontainer {
-    max-width: 900px;
-    margin: 0 auto;
-}
 
 @function frac($frac) {
     @return $frac * 100%;
@@ -26,14 +22,19 @@
     margin-left: frac($frac);
 }
 
+.flex-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-.frow {
+
+.flex-row {
     background-color: lightblue;
     display: flex;
     flex-flow: row wrap;
 }
 
-.fcol {
+.flex-column {
     border: 1px solid red;
     &.fc1 { @include col(2/12, 15px); }
     &.fc2 { @include col(6/12, 15px); }

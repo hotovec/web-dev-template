@@ -1,21 +1,2 @@
-.l-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 100;
-
-    // animations and hiding
-
-    @include transition(all 0.3s);
-
-    &.is-hidden {
-        $offset: -99px;
-        @include transform(translateY($offset));
-        @include transition(all 0.2s);
-    }
-}
-
 
 
