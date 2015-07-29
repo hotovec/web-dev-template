@@ -70,9 +70,13 @@ $offcanvas-width: 300px;
         .l-offcanvas--slide {
             transition: .3s ease all;
             transform: translateX($offcanvas-width);
-            &.is-hidden {
+            &.l-sticky {
                 display: none;
             }
+            &.l-sticky.is-open {
+                display: block;
+            }
+
         }
 
         .l-offcanvas--overlay {

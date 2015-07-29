@@ -894,8 +894,10 @@ body {
     -webkit-transform: translateX(300px);
         -ms-transform: translateX(300px);
             transform: translateX(300px); }
-    .l-offcanvas.mm-open .l-offcanvas--slide.is-hidden {
+    .l-offcanvas.mm-open .l-offcanvas--slide.l-sticky {
       display: none; }
+    .l-offcanvas.mm-open .l-offcanvas--slide.l-sticky.is-open {
+      display: block; }
   .l-offcanvas.mm-open .l-offcanvas--overlay {
     opacity: 0.8;
     visibility: visible;
