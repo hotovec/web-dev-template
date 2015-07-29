@@ -76,13 +76,10 @@
 
 <body class="l-page  {% block bodyClasses %}{% endblock %}">
 
-<div class="l-offcanvas mm-open">
+<div class="l-offcanvas">
     <div class="l-offcanvas--pusher">
 
-        <nav class="l-offcanvas--menu">
-            <div class="m-offcanvas--close">x</div>
             {% include "subtemplates/base-offcanvas-menu.twig" %}
-        </nav>
 
         <nav class="l-sticky {% if navbar.isSticky %}is-sticky{% endif %} l-offcanvas--slide">
             {% include "subtemplates/module-navbar.twig" %}

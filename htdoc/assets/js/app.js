@@ -215,7 +215,7 @@ $(".m-navbar--menu-toc").click(function () {
 $(".l-offcanvas--overlay").click(function () {
     toggleNav();
 });
-$(".l-offcanvas--close").click(function () {
+$(".m-offcanvas--close").click(function () {
     toggleNav();
 });
 
