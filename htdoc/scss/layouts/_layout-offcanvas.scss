@@ -8,10 +8,10 @@ $offcanvas-width: 300px;
     width: $offcanvas-width;
     margin: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #F5F5F5;
     opacity: 0;
     z-index: 0;
-    transition: .2s opacity;
+    transition: .5s ease opacity;
 }
 
 .l-offcanvas--overlay {
@@ -24,7 +24,7 @@ $offcanvas-width: 300px;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    transition: .3s ease all;
+    transition: .2s ease all;
 }
 
 .l-offcanvas--close {

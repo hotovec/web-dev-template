@@ -151,6 +151,7 @@ $navbar-text-transform: none !default;
 
             height: $navbar-height;
 
+
             @include media(C) {
                 background-position: 0 50%;
                 min-height: $navbar-height;
@@ -250,7 +251,10 @@ $navbar-text-transform: none !default;
 
         .m-navbar--logo {
             width: 250px;
-
+            float: left;
+            padding: 0;
+            margin: 0;
+            margin-right: 16px;
             .mm-has-svg {
                 width: 250px;
 
@@ -263,12 +267,9 @@ $navbar-text-transform: none !default;
             a {
                 line-height: $navbar-sticky-height;
             }
-        }
-
-        .m-navbar--logo {
-            float: left;
-            padding: 0;
-            margin: 0;
+            a:hover {
+                border-color: transparent;
+            }
         }
 
         .m-navbar--menu-secondary,
@@ -282,15 +283,14 @@ $navbar-text-transform: none !default;
 
         .m-navbar--menu-primary {
             border: none;
-            float: right;
+            float: left;
             @include media(C) {
                 width: 540px;
             }
             @include media(D) {
                 width: 900px;
-                float: left;
-
             }
+
         }
 
         .m-navbar--about {
