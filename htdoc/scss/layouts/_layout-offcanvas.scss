@@ -81,17 +81,24 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
 }
 
 .m-offcanvas--close {
-    background-color: white;
+    background-image: url("/assets/images/close-offcanvas-button.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: $offcanvas-text-color;
-    position: absolute;
-    width: 32px;
+    cursor: pointer;
     height: 32px;
     line-height: 32px;
-    border-radius: 50%;
+    position: absolute;
     text-align: center;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
+
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    &:hover {
+
+        border: 1px solid black;
+    }
 }
 
 .m-offcanvas--menu,
@@ -136,4 +143,9 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
             color: $offcanvas-hover-color;
         }
     }
+}
+
+.m-offcanvas--label {
+    font-size: rem-calc(32);
+    line-height: 1em;
 }

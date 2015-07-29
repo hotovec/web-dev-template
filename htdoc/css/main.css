@@ -892,17 +892,20 @@ body {
             transition: .3s ease all; }
 
 .m-offcanvas--close {
-  background-color: white;
+  background-image: url("/assets/images/close-offcanvas-button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   color: #5C5C5C;
-  position: absolute;
-  width: 32px;
+  cursor: pointer;
   height: 32px;
   line-height: 32px;
-  border-radius: 50%;
+  position: absolute;
   text-align: center;
-  right: 10px;
-  top: 10px;
-  cursor: pointer; }
+  right: 16px;
+  top: 16px;
+  width: 32px; }
+  .m-offcanvas--close:hover {
+    border: 1px solid black; }
 
 .m-offcanvas--menu,
 .m-offcanvas--panel {
@@ -937,6 +940,10 @@ body {
     text-decoration: none; }
     .m-offcanvas--menu-link a:hover {
       color: #c20e1a; }
+
+.m-offcanvas--label {
+  font-size: 2rem;
+  line-height: 1em; }
 
 .l-sticky {
   position: fixed;
