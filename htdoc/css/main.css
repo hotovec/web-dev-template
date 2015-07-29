@@ -1715,7 +1715,10 @@ body {
       background-color: #b0d6fd;
       text-shadow: none; }
   .m-body--copy p, .m-body--copy ul, .m-body--copy ol, .m-body--copy blockquote, .m-body--copy figure {
+    margin-top: 0;
     margin-bottom: 2em; }
+  .m-body--copy > p:first-of-type {
+    margin-top: -.45em; }
   .m-body--copy p:first-of-type span {
     font-family: "source-sans-pro", sans-serif;
     font-style: normal;
@@ -1730,6 +1733,7 @@ body {
     width: 100%; }
   .m-body--copy blockquote {
     margin: 0;
+    margin-bottom: 20px;
     padding: 20px 0;
     border-top: 1px solid #949494;
     border-bottom: 1px solid #949494;
@@ -1737,8 +1741,6 @@ body {
     font-family: Georgia;
     font-size: 1.1875rem;
     color: #949494; }
-    .m-body--copy blockquote + blockquote {
-      border-top: 0; }
     .m-body--copy blockquote .author {
       display: block;
       margin-top: 10px;
