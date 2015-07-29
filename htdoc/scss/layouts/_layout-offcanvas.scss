@@ -9,7 +9,9 @@ $offcanvas-width: 300px;
     margin: 0;
     overflow: hidden;
     background-color: black;
+    opacity: 0;
     z-index: 0;
+    transition: .2s opacity;
 }
 
 .l-offcanvas--overlay {
@@ -61,7 +63,9 @@ $offcanvas-width: 300px;
 
     &.mm-open {
 
-
+        .l-offcanvas--menu {
+            opacity: 1;
+        }
 
         .l-offcanvas--slide {
             transition: .3s ease all;

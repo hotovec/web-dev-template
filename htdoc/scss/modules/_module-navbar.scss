@@ -107,11 +107,14 @@ $navbar-text-transform: none !default;
     }
 
     .m-navbar--menu-secondary {
-        margin-bottom: 30px;
 
         color: #9e9e9e;
         a {
             color: #9e9e9e;
+        }
+
+        @include media(C) {
+            margin-bottom: 30px;
         }
 
     }
@@ -157,27 +160,42 @@ $navbar-text-transform: none !default;
 
     .m-navbar--about {
         @include tk-nexa-thin();
-        font-size: rem-calc(17);
         line-height: 1em;
         color: #c2c2c2;
         margin-top: 0;
-        margin-bottom: 30px;
         display: block;
+        font-size: rem-calc(18);
+        margin-bottom: 40px;
 
         h2 {
-            font-size: rem-calc(21);
+            font-size: rem-calc(16);
             margin: 0;
+        }
+
+        @include media(B) {
+            font-size: rem-calc(17);
+            margin-bottom: 30px;
+            h2 {
+                font-size: rem-calc(21);
+            }
+
         }
     }
 
     .m-navbar--logo {
         @include column(1, $gut: 0);
 
-        padding-bottom: 20px;
         height: auto;
 
         h1 {
             margin-left: -4px;
+        }
+            margin-bottom: 0;
+        @include media(B) {
+            margin-bottom: 8px;
+        }
+        @include media(C) {
+            margin-bottom: 20px;
         }
     }
 
