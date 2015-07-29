@@ -1,17 +1,72 @@
+$nexa-font-path: "/assets/fonts/nexa2";
+
+@font-face {
+    font-family: 'nexa';
+    src: url('#{$nexa-font-path}/nexa_book-webfont.eot');
+    src: url('#{$nexa-font-path}/nexa_book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$nexa-font-path}/nexa_book-webfont.woff2') format('woff2'),
+    url('#{$nexa-font-path}/nexa_book-webfont.woff') format('woff'),
+    url('#{$nexa-font-path}/nexa_book-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('#{$nexa-font-path}/nexa_light-webfont.eot');
+    src: url('#{$nexa-font-path}/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$nexa-font-path}/nexa_light-webfont.woff2') format('woff2'),
+    url('#{$nexa-font-path}/nexa_light-webfont.woff') format('woff'),
+    url('#{$nexa-font-path}/nexa_light-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('#{$nexa-font-path}/nexa_thin-webfont.eot');
+    src: url('#{$nexa-font-path}/nexa_thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$nexa-font-path}/nexa_thin-webfont.woff2') format('woff2'),
+    url('#{$nexa-font-path}/nexa_thin-webfont.woff') format('woff'),
+    url('#{$nexa-font-path}/nexa_thin-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('#{$nexa-font-path}/nexa_bold-webfont.eot');
+    src: url('#{$nexa-font-path}/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$nexa-font-path}/nexa_bold-webfont.woff2') format('woff2'),
+    url('#{$nexa-font-path}/nexa_bold-webfont.woff') format('woff'),
+    url('#{$nexa-font-path}/nexa_bold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
 @mixin tk-nexa-thin() {
-    font-family: "Nexa Thin", $ff-helvetica;
+    font-family: "nexa", $ff-helvetica;
     font-style: normal;
     font-weight: 100;
 }
 
 @mixin tk-nexa-light() {
-    font-family: "Nexa Light", $ff-helvetica;
+    font-family: "nexa", $ff-helvetica;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 @mixin tk-nexa-book() {
-    font-family: "Nexa Book", $ff-helvetica;
+    font-family: "nexa", $ff-helvetica;
     font-style: normal;
     font-weight: 400;
+}
+
+@mixin tk-nexa-bold() {
+    font-family: "nexa", $ff-helvetica;
+    font-style: normal;
+    font-weight: 600;
 }
