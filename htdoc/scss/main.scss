@@ -1,6 +1,7 @@
-$feature-height: 600px;
+$feature-height: 800px;
+$feature-height_mobile: 600px;
 $feature-content-height: $feature-height - 360px;
-
+$feature-content-height_mobile: $feature-height_mobile - 360px;
 
 // componentns
 @import "../components/normalize-scss/normalize";
@@ -17,6 +18,7 @@ $feature-content-height: $feature-height - 360px;
 @import "lib/inline-lists";
 @import "lib/vertical-align";
 @import "lib/element-queries";
+
 // settings
 @import "settings/settings";
 @import "settings/fonts";
@@ -25,8 +27,10 @@ $feature-content-height: $feature-height - 360px;
 @import "settings/grid";
 @import "base/globals";
 @import "modules/module-placeholder";
+
 // layouts and modules
 @import "layouts/layout-base";
+@import "layouts/layout-page";
 @import "layouts/layout-section";
 @import "layouts/layout-offcanvas";
 @import "layouts/layout-navbar";
@@ -62,10 +66,6 @@ $feature-content-height: $feature-height - 360px;
 @import "dev-flex";
 
 // dev
-
-
-
-
 
 * {
     box-sizing: border-box;
@@ -137,53 +137,7 @@ $feature-content-height: $feature-height - 360px;
     background-color: $color-body-bg;
 }
 
-.l-page {
 
-    .l-feature {
-        position: absolute;
-        height: $feature-height;
-        width: 100%;
-        z-index: -1;
-        display: none;
-
-        &:after {
-            position: absolute;
-            display: block;
-
-            content: "";
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-            background-color: rgba(0,0,0,.25);
-        }
-    }
-
-    &.mm-feature {
-
-        .l-feature {
-            display: block;
-            background-image: url("http://lorempixel.com/900/600");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-
-
-
-        }
-
-        .l-navbar {
-            height: $feature-height;
-        }
-
-
-    }
-
-    .m-body--content {
-        padding-top: $space * .75;
-    }
-}
 
 
 

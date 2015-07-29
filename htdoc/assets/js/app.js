@@ -1,7 +1,3 @@
-
-
-
-
 $(function () {
 
 
@@ -133,30 +129,24 @@ $(function () {
     var currentTop = function () {
         return scrollDriver.scrollTop();
     }
-    navbar.addClass("is-hidden");
 
     $(window).scroll(function (event) {
 
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
-            //console.log("down");
-
+            // console.log("down");
             if (currentTop() > stickyBorder) {
-                if (!navbar.hasClass("is-hidden")) {
-                    navbar.addClass("is-hidden");
+                if (!navbar.hasClass("is-open")) {
+                    navbar.addClass("is-open");
                 }
             }
-
         } else {
-            //console.log("up");
-            if (currentTop() > stickyBorder) {
-                if (navbar.hasClass("is-hidden")) {
-                    navbar.removeClass("is-hidden");
+            // console.log("up");
+            if (currentTop() < (stickyBorder + 100)) {
+                if (navbar.hasClass("is-open")) {
+                    navbar.removeClass("is-open");
                 }
-            } else {
-                navbar.addClass("is-hidden");
             }
-
         }
         lastScrollTop = st;
 
@@ -213,22 +203,21 @@ function toggleNav() {
         $('.l-offcanvas').addClass('mm-open');
         $('.l-offcanvas--menu').addClass('active');
         $('body').addClass('scroll-lock');
-        $(document).bind('touchmove', function(e) {
+        $(document).bind('touchmove', function (e) {
             e.preventDefault();
         });
     }
 }
 
-$(".m-navbar--menu-toc").click(function() {
+$(".m-navbar--menu-toc").click(function () {
     toggleNav();
 });
-$(".l-offcanvas--overlay").click(function() {
+$(".l-offcanvas--overlay").click(function () {
     toggleNav();
 });
-$(".l-offcanvas--close").click(function() {
+$(".l-offcanvas--close").click(function () {
     toggleNav();
 });
-
 
 
 // script

@@ -52,10 +52,10 @@
         .m-story--header {
 
             position: absolute;
-            height: $feature-height - $feature-content-height;
+            height: $feature-height_mobile - $feature-content-height_mobile;
             width: 100%;
             left: 0;
-            top: $feature-content-height;
+            top: $feature-content-height_mobile;
             padding-bottom: 40px;
 
             .m-story--header-content {
@@ -70,6 +70,12 @@
             .m-story--summary {
                 color: white;
             }
+
+            @include media(C) {
+                height: $feature-height - $feature-content-height;
+                top: $feature-content-height;
+                }
+
         }
     }
 }

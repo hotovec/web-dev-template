@@ -10,11 +10,13 @@ $navbar-sticky-height: 48px !default;
     z-index: 100;
 
     // animations and hiding
-    @include transition(all 0.3s);
-    //transition-delay: .2s; // iphone glitch fix when safari is opening top and bottom navbars
 
-    &.is-hidden {
-        $offset: -99px;
+    $offset: -99px;
+    @include transform(translateY($offset));
+    @include transition(all 0.3s);
+
+    &.is-open {
+        $offset: 0;
         @include transform(translateY($offset));
         @include transition(all 0.2s);
     }

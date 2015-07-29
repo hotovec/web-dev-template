@@ -728,6 +728,42 @@ body {
 .scroll-lock {
   overflow: hidden; }
 
+.l-page .l-feature {
+  position: absolute;
+  height: 600px;
+  width: 100%;
+  z-index: -1;
+  display: none; }
+  .l-page .l-feature:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.25); }
+
+.l-page.mm-feature .l-feature {
+  display: block;
+  background-image: url("http://lorempixel.com/900/600");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+
+.l-page.mm-feature .l-navbar {
+  height: 600px; }
+
+@media only screen and (min-width: 1021px) {
+  .l-page .l-feature {
+    height: 800px; }
+  .l-page.mm-feature .l-navbar {
+    height: 800px; } }
+
+.l-page .m-body--content {
+  padding-top: 45px; }
+
 .l-section--item {
   overflow: hidden; }
 
@@ -869,12 +905,15 @@ body {
   height: 48px;
   overflow: hidden;
   z-index: 100;
+  -webkit-transform: translateY(-99px);
+  -ms-transform: translateY(-99px);
+  transform: translateY(-99px);
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .l-sticky.is-hidden {
-    -webkit-transform: translateY(-99px);
-    -ms-transform: translateY(-99px);
-    transform: translateY(-99px);
+  .l-sticky.is-open {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
 
@@ -1103,8 +1142,6 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: none;
-  padding-top: 10px;
-  padding-bottom: 40px;
   z-index: 10;
   top: 0;
   width: 100%;
@@ -1290,23 +1327,23 @@ body {
     .m-navbar .m-navbar--logo h1 {
       margin-left: -4px; }
 
-.mm-feature .m-navbar .m-navbar--menu-primary,
-.mm-feature .m-navbar .m-navbar--menu-secondary {
+.mm-feature .l-page--container .m-navbar .m-navbar--menu-primary,
+.mm-feature .l-page--container .m-navbar .m-navbar--menu-secondary {
   color: white; }
-  .mm-feature .m-navbar .m-navbar--menu-primary a,
-  .mm-feature .m-navbar .m-navbar--menu-secondary a {
+  .mm-feature .l-page--container .m-navbar .m-navbar--menu-primary a,
+  .mm-feature .l-page--container .m-navbar .m-navbar--menu-secondary a {
     color: white; }
 
-.mm-feature .m-navbar .m-navbar--menu a {
+.mm-feature .l-page--container .m-navbar .m-navbar--menu a {
   color: white; }
-  .mm-feature .m-navbar .m-navbar--menu a:hover {
+  .mm-feature .l-page--container .m-navbar .m-navbar--menu a:hover {
     color: white;
     border-top-color: white; }
 
-.mm-feature .m-navbar .m-navbar--logo .mm-has-svg {
+.mm-feature .l-page--container .m-navbar .m-navbar--logo .mm-has-svg {
   background-image: url("/assets/images/site-logo-white.svg"); }
 
-.mm-feature .m-navbar .m-navbar--about {
+.mm-feature .l-page--container .m-navbar .m-navbar--about {
   color: white; }
 
 .l-sticky .m-navbar {
@@ -2994,6 +3031,10 @@ article header figure {
   .mm-feature article .m-story--header .m-story--hed,
   .mm-feature article .m-story--header .m-story--summary {
     color: white; }
+  @media only screen and (min-width: 1021px) {
+    .mm-feature article .m-story--header {
+      height: 360px;
+      top: 440px; } }
 
 .l-detail-page .m-section--footer {
   margin-top: 50px; }
@@ -3641,34 +3682,4 @@ figure.m-layout-object,
   position: relative;
   z-index: 10;
   background-color: #FDFDFD; }
-
-.l-page .l-feature {
-  position: absolute;
-  height: 600px;
-  width: 100%;
-  z-index: -1;
-  display: none; }
-  .l-page .l-feature:after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.25); }
-
-.l-page.mm-feature .l-feature {
-  display: block;
-  background-image: url("http://lorempixel.com/900/600");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; }
-
-.l-page.mm-feature .l-navbar {
-  height: 600px; }
-
-.l-page .m-body--content {
-  padding-top: 45px; }
 /*# sourceMappingURL=main.css.map */

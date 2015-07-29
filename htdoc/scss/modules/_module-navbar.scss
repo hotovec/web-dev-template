@@ -1,4 +1,3 @@
-
 $navbar-logo: url('/assets/images/site-logo.svg') !default;
 $navbar-logo-white: url('/assets/images/site-logo-white.svg') !default;
 
@@ -29,9 +28,6 @@ $navbar-text-transform: none !default;
     font-size: $navbar-font-size;
     font-weight: $navbar-font-weight;
     text-transform: $navbar-text-transform;
-
-    padding-top: 10px;
-    padding-bottom: 40px;
 
     z-index: 10;
     top: 0;
@@ -192,35 +188,37 @@ $navbar-text-transform: none !default;
 }
 
 .mm-feature {
-    .m-navbar {
+    .l-page--container {
+        .m-navbar {
 
-        .m-navbar--menu-primary,
-        .m-navbar--menu-secondary {
-            color: white;
-            a {
+            .m-navbar--menu-primary,
+            .m-navbar--menu-secondary {
                 color: white;
-            }
-        }
-
-        .m-navbar--menu {
-            a {
-                color: white;
-                &:hover {
+                a {
                     color: white;
-                    border-top-color: white;
                 }
             }
-        }
 
-        .m-navbar--logo {
-            .mm-has-svg {
-                background-image: $navbar-logo-white;
-
+            .m-navbar--menu {
+                a {
+                    color: white;
+                    &:hover {
+                        color: white;
+                        border-top-color: white;
+                    }
+                }
             }
-        }
 
-        .m-navbar--about {
-            color: white;
+            .m-navbar--logo {
+                .mm-has-svg {
+                    background-image: $navbar-logo-white;
+
+                }
+            }
+
+            .m-navbar--about {
+                color: white;
+            }
         }
     }
 }
