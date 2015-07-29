@@ -857,19 +857,6 @@ body {
   -webkit-transition: .2s ease all;
           transition: .2s ease all; }
 
-.l-offcanvas--close {
-  background-color: white;
-  color: black;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  border-radius: 50%;
-  text-align: center;
-  right: 10px;
-  top: 10px;
-  z-index: 1001; }
-
 .l-offcanvas--pusher {
   position: relative;
   overflow: hidden;
@@ -903,6 +890,19 @@ body {
     visibility: visible;
     -webkit-transition: .3s ease all;
             transition: .3s ease all; }
+
+.m-offcanvas--close {
+  background-color: white;
+  color: black;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  right: 10px;
+  top: 10px;
+  z-index: 1001; }
 
 .l-sticky {
   position: fixed;
