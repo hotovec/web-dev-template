@@ -1,0 +1,60 @@
+{% extends "_base.twig" %}
+
+{% block body %}
+    <section class="m-hub">
+
+        <article>
+            <div class="row">
+                <header class="m-hub--header">
+                    <div class="m-hub--header-content">
+                        <h1 class="m-hub--hed">HUB</h1>
+
+                        {#<div class="m-hub--summary">Material Design shadows perform an important function in notation structure Material Design shadows perform an important function in notation structureMaterial Design shadows perform an important function in notation structureMaterial Design shadows perform an important function in notation structureMaterial Design shadows perform an important function in notation structure</div>#}
+                    </div>
+                </header>
+            </div>
+        </article>
+
+        <div class="row">
+            {% include "subtemplates/base-feed.twig" %}
+        </div>
+
+        {# <div class="row">
+             {% include "subtemplates/base-filter.twig" %}
+         </div>#}
+
+
+        {#{% include "subtemplates/base-section.twig" %}#}
+        {# feeds #}
+
+        {#<div class="row">#}
+        {#{% include "subtemplates/base-feed.twig" %}#}
+        {#{% include "subtemplates/base-carousel.twig" %}#}
+        {#</div>#}
+
+        {#{% include "subtemplates/feed-block-carousel.twig" %}#}
+
+
+        {#{% include "subtemplates/base-banner.twig" %}#}
+
+
+
+        {# navs #}
+
+        {#{% include "subtemplates/module-next-prev.twig" %}#}
+
+
+        {# panels & tools #}
+        {#{% include "subtemplates/hero-tabs.twig" %}#}
+        {#{% include "subtemplates/section-vertical-tabs.twig" %}#}
+        {#{% include "subtemplates/module-side-panel.twig" %}#}
+
+        {#{% include "subtemplates/module-footer.twig" %}#}
+    </section>
+
+    {{ parent() }}
+{% endblock %}
+
+
+{% block scripts %}{% endblock %}
+

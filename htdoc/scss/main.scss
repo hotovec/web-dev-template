@@ -7,11 +7,13 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 @import "../components/normalize-scss/normalize";
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "../components/lost-grid/scss/lost";
+
 // typekit
 @import "typekit/base";
 @import "typekit/nexa";
 @import "typekit/proxima-nova";
 @import "typekit/source-sans-pro";
+
 // libraries
 @import "lib/functions";
 @import "lib/custom-underline";
@@ -28,7 +30,7 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 @import "base/globals";
 @import "modules/module-placeholder";
 
-// layouts and modules
+// layouts
 @import "layouts/layout-base";
 @import "layouts/layout-page";
 @import "layouts/layout-section";
@@ -37,12 +39,14 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 @import "layouts/layout-sticky";
 @import "layouts/layout-feed";
 @import "layouts/layout-navigation";
-//@import "layouts/layout-page-detail-full";
+
+// modules
+@import "modules/shared-mixins";
 @import "modules/module-side-panel";
 @import "modules/module-navbar";
 @import "modules/module-footer";
 @import "modules/module-body-content";
-//@import "modules/module-pagination";
+
 @import "modules/module-coverlines";
 @import "modules/module-section";
 @import "modules/module-aside-block";
@@ -55,13 +59,16 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 @import "modules/module-banner";
 @import "modules/module-basic-page";
 @import "modules/module-content-story";
+@import "modules/module-hub";
 @import "modules/module-content-reference";
 @import "modules/module-content-contact";
 @import "modules/module-layout-object";
 @import "not-modular/hero-tabs";
+
 // external JS overrides
 @import "external/chosen";
 @import "external/slick";
+
 // dev
 @import "dev-flex";
 

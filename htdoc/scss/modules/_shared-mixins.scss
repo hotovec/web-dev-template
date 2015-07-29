@@ -1,0 +1,175 @@
+@mixin basic-page-header($content-type: m-story) {
+
+    .#{$content-type}--header {
+        @include cf();
+    }
+
+    .#{$content-type}--header-content {
+        height: 100%;
+    }
+
+    .#{$content-type}--hed,
+    .#{$content-type}--summary {
+        @include column(1, $gut: 60px);
+    }
+
+    .#{$content-type}--hed {
+        @include tk-nexa-book();
+        font-size: rem-calc(36);
+        line-height: 1.2em;
+    }
+
+    .#{$content-type}--summary {
+        @include tk-nexa-book();
+        font-size: rem-calc(18);
+        line-height: 1.2em;
+    }
+
+    @include media(C) {
+        .#{$content-type}--hed {
+            font-size: rem-calc(50);
+            line-height: 1.1em;
+        }
+
+        .#{$content-type}--summary {
+            font-size: rem-calc(20);
+            line-height: 1.1em;
+        }
+    }
+
+    @include media(D) {
+        .#{$content-type}--hed {
+            font-size: rem-calc(60);
+            line-height: 1.1em;
+        }
+
+        .#{$content-type}--summary {
+            font-size: rem-calc(20);
+            line-height: 1.1em;
+        }
+    }
+
+    &.mm-feature {
+        article {
+            .#{$content-type}--header {
+
+                position: absolute;
+                height: $feature-height_mobile - $feature-content-height_mobile;
+                width: 100%;
+                left: 0;
+                top: $feature-content-height_mobile;
+                padding-bottom: 40px;
+
+                .#{$content-type}--header-content {
+                    @include l-grid();
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                .#{$content-type}--hed,
+                .#{$content-type}--summary {
+                    color: white;
+                }
+
+                @include media(C) {
+                    height: $feature-height - $feature-content-height;
+                    top: $feature-content-height;
+                }
+
+            }
+        }
+    }
+
+}
+
+@mixin hub-page-header($content-type: m-hub) {
+
+    .#{$content-type}--header {
+        @include cf();
+        margin-bottom: 30px;
+
+    }
+
+    .#{$content-type}--header-content {
+        height: 100%;
+    }
+
+    .#{$content-type}--hed,
+    .#{$content-type}--summary {
+        @include column(1, $gut: 60px);
+    }
+
+    .#{$content-type}--hed {
+        @include tk-nexa-book();
+        font-size: rem-calc(36);
+        line-height: 1.2em;
+        margin-bottom: 0;
+        margin-top: 0;
+
+        // fix optical left alignment
+    }
+
+    .#{$content-type}--summary {
+        @include tk-nexa-book();
+        font-size: rem-calc(18);
+        line-height: 1.2em;
+    }
+
+    @include media(C) {
+        .#{$content-type}--hed {
+            font-size: rem-calc(50);
+            line-height: 1.1em;
+        }
+
+        .#{$content-type}--summary {
+            font-size: rem-calc(20);
+            line-height: 1.1em;
+        }
+    }
+
+    @include media(D) {
+        .#{$content-type}--hed {
+            font-size: rem-calc(60);
+            line-height: 1.1em;
+        }
+
+        .#{$content-type}--summary {
+            font-size: rem-calc(20);
+            line-height: 1.1em;
+        }
+    }
+
+    &.mm-feature {
+        .#{$content-type}--header {
+
+            position: absolute;
+            height: $feature-height_mobile - $feature-content-height_mobile;
+            width: 100%;
+            left: 0;
+            top: $feature-content-height_mobile;
+            padding-bottom: 40px;
+
+            .#{$content-type}--header-content {
+                @include l-grid();
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .#{$content-type}--hed,
+            .#{$content-type}--summary {
+                color: white;
+            }
+
+            @include media(C) {
+                height: $feature-height - $feature-content-height;
+                top: $feature-content-height;
+            }
+
+        }
+    }
+
+}
