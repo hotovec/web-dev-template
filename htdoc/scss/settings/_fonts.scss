@@ -94,7 +94,8 @@ $fnt-body-line: 1.4em;
 
 @mixin font-body() {
     //@include tk-nexa-reg();
-    @include tk-proxima-nova-reg();
+    //@include tk-proxima-nova-reg();
+    font-family: $georgia;
     @include font-debug("B");
 }
 

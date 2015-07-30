@@ -1723,10 +1723,8 @@ body {
       margin-right: 30px; } }
 
 .m-body--copy {
-  font-family: "proxima-nova", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem; }
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-size: 1.1875rem; }
   .m-body--copy:before {
     display: block;
     width: 16px;
@@ -1741,14 +1739,15 @@ body {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: 600; }
   .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
-    line-height: 1.2em;
+    line-height: 1.3em;
     margin-top: 2em;
-    margin-bottom: 1.6em; }
-  .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
+    margin-bottom: 1em; }
+  .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
     font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
-    font-weight: 400; }
-    .m-body--copy h2:before, .m-body--copy h3:before, .m-body--copy h4:before, .m-body--copy h5:before, .m-body--copy h6:before {
+    font-weight: 400;
+    letter-spacing: -0.02em; }
+    .m-body--copy h1:before, .m-body--copy h2:before, .m-body--copy h3:before, .m-body--copy h4:before, .m-body--copy h5:before, .m-body--copy h6:before {
       display: block;
       width: 16px;
       height: 16px;
@@ -1762,90 +1761,29 @@ body {
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-weight: 600; }
   .m-body--copy h1 {
-    font-family: "nexa", "Helvetica Neue", sans-serif;
-    font-style: normal;
-    font-weight: 200;
-    font-size: 2.5rem;
-    margin-bottom: 1em; }
-    .m-body--copy h1:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "H";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
+    font-size: 2.375rem; }
   .m-body--copy h2 {
-    font-size: 1.875rem; }
+    font-size: 2.1375rem; }
   .m-body--copy h3 {
-    font-size: 1.625rem;
+    font-size: 1.78125rem;
     font-weight: 600; }
   .m-body--copy h4 {
-    font-size: 1.625rem;
-    font-weight: 400;
-    margin-bottom: 1em; }
+    font-size: 1.78125rem;
+    font-weight: 400; }
   .m-body--copy h5 {
-    font-size: 1.25rem;
+    font-size: 1.425rem;
     font-weight: 600;
     margin-bottom: 1em;
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(top, transparent 49%, #333 50%);
-    background-image: -webkit-linear-gradient(top, transparent 49%, #333 50%, , , , , , , , );
-    background-image: linear-gradient(to bottom,transparent 49%, #333 50%, , , , , , , , );
-    background-repeat: repeat-x;
-    background-size: 2px 2px;
-    background-position: 0 90%;
-    text-shadow: -2px 0 #fff, -1px 0 #fff, 1px 0 #fff, 2px 0 #fff; }
-    @media (-webkit-max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi) {
-      .m-body--copy h5 {
-        background-size: 1px 2px; } }
-    .m-body--copy h5::-moz-selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
-    .m-body--copy h5::selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
-    .m-body--copy h5::-moz-selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
+    display: inline-block; }
   .m-body--copy h6 {
-    font-size: 1.125rem;
+    font-size: 1.30625rem;
     font-weight: 400;
     margin-bottom: 1em;
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(top, transparent 49%, #333 50%);
-    background-image: -webkit-linear-gradient(top, transparent 49%, #333 50%, , , , , , , , );
-    background-image: linear-gradient(to bottom,transparent 49%, #333 50%, , , , , , , , );
-    background-repeat: repeat-x;
-    background-size: 2px 2px;
-    background-position: 0 90%;
-    text-shadow: -2px 0 #fff, -1px 0 #fff, 1px 0 #fff, 2px 0 #fff; }
-    @media (-webkit-max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi) {
-      .m-body--copy h6 {
-        background-size: 1px 2px; } }
-    .m-body--copy h6::-moz-selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
-    .m-body--copy h6::selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
-    .m-body--copy h6::-moz-selection {
-      background-color: #b0d6fd;
-      text-shadow: none; }
+    display: inline-block; }
   .m-body--copy p, .m-body--copy ul, .m-body--copy ol, .m-body--copy blockquote, .m-body--copy figure {
     margin-top: 0;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    line-height: 1.6em; }
   .m-body--copy > p:first-of-type {
     margin-top: -.45em; }
   .m-body--copy p:first-of-type span {
@@ -3282,14 +3220,42 @@ article header figure {
   font-style: normal;
   font-weight: 400;
   font-size: 2.25rem;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+  letter-spacing: -0.02em; }
+  .m-story--hed:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H2";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
 
 .m-story--summary {
   font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 1.125rem;
+  font-weight: 200;
+  color: #437373;
+  font-size: 1.375rem;
   line-height: 1.2em; }
+  .m-story--summary:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
 
 @media only screen and (min-width: 1021px) {
   .m-story--hed {
@@ -3531,11 +3497,24 @@ article header figure {
 .m-hub--hed {
   font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 2.25rem;
   line-height: 1.2em;
   margin-bottom: 0;
   margin-top: 0; }
+  .m-hub--hed:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
 
 .m-hub--summary {
   font-family: "nexa", "Helvetica Neue", sans-serif;
@@ -3543,6 +3522,19 @@ article header figure {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.2em; }
+  .m-hub--summary:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H2";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
 
 @media only screen and (min-width: 1021px) {
   .m-hub--hed {

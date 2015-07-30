@@ -71,57 +71,63 @@ $aside-column-width: 300px;
 .m-body--copy {
     @include font-body();
 
-    font-size: rem-calc(16);
+    $fontBase: 19px;
+    font-size: rem-calc($fontBase * 1);
+
 
     h1, h2, h3, h4, h5, h6 {
-        line-height: 1.2em;
+        line-height: 1.3em;
         margin-top: 2em;
-        margin-bottom: 1.6em;
+        margin-bottom: 1em;
         //color: darken($color-body-font, 30%);
     }
 
-    h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         @include font-headline-secondary();
+        letter-spacing: -0.02em;
     }
 
     h1 {
-        @include font-headline();
-        font-size: rem-calc(40);
-        margin-bottom: 1em;
+        //@include font-headline();
+        font-size: rem-calc($fontBase * 2);
     }
 
     h2 {
-        font-size: rem-calc(30);
+        font-size: rem-calc($fontBase * 1.8);
     }
 
     h3 {
-        font-size: rem-calc(26);
+        font-size: rem-calc($fontBase * 1.5);
         font-weight: 600;
     }
     h4 {
-        font-size: rem-calc(26);
+        font-size: rem-calc($fontBase * 1.5);
         font-weight: 400;
-        margin-bottom: 1em;
     }
     h5 {
-        font-size: rem-calc(20);
+        font-size: rem-calc($fontBase * 1.2);
         font-weight: 600;
         margin-bottom: 1em;
 
         display: inline-block;
-        @include customUnderline();
+        //@include customUnderline();
     }
     h6 {
-        font-size: rem-calc(18);
+        font-size: rem-calc($fontBase * 1.1);
         font-weight: 400;
         margin-bottom: 1em;
         display: inline-block;
-        @include customUnderline();
+        //@include customUnderline();
     }
 
     p, ul, ol, blockquote, figure {
         margin-top: 0;
         margin-bottom: 2em;
+        line-height: 1.6em;
+    }
+
+    p {
+
     }
 
     // compensate lineheight
@@ -204,5 +210,9 @@ $aside-column-width: 300px;
             color: black;
         }
     }
+
+    // tweaks
+
+
 
 }

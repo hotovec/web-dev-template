@@ -14,14 +14,16 @@
     }
 
     .#{$content-type}--hed {
-        @include tk-nexa-book();
+        @include font-headline-secondary();
         font-size: rem-calc(36);
         line-height: 1.2em;
+        letter-spacing: -0.02em;
     }
 
     .#{$content-type}--summary {
-        @include tk-nexa-book();
-        font-size: rem-calc(18);
+        @include font-headline();
+        color: #437373;
+        font-size: rem-calc(22);
         line-height: 1.2em;
     }
 
@@ -102,7 +104,7 @@
     }
 
     .#{$content-type}--hed {
-        @include tk-nexa-book();
+        @include font-headline();
         font-size: rem-calc(36);
         line-height: 1.2em;
         margin-bottom: 0;
@@ -112,7 +114,7 @@
     }
 
     .#{$content-type}--summary {
-        @include tk-nexa-book();
+        @include font-headline-secondary();
         font-size: rem-calc(18);
         line-height: 1.2em;
     }
