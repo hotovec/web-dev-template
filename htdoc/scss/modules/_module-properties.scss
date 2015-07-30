@@ -2,7 +2,7 @@
 
 .m-properties {
     display: block;
-    @include font-ui();
+    @include font-meta();
     font-size: rem-calc(14);
 
     dl {

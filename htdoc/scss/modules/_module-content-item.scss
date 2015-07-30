@@ -16,7 +16,7 @@
 }
 
 .m-item--meta {
-    @include font-headline-secondary();
+    @include font-meta();
     font-size: rem-calc(14);
     line-height: 1.3em;
     color: lighten($color-body-font,16%);

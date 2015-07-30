@@ -1,6 +1,6 @@
 // font setup
 
-$fnt-debug: false;
+$fnt-debug: true;
 $fnt-base-size: 16px !default;
 $rem-base: $fnt-base-size ;
 
@@ -42,7 +42,7 @@ $fnt-body-line: 1.4em;
 
 @mixin font-debug($id) {
     @if $fnt-debug {
-        &:after {
+        &:before {
             display: block;
             width: 16px;
             height: 16px;
@@ -87,9 +87,9 @@ $fnt-body-line: 1.4em;
     @include font-debug("U");
 }
 
-@mixin font-ui-secondary() {
-    @include tk-proxima-nova-reg();
-    @include font-debug("U2");
+@mixin font-meta() {
+    @include tk-proxima-nova-bold();
+    @include font-debug("M");
 }
 
 @mixin font-body() {
