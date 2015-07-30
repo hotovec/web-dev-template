@@ -116,10 +116,10 @@
     .m-item--meta {
         //background-color: rgba(0,0,0,.5);
         width: 80%;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         text-align: center;
         text-transform: uppercase;
-        font-weight: 600;
+        //font-weight: 600;
         border-bottom: 2px solid white;
         position: relative;
         z-index: 1;
@@ -273,7 +273,7 @@
         .m-item--hed,
         .m-item--description,
         .m-item--meta {
-            font-weight: 600;
+            //font-weight: 600;
         }
         .m-item--hed {
             font-size: rem-calc(50);
@@ -428,7 +428,7 @@
 
     .m-item--hed {
         @include vertical-align();
-        font-weight: 400;
+        //font-weight: 400;
         font-size: rem-calc(14);
     }
 

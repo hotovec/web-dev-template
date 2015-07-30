@@ -384,6 +384,34 @@ th {
   .row:after {
     clear: both; }
 
+@font-face {
+  font-family: 'nexa';
+  src: url("/assets/fonts/nexa2/nexa_book-webfont.eot");
+  src: url("/assets/fonts/nexa2/nexa_book-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/nexa2/nexa_book-webfont.woff2") format("woff2"), url("/assets/fonts/nexa2/nexa_book-webfont.woff") format("woff"), url("/assets/fonts/nexa2/nexa_book-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'nexa';
+  src: url("/assets/fonts/nexa2/nexa_light-webfont.eot");
+  src: url("/assets/fonts/nexa2/nexa_light-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/nexa2/nexa_light-webfont.woff2") format("woff2"), url("/assets/fonts/nexa2/nexa_light-webfont.woff") format("woff"), url("/assets/fonts/nexa2/nexa_light-webfont.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'nexa';
+  src: url("/assets/fonts/nexa2/nexa_thin-webfont.eot");
+  src: url("/assets/fonts/nexa2/nexa_thin-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/nexa2/nexa_thin-webfont.woff2") format("woff2"), url("/assets/fonts/nexa2/nexa_thin-webfont.woff") format("woff"), url("/assets/fonts/nexa2/nexa_thin-webfont.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'nexa';
+  src: url("/assets/fonts/nexa2/nexa_bold-webfont.eot");
+  src: url("/assets/fonts/nexa2/nexa_bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/nexa2/nexa_bold-webfont.woff2") format("woff2"), url("/assets/fonts/nexa2/nexa_bold-webfont.woff") format("woff"), url("/assets/fonts/nexa2/nexa_bold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
 .c-1 {
   color: #7ab929; }
 
@@ -909,7 +937,7 @@ body {
 
 .m-offcanvas--menu,
 .m-offcanvas--panel {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   list-style: none;
@@ -1188,7 +1216,7 @@ body {
   *zoom: 1;
   font-family: "proxima-nova", sans-serif;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: normal;
   text-transform: none;
   z-index: 10;
   top: 0;
@@ -1279,9 +1307,8 @@ body {
     list-style: none;
     overflow: hidden;
     margin: 0;
-    font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+    font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-weight: 600;
     color: #858585; }
     .m-navbar .m-navbar--menu-primary > li,
@@ -1357,24 +1384,22 @@ body {
           background-position: 0 50%;
           min-height: 48px; } }
   .m-navbar .m-navbar--about {
-    font-family: "Nexa Thin", "Helvetica Neue", sans-serif;
+    font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1em;
     color: #c2c2c2;
     margin-top: 0;
     display: block;
     font-size: 1.125rem;
     margin-bottom: 40px; }
-    .m-navbar .m-navbar--about h2 {
-      font-size: 1rem;
-      margin: 0; }
     @media only screen and (min-width: 641px) {
       .m-navbar .m-navbar--about {
-        font-size: 1.0625rem;
-        margin-bottom: 30px; }
-        .m-navbar .m-navbar--about h2 {
-          font-size: 1.3125rem; } }
+        font-size: 1.3125rem;
+        margin-bottom: 30px; } }
+    @media only screen and (min-width: 1021px) {
+      .m-navbar .m-navbar--about {
+        margin-left: -2px; } }
   .m-navbar .m-navbar--logo {
     float: left;
     width: calc(100% * 1);
@@ -1649,13 +1674,13 @@ body {
     margin-top: 2em;
     margin-bottom: 1.6em; }
   .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
-    font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+    font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400; }
   .m-body--copy h1 {
-    font-family: "Nexa Light", "Helvetica Neue", sans-serif;
+    font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 2.5rem;
     margin-bottom: 1em; }
   .m-body--copy h2 {
@@ -1907,9 +1932,9 @@ body {
 .m-section--header,
 .m-section--footer {
   *zoom: 1;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   font-weight: 800;
   padding-top: 60px;
@@ -1932,9 +1957,9 @@ body {
       text-decoration: underline; }
 
 .m-section--hed {
-  font-family: "Nexa Light", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1.875rem;
   text-transform: uppercase;
   line-height: 1.2em;
@@ -2410,14 +2435,14 @@ body {
     text-decoration: underline; }
 
 .m-item--hed {
-  font-family: "Nexa Light", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1.5rem;
   line-height: 1.3em; }
 
 .m-item--meta {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -2425,7 +2450,7 @@ body {
   color: #707070; }
 
 .m-item--description {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem; }
@@ -2568,10 +2593,9 @@ body {
   .m-card_image .m-item--description,
   .m-card_image .m-item--meta {
     width: 80%;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     text-align: center;
     text-transform: uppercase;
-    font-weight: 600;
     border-bottom: 2px solid white;
     position: relative;
     z-index: 1;
@@ -2670,10 +2694,6 @@ body {
     width: 60%; }
   .m-card_image[min-width~="800"] .m-item--hed {
     font-size: 1.875rem; }
-  .m-card_image[min-width~="1024"] .m-item--hed,
-  .m-card_image[min-width~="1024"] .m-item--description,
-  .m-card_image[min-width~="1024"] .m-item--meta {
-    font-weight: 600; }
   .m-card_image[min-width~="1024"] .m-item--hed {
     font-size: 3.125rem; }
   .m-card_image[min-width~="1024"] .m-item--header-content {
@@ -2768,13 +2788,12 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-weight: 400;
     font-size: 0.875rem; }
 
 .m-filter {
-  font-family: "proxima-nova", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 30px; }
   .m-filter .active-result {
     font-weight: 400; }
@@ -2840,9 +2859,9 @@ body {
 
 .m-properties {
   display: block;
-  font-family: "proxima-nova", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.875rem; }
   .m-properties dl {
     position: relative;
@@ -3010,14 +3029,14 @@ article header figure {
   margin-right: 30px; }
 
 .m-story--hed {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.25rem;
   line-height: 1.2em; }
 
 .m-story--summary {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.125rem;
@@ -3261,7 +3280,7 @@ article header figure {
   margin-right: 30px; }
 
 .m-hub--hed {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.25rem;
@@ -3270,7 +3289,7 @@ article header figure {
   margin-top: 0; }
 
 .m-hub--summary {
-  font-family: "Nexa Book", "Helvetica Neue", sans-serif;
+  font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.125rem;

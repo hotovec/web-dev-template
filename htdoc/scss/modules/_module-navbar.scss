@@ -15,7 +15,7 @@ $navbar-hover-bg-color: transparent !default;
 
 $navbar-border-color: #dfdfe3 !default;
 $navbar-font-size: rem(14) !default;
-$navbar-font-weight: 600 !default;
+$navbar-font-weight: normal !default;
 $navbar-text-transform: none !default;
 
 // module inner default layout
@@ -78,8 +78,7 @@ $navbar-text-transform: none !default;
     .m-navbar--menu-primary,
     .m-navbar--menu-secondary {
         @include inline-list($direction: left, $margin-opposite: 30px, $margin-dir: 30px);
-        @include tk-nexa-book();
-        font-weight: 600;
+        @include font-ui();
 
         color: darken(#9e9e9e, 10%);
         a {
@@ -151,7 +150,6 @@ $navbar-text-transform: none !default;
 
             height: $navbar-height;
 
-
             @include media(C) {
                 background-position: 0 50%;
                 min-height: $navbar-height;
@@ -160,7 +158,7 @@ $navbar-text-transform: none !default;
     }
 
     .m-navbar--about {
-        @include tk-nexa-thin();
+        @include font-headline-secondary();
         line-height: 1em;
         color: #c2c2c2;
         margin-top: 0;
@@ -168,18 +166,15 @@ $navbar-text-transform: none !default;
         font-size: rem-calc(18);
         margin-bottom: 40px;
 
-        h2 {
-            font-size: rem-calc(16);
-            margin: 0;
+        @include media(B) {
+            font-size: rem-calc(21);
+            margin-bottom: 30px;
+
         }
 
-        @include media(B) {
-            font-size: rem-calc(17);
-            margin-bottom: 30px;
-            h2 {
-                font-size: rem-calc(21);
-            }
-
+        // optical compensation
+        @include media(C) {
+            margin-left: -2px;
         }
     }
 
@@ -191,7 +186,7 @@ $navbar-text-transform: none !default;
         h1 {
             margin-left: -4px;
         }
-            margin-bottom: 0;
+        margin-bottom: 0;
         @include media(B) {
             margin-bottom: 8px;
         }

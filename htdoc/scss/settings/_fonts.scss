@@ -60,12 +60,13 @@ $fnt-body-line: 1.4em;
 }
 
 @mixin font-headline() {
+    //@include tk-proxima-nova-light();
     @include tk-nexa-light();
     @include font-debug("H");
 }
 
 @mixin font-headline-secondary() {
-    //@include tk-proxima-nova-light();
+    //@include tk-proxima-nova-reg();
     @include tk-nexa-book();
     @include font-debug("H2");
 }
@@ -82,7 +83,7 @@ $fnt-body-line: 1.4em;
 }
 
 @mixin font-ui() {
-    @include tk-proxima-nova-reg();
+    @include tk-nexa-bold();
     @include font-debug("U");
 }
 
