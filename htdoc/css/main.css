@@ -1483,10 +1483,11 @@ body {
     height: 48px; }
     .l-sticky .m-navbar .m-navbar--menu-logo a,
     .l-sticky .m-navbar .m-navbar--menu a {
-      line-height: 48px; }
+      line-height: 48px;
+      border: none; }
     .l-sticky .m-navbar .m-navbar--menu-logo a:hover,
     .l-sticky .m-navbar .m-navbar--menu a:hover {
-      border-color: transparent; }
+      border: none; }
   .l-sticky .m-navbar .m-navbar--menu-secondary,
   .l-sticky .m-navbar .m-navbar--menu-primary {
     float: left;

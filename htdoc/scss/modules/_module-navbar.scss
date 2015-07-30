@@ -261,9 +261,10 @@ $navbar-text-transform: none !default;
             height: $navbar-sticky-height;
             a {
                 line-height: $navbar-sticky-height;
+                border: none;
             }
             a:hover {
-                border-color: transparent;
+                border: none;
             }
         }
 
