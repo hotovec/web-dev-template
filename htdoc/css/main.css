@@ -933,18 +933,32 @@ body {
   top: 16px;
   width: 32px; }
   .m-offcanvas--close:hover {
-    border: 1px solid black; }
+    border: 1px solid #5C5C5C; }
 
 .m-offcanvas--menu,
 .m-offcanvas--panel {
   font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   list-style: none;
   margin: 20px;
   padding: 0;
   padding-bottom: 20px;
   border-bottom: 1px solid #c2c2c2; }
+  .m-offcanvas--menu:before,
+  .m-offcanvas--panel:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "U";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
   .m-offcanvas--menu em,
   .m-offcanvas--panel em {
     font-style: normal; }
@@ -964,14 +978,31 @@ body {
   line-height: 2em;
   color: #5C5C5C; }
   .m-offcanvas--menu-link a {
+    display: block;
     color: #5C5C5C;
     text-decoration: none; }
     .m-offcanvas--menu-link a:hover {
       color: #c20e1a; }
 
 .m-offcanvas--label {
+  font-family: "nexa", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 200;
   font-size: 2rem;
   line-height: 1em; }
+  .m-offcanvas--label:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "H";
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 600; }
 
 .l-sticky {
   position: fixed;

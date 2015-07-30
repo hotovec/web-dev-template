@@ -78,6 +78,7 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
 // module
 
 .m-offcanvas {
+
 }
 
 .m-offcanvas--close {
@@ -97,13 +98,13 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
     width: 32px;
     &:hover {
 
-        border: 1px solid black;
+        border: 1px solid $offcanvas-text-color;
     }
 }
 
 .m-offcanvas--menu,
 .m-offcanvas--panel {
-    @include tk-nexa-book();
+    @include font-ui();
     list-style: none;
     margin: 20px;
     padding: 0;
@@ -134,9 +135,11 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
 }
 
 .m-offcanvas--menu-link {
+
     line-height: 2em;
     color: $offcanvas-text-color;
     a {
+        display: block;
         color: $offcanvas-text-color;
         text-decoration: none;
         &:hover {
@@ -146,6 +149,7 @@ $offcanvas-border-color: lighten($offcanvas-text-color, 40%);
 }
 
 .m-offcanvas--label {
+    @include font-headline();
     font-size: rem-calc(32);
     line-height: 1em;
 }
