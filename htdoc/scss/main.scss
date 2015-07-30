@@ -138,6 +138,8 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 }
 
 .l-page--container {
+    @include cf();
+
     position: relative;
     z-index: 10;
 

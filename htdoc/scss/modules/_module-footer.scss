@@ -4,24 +4,16 @@ $footer-copyright-height: 64px !default;
 
 .m-footer {
 
-
-
-    &.m-section {
-        padding-top: $space;
-        padding-bottom: $space * .5;
-    }
-
-    background-color: $color-primary;
-
+    background-color: $color-body-font;
     height: auto;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     .m-footer--container {
-        color: white;
-        font-weight: 600;
+        @include font-ui();
+
+        color: lighten($color-body-font, 60%);
     }
 
     em {
@@ -29,7 +21,7 @@ $footer-copyright-height: 64px !default;
     }
 
     a {
-        color: white;
+        color: lighten($color-body-font, 80%);
         text-decoration: none;
         &:hover {
             text-decoration: underline;
@@ -38,30 +30,16 @@ $footer-copyright-height: 64px !default;
 
     .m-footer--section {
 
-
         font-size: rem-calc(14);
 
         &:nth-of-type(1) {
-            @include column(1);
-            margin-bottom: 16px;
+            @include column(9/12);
 
-        }
-        &:nth-of-type(2) {
-            @include column(1);
-            margin-bottom: 6px;
-
-        }
-        &:nth-of-type(3) {
-            @include column(1);
-            text-align: left;
-            margin-bottom: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid white;
         }
 
         @include media(C) {
             &:nth-of-type(1) {
-                @include column(3/12);
+                @include column(6/12);
                 margin-bottom: 0;
 
             }
@@ -76,46 +54,34 @@ $footer-copyright-height: 64px !default;
                 margin-bottom: 0;
 
             }
-
         }
+        @include media(D) {
+            &:nth-of-type(1) {
+                @include column(4/12);
+                margin-bottom: 0;
+
+            }
+            }
     }
 
     .m-footer--subsection {
-        margin-top: 20px;
+        @include column(1);
+
         font-size: rem-calc(12);
-
-        &:nth-of-type(1) {
-            @include column(6/12);
-            text-align: left;
-        }
-
-        &:nth-of-type(2) {
-            @include column(6/12);
-            text-align: right;
-        }
+        border-top: 1px solid lighten($color-body-font, 30%);
+        margin-top: 10px;
+        padding-top: 10px;
     }
 
     .m-footer--menu-primary {
         text-transform: uppercase;
         @include inline-list(left, 30px);
     }
-    .m-footer--menu-secondary {
-        text-transform: uppercase;
-        @include inline-list(left, 16px);
-
-        @include media(C) {
-            @include inline-list(right, 30px);
-        }
-    }
 
     .m-footer--menu-link {
         i {
             font-size: rem-calc(24px);
         }
-    }
-
-    .m-footer--author {
-        text-align: right;
     }
 
     .m-footer--logo {

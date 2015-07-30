@@ -75,6 +75,7 @@ $aside-column-width: 300px;
     color: $color-body-font;
     $fontBase: 18px;
     font-size: rem-calc($fontBase * 1);
+    margin-bottom: $space / 2;
 
 
     h1, h2, h3, h4, h5, h6 {
