@@ -71,7 +71,9 @@ $aside-column-width: 300px;
 .m-body--copy {
     @include font-body();
 
-    $fontBase: 19px;
+
+    color: $color-body-font;
+    $fontBase: 18px;
     font-size: rem-calc($fontBase * 1);
 
 
@@ -166,19 +168,21 @@ $aside-column-width: 300px;
         border-top: 1px solid lighten($color-body-font, 30%);
         border-bottom: 1px solid lighten($color-body-font, 30%);
 
+        @include font-body();
+
         font-style: italic;
-        font-family: Georgia;
-        font-size: rem-calc(19);
+        font-size: rem-calc($fontBase * .96);
+        line-height: 1.6em;
         color: lighten($color-body-font, 30%);
 
 
 
         .author {
+            @include font-subhed();
             display: block;
             margin-top: 10px;
-            font-family: $fnt-subhed;
-            font-style: normal;
-            font-size: rem-calc(15);
+
+            font-size: rem-calc($fontBase * .8);
             font-weight: 600;
             color: $color-body-font;
             text-align: right;
@@ -195,16 +199,20 @@ $aside-column-width: 300px;
 
     }
 
-    figure:not(.m-layout-object) {
-        margin: 0;
 
+
+    figure { //:not(.m-layout-object) {
+        margin-left: 0;
+        margin-right: 0;
     }
 
     figcaption {
-        font-size: rem-calc(12);
+        @include font-meta();
+        font-size: rem-calc($fontBase * .7);
         line-height: 1.5em;
         padding-top: 10px;
-        //font-weight: bold;
+
+        font-weight: normal;
 
         strong {
             color: black;
