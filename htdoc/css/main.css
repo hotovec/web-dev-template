@@ -2468,7 +2468,9 @@ body {
   position: relative;
   overflow: hidden;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 30px; }
   .m-card_standard article,
   .m-card_standard .m-item--header,
   .m-card_standard .m-item--image {
@@ -2491,10 +2493,29 @@ body {
     position: absolute;
     left: 20px;
     bottom: 20px; }
+  @media only screen and (min-width: 641px) {
+    .m-card_standard {
+      padding-bottom: 60px; } }
+  @media only screen and (min-width: 1021px) {
+    .m-card_standard {
+      padding-bottom: 0; } }
   .m-card_standard .m-item--header {
     padding: 0; }
+  .m-card_standard .m-item--description {
+    margin-bottom: 1em; }
   .m-card_standard .m-item--hed {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: "nexa", "Helvetica Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400; }
+    @media only screen and (min-width: 1021px) {
+      .m-card_standard .m-item--hed {
+        font-family: "nexa", "Helvetica Neue", sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 1.5rem;
+        line-height: 1.3em; } }
   .m-card_standard .m-item--more,
   .m-card_standard .m-item--image {
     display: none; }
