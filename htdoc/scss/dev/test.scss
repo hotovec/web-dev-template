@@ -1,0 +1,11 @@
+//@import "../../components/normalize-scss/normalize";
+@import "../../components/bourbon/app/assets/stylesheets/bourbon";
+@import "media";
+@import "grid";
+
+body {
+    color: rebeccapurple;
+    @include grid() {
+        @include row();
+    }
+}

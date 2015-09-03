@@ -1,0 +1,241 @@
+//
+// Simple Flex Box Grid
+// uses: bourbon.io mixins for flex-box
+//
+
+$grid-debugRow: false;
+
+// STANDARD GRID
+$std_base_widths: (100%, 100%, 100%, 1200px);
+$std_gutter_widths: (20px, 20px, 20px, 30px);
+$std_margin_widths: (20px, 30px, 30px, 30px);
+$std_colpad_widths: (20px, 20px, 20px, 20px);
+$std_componentpad_widths: (40px, 40px, 40px, 40px);
+
+$standard_grid: ($std_base_widths, $std_gutter_widths, $std_margin_widths, $std_colpad_widths, $std_componentpad_widths);
+
+/**
+ * _get_value_by_size - gets a value from a list that is organized by media size.
+ */
+@function _get_value_by_size($list, $size) {
+    @if $size == A {
+        @return nth($list, 1);
+    }
+    @if $size == B {
+        @return nth($list, 2);
+    }
+    @if $size == C {
+        @return nth($list, 3);
+    }
+    @if $size == D {
+        @return nth($list, 4);
+    }
+}
+
+/**
+ * _get_grid_value - gets a value from a grid-definition list, based on the
+ * value name and the media size.
+ */
+@function _get_grid_value($grid, $value, $size) {
+    @if $value == base {
+        @return _get_value_by_size(nth($grid, 1), $size);
+    }
+    @if $value == gutter {
+        @return _get_value_by_size(nth($grid, 2), $size);
+    }
+    @if $value == margin {
+        @return _get_value_by_size(nth($grid, 3), $size);
+    }
+    @if $value == colpad {
+        @return _get_value_by_size(nth($grid, 4), $size);
+    }
+    @if $value == componentpad {
+        @return _get_value_by_size(nth($grid, 5), $size);
+    }
+}
+
+/**
+ * _set_grid_vars - used to set the globally-exposed grid variables to
+ * the correct variable for the size.
+ *
+ */
+@mixin _set_grid_vars ($size, $grid) {
+    $base_width: _get_grid_value($grid, base, $size);
+    $gutter_width: _get_grid_value($grid, gutter, $size);
+    $margin_width: _get_grid_value($grid, margin, $size);
+    $colpad_width: _get_grid_value($grid, colpad, $size);
+    $componentpad_width: _get_grid_value($grid, componentpad, $size);
+}
+
+
+// SET GLOBALS TO DEFAULT OF STANDARD GRID, SIZE A
+$base_width: _get_grid_value($standard_grid, base,  A);
+$gutter_width: _get_grid_value($standard_grid, gutter, A);
+$margin_width: _get_grid_value($standard_grid, margin, A);
+$colpad_width: _get_grid_value($standard_grid, colpad, A);
+$componentpad_width: _get_grid_value($standard_grid, componentpad, A);
+
+
+//
+// Calculate width of column from fraction
+//
+// scope: private
+//
+
+@function _frac($fraction) {
+    @return $fraction * 100%;
+}
+
+//
+// Get padding value from gutter size
+//
+// scope: private
+//
+
+@function _calcGutter($gutter) {
+    @return $gutter / 2;
+}
+
+//
+// Apply gutter
+//
+// scope: private
+//
+
+@mixin _setGutter($gutter) {
+    padding-left: _calcGutter($gutter);
+    padding-right: _calcGutter($gutter);
+}
+
+
+/**
+ * grid - All mixins and variables specific to grid and grid-spacing must
+ * be used inside of this mixin.
+ *
+ * $name - the name of the grid you want to use. Not yet implemented.
+ *
+ * NOTE: Bound to the current implementation of size(), as it expects the 'inside_mq' flag
+ * to be set when used inside a media query, via the size() mixin, and it also expects to use
+ * the $current_size global, which size() currently sets.
+ *
+ * USAGE:
+ *
+ * If used within a media query (via size() mixin), you MUST pass every
+ * media size individually to the size() mixin, or the grid will not have the correct
+ * gutter, margin, and padding widths at different media sizes.
+ *
+ * ---------------- GOOD --------------------------
+ * @include size((A, B)) {
+ *      @include grid() {
+ *          // what you want at size A + B
+ *      }
+ * }
+ *
+ * @include size((C, D)) {
+ *      @include grid() {
+ *          // what you want at size C + D!
+ *      }
+ * }
+ *
+ * ---------------- BAD --------------------------
+ * @include size(A) {
+ *      @include grid() {
+ *          // will NOT have correct spacing at size B
+ *      }
+ * }
+ *
+ * @include size(C) {
+ *      @include grid() {
+ *          // will NOT have correct spacing at size D!
+ *      }
+ * }
+ *
+ */
+
+@mixin grid($grid: $standard_grid) {
+    @if $inside_mq == true {
+        @include _set_grid_vars($current_size, $grid);
+        @content;
+    }
+    @else {
+        $_size: _get_range_of_sizes($current_size);
+        @include size($_size) {
+            @include _set_grid_vars($current_size, $grid);
+            @content;
+        }
+    }
+}
+
+/**
+ * container - handles the overall width of the grid. Defaults to using the
+ * global variables $margin_width and $base_width, which should be set by the
+ * grid() mixin.
+ */
+@mixin container( $side_gutters: $margin_width, $width: $base_width ) {
+
+    @include display(flex);
+    overflow: hidden;
+    margin: 0 auto;
+
+    width: $width;
+    padding: 0 $margin_width;
+}
+
+/**
+ * row - gives an element all the properties necessary to have col() elements
+ * as children.
+ */
+@mixin row( $gutter: $gutter_width, $collapsed: false ) {
+
+    @include display(flex);
+    @include flex-flow(row);
+    @include flex-wrap(wrap);
+
+    flex: 1; // because container is flex
+    overflow: hidden;
+
+    @if($collapsed == true) {
+        margin-left: - $gutter;
+        margin-right: - $gutter;
+    } @else {
+        margin-left: - _calcGutter($gutter);
+        margin-right: - _calcGutter($gutter);
+    }
+}
+
+//
+//
+// Column mixin
+//
+// Also exposed flexbox grow/shrink values. Useful if the columns should grow
+// or shrink based on their siblings!
+//
+// usage:
+//      @include col(1/12);        1 column of 12 with default gutter
+//      @include col(2/6);         2 columns of 6 with default gutter
+//      @include col(4/12, 20px);  4 columns of 12 with 20px gutter
+//      @include col(4/12, 0);     4 columns of 12 with zero gutter
+//      @include col(.5, 0);       1/2 of row with zero gutter
+//
+
+@mixin col($frac, $gutter: $gutter_width, $grow: 0, $shrink: 0) {
+    @include flex($grow $shrink _frac($frac));
+    overflow: hidden;
+
+    // Allows disabling of gutters.
+    @include _setGutter($gutter);
+
+}
+
+//
+// push pull by margin? Is better way?
+// not ready?
+//
+@mixin fpush($frac) {
+    margin-left: _frac($frac);
+}
+
+@mixin fpull($frac) {
+    margin-left: -1 * _frac($frac);
+}
+
