@@ -751,8 +751,7 @@ body {
   display: block;
   background-image: url("http://lorempixel.com/900/600");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; }
+  background-position: center; }
 
 .l-page.mm-feature .l-navbar {
   height: 600px; }
@@ -919,20 +918,6 @@ body {
   padding: 0;
   padding-bottom: 20px;
   border-bottom: 1px solid #c2c2c2; }
-  .m-offcanvas--menu:before,
-  .m-offcanvas--panel:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "U";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
   .m-offcanvas--menu em,
   .m-offcanvas--panel em {
     font-style: normal; }
@@ -964,19 +949,6 @@ body {
   font-weight: 200;
   font-size: 2rem;
   line-height: 1em; }
-  .m-offcanvas--label:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .l-sticky {
   position: fixed;
@@ -1330,20 +1302,6 @@ body {
       .m-navbar .m-navbar--menu-primary > li > *,
       .m-navbar .m-navbar--menu-secondary > li > * {
         display: inline-block; }
-    .m-navbar .m-navbar--menu-primary:before,
-    .m-navbar .m-navbar--menu-secondary:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "U";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
     .m-navbar .m-navbar--menu-primary a,
     .m-navbar .m-navbar--menu-secondary a {
       color: #858585; }
@@ -1412,19 +1370,6 @@ body {
     display: block;
     font-size: 1.125rem;
     margin-bottom: 40px; }
-    .m-navbar .m-navbar--about:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "H2";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
     @media only screen and (min-width: 641px) {
       .m-navbar .m-navbar--about {
         font-size: 1.3125rem;
@@ -1518,19 +1463,6 @@ body {
     font-style: normal;
     font-weight: 600;
     color: #cfcfcf; }
-    .m-footer .m-footer--container:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "U";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
   .m-footer em {
     font-style: normal; }
   .m-footer a {
@@ -1612,92 +1544,70 @@ body {
       background-position: 0 50%;
       background-repeat: no-repeat; }
 
-.m-body--content.layout-onecol {
-  margin-left: 30px;
-  margin-right: 30px; }
-  @media only screen and (min-width: 1021px) {
-    .m-body--content.layout-onecol .m-body--copy {
-      width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-      float: none; } }
-  @media only screen and (min-width: 1401px) {
-    .m-body--content.layout-onecol .m-body--copy {
-      width: 700px; } }
-  .m-body--content.layout-onecol aside {
-    display: none; }
-
-.m-body--content.layout-onecol-full {
-  margin-left: 30px;
-  margin-right: 30px; }
-  @media only screen and (min-width: 1021px) {
-    .m-body--content.layout-onecol-full .m-body--copy {
-      float: none; } }
-  .m-body--content.layout-onecol-full aside {
-    display: none; }
-
-.m-body--content.layout-twocol .m-body--copy {
-  margin-left: 30px;
-  margin-right: 30px; }
-  @media only screen and (min-width: 1021px) {
-    .m-body--content.layout-twocol .m-body--copy {
-      float: left;
-      width: calc(100% * 0.6666666667 - 60px);
-      margin-left: 30px;
-      margin-right: 30px; } }
-
-.m-body--content.layout-twocol aside {
-  float: left;
-  width: calc(100% * 1 - 60px);
-  margin-left: 30px;
-  margin-right: 30px; }
-  @media only screen and (min-width: 1021px) {
-    .m-body--content.layout-twocol aside {
-      float: left;
-      width: calc(100% * 0.3333333333 - 60px);
-      margin-left: 30px;
-      margin-right: 30px; } }
+.m-body--content {
+  *zoom: 1;
+  padding-bottom: 30px; }
+  .m-body--content:before, .m-body--content:after {
+    content: '';
+    display: table; }
+  .m-body--content:after {
+    clear: both; }
+  .m-body--content.layout-onecol {
+    margin-left: 30px;
+    margin-right: 30px; }
+    @media only screen and (min-width: 1021px) {
+      .m-body--content.layout-onecol .m-body--copy {
+        width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none; } }
+    @media only screen and (min-width: 1401px) {
+      .m-body--content.layout-onecol .m-body--copy {
+        width: 700px; } }
+    .m-body--content.layout-onecol aside {
+      display: none; }
+  .m-body--content.layout-onecol-full {
+    margin-left: 30px;
+    margin-right: 30px; }
+    @media only screen and (min-width: 1021px) {
+      .m-body--content.layout-onecol-full .m-body--copy {
+        float: none; } }
+    .m-body--content.layout-onecol-full aside {
+      display: none; }
+  .m-body--content.layout-twocol .m-body--copy {
+    margin-left: 30px;
+    margin-right: 30px; }
+    @media only screen and (min-width: 1021px) {
+      .m-body--content.layout-twocol .m-body--copy {
+        float: left;
+        width: calc(100% * 0.6666666667 - 60px);
+        margin-left: 30px;
+        margin-right: 30px; } }
+  .m-body--content.layout-twocol aside {
+    float: left;
+    width: calc(100% * 1 - 60px);
+    margin-left: 30px;
+    margin-right: 30px; }
+    @media only screen and (min-width: 1021px) {
+      .m-body--content.layout-twocol aside {
+        float: left;
+        width: calc(100% * 0.3333333333 - 60px);
+        margin-left: 30px;
+        margin-right: 30px; } }
 
 .m-body--copy {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   color: #363636;
-  font-size: 1.125rem;
-  margin-bottom: 30px; }
-  .m-body--copy:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "B";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
+  font-size: 1.125rem; }
   .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
-    line-height: 1.3em;
-    margin-top: 2em;
+    line-height: 1.2em;
+    margin-top: 1em;
     margin-bottom: 1em; }
   .m-body--copy h1, .m-body--copy h2, .m-body--copy h3, .m-body--copy h4, .m-body--copy h5, .m-body--copy h6 {
     font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.02em; }
-    .m-body--copy h1:before, .m-body--copy h2:before, .m-body--copy h3:before, .m-body--copy h4:before, .m-body--copy h5:before, .m-body--copy h6:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "H2";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
   .m-body--copy h1 {
     font-size: 2.25rem; }
   .m-body--copy h2 {
@@ -1729,19 +1639,6 @@ body {
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase; }
-    .m-body--copy p:first-of-type span:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "S";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
   .m-body--copy a {
     color: #c20e1a; }
     .m-body--copy a:hover {
@@ -1760,19 +1657,9 @@ body {
     font-size: 1.08rem;
     line-height: 1.6em;
     color: #838383; }
-    .m-body--copy blockquote:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "B";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
+    .m-body--copy blockquote > p {
+      margin-bottom: 0;
+      background-color: orange; }
     .m-body--copy blockquote .author {
       font-family: "source-sans-pro", sans-serif;
       font-style: normal;
@@ -1783,19 +1670,6 @@ body {
       font-weight: 600;
       color: #363636;
       text-align: right; }
-      .m-body--copy blockquote .author:before {
-        display: block;
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        content: "S";
-        background-color: red;
-        color: white;
-        font-size: 10px;
-        line-height: 16px;
-        text-align: center;
-        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-        font-weight: 600; }
     .m-body--copy blockquote.mm-center {
       text-align: center;
       padding-left: 10%;
@@ -1813,19 +1687,6 @@ body {
     line-height: 1.5em;
     padding-top: 10px;
     font-weight: normal; }
-    .m-body--copy figcaption:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "M";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
     .m-body--copy figcaption strong {
       color: black; }
 
@@ -1979,20 +1840,6 @@ body {
   .m-section--header:after,
   .m-section--footer:after {
     clear: both; }
-  .m-section--header:before,
-  .m-section--footer:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "U";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
   .m-section--header a,
   .m-section--footer a {
     text-decoration: none;
@@ -2010,19 +1857,6 @@ body {
   text-transform: uppercase;
   line-height: 1.2em;
   font-weight: 100; }
-  .m-section--hed:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
   .m-section--hed.mm-border {
     border: 2px solid black;
     color: black;
@@ -2499,19 +2333,6 @@ body {
   font-weight: 200;
   font-size: 1.5rem;
   line-height: 1.3em; }
-  .m-item--hed:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .m-item--meta {
   font-family: "proxima-nova", sans-serif;
@@ -2520,38 +2341,12 @@ body {
   font-size: 0.875rem;
   line-height: 1.3em;
   color: #5f5f5f; }
-  .m-item--meta:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "M";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .m-item--description {
   font-family: "nexa", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem; }
-  .m-item--description:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H2";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .m-item--image {
   background-size: cover;
@@ -2607,39 +2402,13 @@ body {
     font-family: "nexa", "Helvetica Neue", sans-serif;
     font-style: normal;
     font-weight: 400; }
-    .m-card_standard .m-item--hed:before {
-      display: block;
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      content: "H2";
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      line-height: 16px;
-      text-align: center;
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      font-weight: 600; }
     @media only screen and (min-width: 1021px) {
       .m-card_standard .m-item--hed {
         font-family: "nexa", "Helvetica Neue", sans-serif;
         font-style: normal;
         font-weight: 200;
         font-size: 1.5rem;
-        line-height: 1.3em; }
-        .m-card_standard .m-item--hed:before {
-          display: block;
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          content: "H";
-          background-color: red;
-          color: white;
-          font-size: 10px;
-          line-height: 16px;
-          text-align: center;
-          font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-          font-weight: 600; } }
+        line-height: 1.3em; } }
   .m-card_standard .m-item--more,
   .m-card_standard .m-item--image {
     display: none; }
@@ -2940,19 +2709,6 @@ body {
   font-style: normal;
   font-weight: 600;
   margin-bottom: 30px; }
-  .m-filter:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "U";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
   .m-filter .active-result {
     font-weight: 400; }
   .m-filter .category {
@@ -3021,19 +2777,6 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 0.875rem; }
-  .m-properties:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "M";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
   .m-properties dl {
     position: relative;
     margin: 0;
@@ -3207,19 +2950,6 @@ article header figure {
   font-size: 2.25rem;
   line-height: 1.2em;
   letter-spacing: -0.02em; }
-  .m-story--hed:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H2";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .m-story--image {
   display: block;
@@ -3260,19 +2990,6 @@ article header figure {
   color: #437373;
   font-size: 1.375rem;
   line-height: 1.2em; }
-  .m-story--summary:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 @media only screen and (min-width: 1021px) {
   .m-story--hed {
@@ -3348,6 +3065,8 @@ article header figure {
   .mm-feature article .m-story--header .m-story--hed,
   .mm-feature article .m-story--header .m-story--summary {
     color: white; }
+  .mm-feature article .m-story--header .m-story--image {
+    display: none; }
   @media only screen and (min-width: 1021px) {
     .mm-feature article .m-story--header {
       height: 360px;
@@ -3519,19 +3238,6 @@ article header figure {
   line-height: 1.2em;
   margin-bottom: 0;
   margin-top: 0; }
-  .m-hub--hed:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 .m-hub--summary {
   font-family: "nexa", "Helvetica Neue", sans-serif;
@@ -3539,19 +3245,6 @@ article header figure {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.2em; }
-  .m-hub--summary:before {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    content: "H2";
-    background-color: red;
-    color: white;
-    font-size: 10px;
-    line-height: 16px;
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 600; }
 
 @media only screen and (min-width: 1021px) {
   .m-hub--hed {
@@ -3627,6 +3320,8 @@ article header figure {
   .mm-feature .m-hub--header .m-hub--hed,
   .mm-feature .m-hub--header .m-hub--summary {
     color: white; }
+  .mm-feature .m-hub--header .m-hub--image {
+    display: none; }
   @media only screen and (min-width: 1021px) {
     .mm-feature .m-hub--header {
       height: 360px;
@@ -3669,12 +3364,12 @@ article header figure {
     float: none; }
     @media only screen and (min-width: 1021px) {
       .m-layout-object.mm-expand {
-        margin-left: -180px;
-        margin-right: -180px; } }
+        margin-left: -120px;
+        margin-right: -120px; } }
     @media only screen and (min-width: 1401px) {
       .m-layout-object.mm-expand {
-        margin-left: -246px;
-        margin-right: -246px; } }
+        margin-left: -310px;
+        margin-right: -310px; } }
   .m-layout-object.mm-small {
     width: 100%;
     height: auto; }
@@ -3963,6 +3658,27 @@ figure.m-layout-object,
           background-color: #FDFDFD; }
         .hero-tabs .navigation .tab.color-body.active {
           background-color: #FDFDFD; }
+
+.flex-video {
+  position: relative;
+  padding-top: 1.5625rem;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 1rem;
+  overflow: hidden; }
+  .flex-video.widescreen {
+    padding-bottom: 56.34%; }
+  .flex-video.vimeo {
+    padding-top: 0; }
+  .flex-video iframe,
+  .flex-video object,
+  .flex-video embed,
+  .flex-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .chosen-container {
   width: 100% !important;

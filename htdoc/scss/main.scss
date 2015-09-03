@@ -65,6 +65,8 @@ $feature-content-height_mobile: $feature-height_mobile - 360px;
 @import "modules/module-layout-object";
 @import "not-modular/hero-tabs";
 
+@import "external/flex-video";
+
 // external JS overrides
 @import "external/chosen";
 @import "external/slick";

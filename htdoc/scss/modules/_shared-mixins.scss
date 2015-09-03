@@ -124,6 +124,10 @@
                     color: white;
                 }
 
+                .#{$content-type}--image {
+                    display: none;
+                }
+
                 @include media(C) {
                     height: $feature-height - $feature-content-height;
                     top: $feature-content-height;
@@ -213,6 +217,10 @@
             .#{$content-type}--hed,
             .#{$content-type}--summary {
                 color: white;
+            }
+
+            .#{$content-type}--image {
+                display: none;
             }
 
             @include media(C) {

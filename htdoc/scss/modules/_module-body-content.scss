@@ -5,6 +5,10 @@ $content-column-width_D: 700px;
 $aside-column-width: 300px;
 
 .m-body--content {
+
+    @include cf();
+    padding-bottom: $space / 2;
+
     // centered column
     &.layout-onecol {
         margin-left: $gutter / 2;
@@ -75,12 +79,11 @@ $aside-column-width: 300px;
     color: $color-body-font;
     $fontBase: 18px;
     font-size: rem-calc($fontBase * 1);
-    margin-bottom: $space / 2;
 
 
     h1, h2, h3, h4, h5, h6 {
-        line-height: 1.3em;
-        margin-top: 2em;
+        line-height: 1.2em;
+        margin-top: 1em;
         margin-bottom: 1em;
         //color: darken($color-body-font, 30%);
     }
@@ -176,6 +179,10 @@ $aside-column-width: 300px;
         line-height: 1.6em;
         color: lighten($color-body-font, 30%);
 
+
+        > p:last-child {
+            margin-bottom: 0;
+        }
 
 
         .author {
